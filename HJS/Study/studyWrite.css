@@ -1,0 +1,118 @@
+body {
+    max-width: 1552px;
+    height: 13601px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.choosebox {
+    position: relative;
+    top: 30px;
+    width: 800px;
+    height: 320px;
+    margin: 0 auto;
+    border: 1px solid#FFF;
+    background-color: #f2f2f2;
+}
+
+.writebox {
+    position: relative;
+    top: 50px;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid#FFF;
+    background-color: #f2f2f2;
+}
+
+
+.who {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.hr {
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+}
+
+.field {
+
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fieldchoose {
+    color: #757575;
+    background-color: #f2f2f2;
+    border-style: none;
+    margin-left: -2px;
+}
+
+.locationchoose {
+    width: 90px;
+    color: #757575;
+    background-color: #f2f2f2;
+    border-style: none;
+    margin-left: -2px;
+}
+
+.wish {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.count {
+    margin-top: 10px;
+}
+
+.text {
+    width: 30px;
+}
+
+.yes {
+    position: absolute;
+    background-color: #3393f4;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.ckb {
+    position: absolute;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+
+.notetitle {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #757575;
+
+}
+.btn2{
+    margin-top: 100px;
+    margin-left: 420px;
+    border: none;
+    background-color: #3393f4;
+    color: #FFF;
+    border-radius: 30px;
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
