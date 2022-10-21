@@ -1,0 +1,422 @@
+
+
+
+
+
+.communitySection {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+h1 {
+    display: flex;
+    flex-direction: column;
+}
+span.smTxt {
+    color: #3393f4;
+    font-size: .875rem;
+}
+span.bgTxt {
+    color: #42495b;
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+div.community_header {
+    display: flex;
+    padding: 20px 10px 10px;
+    box-sizing: border-box;
+}
+div.community {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+div.communityWrap {
+    width: 100%;
+    max-width: 980px;
+    position: relative;
+    height: auto;
+}
+div.communityInputSection {
+    display: inline-flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+}
+div.communityInputWrap {
+    border: 1px solid #c9c9d9;
+    padding: 0 20px;
+    border-radius: 4px;
+}
+div.communityInputWrap textarea {
+    box-sizing: border-box;
+    flex: 1 1;
+    padding: 13px 0;
+    border: none;
+    font-size: .875rem;
+    border-radius: 4px;
+    resize: none;
+    width : 938px;
+    vertical-align: middle;
+    line-height: 2.5;
+    color: #333;
+    overflow: auto;
+    text-align: left;
+    outline: none;
+    
+
+}
+* {
+    font-family: Noto Sans KR,Lato,sans-serif;
+    font-weight: 550;
+    font-size: 0.975rem;
+}
+div.communityFeedSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+div.communityFeedWrap {
+    width: 100%;
+    background-color: #fff;
+    padding: 0! important;
+    box-sizing: border-box;
+    margin-top: 0;
+    transition: all .2s;
+}
+div.communityFeedContentWrap {
+    box-shadow: 0 3px 12px 0 rgb(0 0 0 / 6%);
+    position: relative;
+    z-index: 999;
+    box-sizing: border-box;
+    padding: 13px 10px;
+}
+
+body {
+    line-height: 1.5;
+    color: #333;
+    display: block;
+    margin: 0;
+}
+div.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+}
+div.left {
+    margin-right: 16px;
+}
+div.profileThumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.profileThumb img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border: 0;
+}
+div {
+    margin: 0;
+    padding: 0;
+}
+h2.profileName {
+    font-size: 1rem;
+    color: #42495b;
+    line-height: 1.125rem;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+}
+.right span {
+    font-size: .75rem;
+    color: #c9c9d9;
+    margin-right: 5px;
+}
+.right {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+div.bottom {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+div.feedContents {
+    flex: 1 1;
+    margin-top: 10px;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: left;
+}
+
+textarea.text {
+    border: none;
+    background: none;
+    resize: none;
+    padding: 0;
+    height: auto;
+    color: #222;
+    opacity: 1;
+    -webkit-text-fill-color: #222;
+    word-break: keep-all;
+    vertical-align: middle;
+    text-align: left;
+    display: flex;
+}
+
+div.feedContents textarea {
+    margin-bottom: 13px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: inherit;
+    vertical-align: middle
+    
+    
+}
+
+div.bottom2 {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+div.replyFold {
+    font-size: .75rem;
+    color: #c9c9c9;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+div.btnWrap {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 0px;
+}
+button.grayBtn {
+    border: 1px solid #f2f2f2;
+    width: auto;
+    background-color: #f2f2f2;
+    font-size: 13px;
+    color: #222;
+    padding: 8px 29px!important;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+    border-radius: 4px;
+    height: 40px;
+}
+#btnWrap {
+    display: none;
+    
+}
+#communityReplyTab {
+    display: none;
+}
+p.count {
+    font-size: 14px;
+    color: #b1b1b1;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn button {
+    font-size: .75rem;
+    padding: 8px 29px!important;
+    transition: all .2s;
+    border-radius: 4px;
+}
+div.communityReplyTab {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 24px 24px 10px 80px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+div.replyTab {
+    box-sizing: border-box;
+}
+div.tabTop{
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    -moz-box-align: start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+div.tabLeft {
+    margin-right: 16px;
+}
+div.tabRight {
+    width: 100%;
+}
+div.tabProfile {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 0.65;
+    margin: 0;
+    padding: 0;
+}
+p.tabProfileName {
+    font-size: 1rem;
+    color: #42495b;
+    cursor: pointer;
+    position: relative;
+}
+span.tabDate {
+    font-size: .75rem;
+    color: #c9c9c9;
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+textarea.tabTextarea {
+    background: none;
+    border: none;
+    font-size: .875rem;
+    color: #222;
+    -moz-box-flex: 1;
+    flex: 1 1;
+    padding: 10px 10px 10px 0;
+    resize: none;
+    opacity: 1;
+    -webkit-text-fill-color: #222;
+    text-align: left;
+}
+img.tabImg {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}
+img.tabImg0 {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 7px;
+    
+    background-color: white;
+}
+div.replyInput {
+    display: -moz-box;
+    display: flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    -moz-box-align: start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+div.txtInput {
+    flex: 1 1;
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+}
+div.txtInput textarea {
+    flex: 1 1;
+    font-size: .875rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 11px 16px;
+    border-radius: 4px;
+    margin-right: 14px;
+    resize: none;
+    border: 1px solid #9796a7;
+    vertical-align: middle;
+    margin-left: 18px;
+}
+button.blackBtn {
+    background-color: #42495b;
+    color: #fff;
+    border: 1px solid #42495b;
+    width: auto;
+    padding: 8px 29px!important;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+    font-size: .75rem;
+    border-radius: 4px;
+}
+div.replyFoldRight {
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+}
+span.replyCount {
+    font-size: .75rem;
+    color: #42495b;
+    display: -moz-inline-box;
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+}
+.replyCount:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    background-image: url("https://letspl.me/_next/static/media/ico_comment.66b0e87a88ad24dc805cabc6e2ca41af.svg");
+}
+span.recommend {
+    font-size: .75rem;
+    color: #42495b;
+    margin-left: 16px;
+    cursor: pointer;
+    -moz-box-align: center;
+    align-items: center;
+    display: -moz-inline-box;
+    display: inline-flex;
+}
+.recommend:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url("https://letspl.me/_next/static/media/ic_talk_up.d77558e075b8af7c0b7b3bc1895da96b.svg");
+}
