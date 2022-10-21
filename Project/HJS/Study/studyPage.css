@@ -1,0 +1,110 @@
+body {
+    max-width: 1552px;
+    height: 13601px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.box{
+    width: 700px;
+    height: 400px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.profilebox{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #FFF;
+}
+
+.title{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.ing{
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 13px;
+    border: 1px solid #3393f4;
+    background-color: #3393f4;
+    margin-left: 600px;
+    margin-top: -30px;
+}
+.time{
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 10px;
+    color: #757575;
+}
+.field{
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 10px;
+    color: #757575;
+    
+}
+.answerfield{
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 80px;
+    
+}
+.location{
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 10px;
+    color: #757575;
+    
+}
+.answerlocation{
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 80px;
+}
+
+.people{
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 10px;
+    color: #757575;
+}
+.answerpeople{
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 80px;
+}
+
+.write{
+    position: absolute;
+    margin-top: 235px;
+    margin-left: 10px;
+}
+.btn{
+    color: #FFF;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 430px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #3393f4;
+    border-color: #3393f4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profileName{
+    margin-top: -13px;
+    margin-left: 80px;
+    font-size: 30px;
+}
