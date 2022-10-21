@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-246180959-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-246180959-1');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의글 관리</title>
+
+    <!--css 링크 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="table.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <!-- 로고(image) -->
+            <div class="logo">
+                <img src="..">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="menu"><img src="images/globe.png">사이트 바로가기</a>
+                </li>
+                <li>
+                    <a href="managerHome.html" class="menu"><img src="images/home.png">관리자 홈</a>
+                </li>
+                <li>
+                    <label for="check-btn1" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
+                    <img src="images/user.png" style="height: 30px; padding: 0px 10px 7px 0px;">회원 관리
+                    <img src="images/plus.png" style="height: 40px; margin-left: 130px;">
+                    </label>
+                    <input id="check-btn1" type="checkbox">
+                    <nav id="submenu1" class="submenu">
+                        <ul>
+                            <li><a href="blackList.html">블랙리스트</a></li>
+                            <li><a href="memberConfirm.html">회원 인증 관리</a></li>
+                            <li><a href="memberPoint.html">회원 포인트 관리</a></li>
+                            <li><a href="memberBadge.html">회원 뱃지 관리</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <label for="check-btn2" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
+                        <img src="images/apps.png" style="height: 30px; padding: 0px 10px 7px 0px;">콘텐츠 관리
+                        <img src="images/plus.png" style="height: 40px; margin-left: 113px;">
+                        </label>
+                        <input id="check-btn2" type="checkbox">
+                        <nav id="submenu2" class="submenu">
+                            <ul>
+                                <li><a href="question.html">문의글 관리</a></li>
+                                <li><a href="comment.html">댓글 관리</a></li>
+                                <li><a href="post.html">게시글 관리</a></li>
+                            </ul>
+                    </nav>
+                </li>
+                <li>
+                    <label for="check-btn3" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
+                        <img src="images/chart.png" style="height: 30px; padding: 0px 10px 7px 0px;">통계
+                        <img src="images/plus.png" style="height: 40px; margin-left: 167px;">
+                        </label>
+                        <input id="check-btn3" type="checkbox">
+                        <nav id="submenu3" class="submenu">
+                    <ul>
+                        <li><a href="settingTerm.html">기간별 분석</a></li>
+                        <li><a href="settingVisitor.html">방문자 통계</a></li>
+                    </ul>
+                    </nav>
+                </li>
+                <li>
+                    <label for="check-btn4" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
+                        <img src="images/settings.png" style="height: 30px; padding: 0px 10px 7px 0px;">환경 설정
+                        <img src="images/plus.png" style="height: 40px; margin-left: 130px;">
+                        </label>
+                        <input id="check-btn4" type="checkbox">
+                        <nav id="submenu4" class="submenu">
+                    <ul>
+                        <li><a href="settingBanner.html">배너 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contents">
+        <h3>문의글 관리</h3>
+        <div class="searchBox">
+              <input class="search-txt" type="text" placeholder="검색">
+              <button class="search-btn" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+          </div>
+
+          <table class="question">
+            <thead>
+            <tr>
+                <th>분류</th><th>제목</th><th>회원명</th><th>작성일</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.open('http://127.0.0.1:5500/project01/test.html')">
+                <td>포인트 관련</td>
+                <td>포인트 사용 문의합니다</td>
+                <td>000</td>
+                <td>0000-00-00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <!-- bundle-->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+</body>
+<script src="manager.js"></script>
+<!-- <script src="analytics.js"></script> -->
+<!-- <script src="jquery-3.6.1.min.js"></script> -->
+</html>

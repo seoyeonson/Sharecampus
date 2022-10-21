@@ -1,0 +1,135 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrapper .sidebar {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 17vw;
+    height: 100vw;
+    /* padding: 20px 0; */
+    /* margin: 30px 0; */
+    transition: all 0.5s ease;
+    float: left;
+}
+
+.wrapper .sidebar ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.wrapper .sidebar ul li a {
+    margin-bottom: 10px;
+    display: block;
+    padding: 10px 20px;
+    /* border-bottom: 1px solid #10558d; */
+    color: #3393f4;
+    font-size: 20px;
+    position: relative;
+    /* text-shadow: -1px 0 #3393f4, 0 1px #3393f4, 1px 0 #3393f4, 0 -1px #3393f4; */
+    font-weight: bold;
+}
+
+.wrapper .sidebar ul li a img {
+    display: inline-block;
+    padding: 0px 10px 7px 0px;
+    height: 30px;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    /* color: white; */
+
+    background:rgb(245, 245, 245);
+    /* border-right: 2px solid rgb(5, 68, 104); */
+}
+
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+
+.wrapper .sidebar ul li input#check-btn1 {
+    display: none;
+}
+
+.wrapper .sidebar ul li nav#submenu1 {
+    display: none;
+}
+
+#check-btn1:checked + #submenu1 {
+    display: block;
+}
+
+.wrapper .sidebar ul li input#check-btn2 {
+    display: none;
+}
+
+.wrapper .sidebar ul li nav#submenu2 {
+    display: none;
+}
+
+#check-btn2:checked + #submenu2 {
+    display: block;
+}
+
+.wrapper .sidebar ul li input#check-btn3 {
+    display: none;
+}
+
+.wrapper .sidebar ul li nav#submenu3 {
+    display: none;
+}
+
+#check-btn3:checked + #submenu3 {
+    display: block;
+}
+
+.wrapper .sidebar ul li input#check-btn4 {
+    display: none;
+}
+
+.wrapper .sidebar ul li nav#submenu4 {
+    display: none;
+}
+
+#check-btn4:checked + #submenu4 {
+    display: block;
+}
+
+
+.contents{
+    color: black;
+    float: right;
+    width: 82vw;
+    height: 100vw;
+    background-color: lightgray;
+}
+
+.contents h3{
+    background-color:#3393f4;
+    padding: 13px;
+    color: white;
+    margin-top:0;
+}
+
+.contents .card {
+    margin: 8px;
+    width: 39.9vw;
+    height: 13vw;
+    float: left;
+    background-color: white;
+}
+
+.contents .card p{
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+    text-align: center;
+}
+
+.wrapper .sidebar ul li .submenu {
+    background-color: white;
+}
