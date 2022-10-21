@@ -1,0 +1,210 @@
+body {
+    max-width: 1552px;
+    height: 13601px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.pickbox {
+    width: 1200px;
+    height: 3400px;
+    margin: 0 auto;
+}
+
+.picka {
+    border: 1px solid #EBEBEB;
+    max-width: 285px;
+    width: 100%;
+    height: 290px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 0 12px;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: all .2s;
+    display: inline-block;
+}
+
+.pickb {
+    border: 1px solid #EBEBEB;
+    max-width: 285px;
+    width: 100%;
+    height: 290px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 0 12px;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: all .2s;
+    display: inline-block;
+}
+
+.pickc {
+    border: 1px solid #EBEBEB;
+    max-width: 285px;
+    width: 100%;
+    height: 290px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 0 12px;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: all .2s;
+    display: inline-block;
+}
+
+.pickd {
+    border: 1px solid #EBEBEB;
+    max-width: 285px;
+    width: 100%;
+    height: 290px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 0 12px;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    transition: all .2s;
+    display: inline-block;
+}
+
+
+.study {
+    width: 20%;
+    font-size: 0.5em;
+    color: #FFF;
+    box-sizing: border-box;
+    padding: 4px 10px;
+    margin: 12px 0 0 15px;
+    border: 1px solid #594BBA;
+    background-color: #594BBA;
+    text-align: center;
+}
+
+.purpose {
+    font-size: 0.8em;
+    color: #b5b5b5;
+    margin-left: 8px;
+
+}
+
+.locat {
+    font-size: 0.8em;
+    margin-left: 8px;
+    font-weight: bold;
+
+}
+
+.who {
+    color: #b5b5b5;
+    font-size: 0.8em;
+    margin-left: 8px;
+
+}
+
+.favorite {
+    margin: -22px 0 0 242px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.heart {
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.pic {
+    margin-left: 10px;
+}
+
+.smallheart {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+}
+
+.num {
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 30px;
+    font-size: 0.8em;
+}
+
+.hr {
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    width: 285px;
+    margin-top: -10px;
+
+
+}
+
+.finish {
+    margin-left: 10px;
+    margin-top: -2px;
+    font-size: 1em;
+}
+
+.ppl {
+    color: #d71717;
+}
+
+.studySelect {
+    margin-left: 180px;
+}
+
+
+#mogip {
+    position: absolute;
+    accent-color: #3393f4;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.mogiping {
+    position: absolute;
+    margin-left: 45px;
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+.write{
+    margin-left: 710px;
+    padding: 10px 30px;
+    border: none;
+    border-color: #3393f4;
+    border-radius: 5px;
+    background-color: #3393f4;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.join{
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: #3393f4;
+    color: #FFF;
+    margin-left: 16px;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+}
