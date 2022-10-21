@@ -1,0 +1,600 @@
+body, html {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    display: block;
+    margin: 8px;
+    line-height: 1.43;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+button{
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+body{
+    background-color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+button, dd, dl, dt, fieldset, ol, p ,ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li.first_Nav{
+    background-color: #3393f4;
+}
+
+#container{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    position: relative;
+    width: 1034px;
+    margin: 0 auto;
+    padding: 70px 0 0;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+#active .sideNav li a{
+        -webkit-box-flex: 1;
+        flex: 1 1;
+        padding: 17px 35px 15px 15px;
+        vertical-align: middle;
+        line-height: 1.1;
+        font-size: 13px;
+        font-weight: 400;
+        color: #222;
+}
+
+#asideWrap{
+        display: none;
+        margin-right: 18px;
+        -webkit-box-flex: 0;
+        flex: 0 0 auto;
+}
+#asideWrap.active{
+display: block;
+}
+
+
+.sideNav{
+    width: 208px;
+    border-radius: 8px;
+}
+
+.active ul{
+    padding: 0px;
+    margin-top: 0px;
+    border: gray 0.05px solid;
+    
+}
+
+.sideNav li{
+   position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+        min-height: 49px;
+        border-bottom: 1px solid rgba(0,0,0,.04);
+        background-color: #fff;
+        box-shadow: 0.2px 0.2px grey;
+}
+
+.sideNav .first_Nav a span{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sideNav a {
+    font-size: 13px;
+    -webkit-box-flex: 1;
+    flex: 1 1;
+    padding: 17px 35px 15px 15px;
+    vertical-align: middle;
+    line-height: 1.1;
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+}
+
+.first_Nav{
+    font-weight: 500;
+    
+}
+
+/* main */
+
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+}
+
+#content.more{
+    margin: 0 0 20px;
+    width: 810px;
+    height: 775px;
+    background-color: #fff;
+    box-shadow: 0.2px 0.2px grey;
+    border: gray solid 0.05px;
+}
+#content {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding-bottom: 20px;
+}
+
+figcaption, figure, main {
+    display: block;
+}
+
+.sMypage {
+    position: relative;
+}
+.sMypage .sMypageTitle {
+    height: 49px;
+    padding: 0 30px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e3e3e3;
+    line-height: 49px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+.sMypage .sMypageProfile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: normal;
+    border-bottom: 1px solid #efefef;
+}
+
+.sMypage .sMypageSubTitle{
+    -webkit-box-flex: 0px;
+    flex: 0 0 228px;
+    width: 228px;
+    box-sizing: border-box;
+    padding: 29px 50px 0 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+
+.sMypage .sMypageSubTitle{
+    height: 137px;
+}
+
+.sMypage .sMypageProfileBox{
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 5px 0 13px 0;
+}
+.sMypage .sMypageProfileBox .profileList{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 472px;
+    margin: 15px 0 0 -10px;
+}
+
+.sMypage .sMypageProfileBtnArea{
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: 0 0 115px;
+    width: 115px;
+}
+
+.sMypage .sMypageProfileBtnArea .uButton{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -3px;
+}
+
+:not(button).uButton.-sizeS{
+    line-height: 26px;
+}
+
+:not(button).uButton{
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.uButton.-sizeS{
+min-width: 41px;
+height: 26px;
+padding: 0 10px;
+font-size: 12px;
+}
+
+
+.uButton.-confirm3{
+    border: solid 1px #ccc;
+    background: #fff;
+    color: #222;
+}
+
+a{
+    text-decoration: none;
+}
+
+.uProfile{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-size: 0px;
+}
+
+.uProfile.-size60 .profileInner{
+    width: 100px;
+    height: 100px;
+}
+
+.uProfile .profileInner img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    vertical-align: top;
+    border: 0.1px solid gray ;
+}
+.uProfile .profileInner{
+display: block;
+overflow: hidden;
+position: relative;
+background-color: #ebebeb;
+border-radius: 50%;
+}
+
+.sMypage .sMypageInfo{
+    display: flex;
+    border-bottom: 1px solid #efefef;
+}
+
+.sMypage .sMypageInfoCont{
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 11px 0 13px;
+}
+
+.sMypage .sMypageInfoItem{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 44px;
+    margin: 6px 0;
+}
+
+.sMypage .sMypageInfoItem .label{
+    -webkit-box-flex: 0;
+    flex: 0 0 100px;
+    width: 100px;
+    font-size: 13px;
+    color: #333;
+}
+
+.sMypage .sMypageInfoItem .btn{
+    -webkit-box-flex: 0;
+    flex: 0 0 150px;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.sMypage .sMypageInfoItem .content {
+    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    font-size: 13px;
+    color: #333;
+}
+.sideNav.-second{
+    padding-top: 30px;
+}
+
+.uSelect{
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    border: solid 1px #ebebeb;
+    vertical-align: top;
+}
+
+.uSelect .select, .uSelect input, .uSelect select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0 33px 0 10px;
+    border: 0;
+    border-radius: 0;
+    background: 0 0;
+    text-align: left;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+.uSelect:before {
+    z-index: 1;
+    vertical-align: top;
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    margin-top: -4px;
+    width: 12px;
+    height: 8px;
+    overflow: hidden;
+    display: inline-block;
+    background-repeat: no-repeat;
+    content: '';
+    background-image: url(../images/spr_icons.png);
+    background-position: -563px -737px;
+}
+.uSelect:before {
+    width: 12px;
+    height: 8px;
+    background-size: 735px auto;
+    background-image: url(img/spr_icons_2x.png);
+    background-position: -140px -85px;
+    object-fit: cover;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.-confirm{
+    background-color: #474e60;
+    color: #fff;
+}
+
+.sMypageAccount{
+    display: flex;
+    border-bottom: 1px solid #efefef;
+}
+.sMypage .sMypageAccountItem{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 40px;
+    margin: 6px 0 7px;
+}
+.sMypageAccountCont{
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 13px 0 12px;
+}
+.sMypageAccountItem .label{
+    -webkit-box-flex: 0;
+    flex: 0 0 100px;
+    width: 100px;
+    font-size: 13px;
+}
+
+.uInput>:not(.border){
+    z-index: 3;
+}
+.gSrOnly{
+    overflow: hidden!important;
+    position: absolute!important;
+    height: 1px!important;
+    width: 1px!important;
+    clip: rect(1px,1px,1px,1px)!important;
+}
+.uInput input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    background: 0 0;
+    font-size: 13px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+input, textarea{
+    color: #333;
+    border-radius: 0;
+}
+
+.uInput .border{
+    z-index: 2;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid #ebebeb;
+}
+.uInput input~.border{
+    border: 1px solid #ebebeb;
+}
+.uInput.-simpleLine .border{
+    border-width: 0 0 1px 0;
+}
+.content .uInput.phoneNumber{
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.content .uInput{
+    display: inline-block;
+}
+.uInput{
+    height: 36px;
+}
+
+.sMypageAccountItem .btn{
+    -webkit-box-flex: 0;
+    flex: 0 0 150px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 30px;
+}
+
+
+.infoIcon{
+    vertical-align: top;
+    margin: 9px 0 0 6px;
+}
+
+.sMypage .infoIcon.-help {
+    width: 18px;
+    height: 18px;
+    overflow: auto;
+    border-style: none;
+}
+button img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.content{
+    flex: 1 1 auto;
+}
+
+.sMypageAccountItem .btn-phone{
+    flex: 1 1 150px;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 30px;
+}
+#_btnPhoneNumberChan{
+    background-color: #3393f4;
+    color: #fff;
+}
+#_btnUpdateGender{
+    background-color: #3393f4;
+    color: #fff;
+}
+#_btnUpdateEmail{
+    background-color: #3393f4;
+    color: #fff;
+}
+
+.cell.label.-desc{
+    line-height: 1.42;
+    font-size: 12px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+#_btnPhoneHelpGuide{
+    background-image: url(icon/search.png);
+}
+
+.infoIcon.-error{
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    display: inline-block;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+    background-image: url(icon/engine-warning.png);
+}
+
+.sMypageInnerTitle h2{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+
+.sMypageConntetTitleBox h2{
+    flex: 0 0 228px;
+    width: 228px;
+    position: relative;
+    padding: 29px 50px 0 30px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 600;
+}
+.sMypageConnectItem{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 52px;
+}
+.sMypageConnect{
+    display: flex;
+    border-bottom: 1px solid #efefef;
+}
+.sMypageConnectCont{
+    flex: 1 1 auto;
+    padding: 13px 0;
+}
+.sMypageConnectItem .btn{
+    float: 0 0 150px;
+    width: 150px;
+    box-sizing: boreder-box;
+    text-align: right;
+    padding-right: 30px;
+}
+
+h2.sMypageInnerTitle{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+}
+.sMypageConnectOrganization{
+    display: flex;
+}
+
+.sMypageConnectDocumnet .content{
+    flex: 1 1 auto;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+}
+
+.sMypageConnectDocumnet{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 52px;
+    padding-top: 21px;
+}
+.sMypageConnectOrganization .sMypageConntetTitleBox{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 52px;
+}
+.sMypageConnectOrganization .btn{
+    flex: 1 1 150px;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 22px;
+}
+
+
