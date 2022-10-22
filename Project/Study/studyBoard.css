@@ -1,0 +1,199 @@
+body {
+    max-width: auto;
+    height: auto;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#box {
+    width: 800px;
+    height: 930px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border: 1px solid#FFF;
+    background-color: #f2f2f2;
+}
+
+#title {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    top: 20px;
+    left: 20px;
+}
+
+.profPic {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: inline-block;
+    top: 40px;
+    left: 20px;
+
+
+}
+
+.profName {
+    position: relative;
+    display: inline-block;
+    top: 17px;
+    left: 20px;
+}
+
+.time {
+    position: relative;
+    top: 17px;
+    left: 65px;
+    color: #b5b5b5;
+
+}
+
+.hr1 {
+    position: relative;
+    color: #EBEBEB;
+    width: 94%;
+    border: 1px solid #EBEBEB;
+    top: 20px;
+}
+
+.field {
+    position: relative;
+    top: 40px;
+    left: 20px;
+    color: #b5b5b5;
+    display: inline-block;
+}
+
+.answerfield {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    display: inline-block;
+}
+
+.location {
+    position: relative;
+    top: 45px;
+    left: 20px;
+    color: #b5b5b5;
+
+}
+
+.answerlocation {
+    position: relative;
+    top: 23px;
+    left: 67px;
+}
+
+.people {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    color: #b5b5b5;
+
+}
+
+.answerpeople {
+    position: relative;
+    top: 4px;
+    left: 67px;
+}
+
+.hr2 {
+    position: relative;
+    width: 94%;
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    top: 20px;
+}
+
+.comment {
+    position: relative;
+    font-weight: bold;
+    top: 225px;
+    left: 20px;
+    
+}
+.noComment{
+    position: relative;
+    text-align: center;
+    top: 320px;
+    font-size: 20px;
+}
+.hr5{
+    position: relative;
+    width: 94%;
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    top: 200px;
+
+}
+.hr3{
+    position: relative;
+    width: 94%;
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    top: 380px;
+    
+}
+.commentWrite{
+    position: relative;
+    font-weight: bold;
+    top: 380px;
+    left: 20px;
+
+}
+#cwrite{
+    position: relative;
+    top: 390px;
+    left: 20px;
+    resize: none;
+    outline-color: #f2f2f2;
+    border-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
+    border-radius: 10px;
+}
+
+.hr4{
+    position: relative;
+    width: 94%;
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    top: 335px;
+}
+.btn{
+    position: relative;
+    z-index: 1;
+    top: 333px;
+    left: 730px;
+    color: #FFF;
+    /* background-color: #3393f4; */
+    background-color: #a6a6a6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #3393f4;
+    color: #fff;
+}
+.about{
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+
+.report{
+    position: relative;
+    top: 20px;
+    left: 740px;
+    font-size: 10px;
+    
+}
+a{
+    color: #b5b5b5;
+    text-decoration: none;
+}
