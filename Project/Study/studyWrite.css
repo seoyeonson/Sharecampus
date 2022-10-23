@@ -1,6 +1,6 @@
 body {
-    max-width: 1552px;
-    height: 13601px;
+    max-width: auto;
+    height: auto;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -69,10 +69,15 @@ body {
 
 .count {
     margin-top: 10px;
+
+}
+#hopediv{
+    display: inline-block;
 }
 
 .text {
     width: 30px;
+    font-weight: normal;
 }
 
 .yes {
@@ -98,15 +103,17 @@ body {
     font-weight: bold;
 }
 
-.content {
+#cwrite {
+    font-size: 15px;
+    border: none;
+    background-color: #f2f2f2;
     margin-top: 10px;
     margin-left: 10px;
     color: #757575;
+    
 
 }
 .btn2{
-    margin-top: 100px;
-    margin-left: 420px;
     border: none;
     background-color: #3393f4;
     color: #FFF;
@@ -115,4 +122,34 @@ body {
     height: 50px;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+}
+textarea{
+    resize: none;
+    outline-color: #f2f2f2;
+    border-color: #f2f2f2;
+}
+#hope{
+    display: inline-block;
+}
+
+.btn3{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 70px;
+}
+#ctitle{
+    resize: none;
+    outline-color: #f2f2f2;
+    border-color: #f2f2f2;
+    background-color: #f2f2f2;
+}
+
+#ppls{
+    accent-color: #3393f4;
+}
+.mung{
+    font-weight: normal;
+    font-size: 15px;
 }
