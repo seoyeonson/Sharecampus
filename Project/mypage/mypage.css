@@ -314,6 +314,28 @@ border-radius: 50%;
     color: #333;
 }
 
+.content input[type='date']{
+    position: relative;
+    z-index: 2;
+    width: 140px;
+    height: 40px;
+    padding: 0 0px 0 10px;
+    border: 0;
+    border-radius: 0;
+    background: 0 0;
+    text-align: left;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    
+}
+li.sMypageInfoItem .content{
+    text-align: right;
+    padding-right: 0px;
+}
+
 .sMypage .sMypageInfoItem .btn{
     -webkit-box-flex: 0;
     flex: 0 0 150px;
@@ -601,9 +623,6 @@ h2.sMypageInnerTitle{
     font-weight: 400;
     color: #333;
 }
-.sMypageAccountItem.password{
-   
-}
 
 .sMypageConnectDocumnet{
     display: flex;
@@ -680,4 +699,21 @@ a:hover, a:active { text-decoration: none; }
 
 .board_list tbody tr:last-child{
     border-bottom: 2px solid #fff;
+}
+
+.btn .document_file{
+    width: 220px;
+}
+input::file-selector-button {
+    color: #222;
+    border: thin solid grey;
+    border-radius: 3px;
+    background-color:#fff;
+    
+}
+
+.Chan_Bitrh{
+    border: none;
+    height: 30px;
+    border-bottom: 1px solid #ebebeb;
 }

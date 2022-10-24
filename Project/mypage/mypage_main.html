@@ -5,45 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mypage.css">
-    <link rel="stylesheet" href="../main/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="mypage.js"></script>
     <title>마이페이지
-
     </title>
 </head>
 <div>
-    <!-- header start -->
-    <header class="Header">
-        <nav>
-            <div class="logo"><a href="../main/index.html">로고</a></div>
-            <ul class="Navbar">
-                <li><a href="#">커리큘럼</a></li>
-                <li><a href="../Study/studyMain.html">스터디</a></li>
-                <li><a href="../activity/activity.html">대외활동</a></li>
-                <li><a href="../community/community.html">커뮤니티</a></li>
-            </ul>
-            <div class="loginWrap">
-                <div class="searchWrap">
-                    <a class="searchIc" href="../search/search.html">
-                        <span>검색</span>
-                        <img src="https://letspl.me/assets/images/ic-search-white.png">
-                    </a>
-                </div>
-                <div class="joinAndLoginWrap">
-                    <a class="joinAndLogin join">가입</a>
-                    <a class="joinAndLogin login">로그인</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- header end -->
+    <!-- 배너 관리 시작 -->
     <div id="container">
+        <!-- 왼쪽 배너 시작 -->
         <div id="asideWrap" class="active">
             <div class="sideNav -first">
+                <!-- 왼쪽 첫번째 배너 시작-->
                 <ul>
                     <li class="first_Nav" style="background-color: #3393f4;">
                         <a href="mypage_main.html">
@@ -55,10 +31,11 @@
                         <span>회원 정보 변경</span>
                         </a>
                     </li>
-                   
                 </ul>
+                  <!-- 왼쪽 첫번째 배너 끝-->
             </div> 
             <div class="sideNav -second">
+                    <!-- 왼쪽 두번째 배너 시작-->
                 <ul>
                     <li class="first_Nav" style="background-color: #3393f4;">
                         <a href="mypage_writing.html">
@@ -81,54 +58,76 @@
                         </a>
                     </li>
                 </ul>
+                 <!-- 왼쪽 두번째 배너 끝-->
             </div>
         </div>
+        <!-- 오른쪽 배너 시작 -->
         <main id = "content" role="main" class="more" style="border:none">
             <section class="sMypage">
+                <!-- 오른쪽 배너 타이틀 -->
                 <h1 class="sMypageTitle" style="background-color: #3393f4; color: #fff; ">내 정보</h1>
+                <!-- 오른쪽 배너 타이틀 -->
                 <div>
                     <div class="sMypageProfile">
                         <h2 class="sMypageSubTitle">사용중인 프로필</h2>
                         <div class="sMypageProfileBox">
+                            <!-- 프로필 이미지 미리보기 설정 -->
                             <div class="profileList">
                                             <label for="attach">
                                                 <div></div>
                                             </label>
                                             <input type="file" id="attach" style="display:none;">
-                                  
                             </div>
+                            <!-- 프로필 이미지 미리보기 설정 끝-->
                         </div>  
+                        <!-- 프로필 이미지 누르기와 같은 버튼 -->
                         <div class="sMypageProfileBtnArea">
-                            
                             <a href="#" class="uButton -sizeS -confirm3">관리</a>
                         </div>
+                        <!-- 프로필 이미지 누르기와 같은 버튼 종료-->
                     </div>
                     <div class="sMypageInfo">
                         <h2 class="sMypageSubTitle">개인 정보</h2>
                         <div class="sMypageInfoCont">
                             <ul class="sMypageInfoList">
                                 <li class="sMypageInfoItem _birthdayTextPanel">
-                                    <h3 class="label">생일</h3> DB연결 생일 출력 잘못되어있을시 변경>
-                                    <div class="content"></div>
+                                    <h3 class="label">생일</h3>
+                                    <!-- 현재 DB에 있는 생일을 입력 -->
+                                    <div id="now_Birth">현재 DB상 생일</div>
+                                    <!-- 현재 DB에 있는 생일을 입력 끝 -->
+                                    <!-- 바꿀 생일 값을 설정 -->
+                                    <div class="content">
+                                        <input type="text" class="Chan_Bitrh">
+                                    </div> 
+                                    <!-- 바꿀 생일 값을 설정 -->
+                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
                                     <div class="btn">
                                         <a href="#" class="uButton -sizeS -confirm3 _btnChangeBirthday">변경</a>
                                     </div>
+                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
                                 </li>
+                                <!-- 성별 설정 라인 -->
                                 <li class="sMypageInfoItem _genderActionPanel">
                                     <h3 class="label">성별</h3>
+                                    <div id="now_Gender">현재 DB상 성별</div>
                                     <div class="content">
+                                         <!-- 바꿀 성별 값을 설정 -->
                                         <div class="uSelect">
-                                            <select class="_selectGender" title="성별 선택" style="width:118px;">
+                                            <select id="chan_Gender" class="_selectGender" title="성별 선택" style="width:118px;">
                                                 <option class="hide">성별</option>
                                                 <option value="male">남성</option>
                                                 <option value="female">여성</option>
                                             </select>
+                                             <!-- 바꿀 성별 값을 설정 -->
                                         </div>
                                     </div>
+                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
                                     <div class="btn">
                                         <a href="#" class="uButton -sizeS -confirm" id="_btnUpdateGender">확인</a>
                                     </div>
+                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
                                 </li>
+                                <!-- 성별 설정 라인 끝-->
                             </ul>
                         </div>
                     </div>
@@ -138,8 +137,10 @@
                             <div class="sMypageAccountItem _phoneTextPanel" style="display: none;"></div>
                             <div class="sMypageAccountItem _phoneActionPanel">
                                 <h3 class="label">휴대폰 번호</h3>
+                                <!-- 휴대폰 번호 선택 -->
                                 <div class="content">
                                     <div class="uSelect">
+                                        <!--국가번호 선택 -->
                                         <select class="_selectCountryCode" title="국가 번호 선택" style="width:101px">
                                             <option value="" class="hide">선택</option>
                                             
@@ -984,20 +985,30 @@
                                             </option>
                                             
                                         </select>
+                                        <!--국가번호 선택 -->
                                     </div>
+                                    <!-- 휴대폰 번호 값 직접 입력 -->
                                     <div class="uInput -simpleLine phoneNumber" style="width: 146px;">
                                         <label class="gSrOnly" for="hp_view905">휴대폰 번호</label>
                                         <input type="text" class="_inputPhoneNumber" id="hp_view905" placeholder="휴대폰 번호" value="">
                                     </div>
+                                    <!--휴대폰 번호 수집하는 경고 문구 출력 -->
                                     <button type="button" class="infoIcon -help" id="_btnPhoneHelpGuide" style="cursor: pointer;">
-                                        <img src="../mypage/icon/search.png" style="  background-color: transparent;">
-                                    </button></div>
+                                        <img src="/Project/mypage/icon/search.png" style="  background-color: transparent;">
+                                    </button>
+                                    <!--휴대폰 번호 수집하는 경고 문구 출력 -->
+                                </div>
+                                   <!-- 휴대폰 번호 선택  끝-->
                                 <div class="btn-phone">
                                     <a href="#" class="uButton -sizeS -confirm3" id = "_btnPhoneNumberChan">확인</a>
+                                    <!-- 취소시 입력한 데이터를 넣지 않음. 초기화-->
                                     <a href="#" class="uButton -sizeS -confirm3 _btnPhoneNumberDel">취소</a>
                                 </div>
-                            </div>
+                                <!-- 휴대폰 번호 입력한 데이터를 전송 -->
+                            </div> 
+                            <!-- 휴대폰 동의문구 출력-->
                             <p class="uTableList"><span class="cell label -desc -help">휴대폰 번호는 로그인을 위해 저장되며, 사이트 이용기간 동안 보관되는 것에 동의합니다.</span></p>
+                            <!-- 휴대폰 동의문구 출력-->
                             <div class="sMypageAccountItem _emailTextPanel" style="display: none;">
                                 <div class="label">이메일</div>
                                 <div class="content"></div>
@@ -1009,24 +1020,31 @@
                                 <label class="label" for="email_view630">이메일</label>
                                 <div class="content">
                                     <div class="uInput -simpleLine" style="width: 259px;">
-                                        <input type="text" id="email_view630" placeholder="이메일 주소 입력" value class="_inputEmail">
+                                        <!-- 이메일 주소 입력 -->
+                                        <input type="text" id="email_view630" placeholder="이메일 주소 입력" value="ㅇㅇ" class="_inputEmail">
+                                        <!-- 이메일 주소 입력 -->
                                     </div>
                                     <span class="infoIcon -error">
                                             <span class="gSrOnly">설정값 오류</span>
                                     </span>
                                 </div>
+                                <!-- 입력한 이메일 값을 DB로 전송-->
                                 <div class="btn">
                                     <button type="button" class="uButton -sizeS -confirm" id="_btnUpdateEmail">확인</button>
                                 </div>
+                                <!-- 입력한 이메일 값을 DB로 전송-->
                             </div>
                             <p class="uTableList">
+                                <!-- 이메일 경고문구 출력 -->
                                 <span class="cell label -desc">이메일 주소는 로그인을 위해 저장되며, 사이트 이용기간 동안 보관되는 것에 동의합니다.</span>
                             </p>
+                            <!-- 비밀번호 변경 창 -->
                             <div class="sMypageAccountItem password">
                                 <div class="label">비밀번호</div>
                                 <div class="content"></div>
                                 <div class="btn">
-                                <a href="#" class="uButton -sizeS -confirm3 _btnChangePassword">변경</a></div>
+                                    <!-- 변경 페이지로 이동 -->
+                                    <a href="#" class="uButton -sizeS -confirm3 _btnChangePassword" id="chan_password">변경</a></div>
                             </div>
                         </div>
                     </div>
@@ -1041,33 +1059,36 @@
                                 </dt>
                             </dl>
                         </div>
+                        <!-- 계정 연동 서비스 -->
+                        <!-- 첫번째 연동 -->
                         <div class="sMypageConnectCont">
-                            <div class="sMypageConnectItem">
                                 <div class="icon">
-                                    <span class="">
+                                    <span class="naver">
                                         <span class="gSrOnly">첫번째 연동</span>
                                     </span>
                                 </div>
-                                <img class="id_icon" src="../mypage/icon/icon_login_naver.png">
-                                <div class="content">아이디로 연결할 수 있습니다.</div>
+                                <img class="id_icon" src="/Project/mypage/icon/icon_login_naver.png">
+                                <div class="content off">아이디로 연결할 수 있습니다.</div>
                                 <div class="btn">
-                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite">연결하기</button>
+                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_navar">연결하기</a></button>
                                 </div>
                             </div>
+                            <!-- 두번째 연동 -->
                             <div class="sMypageConnectItem">
                                 <div class="icon">
-                                    <span class="">
+                                    <span class="kakao">
                                         <span class="gSrOnly">두번째 연동</span>
                                     </span>
                                 </div>
-                                <img class="id_icon" src="../mypage/icon/icon_login_kakao.png">
-                                <div class="content">아이디로 연결할 수 있습니다.</div>
+                                <img class="id_icon" src="/Project/mypage/icon/icon_login_kakao.png">
+                                <div class="content off">아이디로 연결할 수 있습니다.</div>
                                 <div class="btn">
-                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite">연결하기</button>
+                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_kakao">연결하기</a></button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- 소속 인증 서비스 -->
                     <div class="sMypageConnectOrganization">
                         <div class="sMypageConntetTitleBox">
                             <h2>소속 인증</h2>
@@ -1078,11 +1099,13 @@
                                     <span class="gSrOnly">첫번째 연동</span>
                                 </span>
                             </div>
-                            <img class="id_icon" src="../mypage/icon/engine-warning.png">
-                            <div class="content">증명서류를 제출할 수 있습니다.</div>
-                            
+                            <img class="id_icon" src="/Project/mypage/icon/engine-warning.png">
+                            <div class="content off">증명서류를 제출할 수 있습니다.</div>
                         </div>
                         <div class="btn">
+                            <!-- 보낼 파일을 저장함 -->
+                            <input type="file" class="document_file" >
+                            <!-- 해당 파일을 DB로 보냄-->
                             <button type="button" class="uButton -sizeS -confirm3 _btnConnectDocument">제출하기</button>
                         </div>
                     </div>
@@ -1091,93 +1114,7 @@
         </main>
         <div class="sideRight" style="display: none;"></div>
     </div>
-    <!-- footer start -->
-    <footer class="Footer">
-        <div class="footerContent">
-            <div class="top">
-                <div class="left">
-                    <div class="logoWrap">
-                        <a>로고</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <span>1:1 문의</span>
-                            <a href="" target="_blank">운영자 1:1 카카오챗</a>
-                        </li>
-                        <li>
-                            <span>오픈 챗</span>
-                            <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
-                        </li>
-                        <li>
-                            <span>제휴문의</span>
-                            <a href="" target="_blank">help@letspl.me</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li class="tit">바로가기</li>
-                        <li><a href="">렛플인</a></li>
-                        <li><a href="">프로젝트</a></li>
-                        <li><a href="">스토리</a></li>
-                        <li><a href="">라운지</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">이용안내</li>
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="../qna/qna.html">Q&A</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">관련사이트</li>
-                        <li><a href="">네이버 블로그</a></li>
-                        <li><a href="">티스토리 블로그</a></li>
-                        <li><a href="">인스타그램</a></li>
-                        <li><a href="">Velog</a></li>
-                        <li><a href="">Medium</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">서비스약관</li>
-                        <li><a href="">서비스 이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">전자금융거래약관</a></li>
-                        <li><a href="">결제/환불약관</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footerContentBottom">
-            <div class="wrap">
-                <div class="left">
-                    <ul>
-                        <li>어썸크루</li>
-                        <li>사업등록번호 : 619-39-00615</li>
-                        <li>대표 : 이승준</li>
-                        <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
-                        <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
-                        <li>TEL : 070.8064.3497</li>
-                        <li>개인정보담당자 : 이승준 help@letspl.me</li>
-                    </ul>
-                    <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
-                </div>
-                <div class="right">
-                    <div class="appLinkWrap">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <footer>
     </footer>
-    <!-- footer end -->
 </div>
 </html>
