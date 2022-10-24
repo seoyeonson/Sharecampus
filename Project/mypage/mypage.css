@@ -259,12 +259,13 @@ a{
     height: 100px;
 }
 
-label[for='attach'] div {
+label[for='input_image'] div {
     width: 120px;
     height: 120px;
-    background-image: url("img/no_image.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-image: url("img/no_image.jpg");
+    border-image: url("img/no_image.jpg");
     cursor: pointer;
     border: 0.5px solid #ccc;
     border-radius: 50%;
@@ -312,6 +313,28 @@ border-radius: 50%;
     width: 100px;
     font-size: 13px;
     color: #333;
+}
+
+.content input[type='date']{
+    position: relative;
+    z-index: 2;
+    width: 140px;
+    height: 40px;
+    padding: 0 0px 0 10px;
+    border: 0;
+    border-radius: 0;
+    background: 0 0;
+    text-align: left;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    
+}
+li.sMypageInfoItem .content{
+    text-align: right;
+    padding-right: 0px;
 }
 
 .sMypage .sMypageInfoItem .btn{
@@ -601,9 +624,6 @@ h2.sMypageInnerTitle{
     font-weight: 400;
     color: #333;
 }
-.sMypageAccountItem.password{
-   
-}
 
 .sMypageConnectDocumnet{
     display: flex;
@@ -680,4 +700,33 @@ a:hover, a:active { text-decoration: none; }
 
 .board_list tbody tr:last-child{
     border-bottom: 2px solid #fff;
+}
+
+.btn .document_file{
+    width: 220px;
+}
+input::file-selector-button {
+    color: #222;
+    border: thin solid grey;
+    border-radius: 3px;
+    background-color:#fff;
+    
+}
+
+.Chan_Bitrh{
+    border: none;
+    height: 30px;
+    border-bottom: 1px solid #ebebeb;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#password,#confirm_password{
+    text-align: center; 
+    border: none ;
+    padding: 2px;
+    padding-left: 20px;
+}
+.sMypageAccountItem.password fieldset{
+    border: none; 
+    padding-right: 70px;
+    display: flex;
 }
