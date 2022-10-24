@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="mypage.js"></script>
+
     <title>마이페이지
     </title>
 </head>
@@ -73,18 +72,18 @@
                         <div class="sMypageProfileBox">
                             <!-- 프로필 이미지 미리보기 설정 -->
                             <div class="profileList">
-                                            <label for="attach">
+                                            <label for="input_image">
                                                 <div></div>
                                             </label>
-                                            <input type="file" id="attach" style="display:none;">
+                                            <input type="file" id="input_image" style="display:none;">
                             </div>
                             <!-- 프로필 이미지 미리보기 설정 끝-->
                         </div>  
-                        <!-- 프로필 이미지 누르기와 같은 버튼 -->
+                        <!-- 프로필 이미지 눌러 해당 주소를 DB로 -->
                         <div class="sMypageProfileBtnArea">
                             <a href="#" class="uButton -sizeS -confirm3">관리</a>
                         </div>
-                        <!-- 프로필 이미지 누르기와 같은 버튼 종료-->
+                         <!-- 프로필 이미지 눌러 해당 주소를 DB로 -->
                     </div>
                     <div class="sMypageInfo">
                         <h2 class="sMypageSubTitle">개인 정보</h2>
@@ -97,7 +96,7 @@
                                     <!-- 현재 DB에 있는 생일을 입력 끝 -->
                                     <!-- 바꿀 생일 값을 설정 -->
                                     <div class="content">
-                                        <input type="text" class="Chan_Bitrh">
+                                        <input type="date" class="Chan_Bitrh" style="font-size: 13px;">
                                     </div> 
                                     <!-- 바꿀 생일 값을 설정 -->
                                     <!-- 바꿀 생일 값을 DB로 보낸다.-->
@@ -993,7 +992,7 @@
                                         <input type="text" class="_inputPhoneNumber" id="hp_view905" placeholder="휴대폰 번호" value="">
                                     </div>
                                     <!--휴대폰 번호 수집하는 경고 문구 출력 -->
-                                    <button type="button" class="infoIcon -help" id="_btnPhoneHelpGuide" style="cursor: pointer;">
+                                    <button type="button" class="infoIcon -help" id="" style="cursor: pointer;">
                                         <img src="/Project/mypage/icon/search.png" style="  background-color: transparent;">
                                     </button>
                                     <!--휴대폰 번호 수집하는 경고 문구 출력 -->
@@ -1021,7 +1020,7 @@
                                 <div class="content">
                                     <div class="uInput -simpleLine" style="width: 259px;">
                                         <!-- 이메일 주소 입력 -->
-                                        <input type="text" id="email_view630" placeholder="이메일 주소 입력" value="ㅇㅇ" class="_inputEmail">
+                                        <input type="text" id="email_view630" placeholder="이메일 주소 입력" value="" class="_inputEmail">
                                         <!-- 이메일 주소 입력 -->
                                     </div>
                                     <span class="infoIcon -error">
@@ -1030,7 +1029,7 @@
                                 </div>
                                 <!-- 입력한 이메일 값을 DB로 전송-->
                                 <div class="btn">
-                                    <button type="button" class="uButton -sizeS -confirm" id="_btnUpdateEmail">확인</button>
+                                    <button type="submit" class="uButton -sizeS -confirm" id="_btnUpdateEmail">확인</button>
                                 </div>
                                 <!-- 입력한 이메일 값을 DB로 전송-->
                             </div>
@@ -1039,12 +1038,15 @@
                                 <span class="cell label -desc">이메일 주소는 로그인을 위해 저장되며, 사이트 이용기간 동안 보관되는 것에 동의합니다.</span>
                             </p>
                             <!-- 비밀번호 변경 창 -->
-                            <div class="sMypageAccountItem password">
-                                <div class="label">비밀번호</div>
-                                <div class="content"></div>
-                                <div class="btn">
-                                    <!-- 변경 페이지로 이동 -->
-                                    <a href="#" class="uButton -sizeS -confirm3 _btnChangePassword" id="chan_password">변경</a></div>
+                            <div class="sMypageAccountItem password">비밀번호
+                                <fieldset>
+                                    <input type="password" placeholder="비밀번호 입력" id="password" required>
+                                    <input type="password" placeholder="비밀번호 재확인" id="confirm_password" required>
+                                    <button type="submit"  class="pure-button pure-button-primary " style="height: 26px; border: solid 1px #ccc; line-height: 26px; min-width: 41px;  padding: 0 10px; font-size: 12px; display: block; justify-content: space-between;">변경</button>
+                                </fieldset>
+                                <div style="padding-right: 30px; text-align: right;">
+                                </div>   
+                                 <!-- 변경 페이지로 이동 -->
                             </div>
                         </div>
                     </div>
@@ -1060,8 +1062,10 @@
                             </dl>
                         </div>
                         <!-- 계정 연동 서비스 -->
+                       
                         <!-- 첫번째 연동 -->
                         <div class="sMypageConnectCont">
+                            <div class="sMypageConnectItem">
                                 <div class="icon">
                                     <span class="naver">
                                         <span class="gSrOnly">첫번째 연동</span>
@@ -1070,11 +1074,11 @@
                                 <img class="id_icon" src="/Project/mypage/icon/icon_login_naver.png">
                                 <div class="content off">아이디로 연결할 수 있습니다.</div>
                                 <div class="btn">
-                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_navar">연결하기</a></button>
+                                    <button type="submit" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_navar">연결하기</a></button>
                                 </div>
                             </div>
                             <!-- 두번째 연동 -->
-                            <div class="sMypageConnectItem">
+                                <div class="sMypageConnectItem">
                                 <div class="icon">
                                     <span class="kakao">
                                         <span class="gSrOnly">두번째 연동</span>
@@ -1083,9 +1087,10 @@
                                 <img class="id_icon" src="/Project/mypage/icon/icon_login_kakao.png">
                                 <div class="content off">아이디로 연결할 수 있습니다.</div>
                                 <div class="btn">
-                                    <button type="button" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_kakao">연결하기</a></button>
+                                    <button type="submit" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_kakao">연결하기</a></button>
                                 </div>
-                            </div>
+                            </div> 
+                        </div>
                         </div>
                     </div>
                     <!-- 소속 인증 서비스 -->
@@ -1106,7 +1111,7 @@
                             <!-- 보낼 파일을 저장함 -->
                             <input type="file" class="document_file" >
                             <!-- 해당 파일을 DB로 보냄-->
-                            <button type="button" class="uButton -sizeS -confirm3 _btnConnectDocument">제출하기</button>
+                            <button type="submit" class="uButton -sizeS -confirm3 _btnConnectDocument">제출하기</button>
                         </div>
                     </div>
                 </div>
@@ -1117,4 +1122,6 @@
     <footer>
     </footer>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="mypage.js"></script>
 </html>
