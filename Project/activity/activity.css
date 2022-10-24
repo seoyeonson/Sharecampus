@@ -11453,6 +11453,7 @@ div.form ul li .textArea textarea {
   display: -moz-box;
   display: flex;
   margin-bottom: 20px;
+  width: auto;
 }
 .searchOption .smSelect:last-child,
 .searchOption .smSelect:nth-child(4) {
@@ -35859,4 +35860,29 @@ a.note-dropdown-item:hover {
 .help-list-item label {
   margin-bottom: 5px;
   display: inline-block;
+}
+
+.activityNew {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  float: right;
+  position: relative;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.activityNewbox {
+  padding: 6px 10px;
+  background-color: #3393f4;
+  border-radius: 2px;
+  margin-right: 10px;
+  float: right;
+}
+
+.activityNew span {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'noto Sans KR', sans-serif;
 }
