@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대외활동 등록</title>
+</head>
+<link rel="stylesheet" href="../main/main.css">
+<link rel="stylesheet" href="activity.css">
+<link rel="stylesheet" href="activity_new.css">
+<script type="text/javascript" src="activity_new.js"></script>
+<body>
+
+    <body>
+
+        <!-- header start -->
+        <header class="Header">
+            <nav>
+                <div class="logo"><a href="../main/index.html">로고</a></div>
+                <ul class="Navbar">
+                    <li><a href="#">커리큘럼</a></li>
+                    <li><a href="../Study/studyMain.html">스터디</a></li>
+                    <li><a href="../activity/activity.html">대외활동</a></li>
+                    <li><a href="../community/community.html">커뮤니티</a></li>
+                </ul>
+                <div class="loginWrap">
+                    <div class="searchWrap">
+                        <a class="searchIc" href="../search/search.html">
+                            <span>검색</span>
+                            <img src="https://letspl.me/assets/images/ic-search-white.png">
+                        </a>
+                    </div>
+                    <div class="joinAndLoginWrap">
+                        <a class="joinAndLogin join">가입</a>
+                        <a class="joinAndLogin login">로그인</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- header end -->
+
+
+        <form id="container">
+            <div class="section">
+                <h1>대외활동 게시 요청</h1>
+                <p class="description">대외활동 게시는 <strong>무료로 진행</strong>되며,<br>담당자의 검토 및 승인 절차를 걸쳐 48시간 이내 게시됩니다.</p>
+            </div>
+            <div class="section">
+                <h2>담당자 정보</h2>
+                <div class="manager" data-managerfor="first">
+                    <p class="input medium"><input type="email" name="manager_email" placeholder="이메일" maxlength="100"
+                            autocomplete="off"></p>
+                    <p class="input medium"><input type="password" name="manager_password" placeholder="비밀번호"></p>
+                    <p class="input medium"><input type="text" name="manager_name" placeholder="이름" maxlength="10"
+                            autocomplete="off"></p>
+                    <p class="input medium"><input type="number" name="manager_phone" placeholder="연락처 (- 없이 숫자만)"
+                            autocomplete="off"></p>
+                    <p class="input medium"><input type="text" name="manager_company" placeholder="소속 회사" maxlength="40"
+                            autocomplete="off"></p>
+                    <p class="agreement">게시물 관리, 게시 처리 안내, 유료 광고 게재 안내 등을 위해 담당자 이메일, 이름, 연락처, 소속을 수집합니다. 수집한 개인정보는 2년
+                        이후 즉시 파기됩니다.
+                        (게시 요청 또는 게시물 관리 계정 접속 기준)</p>
+                    <label class="agreement"><input type="checkbox" name="agree">위 내용에 동의합니다.</label>
+                </div>
+                <div class="manager" data-managerfor="again" style="display: none;">
+                    <p class="input medium"><input type="email" name="manager_again_email" placeholder="이메일"
+                            maxlength="100"></p>
+                    <p class="input medium"><input type="password" name="manager_again_password" placeholder="비밀번호"></p>
+                    <p class="button medium"><input type="button" name="manager_again_button" value="이메일 및 비밀번호 확인"></p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>활동 개요</h2>
+                <p class="caution">* 별표 표시는 필수 항목입니다.</p>
+                <p class="input"><input type="text" name="title" placeholder="제목 *" maxlength="40" autocomplete="off">
+                </p>
+                <p class="input"><input type="text" name="website" placeholder="웹사이트 (http:// 포함)" autocomplete="off">
+                </p>
+                <h3>분야 *</h3>
+                <div class="group category" data-targetfor="1">
+                    <label class="checkbox"><input type="checkbox" name="category" value="101">기획/아이디어</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="102">브랜드/네이밍</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="103">광고/마케팅</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="104">사진/영상/UCC</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="105">디자인</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="106">예체능</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="107">문학/수기/시나리오</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="108">IT/소프트웨어/게임</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="109">기타</label>
+                </div>
+                <div class="group category" data-targetfor="2" style="display: none;">
+                    <label class="checkbox"><input type="checkbox" name="category" value="201">국내봉사</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="202">해외봉사/탐방</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="203">서포터즈</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="204">기자단</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="205">마케터</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="206">강연/행사</label>
+                    <label class="checkbox"><input type="checkbox" name="category" value="207">기타</label>
+                </div>
+                <h3>접수 기간 *</h3>
+                <p class="input small"><input type="date" name="start_date" autocomplete="off"
+                        class="date"><span>부터</span></p>
+                <p class="input small"><input type="date" name="end_date" autocomplete="off"
+                        class="date"><span>까지</span></p>
+            </div>
+            <div class="section">
+                <h2>기관 정보</h2>
+                <p class="input medium"><input type="text" name="company" placeholder="주최 기관명 *" maxlength="40"
+                        autocomplete="off"></p>
+                <h3>주최 구분 *</h3>
+                <div class="group">
+                    <label class="checkbox"><input type="radio" name="company_type" value="1" checked>중앙정부/기관</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="2">지자체/기관</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="3">학교/재단/협회</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="4">비영리단체</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="5">공기업</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="6">일반기업</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="7">신문/방송/언론</label>
+                    <label class="checkbox"><input type="radio" name="company_type" value="8">기타</label>
+                </div>
+                <p class="input medium"><input type="text" name="company2" placeholder="주관 기관명" maxlength="40"
+                        autocomplete="off">
+                </p>
+                <p class="input medium"><input type="text" name="company3" placeholder="후원/협찬 기관명" maxlength="40"
+                        autocomplete="off"></p>
+            </div>
+            <div class="section">
+                <h2>시상 정보</h2>
+                <p class="input medium"><input type="number" name="prize_top" placeholder="1등 시상금 (원)"
+                        autocomplete="off"></p>
+                <h3>총 시상금 규모</h3>
+                <div class="group">
+                    <label class="checkbox"><input type="radio" name="prize_total" value="1">5천만원이상</label>
+                    <label class="checkbox"><input type="radio" name="prize_total" value="2">5천만원~3천만원</label>
+                    <label class="checkbox"><input type="radio" name="prize_total" value="3">3천만원~1천만원</label>
+                    <label class="checkbox"><input type="radio" name="prize_total" value="4">1천만원이하</label>
+                    <label class="checkbox"><input type="radio" name="prize_total" value="0" checked>없음</label>
+                </div>
+                <h3>특전</h3>
+                <div class="group">
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="1">입사가산점</label>
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="2">인턴채용</label>
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="3">정규직채용</label>
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="4">해외연수</label>
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="5">작품전시</label>
+                    <label class="checkbox"><input type="checkbox" name="prize_benefit" value="6">기타</label>
+                </div>
+            </div>
+            <div class="section">
+                <h2>상세 내용</h2>
+                <p class="input"><textarea name="description"
+                        placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>이미지</h2>
+                <ul class="description">
+                    <li>본문 : 게시물 내에 노출 / 1080px 권장</li>
+                    <li>썸네일 : 목록에 노출 / 480x684px 권장 / 없을 시 '본문' 이미지로 대체</li>
+                </ul>
+                <p class="input medium">
+                    <input type="text" name="attach_filename" placeholder="본문 *" class="attachtext" readonly>
+                    <input type="file" name="attach" class="attachfile">
+                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton">
+                </p>
+                <p class="input medium thumbnail">
+                    <input type="text" name="attach_filename" placeholder="썸네일" class="attachtext" readonly>
+                    <input type="file" name="attach" class="attachfile">
+                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton">
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>유의사항</h2>
+                <ul class="description">
+                    <li>공모전 및 대외활동 정보만 게시할 수 있습니다. 동아리, 스터디, 구인 등의 정보는 다른 커뮤니티를 이용해주세요.</li>
+                    <li>대외활동의 경우 봉사활동, 기자단, 서포터즈, 홍보대사, 마케터, 강연에 해당하는 대외활동만 게시할 수 있습니다.</li>
+                    <li>다음과 같은 공모전·대외활동은 거절될 수 있습니다.</li>
+                    <ul>
+                        <li>서비스 홍보를 요구하는 공모전·대외활동 (회원가입, 설치, 작성, 공유 등)</li>
+                        <li>서비스 이용을 요구하는 공모전·대외활동 (콘텐츠 제작, 멘토링, 운영관리 등)</li>
+                        <li>병의원 관련사의 공모전·대외활동</li>
+                        <li>기관/정치인/정당/종교/시민단체와 직간접적으로 연관되거나, 관련한 온오프라인 활동을 하는 공모전·대외활동</li>
+                        <li>금융/보험 관련사의 영업/실무와 연관된 공모전·대외활동</li>
+                        <li>교육위탁/국비지원/국가지원사업과 연관된 공모전·대외활동</li>
+                        <li>인력 모집을 위한 구인/구직 목적의 공모전·대외활동</li>
+                        <li>비용이 발생하는 공모전·대외활동 (참가비, 후원비 등)</li>
+                        <li>활동참여의 대가 및 혜택이 불분명한 공모전·대외활동</li>
+                        <li>총 상금이 100만원 이하이거나, 상금에 준하는 증권이 아닌 현물을 제공하는 공모전·대외활동</li>
+                        <li>특정 대학교만 참여할 수 있는 공모전·대외활동</li>
+                    </ul>
+                    <li>다음과 같은 게시요청은 게시되지 않습니다.</li>
+                    <ul>
+                        <li>동일한 정보가 이미 게시되어 있을 경우</li>
+                        <li>운영 주체, 모집 기간, 활동 내용 등 상세 정보가 명확하지 않거나 불분명한 경우</li>
+                        <li>그 외 <a href="/page/rules">커뮤니티 이용규칙</a>에 어긋나거나, 커뮤니티 성격에 부적합하다고 판단되는 경우</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="submit"><input type="submit" value="게시 요청하기"></div>
+        </form>
+
+
+        <!-- footer start -->
+        <footer class="Footer">
+            <div class="footerContent">
+                <div class="top">
+                    <div class="left">
+                        <div class="logoWrap">
+                            <a>로고</a>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1:1 문의</span>
+                                <a href="" target="_blank">운영자 1:1 카카오챗</a>
+                            </li>
+                            <li>
+                                <span>오픈 챗</span>
+                                <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
+                            </li>
+                            <li>
+                                <span>제휴문의</span>
+                                <a href="" target="_blank">help@letspl.me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="tit">바로가기</li>
+                            <li><a href="">렛플인</a></li>
+                            <li><a href="">프로젝트</a></li>
+                            <li><a href="">스토리</a></li>
+                            <li><a href="">라운지</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">이용안내</li>
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="../qna/qna.html">Q&A</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">관련사이트</li>
+                            <li><a href="">네이버 블로그</a></li>
+                            <li><a href="">티스토리 블로그</a></li>
+                            <li><a href="">인스타그램</a></li>
+                            <li><a href="">Velog</a></li>
+                            <li><a href="">Medium</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">서비스약관</li>
+                            <li><a href="">서비스 이용약관</a></li>
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">전자금융거래약관</a></li>
+                            <li><a href="">결제/환불약관</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContentBottom">
+                <div class="wrap">
+                    <div class="left">
+                        <ul>
+                            <li>어썸크루</li>
+                            <li>사업등록번호 : 619-39-00615</li>
+                            <li>대표 : 이승준</li>
+                            <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
+                            <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
+                            <li>TEL : 070.8064.3497</li>
+                            <li>개인정보담당자 : 이승준 help@letspl.me</li>
+                        </ul>
+                        <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
+                    </div>
+                    <div class="right">
+                        <div class="appLinkWrap">
+                            <ul>
+                                <li>
+                                    <a href="" target="_blank">
+                                        <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg"
+                                            alt="렛플 안드로이드앱 다운로드">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
+                                        <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg"
+                                            alt="렛플 아이폰앱 다운로드">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </body>
+</body>
+
+</html>
