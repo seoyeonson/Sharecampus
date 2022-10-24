@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-246180959-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-246180959-1');
-</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시글 관리</title>
+    <title>신고글 관리</title>
 
-    <!--css 링크 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="level.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="wrapper">
-        <div class="sidebar">
+        <div class="sidebar" id="menu">
             <!-- 로고(image) -->
             <div class="logo">
                 <img src="..">
@@ -38,54 +28,30 @@
                     <a href="managerHome.html" class="menu"><img src="images/home.png">관리자 홈</a>
                 </li>
                 <li>
-                    <label for="check-btn1" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
-                    <img src="images/user.png" style="height: 30px; padding: 0px 10px 7px 0px;">회원 관리
-                    <img src="images/plus.png" style="height: 40px; margin-left: 130px;">
-                    </label>
-                    <input id="check-btn1" type="checkbox">
-                    <nav id="submenu1" class="submenu">
-                        <ul>
-                            <li><a href="blackList.html">블랙리스트</a></li>
-                            <li><a href="memberConfirm.html">회원 인증 관리</a></li>
-                            <li><a href="memberPoint.html">회원 포인트 관리</a></li>
-                            <li><a href="memberBadge.html">회원 뱃지 관리</a></li>
-                        </ul>
-                    </nav>
+                    <a><img src="images/user.png">회원 관리<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
+                    <ul>
+                        <li><a href="blackList.html">블랙리스트</a></li>
+                        <li><a href="memberConfirm.html">회원 인증 관리</a></li>
+                        <li><a href="memberBadge.html">회원 뱃지 관리</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <label for="check-btn2" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
-                        <img src="images/apps.png" style="height: 30px; padding: 0px 10px 7px 0px;">콘텐츠 관리
-                        <img src="images/plus.png" style="height: 40px; margin-left: 113px;">
-                        </label>
-                        <input id="check-btn2" type="checkbox">
-                        <nav id="submenu2" class="submenu">
+                        <a><img src="images/apps.png">콘텐츠 관리<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
                             <ul>
                                 <li><a href="question.html">문의글 관리</a></li>
-                                <li><a href="comment.html">댓글 관리</a></li>
-                                <li><a href="post.html">게시글 관리</a></li>
+                                <li><a href="post.html">신고글 관리</a></li>
+                                <li><a href="activityPost.html">공고글 관리</a></li>
                             </ul>
-                    </nav>
                 </li>
                 <li>
-                    <label for="check-btn3" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
-                        <img src="images/chart.png" style="height: 30px; padding: 0px 10px 7px 0px;">통계
-                        <img src="images/plus.png" style="height: 40px; margin-left: 167px;">
-                        </label>
-                        <input id="check-btn3" type="checkbox">
-                        <nav id="submenu3" class="submenu">
+                        <a><img src="images/chart.png">통계<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
                     <ul>
                         <li><a href="settingTerm.html">기간별 분석</a></li>
                         <li><a href="settingVisitor.html">방문자 통계</a></li>
                     </ul>
-                    </nav>
                 </li>
                 <li>
-                    <label for="check-btn4" class="plusmenu" style="color: #3393f4; font-size: 20px; font-weight: bold; padding: 10px 19.5px;">
-                        <img src="images/settings.png" style="height: 30px; padding: 0px 10px 7px 0px;">환경 설정
-                        <img src="images/plus.png" style="height: 40px; margin-left: 130px;">
-                        </label>
-                        <input id="check-btn4" type="checkbox">
-                        <nav id="submenu4" class="submenu">
+                        <a><img src="images/settings.png">환경 설정<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
                     <ul>
                         <li><a href="settingBanner.html">배너 관리</a></li>
                     </ul>
@@ -95,7 +61,7 @@
     </div>
 
     <div class="contents">
-        <h3>게시글 관리</h3>
+        <h3>신고글 관리</h3>
         <div class="searchBox">
               <input class="search-txt" type="text" placeholder="검색">
               <button class="search-btn" type="submit" onclick="search()">
@@ -106,7 +72,7 @@
           <table class="post">
             <thead>
             <tr>
-                <th>게시판명</th><th>제목</th><th>회원명</th><th>작성일</th>
+                <th>게시판명</th><th>제목</th><th>회원명</th><th>작성일</th><th>신고 횟수</th>
             </tr>
             </thead>
             <tbody>
@@ -115,17 +81,13 @@
                 <td>스터디 하실 분</td>
                 <td>000</td>
                 <td>0000-00-00</td>
+                <td>3회</td>
               </tr>
               <tr>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td></td>
               </tr>
               <tr>
@@ -133,8 +95,17 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
               </tr>
               <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -142,10 +113,13 @@
               </tr>
             </tbody>
           </table>
+
+          <div class="reportLevel">
+            <span class="title">신고글 확인 기준<hr></span>
+            <span class="in">신고 0회 이상<br></span>
+          </div>
     </div>
 
-    <!-- bundle-->
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 <script>
@@ -155,6 +129,4 @@
 </script>
 
 <script src="manager.js"></script>
-<!-- <script src="analytics.js"></script> -->
-<!-- <script src="jquery-3.6.1.min.js"></script> -->
 </html>
