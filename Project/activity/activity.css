@@ -324,23 +324,8 @@ ul {
   width: 50px;
   height: 50px;
 }
-.Header {
-  position: sticky;
-  background-color: #fff;
-  top: 0;
-  -webkit-box-shadow: 0 3px 27px 0 rgba(0, 0, 0, 0.02);
-  -moz-box-shadow: 0 3px 27px 0 rgba(0, 0, 0, 0.02);
-  box-shadow: 0 3px 27px 0 rgba(0, 0, 0, 0.02);
-  z-index: 9995;
-}
-.Header,
-.loginWrap {
-  display: -moz-box;
-  display: flex;
-  -moz-box-orient: horizontal;
-  -moz-box-direction: normal;
-  flex-direction: row;
-}
+
+
 .loginWrap {
   -moz-box-pack: end;
   justify-content: flex-end;
@@ -1064,7 +1049,7 @@ nav .logo {
 .Header .hoverNav ul li {
   margin-right: 40px;
 }
-.Footer {
+/* .Footer {
   border-top: 1px solid #f0f0f0;
   background-color: #fff;
   z-index: 99;
@@ -1250,7 +1235,7 @@ nav .logo {
 .Footer .footerContentBottom .wrap .right .appLinkWrap ul li a img {
   width: 100%;
   object-fit: contain;
-}
+} */
 .modalWrapOpen .commonModal {
   padding: 60px 20px 40px;
   background-color: #fff;
@@ -10624,7 +10609,7 @@ div.form ul li .textArea textarea {
   }
 }
 .commonContentViewHeader {
-  padding: 40px 10px 24px;
+  padding: 40px 10px 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -35863,26 +35848,34 @@ a.note-dropdown-item:hover {
 }
 
 .activityNew {
+  height: 40px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
   float: right;
   position: relative;
   justify-content: flex-end;
   margin-right: 5px;
+  overflow: visible;
 }
 
-.activityNewbox {
+.activityNew img {
+  overflow: visible;
+  border: transparent;
+  z-index: 1;
+}
+
+/* .activityNewbox {
   padding: 6px 10px;
   background-color: #3393f4;
   border-radius: 2px;
   margin-right: 10px;
   float: right;
-}
+} */
 
-.activityNew span {
+/* .activityNew span {
   font-size: 18px;
   color: #fff;
   font-family: 'noto Sans KR', sans-serif;
-}
+} */

@@ -12344,7 +12344,7 @@ body::backdrop {
 
 @media (min-width: 960px) {
   .MuiContainer-root {
-    padding-left: 24px;
+    padding-left: 70px;
     padding-right: 24px;
   }
 }
@@ -14503,7 +14503,7 @@ label + .MuiInput-formControl {
   color: #fff;
 }
 
-.jss125 {
+.imgzoom {
   top: 8px;
   right: 8px;
   width: 36px;
@@ -15297,6 +15297,7 @@ label + .MuiInput-formControl {
 .jss193 {
   border: 1px solid #e6ecf0;
   margin: 2rem 0;
+  margin-right: 50px;
   display: flex;
 }
 
@@ -15459,7 +15460,7 @@ label + .MuiInput-formControl {
 }
 
 .jss182 {
-  padding: 1.6rem;
+  padding: 0.6rem;
   flex-grow: 1;
   flex-basis: 0;
   flex-shrink: 1;
@@ -23828,7 +23829,7 @@ label + .MuiInput-formControl {
 }
 
 .jss406 {
-  padding: 1rem;
+  padding-right: 50px;
   flex-grow: 1;
   flex-basis: 0;
   flex-shrink: 1;
