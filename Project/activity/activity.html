@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대외활동</title>
 </head>
-<link rel="stylesheet" href="activity.css">
 <link rel="stylesheet" href="../main/main.css">
-
+<link rel="stylesheet" href="activity.css">
+<script src="activity.js"></script>
 <body>
     <!-- header start -->
     <header class="Header">
@@ -98,9 +98,14 @@
                         <option value="0003">6개월~1년</option>
                         <option value="0004">1년 이상</option>
                     </select>
+                    <div class="activityNew">
+                        <a class="activityNewbox" href="activity_new.html">
+                            <span>공고 등록</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="projectGridView">
-                    <div class="projectGridWrap">
+                    <div class="projectGridWrap" onclick="newPage()">
                         <div class="projectTopInfo">
                             <div class="top">
                                 <div class="badgeWrap">
@@ -140,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projectGridWrap">
+                    <div class="projectGridWrap" onclick="location.href='activity_info.html';">
                         <div class="projectTopInfo">
                             <div class="top">
                                 <div class="badgeWrap">
@@ -583,8 +588,6 @@
                 <div class="projectView projectNewsWrap"></div>
                 <div class="projectBlueBg"></div>
         </section>
-        <div class="Footer"></div>
-    </div>
     <!-- footer start -->
     <footer class="Footer">
         <div class="footerContent">

@@ -163,23 +163,6 @@ body {
     border: 1px solid #EBEBEB;
     top: 335px;
 }
-.btn{
-    position: relative;
-    z-index: 1;
-    top: 333px;
-    left: 730px;
-    color: #FFF;
-    /* background-color: #3393f4; */
-    background-color: #a6a6a6;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-}
-.btn:hover{
-    background-color: #3393f4;
-    color: #fff;
-}
 .about{
     position: relative;
     top: 15px;
@@ -196,4 +179,21 @@ body {
 a{
     color: #b5b5b5;
     text-decoration: none;
+}
+.btn{
+    position: relative;
+    z-index: 1;
+    top: 333px;
+    left: 730px;
+    color: #FFF;
+    /* background-color: #3393f4; */
+    background-color: #a6a6a6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #3393f4;
+    color: #fff;
 }
