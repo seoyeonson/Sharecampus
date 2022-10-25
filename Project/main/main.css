@@ -8,9 +8,9 @@ body {
     background-color: #fff;
 }
 
-html {
+/* html {
     font-size: 16px;
-}
+} */
 
 blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
     margin: 0;
