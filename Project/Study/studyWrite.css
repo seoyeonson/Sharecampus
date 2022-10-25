@@ -1,45 +1,80 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
 body {
     max-width: auto;
     height: auto;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
 }
-#all{
+
+#all {
     position: relative;
     width: 800px;
     height: auto;
     margin: 0 auto;
 }
 
+#afthd2 {
+    position: relative;
+    height: 1200px;
+    background-color: #f2f2f2;
+}
+
 .choosebox {
     position: relative;
-    top: 30px;
-    width: 800px;
+    top: 16px;
+    width: 720px;
     height: 320px;
     margin: 0 auto;
     border: 1px solid#FFF;
-    background-color: #f2f2f2;
+    background-color: #FFF;
 }
 
 .writebox {
     position: relative;
-    top: 50px;
-    width: 800px;
+    top: 26px;
+    width: 720px;
     height: 600px;
     margin: 0 auto;
     border: 1px solid#FFF;
-    background-color: #f2f2f2;
+    background-color: #FFF;
 }
-.btn3{
+
+.btn3 {
     position: relative;
     z-index: 1;
     text-align: center;
     margin-top: 70px;
 }
 
+#cwrite {
+    position: relative;
+    font-size: 15px;
+    border: none;
+    background-color: #FFF;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #757575;
+
+
+}
+
+.btn2 {
+    position: relative;
+    border: none;
+    background-color: #3393f4;
+    color: #FFF;
+    border-radius: 30px;
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 .who {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
     margin-left: 10px;
@@ -48,33 +83,63 @@ body {
 }
 
 .hr {
+    position: relative;
+    width: 100%;
     color: #EBEBEB;
     border: 1px solid #EBEBEB;
 }
 
 .field {
-
-    margin-left: 10px;
+    position: relative;
     font-size: 20px;
     font-weight: bold;
 }
+.field2 {
+    position: relative;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.hr1 {
+    position: relative;
+    width: 100%;
+    color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+}
 
 .fieldchoose {
+    position: relative;
+    left: 10px;
     color: #757575;
-    background-color: #f2f2f2;
+    background-color: #fFF;
+    font-size: 15px;
     border-style: none;
     margin-left: -2px;
+}
+.location2{
+    position: relative;
+    left: 10px;
 }
 
 .locationchoose {
+    position: relative;
+    left: 10px;
     width: 90px;
     color: #757575;
-    background-color: #f2f2f2;
+    background-color: #fFF;
+    font-size: 15px;
     border-style: none;
     margin-left: -2px;
 }
+.hopeppl{
+    position: relative;
+    left: 10px;
+}
 
 .wish {
+    position: relative;
+    top: -15px;
+    left: 10px;
     font-weight: normal;
     font-size: 15px;
 }
@@ -83,17 +148,74 @@ body {
     margin-top: 10px;
 
 }
-#hopediv{
+
+#hopediv {
     display: inline-block;
 }
 
 .text1 {
+    position: relative;
+    top: -15px;
+    left: 5px;
     width: 30px;
+    height: 20px;
+    border-color: black;
+    background-color: #f2f2f2;
+    border-radius: 5px;
     font-weight: normal;
+    font-size: 16px;
+    text-align: center;
 }
+
 .text2 {
+    position: relative;
+    top: -15px;
+    left: 5px;
     width: 30px;
+    height: 20px;
+    border-color: black;
+    background-color: #f2f2f2;
+    border-radius: 5px;
     font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.mung1 {
+    position: relative;
+    left: 5px;
+    font-weight: normal;
+    font-size: 20px;
+    top: -13px;
+}
+
+.mung2 {
+    position: relative;
+    left: 5px;
+    font-weight: normal;
+    font-size: 20px;
+    top: -13px;
+}
+
+.slash {
+    position: relative;
+    top: -13px;
+}
+
+#ppls {
+    position: relative;
+    left: 5px;
+    top: -15px;
+    accent-color: #3393f4;
+}
+
+.ckb {
+    position: relative;
+    top: -15px;
+    left: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 6px;
 }
 
 .yes {
@@ -105,12 +227,7 @@ body {
     margin-top: 8px;
 }
 
-.ckb {
-    position: absolute;
-    font-size: 15px;
-    font-weight: normal;
-    margin-top: 6px;
-}
+
 
 .notetitle {
     margin-top: 10px;
@@ -119,48 +236,22 @@ body {
     font-weight: bold;
 }
 
-#cwrite {
-    font-size: 15px;
-    border: none;
-    background-color: #f2f2f2;
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #757575;
-    
 
-}
-.btn2{
-    border: none;
-    background-color: #3393f4;
-    color: #FFF;
-    border-radius: 30px;
-    width: 700px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-textarea{
+
+textarea {
     resize: none;
     outline-color: #f2f2f2;
     border-color: #f2f2f2;
 }
-#hope{
+
+#hope {
     display: inline-block;
 }
 
 
-#ctitle{
+#ctitle {
     resize: none;
-    outline-color: #f2f2f2;
-    border-color: #f2f2f2;
-    background-color: #f2f2f2;
-}
-
-#ppls{
-    accent-color: #3393f4;
-}
-.mung{
-    font-weight: normal;
-    font-size: 15px;
+    outline-color: #fFF;
+    border-color: #fFF;
+    background-color: #fFF;
 }
