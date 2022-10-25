@@ -118,3 +118,14 @@ function search(){
     alert('블랙리스트에 해당 회원 없음');
   }
 }
+
+//신고글 검색
+function repost_search(){
+  const memberName = document.getElementsById('memberName');
+  const inputValue = document.getElementById('search-txt');
+  if(memberName.innerText == inputValue.value) {
+    alert('해당회원 신고글 존재');
+  }else {
+    alert('해당 회원 신고글 없음');
+  }
+}
