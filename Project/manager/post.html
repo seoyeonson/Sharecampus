@@ -63,8 +63,8 @@
     <div class="contents">
         <h3>신고글 관리</h3>
         <div class="searchBox">
-              <input class="search-txt" type="text" placeholder="검색">
-              <button class="search-btn" type="submit" onclick="search()">
+              <input id="search-txt" type="text" placeholder="검색">
+              <button class="search-btn" type="submit" onclick="repost_search()">
                 <i class="fas fa-search"></i>
               </button>
           </div>
@@ -79,7 +79,7 @@
               <tr onclick="window.open('http://127.0.0.1:5500/project01/test.html')">
                 <td>스터디</td>
                 <td>스터디 하실 분</td>
-                <td>000</td>
+                <td id="memberName">000</td>
                 <td>0000-00-00</td>
                 <td>3회</td>
               </tr>
