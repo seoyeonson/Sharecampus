@@ -107,3 +107,14 @@ function checkSelectAllBadge()  {
     alert('승인하시겠습니까?');
   }
 }
+
+//blackList 테이블에서 회원 검색
+function search(){
+  const memberName = document.getElementsByClassName('td2');
+  const inputValue = document.getElementById('search-txt');
+  if(memberName.innerText == inputValue.value) {
+    alert('블랙리스트에 해당 회원 존재');
+  }else {
+    alert('블랙리스트에 해당 회원 없음');
+  }
+}
