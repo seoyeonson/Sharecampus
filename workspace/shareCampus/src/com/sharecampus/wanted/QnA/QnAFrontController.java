@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.study;
+package com.sharecampus.wanted.qna;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.wanted.Result;
 
-public class StudyFrontController extends HttpServlet{
+public class QnAFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	super.doGet(req, resp);
@@ -22,16 +22,8 @@ public class StudyFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/study/list.su")) {
-//		스터디 목록들을 DB에서 가져오는 것
-		}else if(target.equals("/study/listDs.su")) {
-//		스터디 상세글을 DB에서 조회
-		}else if(target.equals("/study/listDi.su")) {
-//		스터디 상세글을 DB에 추가
-		}else if(target.equals("/study/listDd.su")) {
-//		스터디 상세글을 DB에서 삭제
-		}else if(target.equals("/study/listDu.su")) {
-//		스터디 상세글을 DB에서 수정
+		if(target.equals("/qnapage/join.qa")) {
+//			질문 게시판으로 이동
 		}
 		
 		if(result != null) {
