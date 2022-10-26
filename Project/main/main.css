@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
+:root {
+    --main: #3393f4;
+    --white: #fff;
+}
+
 * {
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -8,9 +13,9 @@ body {
     background-color: #fff;
 }
 
-/* html {
+html {
     font-size: 16px;
-} */
+}
 
 blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
     margin: 0;
@@ -324,6 +329,10 @@ a.joinAndLogin:hover{
     padding-right: 4px;
     position: relative;
     bottom: 1.5px;
+}
+
+.Footer .footerContentBottom .wrap .left ul li:last-child:after {
+    content: "";
 }
 
 .Footer .footerContentBottom .wrap .left p {
