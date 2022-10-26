@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.community;
+package com.sharecampus.wanted.community;
 
 public class DeleteController {
 

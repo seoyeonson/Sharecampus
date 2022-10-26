@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.community.vo;
+package com.sharecampus.wanted.community.vo;
 
 public class CommunityVO {
 

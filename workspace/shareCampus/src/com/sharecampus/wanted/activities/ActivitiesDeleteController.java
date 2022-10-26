@@ -1,5 +1,4 @@
 package com.sharecampus.wanted.activities;
 
-public class ReplyAction {
-
+public class ActivitiesDeleteController {
 }
