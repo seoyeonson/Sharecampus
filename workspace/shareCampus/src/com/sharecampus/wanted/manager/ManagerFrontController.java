@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.study;
+package com.sharecampus.wanted.manager;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.wanted.Result;
 
-public class StudyFrontController extends HttpServlet{
+public class ManagerFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	super.doGet(req, resp);
@@ -22,19 +22,27 @@ public class StudyFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/study/list.su")) {
-//		스터디 목록들을 DB에서 가져오는 것
-		}else if(target.equals("/study/listDs.su")) {
-//		스터디 상세글을 DB에서 조회
-		}else if(target.equals("/study/listDi.su")) {
-//		스터디 상세글을 DB에 추가
-		}else if(target.equals("/study/listDd.su")) {
-//		스터디 상세글을 DB에서 삭제
-		}else if(target.equals("/study/listDu.su")) {
-//		스터디 상세글을 DB에서 수정
+		if(target.equals("/manager/glistin.ma")) {
+//		문의글 DB가져오기
+		}else if(target.equals("/manager/listDu.ma")) {
+//		문의글 이메일 보내기
+		}else if(target.equals("/manager/gPostAllow.ma")) {
+//		공고글 승인 
+		}else if(target.equals("/manager/gPostNotAllow.ma")) {
+//		공고글 거절 
+		}else if(target.equals("/manager/gReportAllow.ma")) {
+//		신고글 승인 
+		}else if(target.equals("/manager/gReportNotAllow.ma")) {
+//		신고글 거절 
+		}else if(target.equals("/manager/gCerManagerment.ma")) {
+//		회원 인증 관리
+		}else if(target.equals("/manager/gCerManagerment.ma")) {
+//		회원 목록 관리
+		}else if(target.equals("/manager/gChanBanner.ma")) {
+//		배너수정			
 		}
-		
-		if(result != null) {
+			
+			if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
 				
@@ -42,7 +50,6 @@ public class StudyFrontController extends HttpServlet{
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 			
-		}
 		
-	}
-}
+
+			}}}
