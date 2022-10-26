@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.activities.dao;
+package com.shareCampus.wanted.activities.dao;
 
 public class ActivitiesDAO {
 

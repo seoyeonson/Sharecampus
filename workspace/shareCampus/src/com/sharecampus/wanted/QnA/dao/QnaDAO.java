@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.QnA.dao;
+package com.shareCampus.wanted.QnA.dao;
 
 public class QnaDAO {
 

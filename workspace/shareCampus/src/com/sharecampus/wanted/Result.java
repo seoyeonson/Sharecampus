@@ -1,4 +1,4 @@
-package com.example.app;
+package com.shareCampus.wanted;
 
 public class Result {
 	private String path;

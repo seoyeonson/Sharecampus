@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.community;
+package com.shareCampus.wanted.community;
 
 public class AddController {
 

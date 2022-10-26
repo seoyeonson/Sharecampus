@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.mypage.vo;
+package com.shareCampus.wanted.mypage.vo;
 
 public class MypageVO {
 

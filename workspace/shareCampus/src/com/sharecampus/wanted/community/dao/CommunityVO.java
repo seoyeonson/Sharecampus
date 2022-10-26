@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.community.dao;
+package com.shareCampus.wanted.community.dao;
 
 public class CommunityVO {
 
