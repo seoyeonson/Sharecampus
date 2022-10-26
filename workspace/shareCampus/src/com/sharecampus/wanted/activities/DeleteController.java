@@ -1,5 +1,4 @@
-package com.wanted.sharecampus.activities;
+package com.shareCampus.wanted.activities;
 
 public class DeleteController {
-
 }

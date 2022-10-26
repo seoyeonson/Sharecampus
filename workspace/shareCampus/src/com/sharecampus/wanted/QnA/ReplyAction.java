@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.QnA;
+package com.shareCampus.wanted.QnA;
 
 public class ReplyAction {
 

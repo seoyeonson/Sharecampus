@@ -1,4 +1,4 @@
-package com.wanted.sharecampus.member;
+package com.shareCampus.wanted.member;
 
 public class EmailAddController {
 
