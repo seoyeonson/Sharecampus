@@ -1,0 +1,214 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../main/main.css" rel="stylesheet">
+    <link href="../user/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <!-- header start -->
+        <header class="Header">
+            <nav>
+                <div class="logo"><a href="../main/index.html">로고</a></div>
+                <ul class="Navbar">
+                    <li><a href="">커리큘럼</a></li>
+                    <li><a href="">스터디</a></li>
+                    <li><a href="">대외활동</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                </ul>
+                <div class="loginWrap">
+                    <div class="searchWrap">
+                        <a class="searchIc" href="../main/search.html">
+                            <span>검색</span>
+                            <img src="https://letspl.me/assets/images/ic-search-white.png">
+                        </a>
+                    </div>
+                    <div class="joinAndLoginWrap">
+                        <a class="joinAndLogin">가입</a>
+                        <a class="joinAndLogin">로그인</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <main>
+            <section>
+                <div class="signupWrap">
+                    <h3>
+                        <span class="smTxt">본 캐릭터 설정</span>
+                        <span class="bigTxt">회원 가입이 바로 완료됩니다</span>
+                    </h3>
+                    <div class="form join1">
+                        <ul class="firstSignForm">
+                            <li>
+                                <label for="">이메일</label>
+                                <div class="inputWrap threeInput row">
+                                    <div class="css-1yoqljf-container">
+                                        <div class="css-ou3ob2-control">
+                                            <div class=" css-rqvngq-ValueContainer">
+                                                <div class=" css-25h44v-placeholder">aaa@naver.com</div>
+                                                <div class="css-1ag7u5m-Input">
+                                                    <div class="" style="display:inline-block">
+                                                        <input type="text" disabled="" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-10-input" spellcheck="false" tabindex="0" value="" aria-autocomplete="list" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;"><div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 12.8px; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" css-1hb7zxy-IndicatorsContainer"></div>
+                                        </div>
+                                    </div>
+                                    <button value="인증완료" class="txtBtn gray" disabled="">인증완료</button>
+                                    <span class="smTxt"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">닉네임</label>
+                                <div class="inputWrap threeInput row">
+                                    <input type="text" id="user_nickname" name="user_nickname" class="midInput" value="홍길동" autocomplete="on" minlength="3" maxlength="10" placeholder="3~10자리 이내로 적어주세요!">
+                                    <span class="smTxt"></span>
+                                </div>
+                            </li>
+                            <li class="fourSelect">
+                                <label for="">본 캐릭터 설정</label>
+                                <div class="inputWrap threeInput row">
+                                    <div class="threeInTwoInput">
+                                        <select>
+                                            <option selected="" value="02">기획</option>
+                                            <option value="03">디자인</option>
+                                            <option value="04">프론트엔드개발</option>
+                                            <option value="05">백엔드개발</option>
+                                            <option value="01">사업</option>
+                                            <option value="06">기타</option>
+                                        </select>
+                                        <select>
+                                            <option selected="" value="0201">UI/UX기획</option>
+                                            <option value="0202">게임기획</option>
+                                            <option value="0203">프로젝트 매니저</option>
+                                            <option value="0204">하드웨어(제품) 기획</option>
+                                            <option value="0205">(기획)기타</option>
+                                        </select>
+                                    </div>
+                                    <select>
+                                        <option value="01">초심자</option>
+                                        <option value="02">초보</option>
+                                        <option selected="" value="03">중수</option>
+                                        <option value="04">고수</option>
+                                        <option value="05">구루</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">프로모션 코드</label>
+                                <div class="inputWrap threeInput row">
+                                    <input type="text" id="promotionCode" name="promotionCode" class="midInput" value="" autocomplete="off" minlength="4" maxlength="8" placeholder=" 프로모션 코드를 적어주세요(선택)">
+                                    <button value="코드 확인" class="txtBtn gray" disabled="">코드 확인</button>
+                                    <span class="smTxt"></span>
+                                </div>
+                            </li>
+                            <div class="btnWrap">
+                                <button value="가입완료" class="grayBtn" disabled="">가입완료</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+        <!-- footer start -->
+        <footer class="Footer">
+            <div class="footerContent">
+                <div class="top">
+                    <div class="left">
+                        <div class="logoWrap">
+                            <a>로고</a>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1:1 문의</span>
+                                <a href="" target="_blank">운영자 1:1 카카오챗</a>
+                            </li>
+                            <li>
+                                <span>오픈 챗</span>
+                                <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
+                            </li>
+                            <li>
+                                <span>제휴문의</span>
+                                <a href="" target="_blank">help@letspl.me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="tit">바로가기</li>
+                            <li><a href="">렛플인</a></li>
+                            <li><a href="">프로젝트</a></li>
+                            <li><a href="">스토리</a></li>
+                            <li><a href="">라운지</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">이용안내</li>
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">Q&A</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">관련사이트</li>
+                            <li><a href="">네이버 블로그</a></li>
+                            <li><a href="">티스토리 블로그</a></li>
+                            <li><a href="">인스타그램</a></li>
+                            <li><a href="">Velog</a></li>
+                            <li><a href="">Medium</a></li>
+                        </ul>
+                        <ul>
+                            <li class="tit">서비스약관</li>
+                            <li><a href="">서비스 이용약관</a></li>
+                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href="">전자금융거래약관</a></li>
+                            <li><a href="">결제/환불약관</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerContentBottom">
+                <div class="wrap">
+                    <div class="left">
+                        <ul>
+                            <li>어썸크루</li>
+                            <li>사업등록번호 : 619-39-00615</li>
+                            <li>대표 : 이승준</li>
+                            <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
+                            <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
+                            <li>TEL : 070.8064.3497</li>
+                            <li>개인정보담당자 : 이승준 help@letspl.me</li>
+                        </ul>
+                        <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
+                    </div>
+                    <div class="right">
+                        <div class="appLinkWrap">
+                            <ul>
+                                <li>
+                                    <a href="" target="_blank">
+                                        <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
+                                        <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
