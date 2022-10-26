@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.member;
+package com.wanted.sharecampus.member;
 
 import java.io.IOException;
 
@@ -26,10 +26,13 @@ protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throw
 	Result result = null;
 	
 	if(target.equals("/member/join.me")) {
+		result = new Result();
+		result.setPath("/app/member/join.jsp");
 		
 	}else if(target.equals("/member/joinOk.me")) {
 		
 	}else if(target.equals("/member/checkId.me")) {
+		new CheckIdController().execute(req, resp);
 		
 	}else if(target.equals("/member/login.me")) {
 		

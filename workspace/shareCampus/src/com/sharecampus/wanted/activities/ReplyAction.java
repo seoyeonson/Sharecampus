@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.activities;
+package com.wanted.sharecampus.activities;
 
 public class ReplyAction {
 

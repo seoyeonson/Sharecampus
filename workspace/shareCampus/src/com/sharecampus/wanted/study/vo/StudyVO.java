@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.study.vo;
+package com.wanted.sharecampus.study.vo;
 
 public class StudyVO {
 

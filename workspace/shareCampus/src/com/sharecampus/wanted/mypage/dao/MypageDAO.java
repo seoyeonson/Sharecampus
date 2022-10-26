@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.mypage.dao;
+package com.wanted.sharecampus.mypage.dao;
 
 public class MypageDAO {
 

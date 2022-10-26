@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.member.vo;
+package com.wanted.sharecampus.member.vo;
 
 public class MemberVO {
    private int memberNumber;
