@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.mypage;
+package com.sharecampus.wanted.mypage;
 
 import java.io.IOException;
 

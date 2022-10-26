@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.study.dao;
+package com.sharecampus.wanted.study.dao;
 
 public class StudyDAO {
 

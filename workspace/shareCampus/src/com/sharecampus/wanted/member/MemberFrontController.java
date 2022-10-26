@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.member;
+package com.sharecampus.wanted.member;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.shareCampus.wanted.Result;
+import com.sharecampus.wanted.Result;
 
 public class MemberFrontController extends HttpServlet {
 	@Override

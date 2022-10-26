@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.member.dao;
+package com.sharecampus.wanted.member.dao;
 
 import org.apache.ibatis.session.SqlSession;
 

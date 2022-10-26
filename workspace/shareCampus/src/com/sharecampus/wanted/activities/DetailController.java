@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.activities;
+package com.sharecampus.wanted.activities;
 
 public class DetailController {
 

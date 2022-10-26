@@ -1,4 +1,4 @@
-package com.shareCampus.wanted.study;
+package com.sharecampus.wanted.study;
 
 public class StudyFrontController {
 
