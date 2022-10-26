@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.study;
+package com.wanted.sharecampus.study;
 
 public class DetailController {
 

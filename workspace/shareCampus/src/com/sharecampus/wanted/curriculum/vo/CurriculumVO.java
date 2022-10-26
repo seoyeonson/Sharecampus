@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.curriculum.vo;
+package com.wanted.sharecampus.curriculum.vo;
 
 public class CurriculumVO {
 

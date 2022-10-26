@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.curriculum;
+package com.wanted.sharecampus.curriculum;
 
 public class CurriculumFrontController {
 

@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.QnA.vo;
+package com.wanted.sharecampus.QnA.vo;
 
 public class QnaVO {
 

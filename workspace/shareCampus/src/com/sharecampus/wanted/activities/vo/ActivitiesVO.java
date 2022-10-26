@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.activities.vo;
+package com.wanted.sharecampus.activities.vo;
 
 public class ActivitiesVO {
 

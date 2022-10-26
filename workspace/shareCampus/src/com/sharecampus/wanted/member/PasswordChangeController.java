@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.member;
+package com.wanted.sharecampus.member;
 
 public class PasswordChangeController {
 

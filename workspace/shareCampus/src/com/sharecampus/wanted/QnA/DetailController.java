@@ -1,4 +1,4 @@
-package com.sharecampus.wanted.QnA;
+package com.wanted.sharecampus.QnA;
 
 public class DetailController {
 
