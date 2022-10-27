@@ -7,35 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="../main/main.css">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/app/assets/css/register.css">
 </head>
 <body>
-    <!-- header start -->
-    <header class="Header">
-        <nav>
-            <div class="logo"><a href="../main/index.html">로고</a></div>
-            <ul class="Navbar">
-                <li><a href="#">커리큘럼</a></li>
-                <li><a href="../Study/studyMain.html">스터디</a></li>
-                <li><a href="../activity/activity.html">대외활동</a></li>
-                <li><a href="../community/community.html">커뮤니티</a></li>
-            </ul>
-            <div class="loginWrap">
-                <div class="searchWrap">
-                    <a class="searchIc" href="../search/search.html">
-                        <span>검색</span>
-                        <img src="https://letspl.me/assets/images/ic-search-white.png">
-                    </a>
-                </div>
-                <div class="joinAndLoginWrap">
-                    <a class="joinAndLogin join">가입</a>
-                    <a class="joinAndLogin login">로그인</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- header end -->
+    <jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
     <div class="container-v2">
         <div class="wrapper-v2">
             <div class="register-wrap">
@@ -49,8 +24,7 @@
                             </label>
                         </div>
                         <div class="input-wrap">
-                            <input class="input-wrap" placeholder="이메일 주소를 입력해주세요" style="outline: none"
-                            ">
+                            <input class="input-wrap" placeholder="이메일 주소를 입력해주세요" style="outline: none">
                             <!-- <p class="default-msg">이메일을 입력해주세요</p> -->
                         </div> 
 
@@ -63,8 +37,7 @@
                              </label>
                          </div>
                          <div class="input-wrap">
-                             <input class="input-wrap" placeholder="영문/숫자/특수문자 포함 8자 이상" style="outline: none"
-                             ">
+                             <input class="input-wrap" placeholder="영문/숫자/특수문자 포함 8자 이상" style="outline: none">
                          </div> 
                          <!-- <span class="eye-icon"><img src="https://drv987r6zjtyw.cloudfront.net/static/v2/svg/account/ic_eye_off.svg" alt=""></span> -->
                      </div>
@@ -76,8 +49,7 @@
                              </label>
                          </div>
                          <div class="input-wrap">
-                             <input class="input-wrap" placeholder="비밀번호를 다시 입력해주세요" style="outline: none" 
-                             ">
+                             <input class="input-wrap" placeholder="비밀번호를 다시 입력해주세요" style="outline: none">
                          </div> 
                          <!-- <span class="eye-icon"><img src="https://drv987r6zjtyw.cloudfront.net/static/v2/svg/account/ic_eye_off.svg" alt=""></span> -->
                      </div>
@@ -89,8 +61,7 @@
                              </label>
                          </div>
                          <div class="input-wrap">
-                             <input class="input-wrap" placeholder="이름을 입력해주세요" style="outline: none"
-                             ">
+                             <input class="input-wrap" placeholder="이름을 입력해주세요" style="outline: none">
                          </div> 
                      </div>
                      <div class="phone-input-wrap">

@@ -53,7 +53,7 @@
 </servlet>
 
 <servlet-mapping>
-  	<servlet-name>Qna<</servlet-name>
+  	<servlet-name>Qna</servlet-name>
   	<url-pattern>*.qa</url-pattern>
 
 </servlet-mapping>
