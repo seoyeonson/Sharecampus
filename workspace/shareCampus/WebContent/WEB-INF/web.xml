@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>board</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>shareCampus</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,10 +9,9 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-<servlet>
+  <servlet>
   	<servlet-name>Community</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.community.CommunityFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.community.CommunityFrontController</servlet-class>
 </servlet>
 <servlet-mapping>
   	<servlet-name>Community</servlet-name>
@@ -21,7 +20,7 @@
 
 <servlet>	
 	<servlet-name>Curriculum</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.curriculum.CurriculumFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.curriculum.CurriculumFrontController</servlet-class>
 </servlet>
   	<servlet-mapping>
   	<servlet-name>Curriculum</servlet-name>
@@ -30,7 +29,7 @@
   	
 <servlet>
 	<servlet-name>Manager</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.manager.ManagerFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.manager.ManagerFrontController</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -40,7 +39,7 @@
   	
 <servlet>
 	<servlet-name>Member</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.member.MemberFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.member.MemberFrontController</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -50,7 +49,7 @@
 
 <servlet>
 	<servlet-name>Qna</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.qna.QnAFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.qna.QnAFrontController</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -62,7 +61,7 @@
   	
 <servlet>
 	<servlet-name>Study</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.study.StudyFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.study.StudyFrontController</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -72,7 +71,7 @@
   
 <servlet>
 	<servlet-name>Activities</servlet-name>
-  	<servlet-class>com.sharecampus.wanted.activities.ActivitiesFrontController</servlet-class>
+  	<servlet-class>com.sharecampus.activities.ActivitiesFrontController</servlet-class>
 </servlet>
 
 <servlet-mapping>
