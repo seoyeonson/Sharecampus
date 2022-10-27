@@ -47,7 +47,7 @@
   float: none;
   font-family: inherit;
   font-size: inherit;
-  font normal;
+  font : normal;
   font-variant: normal;
   font-weight: 400;
   font-stretch: normal;
@@ -56,7 +56,7 @@
   hyphens: none;
   left: auto;
   letter-spacing: normal;
-  list none;
+  list : none;
   margin: 0;
   max-height: none;
   max-width: none;
@@ -75,7 +75,7 @@
   top: auto;
   transform: none;
   transform-origin: 50% 50% 0;
-  transform flat;
+  transform : flat;
   transition: none 0s ease 0s;
   unicode-bidi: normal;
   vertical-align: baseline;
@@ -1126,7 +1126,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  list none;
+  list : none;
   margin: 0;
   padding: 0;
 }
@@ -2508,7 +2508,6 @@ a.uppy-Dashboard-poweredBy {
   animation: spinAround 0.5s linear infinite;
   border-radius: 290486px;
   border-color: transparent transparent #dbdbdb #dbdbdb;
-  border solid;
   border-width: 2px;
   content: "";
   display: block;
@@ -2686,7 +2685,7 @@ h6 {
   font-weight: 400;
 }
 ul {
-  list none;
+  list : none;
 }
 button,
 input,
@@ -2746,7 +2745,6 @@ pre {
   font-family: monospace;
 }
 body {
-  color: ;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
@@ -2790,7 +2788,7 @@ small {
   font-size: 0.875em;
 }
 span {
-  font inherit;
+  font : inherit;
   font-weight: inherit;
 }
 strong {
@@ -2803,7 +2801,6 @@ fieldset {
 pre {
   -webkit-overflow-scrolling: touch;
   background-color: #f5f5f5;
-  color: ;
   font-size: 0.875em;
   overflow-x: auto;
   padding: 1.25rem 1.5rem;
@@ -3202,7 +3199,7 @@ table th {
   text-transform: uppercase !important;
 }
 .is-italic {
-  font italic !important;
+  font : italic !important;
 }
 .has-text-white {
   color: #fff !important;
@@ -3322,12 +3319,7 @@ a.has-text-danger:hover {
 .has-background-grey-darker {
   background-color: #363636 !important;
 }
-.has-text-grey-dark {
-  color:  !important;
-}
-.has-background-grey-dark {
-  background-color:  !important;
-}
+
 .has-text-grey {
   color: #7a7a7a !important;
 }
@@ -6416,7 +6408,6 @@ fieldset[disabled] .select select:hover {
 }
 .file-cta {
   background-color: #f5f5f5;
-  color: ;
 }
 .file-name {
   border: 1px solid #dbdbdb;
@@ -7520,7 +7511,6 @@ fieldset[disabled] .select select:hover {
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  color: ;
   display: block;
   padding: 1.25rem;
 }
@@ -7580,13 +7570,11 @@ a.box:active {
 }
 .button.is-active,
 .button:active {
-  border-color: ;
   color: #363636;
 }
 .button.is-text {
   background-color: transparent;
   border-color: transparent;
-  color: ;
   text-decoration: underline;
 }
 .button.is-text.is-focused,
@@ -8887,7 +8875,7 @@ fieldset[disabled] .button {
   listtype: upper-roman;
 }
 .content ul {
-  list disc outside;
+  list : disc outside;
   margin-left: 2em;
   margin-top: 1em;
 }
@@ -8916,7 +8904,7 @@ fieldset[disabled] .button {
   display: inline-block;
 }
 .content figure figcaption {
-  font italic;
+  font : italic;
 }
 .content pre {
   -webkit-overflow-scrolling: touch;
@@ -9192,14 +9180,7 @@ fieldset[disabled] .button {
 .progress::-webkit-progress-bar {
   background-color: #dbdbdb;
 }
-.progress::-webkit-progress-value {
-  background-color: ;
-}
-.progress::-moz-progress-bar {
-  background-color: ;
-}
 .progress::-ms-fill {
-  background-color: ;
   border: none;
 }
 .progress.is-white::-webkit-progress-value {
@@ -9566,7 +9547,6 @@ fieldset[disabled] .button {
   align-items: center;
   background-color: #f5f5f5;
   border-radius: 4px;
-  color: ;
   display: inline-flex;
   font-size: 0.75rem;
   height: 2em;
@@ -9734,7 +9714,6 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .subtitle {
-  color: ;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -9893,7 +9872,6 @@ a {
 .card {
   background-color: #fff;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  color: ;
   max-width: 100%;
   position: relative;
 }
@@ -9988,7 +9966,6 @@ a {
   padding-top: 0;
 }
 .dropdown-item {
-  color: ;
   display: block;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -10115,9 +10092,6 @@ button.dropdown-item:hover {
   display: block;
   padding: 0.5em 1em;
 }
-.list-item:not(a) {
-  color: ;
-}
 .list-item:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -10209,7 +10183,6 @@ a.list-item {
 }
 .menu-list a {
   border-radius: 2px;
-  color: ;
   display: block;
   padding: 0.5em 0.75em;
 }
@@ -10371,7 +10344,6 @@ a.list-item {
 }
 .message-header {
   align-items: center;
-  background-color: ;
   border-radius: 4px 4px 0 0;
   color: #fff;
   display: flex;
@@ -10395,7 +10367,6 @@ a.list-item {
   border-radius: 4px;
   border: solid #dbdbdb;
   border-width: 0 0 0 4px;
-  color: ;
   padding: 1.25em 1.5em;
 }
 .message-body code,
@@ -11146,7 +11117,6 @@ html.has-navbar-fixed-bottom {
   overflow-y: hidden;
 }
 .navbar-burger {
-  color: ;
   cursor: pointer;
   display: block;
   height: 3rem;
@@ -11192,7 +11162,6 @@ html.has-navbar-fixed-bottom {
 }
 .navbar-item,
 .navbar-link {
-  color: ;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -11788,7 +11757,6 @@ label.panel-block:hover {
 .tabs a {
   align-items: center;
   border-bottom: 1px solid #dbdbdb;
-  color: ;
   display: flex;
   justify-content: center;
   margin-bottom: -1px;
@@ -16631,7 +16599,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.64.woff2)
@@ -16645,7 +16612,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.65.woff2)
@@ -16669,7 +16635,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.66.woff2)
@@ -16693,7 +16658,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.67.woff2)
@@ -16717,7 +16681,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.68.woff2)
@@ -16740,7 +16703,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.69.woff2)
@@ -16762,8 +16724,7 @@ label + .MuiInput-formControl {
 }
 
 @font-face {
-  font-family: "Noto Sans KR";
-  font normal;
+  font-family: "Noto Sans KR";;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.70.woff2)
@@ -16788,7 +16749,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.71.woff2)
@@ -16813,7 +16773,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.72.woff2)
@@ -16837,7 +16796,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.73.woff2)
@@ -16861,7 +16819,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.74.woff2)
@@ -16886,7 +16843,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.75.woff2)
@@ -16910,7 +16866,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.76.woff2)
@@ -16934,7 +16889,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.77.woff2)
@@ -16959,7 +16913,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.78.woff2)
@@ -16983,7 +16936,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.79.woff2)
@@ -17007,7 +16959,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.80.woff2)
@@ -17031,7 +16982,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.81.woff2)
@@ -17055,7 +17005,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.82.woff2)
@@ -17079,7 +17028,6 @@ label + .MuiInput-formControl {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font normal;
   font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosanskr/v27/Pby7FmXiEBPT4ITbgNA5CgmOelzI7bgWsWdx3Ch_M9uykRdOOoSdBjU92zqHxA.83.woff2)

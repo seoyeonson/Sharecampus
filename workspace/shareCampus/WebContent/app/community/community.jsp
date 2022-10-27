@@ -1,85 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티</title>
-<link rel="stylesheet" href="community.css">
-    <link rel="stylesheet" href="../main/main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/app/assets/css/community.css">
 </head>
-<!-- header start -->
-    <header class="Header">
-        <nav>
-            <div class="logo"><a href="../main/index.html">로고</a></div>
-            <ul class="Navbar">
-                <li><a href="#">커리큘럼</a></li>
-                <li><a href="../Study/studyMain.html">스터디</a></li>
-                <li><a href="../activity/activity.html">대외활동</a></li>
-                <li><a href="../community/community.html">커뮤니티</a></li>
-            </ul>
-            <div class="loginWrap">
-                <div class="searchWrap">
-                    <a class="searchIc" href="../search/search.html">
-                        <span>검색</span>
-                        <img src="https://letspl.me/assets/images/ic-search-white.png">
-                    </a>
-                </div>
-                <div class="joinAndLoginWrap">
-                    <a class="joinAndLogin join">가입</a>
-                    <a class="joinAndLogin login">로그인</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- header end -->
-    <section class="communitySection">
-        <div class="community_header">
-            <h1>
-                <span class="smTxt" style="font-size: 0.9rem;">말해봐요</span>
-                <span class="bgTxt">나의 아이디어</span>
-            </h1>
-        </div>
-        <div class="community">
-            <div class="communityWrap">
-                <div class="communityInputSection">
-                    <div class="communityInputWrap">
-                        <textarea placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2" maxlength="1000" id="textarea" style="border: none" ></textarea>
-                        <div class="btnWrap" id="btnWrap">
-                            <p class="count" id="count_cnt" >
-                                <span>(0/1000)</span>
-                                
-                            </p>
-                            <!-- <button disabled="disabled"></button> -->
-                            <button class="grayBtn" >등록</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 피드 시작 -->
-                <div class="communityFeedSection">
-                    <div class="communityFeedWrap">
-                     <div class="communityFeedContentWrap">
-                        <div class="top2">
-                            <div class="left">
-                                <a href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
-                                    <div class="profileThumb">
-                                        <img loading="lazy" src="profile1.jpg" alt="라이언">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="right5">
-                                <h2 class="profileName">나정호
-                                    <div class="hoverView"></div>
-                                </h2>
-                                <span>
-                                    22.10.18 10:15
-                                </span>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <div class="feedContents">
-                                <h3>
-                                    <textarea style="font-size: 0.875rem;  height: auto;"disabled rows="21" maxlength="1000" class="text">
+<body>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<section class="communitySection">
+		<div class="community_header">
+			<h1>
+				<span class="smTxt" style="font-size: 0.9rem;">말해봐요</span> <span
+					class="bgTxt">나의 아이디어</span>
+			</h1>
+		</div>
+		<div class="community">
+			<div class="communityWrap">
+				<div class="communityInputSection">
+					<div class="communityInputWrap">
+						<textarea placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2"
+							maxlength="1000" id="textarea" style="border: none"></textarea>
+						<div class="btnWrap" id="btnWrap">
+							<p class="count" id="count_cnt">
+								<span>(0/1000)</span>
+
+							</p>
+							<!-- <button disabled="disabled"></button> -->
+							<button class="grayBtn">등록</button>
+						</div>
+					</div>
+				</div>
+				<!-- 피드 시작 -->
+				<div class="communityFeedSection">
+					<div class="communityFeedWrap">
+						<div class="communityFeedContentWrap">
+							<div class="top2">
+								<div class="left">
+									<a
+										href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
+										<div class="profileThumb">
+											<img loading="lazy" src="${pageContext.request.contextPath}/app/assets/images/profile1.jpg" alt="라이언">
+										</div>
+									</a>
+								</div>
+								<div class="right5">
+									<h2 class="profileName">
+										나정호
+										<div class="hoverView"></div>
+									</h2>
+									<span> 22.10.18 10:15 </span>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="feedContents">
+									<h3>
+										<textarea style="font-size: 0.875rem; height: auto;" disabled
+											rows="21" maxlength="1000" class="text">
 "차로에서 취향을 이야기하다"
 
 나와 결이 같은 사람과 취향을 공유하고 이야기 나눈다면 그 일상은 분명 특별해질 거예요.
@@ -101,85 +80,89 @@
 알고 싶으시다면👇
 http://talkdrive.co.kr
                                     </textarea>
-                                </h3>
-                                <div class="bottom2">
-                                    <div href="div.communityReplyTab" class="replyFold" id="replyFold">
-                                        댓글 열기
-                                    </div>
-                                    <div class="replyFoldRight">
-                                        <span class="replyCount">
-                                            2
-                                        </span>
-                                        <span class="recommend">
-                                        
-                                            1
-                                        </span>
+									</h3>
+									<div class="bottom2">
+										<div href="div.communityReplyTab" class="replyFold"
+											id="replyFold">댓글 열기</div>
+										<div class="replyFoldRight">
+											<span class="replyCount"> 2 </span> <span class="recommend">
 
-                                    </div>
-                                </div>
-                                <!-- 숨겨진 댓글 창 -->
-                                <div class="communityReplyTab" id="communityReplyTab">
-                                    <div class="replyTab">
-                                        <div class="tabTop">
-                                            <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
-                                                <img src="let.png" alt="" class="tabImg0">
-                                            </a></div>
-                                            <div class="tabRight">
-                                                <div class="tabProfile">
-                                                    <p class="tabProfileName">렛플운영자</p>
-                                                    <span class="tabDate">22.10.18 21:53</span>
-                                                </div>
-                                                <div class="tabTxt">
-                                                    <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
+												1 </span>
+
+										</div>
+									</div>
+									<!-- 숨겨진 댓글 창 -->
+									<div class="communityReplyTab" id="communityReplyTab">
+										<div class="replyTab">
+											<div class="tabTop">
+												<div class="tabLeft">
+													<a
+														href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
+														<img src="let.png" alt="" class="tabImg0">
+													</a>
+												</div>
+												<div class="tabRight">
+													<div class="tabProfile">
+														<p class="tabProfileName">렛플운영자</p>
+														<span class="tabDate">22.10.18 21:53</span>
+													</div>
+													<div class="tabTxt">
+														<textarea disabled maxlength="500"
+															style="font-size: 0.875rem; height: 125px;"
+															class="tabTextarea">
 서비스 출시하시면 웹이나 앱 형태로 나올까요?
 지금은 오픈채팅방으로 가기밖에는 안보여서요
 출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
 제대로 등록한게 맞는지 궁금합니다.</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="replyInput">
-                                        <div class="replyProfileThumb">
-                                            <img loading="lazy "src="https://letspl.me/assets/images/prof-no-img.png" alt="" class="tabImg">
-                                        </div>
-                                        <div class="txtInput">
-                                            <textarea rows="4" maxlength="500" placeholder="로그인 후 댓글작성이 가능합니다" ></textarea>
-                                            <button class="blackBtn" disabled>등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="replyInput">
+											<div class="replyProfileThumb">
+												<img loading="lazy "
+													src="https://letspl.me/assets/images/prof-no-img.png"
+													alt="" class="tabImg">
+											</div>
+											<div class="txtInput">
+												<textarea rows="4" maxlength="500"
+													placeholder="로그인 후 댓글작성이 가능합니다"></textarea>
+												<button class="blackBtn" disabled>등록</button>
+											</div>
+										</div>
+									</div>
+								</div>
 
-                        </div>
-                     </div>
-                     </div>
-                </div>
-                <!-- 피드 시작2 -->
-                <div class="communityFeedSection">
-                    <div class="communityFeedWrap">
-                     <div class="communityFeedContentWrap">
-                        <div class="top2">
-                            <div class="left">
-                                <a href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
-                                    <div class="profileThumb">
-                                        <img loading="lazy" src="let.png" alt="라이언">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="right5">
-                                <h2 class="profileName">렛플운영자
-                                    <div class="hoverView"></div>
-                                </h2>
-                                <span>
-                                    22.10.18 10:15
-                                </span>
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <div class="feedContents">
-                                <h3>
-                                    <textarea style="font-size: 0.875rem;  height: auto;"disabled rows="21" maxlength="1000" class="text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 피드 시작2 -->
+				<div class="communityFeedSection">
+					<div class="communityFeedWrap">
+						<div class="communityFeedContentWrap">
+							<div class="top2">
+								<div class="left">
+									<a
+										href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
+										<div class="profileThumb">
+											<img loading="lazy" src="${pageContext.request.contextPath}/app/assets/images/let.png" alt="라이언">
+										</div>
+									</a>
+								</div>
+								<div class="right5">
+									<h2 class="profileName">
+										렛플운영자
+										<div class="hoverView"></div>
+									</h2>
+									<span> 22.10.18 10:15 </span>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="feedContents">
+									<h3>
+										<textarea style="font-size: 0.875rem; height: auto;" disabled
+											rows="21" maxlength="1000" class="text">
 안녕하세요 
 
 토요일 카카오톡이 기능의 문제가 생기면서 
@@ -200,215 +183,124 @@ http://talkdrive.co.kr
 (저희 공식메일이 다음쪽 솔루션과 연계되어있습니다.  아직 다음메일이 복구되지 않아서 
 메일문의는 현재 확인이 어렵습니다 메일이 아닌 다른 경로로 문의 부탁드립니다.)
                                     </textarea>
-                                </h3>
-                                <div class="bottom2">
-                                    <div href="div.communityReplyTab" class="replyFold" id="replyFold">
-                                        댓글 열기
-                                    </div>
-                                    <div class="replyFoldRight">
-                                        <span class="replyCount">
-                                            0
-                                        </span>
-                                        <span class="recommend">
-                                        
-                                            0
-                                        </span>
+									</h3>
+									<div class="bottom2">
+										<div href="div.communityReplyTab" class="replyFold"
+											id="replyFold">댓글 열기</div>
+										<div class="replyFoldRight">
+											<span class="replyCount"> 0 </span> <span class="recommend">
 
-                                    </div>
-                                </div>
-                                <!-- 숨겨진 댓글 창 -->
-                                <div class="communityReplyTab" id="communityReplyTab">
-                                    <div class="replyTab">
-                                        <div class="tabTop">
-                                            <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
-                                                <img src="let.png" alt="" class="tabImg0">
-                                            </a></div>
-                                            <div class="tabRight">
-                                                <div class="tabProfile">
-                                                    <p class="tabProfileName">렛플운영자</p>
-                                                    <span class="tabDate">22.10.18 21:53</span>
-                                                </div>
-                                                <div class="tabTxt">
-                                                    <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
+												0 </span>
+
+										</div>
+									</div>
+									<!-- 숨겨진 댓글 창 -->
+									<div class="communityReplyTab" id="communityReplyTab">
+										<div class="replyTab">
+											<div class="tabTop">
+												<div class="tabLeft">
+													<a
+														href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
+														<img src="${pageContext.request.contextPath}/app/assets/images/let.png" alt="" class="tabImg0">
+													</a>
+												</div>
+												<div class="tabRight">
+													<div class="tabProfile">
+														<p class="tabProfileName">렛플운영자</p>
+														<span class="tabDate">22.10.18 21:53</span>
+													</div>
+													<div class="tabTxt">
+														<textarea disabled maxlength="500"
+															style="font-size: 0.875rem; height: 125px;"
+															class="tabTextarea">
 서비스 출시하시면 웹이나 앱 형태로 나올까요?
 지금은 오픈채팅방으로 가기밖에는 안보여서요
 출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
 제대로 등록한게 맞는지 궁금합니다.</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="replyInput">
-                                        <div class="replyProfileThumb">
-                                            <img loading="lazy "src="https://letspl.me/assets/images/prof-no-img.png" alt="" class="tabImg">
-                                        </div>
-                                        <div class="txtInput">
-                                            <textarea rows="4" maxlength="500" placeholder="로그인 후 댓글작성이 가능합니다" ></textarea>
-                                            <button class="blackBtn" disabled>등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="replyInput">
+											<div class="replyProfileThumb">
+												<img loading="lazy "
+													src="https://letspl.me/assets/images/prof-no-img.png"
+													alt="" class="tabImg">
+											</div>
+											<div class="txtInput">
+												<textarea rows="4" maxlength="500"
+													placeholder="로그인 후 댓글작성이 가능합니다"></textarea>
+												<button class="blackBtn" disabled>등록</button>
+											</div>
+										</div>
+									</div>
+								</div>
 
-                        </div>
-                     </div>
-                     </div>
-                </div>
-                
-<!-- 카카오톡 채널 톡 api -->
-                <div
-  id="kakao-talk-channel-chat-button"
-  data-channel-public-id="_ZeUTxl"
-  data-title="question"
-  data-size="large"
-  data-color="yellow"
-  data-shape="pc"
-  data-support-multiple-densities="true"
-  style="display: scroll; position: fixed; bottom: 30px; right: 35px;"
-></div>
-<!-- -->
-                        </div>
-                     </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-    <footer class="Footer">
-        <div class="footerContent">
-            <div class="top">
-                <div class="left">
-                    <div class="logoWrap">
-                        <a>로고</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <span>1:1 문의</span>
-                            <a href="" target="_blank">운영자 1:1 카카오챗</a>
-                        </li>
-                        <li>
-                            <span>오픈 챗</span>
-                            <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
-                        </li>
-                        <li>
-                            <span>제휴문의</span>
-                            <a href="" target="_blank">help@letspl.me</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li class="tit">바로가기</li>
-                        <li><a href="">렛플인</a></li>
-                        <li><a href="">프로젝트</a></li>
-                        <li><a href="">스토리</a></li>
-                        <li><a href="">라운지</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">이용안내</li>
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="../qna/qna.html">Q&A</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">관련사이트</li>
-                        <li><a href="">네이버 블로그</a></li>
-                        <li><a href="">티스토리 블로그</a></li>
-                        <li><a href="">인스타그램</a></li>
-                        <li><a href="">Velog</a></li>
-                        <li><a href="">Medium</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">서비스약관</li>
-                        <li><a href="">서비스 이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">전자금융거래약관</a></li>
-                        <li><a href="">결제/환불약관</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footerContentBottom">
-            <div class="wrap">
-                <div class="left">
-                    <ul>
-                        <li>어썸크루</li>
-                        <li>사업등록번호 : 619-39-00615</li>
-                        <li>대표 : 이승준</li>
-                        <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
-                        <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
-                        <li>TEL : 070.8064.3497</li>
-                        <li>개인정보담당자 : 이승준 help@letspl.me</li>
-                    </ul>
-                    <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
-                </div>
-                <div class="right">
-                    <div class="appLinkWrap">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 카카오톡 채널 톡 api -->
+				<div id="kakao-talk-channel-chat-button"
+					data-channel-public-id="_ZeUTxl" data-title="question"
+					data-size="large" data-color="yellow" data-shape="pc"
+					data-support-multiple-densities="true"
+					style="display: scroll; position: fixed; bottom: 30px; right: 35px;"></div>
+				<!-- -->
+			</div>
+		</div>
+	</section>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-    $('#textarea').keydown(function() {
-        $('#btnWrap').css("display", "flex");
-    });
+	$('#textarea').keydown(function() {
+		$('#btnWrap').css("display", "flex");
+	});
 
-    $(document).ready(function() {
-    $('#textarea').on('keyup', function() {
-        $('#count_cnt').html("("+$(this).val().length+" / 1000)");
- 
-        if($(this).val().length > 1000) {
-            $(this).val($(this).val().substring(0, 1000));
-            $('#count_cnt').html("(1000 / 1000)");
-        }
-    });
-});
-    $("#replyFold").click(function(){
-  $("#communityReplyTab").toggle();
-});
-   
+	$(document).ready(function() {
+		$('#textarea').on('keyup', function() {
+			$('#count_cnt').html("(" + $(this).val().length + " / 1000)");
 
-  window.kakaoAsyncInit = function() {
-    Kakao.Channel.createChatButton({
-      container: '#kakao-talk-channel-chat-button',
-    });
-  };
+			if ($(this).val().length > 1000) {
+				$(this).val($(this).val().substring(0, 1000));
+				$('#count_cnt').html("(1000 / 1000)");
+			}
+		});
+	});
+	$("#replyFold").click(function() {
+		$("#communityReplyTab").toggle();
+	});
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.channel.min.js';
-    js.integrity = 'sha384-qN6njjEgLQzM0N/uuB26JXrlFnwdctF+owkJc/pTqUpi1Qrp9xAvRKYIkzH5XcJU';
-    js.crossOrigin = 'anonymous';
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'kakao-js-sdk');
+	window.kakaoAsyncInit = function() {
+		Kakao.Channel.createChatButton({
+			container : '#kakao-talk-channel-chat-button',
+		});
+	};
 
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id))
+			return;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.channel.min.js';
+		js.integrity = 'sha384-qN6njjEgLQzM0N/uuB26JXrlFnwdctF+owkJc/pTqUpi1Qrp9xAvRKYIkzH5XcJU';
+		js.crossOrigin = 'anonymous';
+		fjs.parentNode.insertBefore(js, fjs);
+	})(document, 'script', 'kakao-js-sdk');
 
-    //key up 으로 해보자
-    //     let text = $('#textarea').val();
-    // if (text.length==0) {
-    //     $('#btnWrap').css("display", "none");
-    
-    // }else {
-    //     $('#btnWrap').css("display", "block");
-    // };
-       
+	//key up 으로 해보자
+	//     let text = $('#textarea').val();
+	// if (text.length==0) {
+	//     $('#btnWrap').css("display", "none");
+
+	// }else {
+	//     $('#btnWrap').css("display", "block");
+	// };
 </script>
 </html>
