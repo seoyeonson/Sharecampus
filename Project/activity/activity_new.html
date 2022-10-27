@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="activity.css">
 <link rel="stylesheet" href="activity_new.css">
 <script type="text/javascript" src="activity_new.js"></script>
-
 <body>
 
     <body>
@@ -138,9 +137,9 @@
                 </div>
                 <h3>접수 기간 *</h3>
                 <p class="input small"><input type="date" name="start_date" autocomplete="off"
-                        class="date"><span>부터</span></p>
+                        class="date" id="datepicker1"><span>부터</span></p>
                 <p class="input small"><input type="date" name="end_date" autocomplete="off"
-                        class="date"><span>까지</span></p>
+                        class="date" id="datepicker2"><span>까지</span></p>
                 <h3>활동기간 *</h3>
                 <div class="group">
                     <label class="checkbox"><input type="radio" name="period" value="0001">3개월 이하</label>
@@ -170,13 +169,13 @@
                 </ul>
                 <p class="input medium">
                     <input type="text" name="attach_filename" placeholder="본문 *" class="attachtext" readonly>
-                    <input type="file" id="my-input" name="attach" class="attachfile">
-                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton" onclick="onClickUpload();">
+                    <input type="file" id="my-input" name="attach" class="attachfile" accept="image/jpeg, image/png, image" onchange="fileUpload()">
+                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()" >
                 </p>
                 <p class="input medium thumbnail">
                     <input type="text" name="attach_filename" placeholder="썸네일" class="attachtext" readonly>
-                    <input type="file" id="my-input" name="attach" class="attachfile">
-                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton" onclick="onClickUpload();">
+                    <input type="file" id="my-input" name="attach" class="attachfile" accept="image/jpeg, image/png, image" onchange="fileUpload()">
+                    <input type="button" name="attach_button" value="파일 선택" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
                 </p>
             </div>
 
@@ -303,5 +302,5 @@
         <!-- footer end -->
     </body>
 </body>
-
+<script type="text/javascript" src="activity_new.js"></script>
 </html>
