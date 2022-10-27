@@ -24,7 +24,7 @@ public class ManagerFrontController extends HttpServlet{
 		
 		if(target.equals("/manager/glistin.ma")) {
 //		문의글 DB가져오기
-		}else if(target.equals("/manager/listDu.ma")) {
+		}else if(target.equals("/manager/glistDu.ma")) {
 //		문의글 이메일 보내기 API
 		}else if(target.equals("/manager/gActivitiesManager.ma")) {
 //		대외활동 공고글 관리 DB
