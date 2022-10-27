@@ -25,21 +25,25 @@ public class ManagerFrontController extends HttpServlet{
 		if(target.equals("/manager/glistin.ma")) {
 //		문의글 DB가져오기
 		}else if(target.equals("/manager/listDu.ma")) {
-//		문의글 이메일 보내기
-		}else if(target.equals("/manager/gPostAllow.ma")) {
-//		공고글 승인 
-		}else if(target.equals("/manager/gPostNotAllow.ma")) {
-//		공고글 거절 
-		}else if(target.equals("/manager/gReportAllow.ma")) {
-//		신고글 승인 
-		}else if(target.equals("/manager/gReportNotAllow.ma")) {
-//		신고글 거절 
-		}else if(target.equals("/manager/gCerManagerment.ma")) {
-//		회원 인증 관리
-		}else if(target.equals("/manager/gCerManagerment.ma")) {
-//		회원 목록 관리
+//		문의글 이메일 보내기 API
+		}else if(target.equals("/manager/gActivitiesManager.ma")) {
+//		대외활동 공고글 관리 DB
+		}else if(target.equals("/manager/gActivitiesJoin.ma")) {
+//		대외활동 공고글 가져오기 DB
+		}else if(target.equals("/manager/gReportManager.ma")) {
+//		신고글 관리 DB
+		}else if(target.equals("/manager/gReportJoin.ma")) {
+//		신고글 가져오기 DB
+		}else if(target.equals("/manager/gMemberlistManager.ma")) {
+//		회원 인증 관리 DB
+		}else if(target.equals("/manager/gMemberlistJoin.ma")) {
+//		회원 인증 가져오기 DB
+		}else if(target.equals("/manager/gMemberlistManager.ma")) {
+//		회원 목록 관리 DB
+		}else if(target.equals("/manager/gMemberlistJoin.ma")) {
+//		회원 목록 가져오기 DB
 		}else if(target.equals("/manager/gChanBanner.ma")) {
-//		배너수정			
+//		배너수정 가져오기 DB		
 		}
 			
 			if(result != null) {
