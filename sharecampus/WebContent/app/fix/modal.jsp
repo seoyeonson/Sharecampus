@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="${pageContext.request.contextPath}/assets/css/modal.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/assets/css/main/modal.css" rel="stylesheet">
 <div class="modalWrapOpen">
     <div class="loginModal">
         <p class="modalTit">회원 가입하기</p>

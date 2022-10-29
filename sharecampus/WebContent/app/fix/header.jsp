@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="${pageContext.request.contextPath}/assets/css/main.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/assets/css/main/main.css" rel="stylesheet">
 <header class="Header">
     <nav>
-        <div class="logo"><a href="${pageContext.request.contextPath}/app/main/index.jsp">로고</a></div>
+        <div class="logo"><a href="${pageContext.request.contextPath}/index.jsp">로고</a></div>
         <ul class="Navbar">
             <li><a href="${pageContext.request.contextPath}/app/curriculum/curriculum.jsp">커리큘럼</a></li>
             <li><a href="${pageContext.request.contextPath}/app/study/study_main.jsp">스터디</a></li>
