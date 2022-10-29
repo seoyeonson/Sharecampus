@@ -23,7 +23,7 @@ public class StudyFrontController extends HttpServlet{
 		Result result = null;
 		
 		if(target.equals("/study/list.su")) {
-//		스터디 목록들을 DB에서 가져오는 것
+//		스터디 목록들을 DB에서 조회
 		}else if(target.equals("/study/listDs.su")) {
 //		스터디 상세글을 DB에서 조회
 		}else if(target.equals("/study/listDi.su")) {

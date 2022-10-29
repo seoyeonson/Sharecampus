@@ -25,9 +25,9 @@ public class CurriculumFrontController extends HttpServlet{
 		if(target.equals("/curriculum/list.cu")) {
 //		커리큘럼 목록들을 DB에서 가져오는 것
 		}else if(target.equals("/curriculum/listDs.cu")) {
-//		커리큘럼 상세글을 DB에서 조회
+//		커리큘럼 상세글을 DB에서 가져오기
 		}else if(target.equals("/curriculum/listDi.cu")) {
-//		커리큘럼 상세글을 DB에 추가
+//		커리큘럼 상세글을 DB에서 추가
 		}else if(target.equals("/curriculum/listDd.cu")) {
 //		커리큘럼 상세글을 DB에서 삭제
 		}else if(target.equals("/curriculum/listDu.cu")) {

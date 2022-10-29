@@ -34,38 +34,21 @@ public class MemberFrontController extends HttpServlet {
 //			로그인 성공 회원의 DB를 갖고오는 것
 		}else if(target.equals("/member/logout.me")) {
 //			로그아웃 페이지로 이동
-		}else if(target.equals("/member/chaimg.me")) {
+//			===============================================
+		}else if(target.equals("/member/imagechange.me")) {
 //			프로필 이미지 변경
-		}else if(target.equals("/member/chapw.me")) {
+		}else if(target.equals("/member/passwordchange.me")) {
 //			비밀번호 변경
-		}else if(target.equals("/member/chabir.me")) {
-//			생일 변경
-		}else if(target.equals("/member/chaima.me")) {
+		}else if(target.equals("/member/emailAdd.me")) {
 //			이메일 주소 변경
-		}
-//		else if(target.equals("/member/navcon.me")) {
-//			네이버 아이디 연결
-//		}else if(target.equals("/member/kaocon.me")) {
-//			카카오 아이디 연결
-//		}
-		else if(target.equals("/member/connect.me")) {
+		}else if(target.equals("/member/connectproof.me")) {
 //			인증서 연결
-		}else if(target.equals("/member/moveCo.me")) {
-//			내가 쓴 커뮤니티 글 모아보기로 이동
-		}else if(target.equals("/member/moveSt.me")) {
-//			내가 쓴 스터디 글 모아보기로 이동
-		}else if(target.equals("/member/moveAc.me")) {
-//			내가 쓴 활동 글 보기로 이동
-		}else if(target.equals("/member/moveCu.me")) {
-//			내가 쓴 커리큘럼 글 보기로 이동
-		}else if(target.equals("/member/moveBo.me")) {
+		}else if(target.equals("/member/movelist.me")) {
+//			내가 쓴 글 보기로 이동
+		}else if(target.equals("/member/movecomments.me")) {
+//			내가 쓴 댓글 보기로 이동
+		}else if(target.equals("/member/movebookmarks.me")) {
 //			내가 모은 책갈피로 이동
-		}else if(target.equals("/member/moveCoco.me")) {
-//			내가 쓴 커뮤니티 댓글 모아보기로 이동
-		}else if(target.equals("/member/moveAcco.me")) {
-//			내가 쓴 활동 댓글 모아보기로 이동
-		}else if(target.equals("/member/moveCuco.me")) {
-//			내가 쓴 커리큘럼 댓글 모아보기로 이동
 		}
 		if(result != null) {
 			if(result.isRedirect()) {

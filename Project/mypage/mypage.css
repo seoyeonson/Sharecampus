@@ -1,3 +1,6 @@
+*  {
+    font-family: Noto Sans KR, Lato, sans-serif;
+  }
 body, html {
     height: 100%;
     min-height: 100%;
@@ -6,7 +9,6 @@ body {
     display: block;
     margin: 8px;
     line-height: 1.43;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 button{
@@ -25,6 +27,7 @@ ul{
 }
 *{
     box-sizing: border-box;
+    font-family: Noto Sans KR, Lato, sans-serif;
 }
 
 button, dd, dl, dt, fieldset, ol, p ,ul {
@@ -42,9 +45,8 @@ li.first_Nav{
     -webkit-box-flex: 1;
     flex: 1 1 auto;
     position: relative;
-    width: 1034px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 70px 0 0;
     -webkit-box-align: start;
     align-items: flex-start;
 }
@@ -129,7 +131,6 @@ body, h1, h2, h3, h4, h5, h6 {
 #content.more{
     margin: 0 0 20px;
     width: 810px;
-    height: 775px;
     background-color: #fff;
     box-shadow: 0.2px 0.2px grey;
     border: gray solid 0.05px;
@@ -424,6 +425,7 @@ li.sMypageInfoItem .content{
     align-items: center;
     min-height: 40px;
     margin: 6px 0 7px;
+    
 }
 
 .id_icon{
@@ -546,6 +548,14 @@ button img{
     background-color: #3393f4;
     color: #fff;
 }
+#email_view630 ,#password_view630{
+    width: 390px;
+}
+#_btnUpdatePassword{
+    background-color: #3393f4;
+    color: #fff;
+}
+
 
 .cell.label.-desc{
     line-height: 1.42;
@@ -717,7 +727,6 @@ input::file-selector-button {
     border: none;
     height: 30px;
     border-bottom: 1px solid #ebebeb;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 #password,#confirm_password{
     text-align: center; 
@@ -729,4 +738,33 @@ input::file-selector-button {
     border: none; 
     padding-right: 70px;
     display: flex;
+}
+
+
+
+/* 위 h1 수정 */
+div.curriculum_header {
+    padding: 40px 0px 24px;
+    box-sizing: border-box;
+}
+span.smTxt {
+    color: #3393f4;
+    font-size: .875rem;
+}
+
+span.bgTxt {
+    color: #42495b;
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+.curriculumSection{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+}
+.curriculum_header h1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
 }
