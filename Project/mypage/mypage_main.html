@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mypage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-
-    <title>마이페이지
-    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>마이페이지</title>
 </head>
+<section class="curriculumSection">
 <div>
+    <!-- 위 태그 -->
+    <body>
+        <div class="curriculum_header">
+            <h1>
+                <span class="smTxt" style="font-size: 0.9rem;">LET'S see</span>
+                <span class="bgTxt">마이페이지</span>
+            </h1>
+        </div>
+         <!-- 위 태그 -->
     <!-- 배너 관리 시작 -->
+    <section>
     <div id="container">
         <!-- 왼쪽 배너 시작 -->
         <div id="asideWrap" class="active">
@@ -85,51 +94,7 @@
                         </div>
                          <!-- 프로필 이미지 눌러 해당 주소를 DB로 -->
                     </div>
-                    <div class="sMypageInfo">
-                        <h2 class="sMypageSubTitle">개인 정보</h2>
-                        <div class="sMypageInfoCont">
-                            <ul class="sMypageInfoList">
-                                <li class="sMypageInfoItem _birthdayTextPanel">
-                                    <h3 class="label">생일</h3>
-                                    <!-- 현재 DB에 있는 생일을 입력 -->
-                                    <div id="now_Birth">현재 DB상 생일</div>
-                                    <!-- 현재 DB에 있는 생일을 입력 끝 -->
-                                    <!-- 바꿀 생일 값을 설정 -->
-                                    <div class="content">
-                                        <input type="date" class="Chan_Bitrh" style="font-size: 13px;">
-                                    </div> 
-                                    <!-- 바꿀 생일 값을 설정 -->
-                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
-                                    <div class="btn">
-                                        <a href="#" class="uButton -sizeS -confirm3 _btnChangeBirthday">변경</a>
-                                    </div>
-                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
-                                </li>
-                                <!-- 성별 설정 라인 -->
-                                <li class="sMypageInfoItem _genderActionPanel">
-                                    <h3 class="label">성별</h3>
-                                    <div id="now_Gender">현재 DB상 성별</div>
-                                    <div class="content">
-                                         <!-- 바꿀 성별 값을 설정 -->
-                                        <div class="uSelect">
-                                            <select id="chan_Gender" class="_selectGender" title="성별 선택" style="width:118px;">
-                                                <option class="hide">성별</option>
-                                                <option value="male">남성</option>
-                                                <option value="female">여성</option>
-                                            </select>
-                                             <!-- 바꿀 성별 값을 설정 -->
-                                        </div>
-                                    </div>
-                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
-                                    <div class="btn">
-                                        <a href="#" class="uButton -sizeS -confirm" id="_btnUpdateGender">확인</a>
-                                    </div>
-                                    <!-- 바꿀 생일 값을 DB로 보낸다.-->
-                                </li>
-                                <!-- 성별 설정 라인 끝-->
-                            </ul>
-                        </div>
-                    </div>
+                  
                     <div class="sMypageAccount">
                         <h2 class="sMypageSubTitle">로그인 계정</h2>
                         <div class="sMypageAccountCont">
@@ -1018,14 +983,11 @@
                             <div class="sMypageAccountItem _emailActionPanel">
                                 <label class="label" for="email_view630">이메일</label>
                                 <div class="content">
-                                    <div class="uInput -simpleLine" style="width: 259px;">
+                                    <div class="uInput -simpleLine" style="width: 100%;">
                                         <!-- 이메일 주소 입력 -->
                                         <input type="text" id="email_view630" placeholder="이메일 주소 입력" value="" class="_inputEmail">
                                         <!-- 이메일 주소 입력 -->
                                     </div>
-                                    <span class="infoIcon -error">
-                                            <span class="gSrOnly">설정값 오류</span>
-                                    </span>
                                 </div>
                                 <!-- 입력한 이메일 값을 DB로 전송-->
                                 <div class="btn">
@@ -1038,60 +1000,27 @@
                                 <span class="cell label -desc">이메일 주소는 로그인을 위해 저장되며, 사이트 이용기간 동안 보관되는 것에 동의합니다.</span>
                             </p>
                             <!-- 비밀번호 변경 창 -->
-                            <div class="sMypageAccountItem password">비밀번호
-                                <fieldset>
-                                    <input type="password" placeholder="비밀번호 입력" id="password" required>
-                                    <input type="password" placeholder="비밀번호 재확인" id="confirm_password" required>
-                                    <button type="submit"  class="pure-button pure-button-primary " style="height: 26px; border: solid 1px #ccc; line-height: 26px; min-width: 41px;  padding: 0 10px; font-size: 12px; display: block; justify-content: space-between;">변경</button>
-                                </fieldset>
-                                <div style="padding-right: 30px; text-align: right;">
-                                </div>   
-                                 <!-- 변경 페이지로 이동 -->
+                            <div class="sMypageAccountItem _emailActionPanel">
+                                <label class="label" for="pass_word630">비밀번호</label>
+                                <div class="content" style="display: flex;">
+                                    <div id="password" class="uInput -simpleLine" style=" display: flex; width: 390px;">
+                                        <!-- 비밀번호 입력 -->
+                                        <input type="password" class="password" id="password1" placeholder="비밀번호 입력">
+                                        <input type="password" class="password" id="password2" placeholder="비밀번호 재입력">
+                                        <!-- 비밀번호 입력 -->
+                                    </div>
+                                    <div class="password_check" style="padding-top: 20px; font-size: 8px;"></div>
+                                    </span>
+                                </div>
+                                <!-- 입력한 비밀번호 값을 DB로 전송-->
+                                <div class="btn">
+                                    <input type="button" style="border: 0;" onclick="test()" class="uButton -sizeS -confirm" id="_btnUpdatePassword" value="확인">
+                                </div>
+                                <!-- 입력한 비밀번호 값을 DB로 전송-->
                             </div>
+
                         </div>
                     </div>
-                    <div class="sMypageConnect">
-                        <div class="sMypageConntetTitleBox">
-                            <h2 class="sMypageInnetTitle">연결된 서비스</h2>
-                            <dl class="uHelpGuid -up gInlingBlock">
-                                <dt>
-                                    <button type="button" class="_btnHelpGuide">
-                                        <span class="gSrOnly">도움말</span>
-                                    </button>
-                                </dt>
-                            </dl>
-                        </div>
-                        <!-- 계정 연동 서비스 -->
-                       
-                        <!-- 첫번째 연동 -->
-                        <div class="sMypageConnectCont">
-                            <div class="sMypageConnectItem">
-                                <div class="icon">
-                                    <span class="naver">
-                                        <span class="gSrOnly">첫번째 연동</span>
-                                    </span>
-                                </div>
-                                <img class="id_icon" src="/Project/mypage/icon/icon_login_naver.png">
-                                <div class="content off">아이디로 연결할 수 있습니다.</div>
-                                <div class="btn">
-                                    <button type="submit" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_navar">연결하기</a></button>
-                                </div>
-                            </div>
-                            <!-- 두번째 연동 -->
-                                <div class="sMypageConnectItem">
-                                <div class="icon">
-                                    <span class="kakao">
-                                        <span class="gSrOnly">두번째 연동</span>
-                                    </span>
-                                </div>
-                                <img class="id_icon" src="/Project/mypage/icon/icon_login_kakao.png">
-                                <div class="content off">아이디로 연결할 수 있습니다.</div>
-                                <div class="btn">
-                                    <button type="submit" class="uButton -sizeS -confirm3 _btnConnectFirstSite"><a href="#" id="first_id_connect_kakao">연결하기</a></button>
-                                </div>
-                            </div> 
-                        </div>
-                        </div>
                     </div>
                     <!-- 소속 인증 서비스 -->
                     <div class="sMypageConnectOrganization">
@@ -1107,21 +1036,23 @@
                             <img class="id_icon" src="/Project/mypage/icon/engine-warning.png">
                             <div class="content off">증명서류를 제출할 수 있습니다.</div>
                         </div>
-                        <div class="btn">
+                           <div class="btn" style="display: flex; justify-content: flex-end;">
                             <!-- 보낼 파일을 저장함 -->
-                            <input type="file" class="document_file" >
+                            <input type="file" class="document_file" style="margin-right: 150px;" >
                             <!-- 해당 파일을 DB로 보냄-->
-                            <button type="submit" class="uButton -sizeS -confirm3 _btnConnectDocument">제출하기</button>
+                            <button type="submit" class="uButton -sizeS -confirm3 _btnConnectDocument">심사요청</button>
                         </div>
                     </div>
                 </div>
-            </section>
         </main>
         <div class="sideRight" style="display: none;"></div>
     </div>
     <footer>
     </footer>
 </div>
+</section>
+</section>
+</body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="mypage.js"></script>
 </html>

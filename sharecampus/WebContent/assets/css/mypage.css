@@ -730,3 +730,28 @@ input::file-selector-button {
     padding-right: 70px;
     display: flex;
 }
+div.curriculum_header {
+    padding: 40px 0px 24px;
+    box-sizing: border-box;
+}
+span.smTxt {
+    color: #3393f4;
+    font-size: .875rem;
+}
+
+span.bgTxt {
+    color: #42495b;
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+.curriculumSection{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+}
+.curriculum_header h1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}

@@ -2,10 +2,11 @@
     
 const file = document.querySelector("input[type='file']");
     
-    console.log(file[0]);
     file.addEventListener("change", function(e){
         var reader = new FileReader();
-        reader.readAsDataURL(e.target.files[0]);
+        reader.readAsDataURL
+        
+        (e.target.files[0]);
         reader.onload = function(e){
             let url = e.target.result;
 
@@ -16,17 +17,42 @@ const file = document.querySelector("input[type='file']");
             }
         }
     });
+  
+// 비밀번호 일치 
+var $passwords = $("password");
+var $password1 = $("#password1");
+var $password2 = $("#password2");
+var $password_check = $(".password_check");
 
-    var password = document.getElementById("password")
-    , confirm_password = document.getElementById("confirm_password");
-  
-  function validatePassword(){
-    if(password.value != confirm_password.value) {
-      confirm_password.setCustomValidity("Passwords Don't Match");
-    } else {
-      confirm_password.setCustomValidity(''); // 오류가 없으면 메시지를 빈 문자열로 설정해야한다. 오류 메시지가 비어 있지 않은 한 양식은 유효성 검사를 통과하지 않고 제출되지 않는다.
+$password1.on("click", function(){
+  if($password2.val() == ""){
+    $password2.css({
+      "border-bottom-color":"#ebebeb"
+    });
+    $password1.css({
+      "border-bottom-color":"#ebebeb"
+    });
+    $password_check.html("");
+  };
+
+  $password2.on("blur", function(){
+    console.log($passwords);
+    // password2를 벗어났을때 해당 함수 실행
+    if($password2.val() == ""){
+      $password2.css({
+        "border-bottom-color":"#ebebeb"
+      });
+      $password_check.html("");
+    }else if( $password1.val() != $password2.val() ) {
+        $password_check.html("비밀번호 불일치");
+        $password1.css({
+          "border-bottom-color":"#ff5a5a"
+        })
+        $password2.css({
+          "border-bottom-color":"#ff5a5a"
+        });}
+        else if($password1.val() == $password2.val()){
+        $password_check.html("비밀번호 일치");
     }
-  }
-  
-  password.onchange = validatePassword;
-  confirm_password.onkeyup = validatePassword;
+  });
+});
