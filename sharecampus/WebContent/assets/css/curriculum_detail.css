@@ -13,6 +13,7 @@
 .curriculumDetailHeader{
     display: block;
     margin: 0;
+    margin-top: 40px;
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 30px;
@@ -21,6 +22,7 @@
     color: #0a0a0c;
     word-break: keep-all;
 }
+
 .curriculumDetailHeader h2{
     /* color: #42495b; */
     font-size: 1.75rem;
@@ -123,8 +125,119 @@
 
 .curriculumDetailSection hr {
     background-color: #f5f5f5;
+    margin-top: 150px;
 }
 
 .class_mini_menu{
     font-size: 14px;
+}
+
+.curri_info{
+    margin: 0 0 -8px;
+    padding-top: 47px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.curri_profile{
+	width: 30px;
+	height: 30px;
+    border-radius: 100%;
+}
+
+.curri_regist_date{
+    color: rgb(138, 131, 126);
+    font-size: 14px;
+}
+
+.curri_main_contents{
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify !important;
+    margin-bottom: 150px;
+}
+
+.curri_main_contents img{
+    width: 500px;
+}
+
+.university-logo {
+    padding-top: 5px;
+    width: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+.university-logo img {
+    max-width: 100%;
+}
+
+.univer_name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+.user_name {
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 400;
+}
+
+.td-text-style {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+.rank-mark.checked {
+    background: url(https://d1qzykz9iz00c7.cloudfront.net/static/web/main/rank-star_checked.png) no-repeat center center;
+}
+
+.rank-mark {
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(https://d1qzykz9iz00c7.cloudfront.net/static/web/main/rank-gray.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 15px;
+}
+
+.curri_reply_area{
+    background-color: #f7f7f7;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.curri_reply_area form{
+    display: flex;
+    flex-direction: row;
+}
+
+.curri_reply_area form .textarea{
+    height: 75px !important;
+    border: 1px solid rgb(212, 212, 212);
+    flex-grow: 9;
+    align-items: center;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding: calc(0.375em - 1px) calc(0.625em - 1px);
+    /* position: relative; */
+    /* vertical-align: top; */
+    resize: none;
+    margin-right: 10px;
+}
+
+.curri_reply_area button{
+    border: 1px solid rgb(212, 212, 212);
+    padding: 10px;
+    width: 75px;
+    height: 75px;
 }

@@ -16,6 +16,7 @@ div.curriculum_header {
 .curriculum_header h1 {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
 }
 
 span.smTxt {
@@ -64,6 +65,10 @@ span.bgTxt {
     display: inline-block;
 }
 
+.curriculum-regist:hover{
+    color: #fff;
+}
+
 .curriculum-filter_select{
     display: inline-block;
 }
@@ -91,9 +96,10 @@ span.bgTxt {
 
 .curriculum-list_box {
     border: 1px solid #ececec;
-    padding: 18px;
+    /* padding: 18px; */
     box-shadow: 0 1px 1px rgb(50 50 93 / 11%), 0 1px 1px rgb(0 0 0 / 8%);
     border-radius: 8px;
+    overflow: hidden;
 }
 
 .curriculum-list_box:hover{
@@ -116,7 +122,7 @@ span.bgTxt {
     font-weight: 500;
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 25px;
     padding: 5px 10px;
     letter-spacing: -1px;
     line-height: 1;
@@ -296,18 +302,14 @@ span.bgTxt {
     background-color: #eee;
 }
 
-/* 더보기 버튼 */
-.more-btn {
-    width: 120px;
-    height: 40px;
-    border: 1px solid #bbb;
-    border-radius: 20px;
-    margin: 0 auto;
-    display: block;
-    font-weight: 500;
-    color: #bbb;
-    position: relative;
-    text-indent: 17px;
+.department:hover{
+    background-color: #d0e7fd;
+    /* color: #fff; */
+}
+
+.checked{
+    background-color: #d0e7fd;
+    color: var(--main);
 }
 
 .more-btn:hover{
@@ -322,4 +324,34 @@ span.bgTxt {
     margin-right: 10px;
     float: right;
     display: block;
+}
+
+.curri_img{
+    height: 150px;
+    background-image: url('https://t1.daumcdn.net/cfile/tistory/1819914850ADABCD0A');
+    background-size: 100%;
+    background-position: center;
+}
+
+.top-curriculum-info{
+    padding: 18px;
+    padding-top: 10px;
+}
+
+.curriculum-rank{
+    margin-bottom: 10px;
+}
+
+.bookmark{
+    position: absolute;
+    top: 5px;
+    right: 12px;
+}
+
+.bookmark i {
+    color: rgb(209, 209, 209);
+}
+
+.bookmark i:hover {
+    color: rgb(255, 20, 20);
 }
