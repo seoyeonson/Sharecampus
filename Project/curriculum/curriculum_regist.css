@@ -1,0 +1,155 @@
+body{
+    background-color: #f2f2f2 !important;
+}
+
+.container {
+    margin: 8px auto;
+    padding: 0 8px;
+    max-width: 720px;
+    font-size: 0;
+}
+
+.section{
+    margin-bottom: 8px;
+    padding: 24px 16px 30px 16px;
+    background-color: #fff;
+}
+
+.section h1{
+    margin-bottom: 24px;
+    color: #292929;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.section .description{
+    margin-bottom: 8px;
+    line-height: 20px;
+    color: #4c4c4c;
+    font-size: 14px;
+}
+
+strong{
+    color: #3393f4;
+}
+
+.section h2{
+    margin-bottom: 24px;
+    color: #292929;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section h3{
+    margin-bottom: 8px;
+    padding: 16px 0 0 0;
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.section .input_text_area input{
+    padding: 8px;
+    width: 100%;
+    height: 36px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    color: #4c4c4c;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.group{
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+}
+
+.group label.checkbox{
+    display: inline-block;
+    min-width: 139px;
+    line-height: 30px;
+    color: #4c4c4c;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: normal !important;
+}
+
+input[type='radio']{
+    margin-right: 8px;
+    margin-top: 0 !important;
+}
+
+input{
+    vertical-align: middle !important;
+}
+
+label{
+    margin: 0 !important;
+}
+
+.submit_btn{
+    margin: 8px auto;
+    padding: 0 8px;
+    max-width: 720px;
+}
+
+.submit_btn button{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #3393f4;
+}
+
+.rank-mark.checked {
+    background: url(https://d1qzykz9iz00c7.cloudfront.net/static/web/main/rank-star_checked.png) no-repeat center center;
+}
+
+.rank-mark {
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(https://d1qzykz9iz00c7.cloudfront.net/static/web/main/rank-gray.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.rank_group fieldset{
+    display: inline-block;
+    direction: rtl;
+    border:0;
+}
+
+.rank_group fieldset legend{
+    text-align: right;
+}
+
+.rank_group input[type=radio]{
+    display: none;
+}
+
+.rank_group label{
+    font-size: 18px;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+
+.rank_group label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+.rank_group label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+
+.rank_group input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
