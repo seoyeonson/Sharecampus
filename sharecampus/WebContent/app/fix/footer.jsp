@@ -33,7 +33,7 @@
                 <ul>
                     <li class="tit">이용안내</li>
                     <li><a href="">공지사항</a></li>
-                    <li><a href="../qna/qna.html">Q&A</a></li>
+                    <li><a href="${pageContext.request.contextPath}/app/qna/qna.jsp">Q&A</a></li>
                 </ul>
                 <ul>
                     <li class="tit">관련사이트</li>
