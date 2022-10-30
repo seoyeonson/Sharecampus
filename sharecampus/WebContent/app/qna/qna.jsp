@@ -19,7 +19,7 @@
 					쉐어캠퍼스에서 어떤 점이 궁금하신가요? <br> 친절히 답해드리겠습니다.
 				</p>
 			</div>
-			<form class= "gform" method="POST" data-email="jihyeobg00@naver.com" 
+			<form name = "Share Class 문의글"class= "gform" method="POST" data-email="jihyeobg00@naver.com" 
 				action = https://script.google.com/macros/s/AKfycbwumm3Lvb0QtAPxhTdlZdl1yJzMWX9IMSarNHifG-pug6PVv412KoLYN0ifeSVOMW3e/exec>
 			<div class="member-form">
 				<div class="text_form">
