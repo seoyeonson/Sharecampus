@@ -427,41 +427,7 @@ $("#replyFold").click(function(){
     });
   };
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.channel.min.js';
-    js.integrity = 'sha384-qN6njjEgLQzM0N/uuB26JXrlFnwdctF+owkJc/pTqUpi1Qrp9xAvRKYIkzH5XcJU';
-    js.crossOrigin = 'anonymous';
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'kakao-js-sdk');
-
-  $(document).ready(function(){
-        
-        $("#popOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
- 
-             $("#popupDiv").css({
-                "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
-                "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
-                //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
-             
-             }); 
-            
-            $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
-            $("#popupDiv").css("display","block"); //팝업창 display block
-            
-            $("body").css("overflow","hidden");//body 스크롤바 없애기
-        });
-        
-        $("#popCloseBtn").click(function(event){
-            $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
-            $("#popupDiv").css("display","none"); //팝업창 display none
-            $("body").css("overflow","auto");//body 스크롤바 생성
-        });
-     
-    
-    });
+  
 
     $(".remove_popupBtn").click("on", function(e) {
     $(".remove_popup").css("display", "block")
@@ -479,6 +445,11 @@ $(".edit").click(function(event) {
     $(".text").css("border" , "1px solid black")
     $(".edit").text("작성");
     $(".edit").css("color", "#3393f4");
+    $(".remove_popupBtn").text("취소");
+    $(".remove_popupBtn").css("color", "#ea6560");
+    if ($(".remove_popupBtn").click) {
+        $(".text").attr("disabled", true);
+    }
 });
 
 
