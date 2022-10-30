@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity.css">
 </head>
 <body>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
+	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<div class="MuiContainer-root jss35 jss1 MuiContainer-maxWidthLg">
 		<div>
 			<div class="jss3">

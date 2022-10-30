@@ -12,6 +12,7 @@
 	<title>마이페이지</title>
 </head>
 <div>
+<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<!-- 배너 관리 시작 -->
 	<div id="container">
 		<!-- 왼쪽 배너 시작 -->
