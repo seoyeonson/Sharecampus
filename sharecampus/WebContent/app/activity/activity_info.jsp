@@ -5,11 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>대외활동 상세내용</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity_info.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/activity/activity_info.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
 </head>
 <body>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<div class="MuiContainer-root jss35 jss1 MuiContainer-maxWidthLg">
 		<div>
 			<div class="jss3">
@@ -24,26 +27,21 @@
 								<div class="jss116">
 									<div class="jss118">
 										<figure class="jss119">
-											<img class="jss120"
-												src="https://res.cloudinary.com/linkareer/image/fetch/f_auto/https://api.linkareer.com/attachments/149989"
-												alt="[고용노동부 취업교육] 프로젝트 기반 핀테크 서비스 자바 개발자 훈련생 모집! ▶11, 12월" />
+											<!-- Image Zoom HTML -->
+											<img class="thumbnail"
+												src="https://res.cloudinary.com/linkareer/image/fetch/f_auto/https://api.linkareer.com/attachments/149989">
+											<!-- The Modal -->
+											<div id="myModal" class="big-modal">
+												<img class="big-modal-content" id="img01">
+												<div id="caption"></div>
+											</div>
 										</figure>
 									</div>
-									<span class="imgzoom"><img class="zoom-img"
-										src="${pageContext.request.contextPath}/assets/images/activity-zoom.png" /></span>
 								</div>
 							</div>
 							<div class="jss113">
 								<div class="MuiBox-root jss126 jss115">아이티윌 부산교육센터</div>
 								<div class="jss127">
-									<div class="jss132">
-										<div class="jss133 jss134">기업형태</div>
-										<div class="jss135">비영리단체/협회/재단</div>
-									</div>
-									<div class="jss132">
-										<div class="jss133 jss134">참여대상</div>
-										<div class="jss135">대학생, 직장인/일반인</div>
-									</div>
 									<div class="jss132">
 										<div class="jss133 jss134">접수기간</div>
 										<div class="jss135">22.10.24 ~ 22.11.28</div>
@@ -62,9 +60,13 @@
 											<div class="jss136">부산 부산진구</div>
 										</div>
 									</div>
-									<div class="jss132">
-										<div class="jss133 jss134">우대역량</div>
-										<div class="jss135">컴퓨터 활용능력</div>
+									<div class="jss132 jss142">
+										<div class="jss133 jss134">관심분야</div>
+										<div class="jss135">
+											<div class="jss143">
+												<span class="jss144">교육</span>
+											</div>
+										</div>
 									</div>
 									<div class="jss132">
 										<div class="jss133 jss134">홈페이지</div>
@@ -80,26 +82,6 @@
                             </path>
                           </svg>
 												</div>
-											</div>
-										</div>
-									</div>
-									<div class="jss132">
-										<div class="jss133 jss134">활동혜택</div>
-										<div class="jss135">실무 교육, 입사시 혜택</div>
-									</div>
-									<div class="jss132 jss142">
-										<div class="jss133 jss134">관심분야</div>
-										<div class="jss135">
-											<div class="jss143">
-												<span class="jss144">교육</span><span class="jss144">과학/공학/기술/IT</span>
-											</div>
-										</div>
-									</div>
-									<div class="jss132 jss145">
-										<div class="jss133 jss134">활동분야</div>
-										<div class="jss135">
-											<div class="jss146">
-												<span class="jss147">강연</span><span class="jss147">멘토링</span>
 											</div>
 										</div>
 									</div>
@@ -310,59 +292,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="jss182">
-							<div class="jss183">
-								<div class="jss184">담당자 Q&amp;A</div>
-							</div>
-						</div>
-						<div class="jss405">
-							<div class="jss406">
-								<div>
-									<div class="infinite-scroll-component "
-										style="height: auto; overflow: auto;">
-										<div class="item-grid ReplyList__ItemGrid-dod67q-0 daNmSP"></div>
-									</div>
-								</div>
-								<form
-									class="ReplyInputBox__ReplyInputBoxContainer-gsctxo-0 fhevaL">
-									<textarea cols="30" rows="1" placeholder="댓글을 입력해주세요."
-										maxlength="600"
-										class="ReplyInputBox__ReplyTextarea-gsctxo-1 bkBdQk textarea"></textarea>
-									<button
-										class="ReplyInputBox__SendReplyButton-gsctxo-2 fWHowL button">등록</button>
-								</form>
-							</div>
-						</div>
 					</div>
-					<div class="is-hidden"></div>
-					<div class="is-hidden"></div>
 				</div>
 			</div>
-			<div class="jss4 jss6"></div>
-		</div>
-		<div class="jss223">
-			<div class="jss231">
-				<nav class="jss232">
-					<button class="jss233 jss234 jss242 button">
-						<a href="/list/activity" class="jss235">대외활동</a>
-					</button>
-					<button class="jss233 jss236 button">
-						<span class="jss235">공유</span>
-					</button>
-					<button class="jss233 jss237 button">
-						<span class="jss235">스크랩 <!-- -->1
-						</span>
-					</button>
-					<button class="jss239">연락처/문자 지원</button>
-				</nav>
-			</div>
 		</div>
 	</div>
-	</div>
-	</div>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script
+	src="${pageContext.request.contextPath}/assets/js/activity/activity_info.js"></script>
 </html>
