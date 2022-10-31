@@ -3,7 +3,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import curriculum.VO.CurriculumVO;
+import com.sharecampus.curriculum.vo.CurriculumVO;
 
 public class CurriculumDAO {
 
@@ -48,7 +48,7 @@ public class CurriculumDAO {
 		
 
 		try {
-			pstmt = conn.prepareStatement(curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT);
+			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT);
 			rs = pstmt.executeQuery();
 //			System.out.println("js");
 			 while (rs.next()) {				

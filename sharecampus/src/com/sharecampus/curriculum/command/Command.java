@@ -1,4 +1,4 @@
-package package com.sharecampus.curriculum.command;
+package com.sharecampus.curriculum.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

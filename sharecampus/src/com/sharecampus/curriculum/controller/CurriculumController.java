@@ -1,4 +1,4 @@
-package package com.sharecampus.curriculum.controller;
+package com.sharecampus.curriculum.controller;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import curriculum.command.Command;
+import com.sharecampus.curriculum.command.Command;
 
 /**
  * Servlet implementation class GetList

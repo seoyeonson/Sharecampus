@@ -1,5 +1,4 @@
-
-package package com.sharecampus.curriculum.sql;
+package com.sharecampus.curriculum.sql;
 
 public class CurriculumSQL {
 	public static final String SQL_CURRICULUM_SELECT = 
