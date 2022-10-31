@@ -1,3 +1,5 @@
+
+
 $(".joinAndLogin").click("on", function(e){
     $(".modalWrapOpen").css("display", "block");
     if(e.target.innerHTML == "가입"){
@@ -12,6 +14,7 @@ $(".joinAndLogin").click("on", function(e){
         $(".signupBtn").text("회원 가입하기");
     }
 });
+
 
 $(".closeBtn").click("on", function(i, v){
     $(".modalWrapOpen").css("display", "none");
