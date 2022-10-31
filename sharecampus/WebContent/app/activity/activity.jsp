@@ -20,6 +20,7 @@
 			<h1>전체 대외활동</h1>
 			<div class="searchOption">
 				<select class="smSelect">
+				
 					<option value="KR00">지역 미지정</option>
 					<option value="KR01">서울특별시</option>
 					<option value="KR02">경기도</option>
