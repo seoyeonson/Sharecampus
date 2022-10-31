@@ -7,6 +7,7 @@
     <title>커뮤니티</title>
     <link rel="stylesheet" href="community.css">
     <link rel="stylesheet" href="../main/main.css">
+    <link href="modal.css" rel="stylesheet">
 </head>
 <body>
     <!-- header start -->
@@ -72,8 +73,11 @@
                                 <h2 class="profileName">나정호
                                     <div class="hoverView"></div>
                                 </h2>
+                                
                                 <span>
-                                    22.10.18 10:15
+                                    
+                                    
+                                    <span>22.10.18 10:15</span>
                                 </span>
                             </div>
                         </div>
@@ -104,18 +108,21 @@ http://talkdrive.co.kr
                                     </textarea>
                                 </h3>
                                 <div class="bottom2">
-                                    <div href="div.communityReplyTab" class="replyFold" id="replyFold">
-                                        댓글 열기
-                                    </div>
+                                    <div href="div.communityReplyTab" class="replyFold" id="replyFold">댓글 열기</div>
                                     <div class="replyFoldRight">
-                                        <span class="replyCount">
-                                            2
-                                        </span>
-                                        <span class="recommend">
-                                        
-                                            1
-                                        </span>
-
+                                        <button class="edit" style="color : #c9c9d9" >수정</button>&nbsp;
+                                    ㅣ&nbsp;
+                                    <button class="remove_popupBtn" style="color : #c9c9d9">삭제</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="remove_popup">
+                                        <div class="remove_text"><h2>정말삭제하시겠어요?</h2><br>
+                                        <p>삭제한 글은 다시 불러올 수 없습니다.</p></div>
+                                        <button class="remove_close">
+                                            <img src="https://letspl.me/assets/icon/ic-close.svg" alt="">
+                                        </button>
+                                        <button class="reRemove">
+                                            삭제
+                                        </button>
+                                    </div>
                                     </div>
                                 </div>
                                 <!-- 숨겨진 댓글 창 -->
@@ -207,14 +214,19 @@ http://talkdrive.co.kr
                                         댓글 열기
                                     </div>
                                     <div class="replyFoldRight">
-                                        <span class="replyCount">
-                                            0
-                                        </span>
-                                        <span class="recommend">
-                                        
-                                            0
-                                        </span>
-
+                                        <button class="edit" style="color : #c9c9d9" >수정</button>&nbsp;
+                                    ㅣ&nbsp;
+                                    <button class="remove_popupBtn" style="color : #c9c9d9">삭제</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="remove_popup">
+                                        <div class="remove_text"><h2>정말삭제하시겠어요?</h2><br>
+                                        <p>삭제한 글은 다시 불러올 수 없습니다.</p></div>
+                                        <button class="remove_close">
+                                            <img src="https://letspl.me/assets/icon/ic-close.svg" alt="">
+                                        </button>
+                                        <button class="reRemove">
+                                            삭제
+                                        </button>
+                                    </div>
                                     </div>
                                 </div>
                                 <!-- 숨겨진 댓글 창 -->
@@ -380,9 +392,33 @@ http://talkdrive.co.kr
         }
     });
 });
-    $("#replyFold").click(function(){
-  $("#communityReplyTab").toggle();
+    
+//     $("#replyFold").click(function(){
+//         // console.log($(".replyFold")[0].innerHTML)
+//   $("#communityReplyTab").toggle(function() {});
+//   if ($(".replyFold")[0].innerHTML == "댓글 열기") {
+//     $(".replyFold")[0].innerHTML = "댓글 닫기"
+// } else {
+//     $(".replyFold")[0].innerHTML = "댓글 열기";
+// }
+
+// });
+
+$("#replyFold").click(function(){
+        // console.log($(".replyFold")[0].innerHTML)
+  $("#communityReplyTab").toggle(function() {});
+  if ($(this).text() == "댓글 열기") {
+    $(this).text("댓글 닫기");
+} else {
+    $(this).text("댓글 열기");
+}
+
 });
+
+
+
+  
+
    
 
   window.kakaoAsyncInit = function() {
@@ -391,15 +427,32 @@ http://talkdrive.co.kr
     });
   };
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.channel.min.js';
-    js.integrity = 'sha384-qN6njjEgLQzM0N/uuB26JXrlFnwdctF+owkJc/pTqUpi1Qrp9xAvRKYIkzH5XcJU';
-    js.crossOrigin = 'anonymous';
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, 'script', 'kakao-js-sdk');
+  
+
+    $(".remove_popupBtn").click("on", function(e) {
+    $(".remove_popup").css("display", "block")
+    });
+
+    $(".remove_close").click("on", function(i, v){
+                                            $(".remove_popup").css("display", "none");
+                                        })
+
+/
+$(".text").attr("disabled", true);
+
+$(".edit").click(function(event) {
+	$(".text").attr("disabled", false);
+    $(".text").css("border" , "1px solid black")
+    $(".edit").text("작성");
+    $(".edit").css("color", "#3393f4");
+    $(".remove_popupBtn").text("취소");
+    $(".remove_popupBtn").css("color", "#ea6560");
+    if ($(".remove_popupBtn").click) {
+        $(".text").attr("disabled", true);
+    }
+});
+
+
 
 
     //key up 으로 해보자
@@ -412,4 +465,5 @@ http://talkdrive.co.kr
     // };
        
 </script>
+<script src="../main/modal.js"></script>
 </html>

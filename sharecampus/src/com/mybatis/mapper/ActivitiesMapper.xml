@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="activ">
+	
+	<insert id="insert" parameterType="activitiesVO">
+		insert into tbl_member (activ_manager_email, activ_manager_name, activ_manager_phonenumber, activ_manager_dept, activ_title, activ_url, activ_area, activ_dept, activ_start_date,activ_end_date,activ_activing_date,activ_people,activ_field,activ_contents,activ_main_img_name,activ_thumbnail_img_name)
+		values(#{activ_manager_email}, #{activ_manager_name}, #{activ_manager_phonenumber}, #{activ_manager_dept}, #{activ_title}, #{activ_url}, #{activ_area}, #{activ_dept}, #{activ_start_date},#{activ_end_date},#{activ_activing_date},#{activ_people},#{activ_field},#{activ_contents},#{activ_main_img_name}#{activ_thumbnail_img_name})
+	</insert>
+
+
+
+
+
+</mapper>
