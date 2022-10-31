@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>배너 관리</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="button.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
         <div class="sidebar" id="menu">
             <!-- 로고(image) -->
             <div class="logo">
@@ -18,34 +19,21 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" class="menu"><img src="images/globe.png">사이트 바로가기</a>
-                </li>
-                <li>
-                    <a href="managerHome.html" class="menu"><img src="images/home.png">관리자 홈</a>
+                    <a href="../main/index.html" class="menu"><img src="images/globe.png">사이트 바로가기</a>
                 </li>
                 <li>
                     <a><img src="images/user.png">회원 관리<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
                     <ul>
-                        <li><a href="blackList.html">블랙리스트</a></li>
+                        <li><a href="memberAll.html">회원 목록 관리</a></li>
                         <li><a href="memberConfirm.html">회원 인증 관리</a></li>
-                        <li><a href="memberPoint.html">회원 포인트 관리</a></li>
-                        <li><a href="memberBadge.html">회원 뱃지 관리</a></li>
                     </ul>
                 </li>
                 <li>
                         <a><img src="images/apps.png">콘텐츠 관리<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
                             <ul>
                                 <li><a href="question.html">문의글 관리</a></li>
-                                <li><a href="comment.html">댓글 관리</a></li>
-                                <li><a href="post.html">게시글 관리</a></li>
+                                <li><a href="activityPost.html">대외활동 관리</a></li>
                             </ul>
-                </li>
-                <li>
-                        <a><img src="images/chart.png">통계<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
-                    <ul>
-                        <li><a href="settingTerm.html">기간별 분석</a></li>
-                        <li><a href="settingVisitor.html">방문자 통계</a></li>
-                    </ul>
                 </li>
                 <li>
                         <a><img src="images/settings.png">환경 설정<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
@@ -55,12 +43,30 @@
                 </li>
             </ul>
         </div>
-    </div>
+
     <div class="contents">
         <h3>배너 관리</h3>
-        <div class="banner1 banner">첫번째 배너입니다</div>
-        <div class="banner2 banner">두번째 배너입니다</div>
-    </div>
+        <!-- 전체 배너 테이블  -->
+          <table class="banner">
+            <thead>
+            <tr>
+                <th>사용 여부</th><th>배너 적용/해제 일시</th><th>배너 보기</th>
+            </tr>
+            </thead>
+            <tbody>
+                <td>현재 배너</td>
+                <td>0000-00-00</td>
+                <td>
+                    <a href="https://letspl.me/assets/images/top-main-img-4.png" target="_blank">배너 보기</a>
+                </td>
+              </tr>
+              <tr>
+                <td>이전 배너</td>
+                <td>0000-00-00</td>
+                <td>
+                    <a href="https://letspl.me/assets/images/top-main-img-4.png" target="_blank">배너 보기</a>
+                </td>
+              </tr>
 
 </body>
 <script src="manager.js"></script>
