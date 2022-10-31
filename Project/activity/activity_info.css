@@ -12337,15 +12337,15 @@ body::backdrop {
 
 @media (min-width: 600px) {
   .MuiContainer-root {
-    padding-left: 24px;
-    padding-right: 24px;
+    /* padding-left: 24px;
+    padding-right: 24px; */
   }
 }
 
 @media (min-width: 960px) {
   .MuiContainer-root {
-    padding-left: 70px;
-    padding-right: 24px;
+    /* padding-left: 80px;
+    padding-right: 24px; */
   }
 }
 
@@ -15296,7 +15296,7 @@ label + .MuiInput-formControl {
 .jss193 {
   border: 1px solid #e6ecf0;
   margin: 2rem 0;
-  margin-right: 50px;
+  margin-right: 40px;
   display: flex;
 }
 
@@ -15706,7 +15706,7 @@ label + .MuiInput-formControl {
 }
 
 .jss1 {
-  max-width: 1392px;
+  max-width: 1200px;
 }
 
 .jss2 {
@@ -15732,7 +15732,7 @@ label + .MuiInput-formControl {
 }
 
 .jss4 {
-  padding: 1.6rem;
+  /* padding: 1.6rem; */
   flex-grow: 1;
   flex-basis: 0;
   flex-shrink: 1;
@@ -15740,7 +15740,7 @@ label + .MuiInput-formControl {
 
 @media (max-width: 959.95px) {
   .jss4 {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
 }
 
@@ -23800,10 +23800,14 @@ label + .MuiInput-formControl {
 
 .jss258 {
   color: #363636;
-  width: calc(100% - 160px);
+  width: 100%;
   font-size: 2rem;
   font-weight: 600;
   overflow-wrap: anywhere;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
 }
 
 @media (max-width:959.95px) {
