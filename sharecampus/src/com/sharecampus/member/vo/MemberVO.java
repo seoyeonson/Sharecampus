@@ -1,111 +1,95 @@
 package com.sharecampus.member.vo;
 
 public class MemberVO {
-   private int memberNumber;
-   private String memberId;
-   private String memberPw;
-   private int memberAge;
-   private String memberGender;
-   private String memberEmail;
-   private String memberZipcode;
-   private String memberAddress;
-   private String memberAddressDetail;
+	private int memberNum; 
+	private String memberId;
+	private String memberPw;
+	private String memberName;
+	private String memberNickname;
+	private String memberPhone_number;
+	private String memberImgName;
+	private String memberAuthImgName;
+	private int memberAuth;
+	private String memberSignupDate;
+	private int memberType;
+	
+	public MemberVO() {;}
+	
+	
+	public int getMemberNum() {
+		return memberNum;
+	}
+	public void setMemberNum(int memberNum) {
+		this.memberNum = memberNum;
+	}
+	public String getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+	public String getMemberPw() {
+		return memberPw;
+	}
+	public void setMemberPw(String memberPw) {
+		this.memberPw = memberPw;
+	}
+	public String getMemberName() {
+		return memberName;
+	}
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+	public String getMemberPhone_number() {
+		return memberPhone_number;
+	}
+	public void setMemberPhone_number(String memberPhone_number) {
+		this.memberPhone_number = memberPhone_number;
+	}
+	public String getMemberImgName() {
+		return memberImgName;
+	}
+	public void setMemberImgName(String memberImgName) {
+		this.memberImgName = memberImgName;
+	}
+	public String getMemberAuthImgName() {
+		return memberAuthImgName;
+	}
+	public void setMemberAuthImgName(String memberAuthImgName) {
+		this.memberAuthImgName = memberAuthImgName;
+	}
+	public int getMemberAuth() {
+		return memberAuth;
+	}
+	public void setMemberAuth(int memberAuth) {
+		this.memberAuth = memberAuth;
+	}
+	public String getMemberSignupDate() {
+		return memberSignupDate;
+	}
+	public void setMemberSignupDate(String memberSignupDate) {
+		this.memberSignupDate = memberSignupDate;
+	}
+	public int getMemberType() {
+		return memberType;
+	}
+	public void setMemberType(int memberType) {
+		this.memberType = memberType;
+	}
 
-   public MemberVO() {;}
+	@Override
+	public String toString() {
+		return "MemberVO [memberNum=" + memberNum + ", memberId=" + memberId + ", memberPw=" + memberPw
+				+ ", memberName=" + memberName + ", memberNickname=" + memberNickname + ", memberPhone_number="
+				+ memberPhone_number + ", memberImgName=" + memberImgName + ", memberAuthImgName=" + memberAuthImgName
+				+ ", memberAuth=" + memberAuth + ", memberSignupDate=" + memberSignupDate + ", memberType=" + memberType
+				+ "]";
+	}
 
-   public int getMemberNumber() {
-      return memberNumber;
-   }
-
-   public void setMemberNumber(int memberNumber) {
-      this.memberNumber = memberNumber;
-   }
-
-   public String getMemberId() {
-      return memberId;
-   }
-
-   public void setMemberId(String memberId) {
-      this.memberId = memberId;
-   }
-
-   public String getMemberPw() {
-      return memberPw;
-   }
-
-   public void setMemberPw(String memberPw) {
-      this.memberPw = memberPw;
-   }
-
-   public int getMemberAge() {
-      return memberAge;
-   }
-
-   public void setMemberAge(int memberAge) {
-      this.memberAge = memberAge;
-   }
-
-   public String getMemberGender() {
-      return memberGender;
-   }
-
-   public void setMemberGender(String memberGender) {
-      this.memberGender = memberGender;
-   }
-
-   public String getMemberEmail() {
-      return memberEmail;
-   }
-
-   public void setMemberEmail(String memberEmail) {
-      this.memberEmail = memberEmail;
-   }
-
-   public String getMemberZipcode() {
-      return memberZipcode;
-   }
-
-   public void setMemberZipcode(String memberZipcode) {
-      this.memberZipcode = memberZipcode;
-   }
-
-   public String getMemberAddress() {
-      return memberAddress;
-   }
-
-   public void setMemberAddress(String memberAddress) {
-      this.memberAddress = memberAddress;
-   }
-
-   public String getMemberAddressDetail() {
-      return memberAddressDetail;
-   }
-
-   public void setMemberAddressDetail(String memberAddressDetail) {
-      this.memberAddressDetail = memberAddressDetail;
-   }
-
-   @Override
-   public String toString() {
-      return "MemberVO [memberNumber=" + memberNumber + ", memberId=" + memberId + ", memberPw=" + memberPw
-            + ", memberAge=" + memberAge + ", memberGender=" + memberGender + ", memberEmail=" + memberEmail
-            + ", memberZipcode=" + memberZipcode + ", memberAddress=" + memberAddress + ", memberAddressDetail="
-            + memberAddressDetail + "]";
-   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

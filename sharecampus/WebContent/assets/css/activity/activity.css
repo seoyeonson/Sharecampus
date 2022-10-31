@@ -35879,3 +35879,29 @@ a.note-dropdown-item:hover {
   color: #fff;
   font-family: 'noto Sans KR', sans-serif;
 } */
+
+.ActivityNew {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  float: right;
+  position: relative;
+  justify-content: flex-end;
+  margin-right: 5px;
+  left: 5px;
+  overflow: visible;
+}
+
+.btn123 {
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 6px 10px;
+  background-color: #3393f4;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 2px;
+}

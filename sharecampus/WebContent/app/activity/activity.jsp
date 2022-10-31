@@ -6,10 +6,13 @@
 <meta charset="UTF-8">
 <title>대외활동</title>
 </head>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity.css">
-<script src="${pageContext.request.contextPath}/assets/js/activity.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
+<script
+	src="${pageContext.request.contextPath}/assets/js/activity/activity.js"></script>
 <body>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<section>
 		<div class="commonContentViewHeader">
 			<h1 class="projectView">
@@ -61,28 +64,21 @@
 					<option value="18">사회공헌/교류</option>
 					<option value="19">유통/물류</option>
 					<option value="20">기타</option>
-				</select> <select class="smSelect">
-					<option value="0000">활동기간</option>
-					<option value="0001">3개월 이하</option>
-					<option value="0002">3개월~6개월</option>
-					<option value="0003">6개월~1년</option>
-					<option value="0004">1년 이상</option>
 				</select>
-				<div class="activityNew">
-					<a href="activity_new.html"> <img
-						src="${pageContext.request.contextPath}/assets/images/activity_new_button.PNG" alt="공고 등록 버튼">
-					</a>
+				<div class="ActivityNew">
+					<button class="btn123" onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_new.jsp';">공고
+						등록</button>
 				</div>
 			</div>
 			<div class="projectGridView">
-				<div class="projectGridWrap" onclick="newPage()">
+				<div class="projectGridWrap" onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_info.jsp';"">
 					<div class="projectTopInfo">
 						<div class="top">
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -107,8 +103,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -116,14 +112,14 @@
 					</div>
 				</div>
 				<div class="projectGridWrap"
-					onclick="location.href='activity_info.html';">
+					onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_info.jsp';">
 					<div class="projectTopInfo">
 						<div class="top">
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -148,8 +144,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -162,8 +158,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -188,8 +184,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -202,8 +198,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -228,8 +224,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -242,8 +238,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -268,8 +264,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -282,8 +278,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge blue">
 									<h2>(분야)</h2>
@@ -308,8 +304,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -322,8 +318,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -348,8 +344,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -362,8 +358,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -388,8 +384,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -402,8 +398,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -428,8 +424,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -442,8 +438,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -468,8 +464,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -482,8 +478,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -508,8 +504,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -522,8 +518,8 @@
 							<div class="badgeWrap">
 								<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                      alt="업데이트있는 프로젝트" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+                                            alt="업데이트있는 프로젝트" /> -->
 								</div>
 								<div class="badge black">
 									<h2>(분야)</h2>
@@ -548,8 +544,8 @@
 							<div class="left">
 								<div class="heartCount">
 									<!-- <img loading="lazy"
-                                      src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                      alt="프로젝트 구독자 수" /> -->
+                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
+                                            alt="프로젝트 구독자 수" /> -->
 									<span>(좋아요 수)</span>
 								</div>
 							</div>
@@ -558,11 +554,11 @@
 				</div>
 				<div class="projectView projectNewsWrap"></div>
 				<div class="projectBlueBg"></div>
-			</div>
-		</div>
 	</section>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>

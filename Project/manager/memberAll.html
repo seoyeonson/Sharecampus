@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 목록 관리</title>
+    
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <!-- <div class="wrapper"> -->
+        <div class="sidebar">
+            <!-- 로고(image) -->
+            <div class="logo">
+                <img src="..">
+                <h1 style="color:#3393f4">쉐어 캠퍼스</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="../main/index.html" class="menu"><img src="images/globe.png">사이트 바로가기</a>
+                </li>
+                <li>
+                    <a><img src="images/user.png">회원 관리 <img src="images/menu-burger.png" style="float: right; height:20px;"></a>
+                    <ul>
+                        <li><a href="memberAll.html">회원 목록 관리</a></li>
+                        <li><a href="memberConfirm.html">회원 인증 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                        <a><img src="images/apps.png">콘텐츠 관리<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
+                            <ul>
+                                <li><a href="question.html">문의글 관리</a></li>
+                                <li><a href="activityPost.html">대외활동 관리</a></li>
+                            </ul>
+                </li>
+                
+                <li>
+                        <a><img src="images/settings.png">환경 설정<img src="images/menu-burger.png" style="float: right; height:20px;"></a>
+                    <ul>
+                        <li><a href="settingBanner.html">배너 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    <!-- </div> -->
+    <div class="contents">
+        <h3>회원 목록 관리</h3>
+        <!-- 전체 회원 목록 테이블  -->
+          <table class="memberAll">
+            <thead>
+            <tr>
+                <th>회원번호</th><th>회원명</th><th>가입 일자</th><th>방문 횟수</th><th>회원 상세보기</th><th>회원 삭제</th>
+            </tr>
+            </thead>
+            <tbody>
+                <td class="memberId">0</td>
+                <td>000</td>
+                <td>0000-00-00</td>
+                <td>0회</td>
+                <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td>
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td>
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td>
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td>
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td>
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+    </div>
+    
+</body>
+<script src="manager.js"></script>
+</html>
