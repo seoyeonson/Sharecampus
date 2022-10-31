@@ -8,10 +8,19 @@ table {
   left: 1%;
   border-top:1px solid lightgray;
   border-collapse: collapse;
-  /* margin-top: 5%; */
   width: 80vw;
-  height: 20vw;
   background: white;
+}
+
+.contents .question, .contents .banner{
+  top:5%;
+}
+
+
+.contents caption {
+  background-color: rgb(245, 245, 245);
+  font-size: 20px;
+  padding: 10px;
 }
   th {
     border-bottom: 1px solid lightgray;
@@ -21,7 +30,7 @@ table {
 
   td {
     border-bottom: 1px solid lightgray;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     margin: 0px;
     font-size: 15px;

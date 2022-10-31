@@ -2,7 +2,7 @@
     position:relative;
 }
 
-.contents .badgeLevel, .contents .reportLevel {
+.contents .reportLevel {
     width: 80vw;
     height:auto;
     background-color: white;
@@ -13,6 +13,6 @@
     margin-top: 30px;
 }
 
-.contents .reportLevel .in, .contents .badgeLevel .in {
+.contents .reportLevel .in {
     font-size: 16px;
 }
