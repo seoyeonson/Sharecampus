@@ -1,3 +1,3 @@
 function newPage() {
-    window.location.href = 'activity_info.html'
+    window.location.href = '/app/activity/activity_info.jsp'
 }
