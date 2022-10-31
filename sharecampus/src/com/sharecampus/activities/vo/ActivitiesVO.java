@@ -23,6 +23,7 @@ public class ActivitiesVO {
 	public ActivitiesVO() {;}
 	
 	private int active_num;
+	
 	public int getActive_num() {
 		return active_num;
 	}

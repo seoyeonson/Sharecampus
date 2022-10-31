@@ -1,0 +1,20 @@
+.contents {
+    position: relative;
+}
+
+.contents .banner {
+    position: absolute;
+    width: 30vw;
+    height: 20vw;
+    background-color: white;
+}
+
+.contents .banner1 {
+    top: 5%;
+    left: 1%;
+}
+
+.contents .banner2 {
+    top: 5%;
+    left: 40%;
+}

@@ -18,9 +18,9 @@ input[type=number] {
 </style>
 <!-- 에러 무시 문제 없음 -->
 </head>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity_new.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/activity_new.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/activity/activity_new.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/activity/activity_new.js"></script>
 <body>
 	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<form id="container">
@@ -35,7 +35,7 @@ input[type=number] {
 			<h2>담당자 정보</h2>
 			<div class="manager" data-managerfor="first">
 				<p class="input medium">
-					<input type="email" name="manager_email" placeholder="이메일"
+					<input type="email" name="manager_email" placeholder="이메일" id = "activ_manager_email"
 						maxlength="100" autocomplete="off">
 				</p>
 				<p class="input medium">
