@@ -1,22 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
-<title>공고글 관리</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/manager_style.css">
+<title>회원 목록 관리</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/manager_style.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/manager_table.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/manager_button.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/manager_search.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<!-- <div class="wrapper"> -->
-        <div class="sidebar" id="menu">
+
+    <!-- <div class="wrapper"> -->
+        <div class="sidebar">
             <!-- 로고(image) -->
             <div class="logo">
                 <img src="..">
+                <!-- <h1 style="color:#3393f4">쉐어 캠퍼스</h1> -->
             </div>
             <ul>
                 <li>
@@ -44,69 +50,64 @@
             </ul>
         </div>
     <!-- </div> -->
-
     <div class="contents">
-        <h3>대외활동 게시 요청 글</h3>
+        <h3>회원 목록 관리</h3>
         
-          <input type="button" value="선택글 상세 보기" class="activityDetail" id="activityBtn" onclick="window.open()">
-          <input type="button" value="선택글 승인/거절" class="confirm_btn" id="post_btn" onclick="activityConfirm()">
-
-          <table class="activityPost">
+		<div class="searchBox">
+			<input type="text" placeholder="회원명을 입력해주세요." id="inputName">	
+			<button id="searchBtn" onclick="search()">검색</button>
+		</div>        
+        
+        <!-- 전체 회원 목록 테이블  -->
+          <table class="memberAll">
             <thead>
             <tr>
-                <th>선택</th><th>제목</th><th>회원명</th><th>작성일</th><th>마감일</th>
+                <th>회원번호</th><th>회원명</th><th>가입 일자</th><th>방문 횟수</th><th>회원 삭제</th>
             </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                    <input type="checkbox" name="activityPost_btn" id="activityPost_btn1" onclick='checkSelectAllActivity(this)'>
-                </td>
-                <td>다큐멘터리 제작교육 수강생 모집(~10.30)</td>
-                <td>시청자미디어재단 인천시청자미디어센터</td>
+            <tbody id="memberTableBody">
+                <td class="memberId">0</td>
+                <td class="memberName">홍길동</td>
                 <td>0000-00-00</td>
-                <td>D-6</td>
+                <td>0회</td>
+                <!-- <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td> -->
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
               </tr>
               <tr>
-                <td>
-                    <input type="checkbox" name="activityPost_btn" id="activityPost_btn2" onclick='checkSelectAllActivity()'>
-                </td>
+                <td></td>
+                <td class="memberName">아무개</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <!-- <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td> -->
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
               </tr>
               <tr>
-                <td>
-                    <input type="checkbox" name="activityPost_btn" id="activityPost_btn3" onclick='checkSelectAllActivity()'>
-                </td>
+                <td></td>
+                <td class="memberName"></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <!-- <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td> -->
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
               </tr>
               <tr>
-                <td>
-                    <input type="checkbox" name="activityPost_btn" id="activityPost_btn4" onclick='checkSelectAllActivity()'>
-                </td>
+                <td></td>
+                <td class="memberName"></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <!-- <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td> -->
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
               </tr>
               <tr>
-                <td>
-                    <input type="checkbox" name="activityPost_btn" id="activityPost_btn5" onclick='checkSelectAllActivity()'>
-                </td>
+                <td></td>
+                <td class="memberName"></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <!-- <td><button class="seeDetail" onclick="memberDetail()">상세보기</button></td> -->
+                <td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
               </tr>
             </tbody>
           </table>
     </div>
-
 </body>
 <script src="${pageContext.request.contextPath}/assets/js/manager_manager.js" charset="utf-8"></script>
 </html>

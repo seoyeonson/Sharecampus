@@ -1,13 +1,32 @@
-.contents .confirm_btn {
+.contents {
+    position: relative;
+}
+
+.contents .confirm_btn, .contents .activityDetail {
     background-color: #3393f4;
     color: white;
     border: none;
-    padding: 15px 32px;
+    padding: 13px 28px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 4px;
     position:absolute;
-    left: 89%;
+    left: 84%;
+    top: 5%;
 }
+
+.contents .activityDetail {
+    left: 70%;
+}
+
+.contents .removeList, .contents .seeDetail, .contents .returnDetail, .contents .seeBanner {
+    background-color: lightgray;
+    border: none;
+    padding: 7px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
