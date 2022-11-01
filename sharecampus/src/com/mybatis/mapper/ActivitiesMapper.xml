@@ -3,10 +3,14 @@
 <mapper namespace="activ">
 	
 	<insert id="insert" parameterType="activitiesVO">
-		insert into tbl_member (activ_manager_email, activ_manager_name, activ_manager_phonenumber, activ_manager_dept, activ_title, activ_url, activ_area, activ_dept, activ_start_date,activ_end_date,activ_activing_date,activ_people,activ_field,activ_contents,activ_main_img_name,activ_thumbnail_img_name)
-		values(#{activ_manager_email}, #{activ_manager_name}, #{activ_manager_phonenumber}, #{activ_manager_dept}, #{activ_title}, #{activ_url}, #{activ_area}, #{activ_dept}, #{activ_start_date},#{activ_end_date},#{activ_activing_date},#{activ_people},#{activ_field},#{activ_contents},#{activ_main_img_name}#{activ_thumbnail_img_name})
+		insert into tbl_activity(activ_manager_email, activ_manager_name, activ_manager_phonenum, activ_manager_dept, activ_title, activ_url, activ_area, activ_dept, activ_start_date,activ_end_date,activ_activing_date,activ_people,activ_field,activ_contents,activ_main_img_name,activ_thumbnail_img_name)
+		values(#{activManagerEmail}, #{activManagerName}, #{activManagerPhonenum}, #{activManagerDept}, #{activTitle}, #{activUrl}, #{activArea}, #{activDept}, #{activStartDate},#{activEndDate},#{activActivingDate},#{activPeople},#{activField},#{activContents},#{activMainImgName},#{activThumbnailImgName})
 	</insert>
 
+	<select id="select" parameterType = "activitiesVO" resultType ="activitiesVO">
+		select * from tbl_activity
+		where activ_num = #{activNum}
+	</select>
 
 
 
