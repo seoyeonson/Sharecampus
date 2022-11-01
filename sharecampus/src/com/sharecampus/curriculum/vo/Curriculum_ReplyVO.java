@@ -13,11 +13,11 @@ public Curriculum_ReplyVO(
 	int	member_num,
 	String	curri_reply_contents,
 	String	curri_reply_date) {
-this.curri_reply_num =curri_reply_num;
-this.curri_num =	curri_num;
-this.member_num	= member_num;
-this.curri_reply_contents =	curri_reply_contents;
-this.curri_reply_date =	curri_reply_date;
+this.curri_reply_num 		=	curri_reply_num;
+this.curri_num 				=	curri_num;
+this.member_num				= 	member_num;
+this.curri_reply_contents 	=	curri_reply_contents;
+this.curri_reply_date 		=	curri_reply_date;
 }
 public Curriculum_ReplyVO() {;}
 public int getCurri_reply_num() {

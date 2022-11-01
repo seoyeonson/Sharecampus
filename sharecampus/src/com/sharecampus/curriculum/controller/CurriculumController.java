@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.curriculum.command.Command;
+import com.sharecampus.curriculum.command.ListCommand;
+import com.sharecampus.curriculum.command.ViewCommand;
+import com.sharecampus.curriculum.command.WriteCommand;
 
 /**
  * Servlet implementation class GetList
@@ -51,13 +54,15 @@ public class CurriculumController extends HttpServlet {
 			viewPage = "curriculum.jsp";
 			break;
 		case "/curriculum/view.do":
-			// TODO
+			command = new ViewCommand();
+			command.execute(request, response);
+			viewPage = "curriculum_detail.jsp";
 			break;
-		case "/curriculum/write.do":
+		case "/curriculum/curriculum_regist.do":
 			viewPage = "curriculum_regist.jsp";
 			break;
 		case "/curriculum/writeOk.do":
-//			command = new WriteCommand();
+			command = new WriteCommand();
 			command.execute(request, response);
 			break;
 		case "/curriculum/update.do":
