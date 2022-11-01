@@ -1,22 +1,23 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     margin:0px;
+    overflow: hidden;
 }
 
-.wrapper .sidebar {
+.sidebar {
     background-color: rgb(245, 245, 245);
     position: absolute;
-    width: 17vw;
+    width: 18vw;
     height: 100vw;
     float: left;
 }
 
-.wrapper .sidebar ul {
+.sidebar ul {
     list-style: none;
     padding-left: 0px;
 }
 
-.wrapper .sidebar ul li a {
+.sidebar ul li a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
@@ -27,14 +28,14 @@ body {
     font-weight: bold;
 }
 
-.wrapper .sidebar ul li a img {
+.sidebar ul li a img {
     display: inline-block;
     padding: 0px 10px 0px 0px;
     height: 25px;
 }
 
-.wrapper .sidebar ul li:hover,
-.wrapper .sidebar ul li.active{
+.sidebar ul li:hover,
+.sidebar ul li.active{
     background-color:rgb(220, 220, 220);
 }
 
@@ -54,67 +55,25 @@ body {
     margin-top:0;
 }
 
-.contents .card {
-    position: absolute;
-    width: 39.9vw;
-    height: 13vw;
-    background-color: white;
-}
 
-.contents .card1 {
-    top: 5%;
-    left: 1%;
-}
-
-.contents .card2 {
-    top: 5%;
-    left: 50%;
-}
-
-.contents .card3 {
-    top: 19%;
-    left: 1%;
-}
-
-.contents .card4 {
-    top: 19%;
-    left: 50%;
-}
-
-.contents .card5 {
-    top: 33%;
-    left: 1%;
-}
-
-.contents .card6 {
-    top: 33%;
-    left: 50%;
-}
-
-.contents .card p{
-    border-bottom: 1px solid lightgray;
-    padding: 5px;
-    text-align: center;
-}
-
-.wrapper .sidebar ul li {
+.sidebar ul li {
     position: relative;
 }
-
-.wrapper .sidebar ul li ul {
+.sidebar ul li ul {
     display:none;
     position: absolute;
     background-color: white;
     z-index: 1;
-    width: 16.6vw;
-    transition-duration: 3s;
+    width: 18vw;
 }
 
-.wrapper .sidebar ul li:hover > ul {
+.sidebar ul li:hover > ul {
     display: block;
 }
 
-.wrapper .sidebar ul li ul:hover,
-.wrapper .sidebar ul li ul.active{
+.sidebar ul li ul:hover,
+.sidebar ul li ul.active{
     display: block;
 }
+
+
