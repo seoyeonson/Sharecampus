@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +91,7 @@
 					<div class="projectBottomInfo">
 						<div class="txtWrap studyTxtWrap">
 							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
+							<h2 class="tit" value='<c:out value= "${activTitle}"/>'>(대외활동 제목)</h2>
 							<p class="studyCategory">(간략 설명)</p>
 							<div class="iconWrap">
 								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>

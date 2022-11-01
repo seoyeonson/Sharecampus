@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +32,7 @@ input[type=number] {
 
 
 
-		<form id="container">
+		<form id="container" action ="/activities/listDi.ac">
 			<div class="section">
 				<h1>대외활동 게시 요청</h1>
 				<p class="description">
@@ -43,19 +44,20 @@ input[type=number] {
 				<h2>담당자 정보</h2>
 				<div class="manager" data-managerfor="first">
 					<p class="input medium">
-						<input type="email" name="manager_email" placeholder="이메일"
+						<input type="email" name="activManagerEmail" placeholder="이메일" 
+						value='<c:out value= "${activManagerEmail}"/>'
 							maxlength="100" autocomplete="off">
 					</p>
 					<p class="input medium">
-						<input type="text" name="manager_name" placeholder="이름"
+						<input type="text" name="activManagerName" placeholder="이름" 
 							maxlength="10" autocomplete="off">
 					</p>
 					<p class="input medium">
-						<input type="number" name="manager_phone"
+						<input type="text" name="activManagerPhonenum"
 							placeholder="연락처 (- 없이 숫자만)" autocomplete="off">
 					</p>
 					<p class="input medium">
-						<input type="text" name="manager_company" placeholder="소속"
+						<input type="text" name="activManagerDept" placeholder="소속"
 							maxlength="40" autocomplete="off">
 					</p>
 					<p class="agreement">게시물 관리, 게시 처리 안내, 유료 광고 게재 안내 등을 위해 담당자
@@ -64,7 +66,7 @@ input[type=number] {
 					<label class="agreement"><input type="checkbox"
 						name="agree">위 내용에 동의합니다.</label>
 				</div>
-				<div class="manager" data-managerfor="again" style="display: none;">
+				<!-- <div class="manager" data-managerfor="again" style="display: none;">
 					<p class="input medium">
 						<input type="email" name="manager_again_email" placeholder="이메일"
 							maxlength="100">
@@ -77,115 +79,116 @@ input[type=number] {
 						<input type="button" name="manager_again_button"
 							value="이메일 및 비밀번호 확인">
 					</p>
-				</div>
+				</div> -->
 			</div>
 			<div class="section">
 				<h2>활동 개요</h2>
 				<p class="caution">* 별표 표시는 필수 항목입니다.</p>
 				<p class="input">
-					<input type="text" name="title" placeholder="제목 *" maxlength="40"
-						autocomplete="off">
+					<input type="text" name="activTitle" placeholder="제목 *" maxlength="40"
+						autocomplete="off"
+						>
 				</p>
 				<p class="input">
-					<input type="text" name="website" placeholder="웹사이트 (http:// 포함)"
+					<input type="text" name="activUrl" placeholder="웹사이트 (http:// 포함)"
 						autocomplete="off">
 				</p>
 				<h3>지역 *</h3>
 				<div class="group area">
-					<label class="checkbox"><input type="radio" name="area"
+					<label class="checkbox"><input type="radio" name="activArea"
 						value="KR01">서울특별시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR02">경기도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR02">경기도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR03">부산광역시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR04">인천광역시</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR04">인천광역시</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR05">대구광역시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR06">경상남도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR06">경상남도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR07">경상북도</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR08">대전광역시</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR08">대전광역시</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR09">충청남도</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR10">충청북도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR10">충청북도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR11">전라남도</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR12">전라북도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR12">전라북도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR13">광주광역시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR14">강원도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR14">강원도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR15">울산광역시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR16">제주특별자치도</label> <label
-						class="checkbox"><input type="radio" name="area"
+						type="radio" name="activArea" value="KR16">제주특별자치도</label> <label
+						class="checkbox"><input type="radio" name="activArea"
 						value="KR17">세종특별자치시</label> <label class="checkbox"><input
-						type="radio" name="area" value="KR00">기타</label>
+						type="radio" name="activArea" value="KR00">기타</label>
 				</div>
 				<h3>분야 *</h3>
 				<div class="group category">
-					<label class="checkbox"><input type="radio" name="category"
+					<label class="checkbox"><input type="radio" name="activDept"
 						value="01">여행/호텔/관광</label> <label class="checkbox"><input
-						type="radio" name="category" value="02">언론/미디어</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="02">언론/미디어</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="03">문화/역사</label> <label class="checkbox"><input
-						type="radio" name="category" value="04">행사/페스티벌</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="04">행사/페스티벌</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="05">교육</label> <label class="checkbox"><input
-						type="radio" name="category" value="06">디자인/사진/예술</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="06">디자인/사진/예술</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="07">경제/금융</label> <label class="checkbox"><input
-						type="radio" name="category" value="08">경영/컨설팅/마케팅</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="08">경영/컨설팅/마케팅</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="09">정치/사회/법률</label> <label class="checkbox"><input
-						type="radio" name="category" value="10">체육/헬스</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="10">체육/헬스</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="11">의료/보건</label> <label class="checkbox"><input
-						type="radio" name="category" value="12">뷰티/미용/화장품</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="12">뷰티/미용/화장품</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="13">과학/공학/기술/IT</label> <label class="checkbox"><input
-						type="radio" name="category" value="14">요리/식품</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="14">요리/식품</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="15">창업/자기계발</label> <label class="checkbox"><input
-						type="radio" name="category" value="16">환경/에너지</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="16">환경/에너지</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="17">콘텐츠</label> <label class="checkbox"><input
-						type="radio" name="category" value="18">사회공헌/교류</label> <label
-						class="checkbox"><input type="radio" name="category"
+						type="radio" name="activDept" value="18">사회공헌/교류</label> <label
+						class="checkbox"><input type="radio" name="activDept"
 						value="19">유통/물류</label> <label class="checkbox"><input
-						type="radio" name="category" value="20">기타</label>
+						type="radio" name="activDept" value="20">기타</label>
 				</div>
 				<h3>접수 기간 *</h3>
 				<p class="input small">
-					<input type="date" name="start_date" autocomplete="off"
+					<input type="date" name="activStartDate" autocomplete="off"
 						class="date" id="datepicker1"><span>부터</span>
 				</p>
 				<p class="input small">
-					<input type="date" name="end_date" autocomplete="off" class="date"
+					<input type="date" name="activEndDate" autocomplete="off" class="date"
 						id="datepicker2"><span>까지</span>
 				</p>
 				<h3>활동기간 *</h3>
 				<div class="group">
-					<label class="checkbox"><input type="radio" name="period"
+					<label class="checkbox"><input type="radio" name="activActivingDate"
 						value="0001">3개월 이하</label> <label class="checkbox"><input
-						type="radio" name="period" value="0002">3개월~6개월</label> <label
-						class="checkbox"><input type="radio" name="period"
+						type="radio" name="activActivingDate" value="0002">3개월~6개월</label> <label
+						class="checkbox"><input type="radio" name="activActivingDate"
 						value="0003">6개월~1년</label> <label class="checkbox"><input
-						type="radio" name="period" value="0004">1년 이상</label>
+						type="radio" name="activActivingDate" value="0004">1년 이상</label>
 				</div>
 				<h3>모집인원</h3>
 				<p class="input medium">
-					<input type="number" min="0" name="num_people" placeholder="인원수"
+					<input type="number" min="0" name="activPeople" placeholder="인원수"
 						maxlength="40" autocomplete="off">
 				</p>
 				<h3>기관 정보</h3>
 				<p class="input medium">
-					<input type="text" name="company" placeholder="주최 기관명"
+					<input type="text" name="activField" placeholder="주최 기관명"
 						maxlength="40" autocomplete="off">
 				</p>
 			</div>
 			<div class="section">
 				<h2>상세 내용</h2>
 				<p class="input">
-					<textarea name="description"
+					<textarea name="activContents"
 						placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
 				</p>
 			</div>
@@ -197,7 +200,7 @@ input[type=number] {
 					<li>썸네일 : 목록에 노출 / 480x684px 권장 / 없을 시 '본문' 이미지로 대체</li>
 				</ul>
 				<p class="input medium">
-					<input type="text" name="attach_filename" placeholder="본문 *"
+					<input type="text" name="activThumbnailImgName" placeholder="본문 *"
 						class="attachtext" readonly> <input type="file"
 						id="my-input" name="attach" class="attachfile"
 						accept="image/jpeg, image/png, image" onchange="fileUpload()">
@@ -206,7 +209,7 @@ input[type=number] {
 						onchange="fileUpload()">
 				</p>
 				<p class="input medium thumbnail">
-					<input type="text" name="attach_filename" placeholder="썸네일"
+					<input type="text" name="activMainImgName" placeholder="썸네일"
 						class="attachtext" readonly> <input type="file"
 						id="my-input" name="attach" class="attachfile"
 						accept="image/jpeg, image/png, image" onchange="fileUpload()">
@@ -249,7 +252,7 @@ input[type=number] {
 				</ul>
 			</div>
 			<div class="submit">
-				<input type="submit" value="게시 요청하기">
+				<input type="submit" value="게시 요청하기" >
 			</div>
 		</form>
 	</div>

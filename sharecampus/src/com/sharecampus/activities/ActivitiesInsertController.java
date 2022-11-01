@@ -19,32 +19,36 @@ public class ActivitiesInsertController implements Execute{
 		ActivitiesVO activitiesVO = new ActivitiesVO();
 		Result result = new Result();
 		
-		activitiesVO.setActiv_manager_email(req.getParameter("activ_manager_email"));
-		activitiesVO.setActiv_manager_name(req.getParameter("activ_manager_name"));
-		activitiesVO.setActiv_manager_phonenumber(req.getParameter("activ_manager_phonenumber"));
-		activitiesVO.setActiv_manager_dept(req.getParameter("activ_manager_dept"));
-		activitiesVO.setActiv_title(req.getParameter("activ_title"));
-		activitiesVO.setActiv_url(req.getParameter("activ_url"));
-		activitiesVO.setActiv_area(req.getParameter("activ_area"));
-		activitiesVO.setActiv_dept(req.getParameter("activ_dept"));
-		activitiesVO.setActiv_start_date(Integer.valueOf(req.getParameter("activ_start_date")));
-		activitiesVO.setActiv_end_date(Integer.valueOf(req.getParameter("activ_end_date")));
-		activitiesVO.setActiv_activing_date(Integer.valueOf(req.getParameter("activ_activing_date")));
-		activitiesVO.setActiv_people(Integer.valueOf(req.getParameter("activ_people")));
-		activitiesVO.setActiv_field(req.getParameter("activ_field"));
-		activitiesVO.setActiv_contents(req.getParameter("activ_contents"));
-		activitiesVO.setActiv_main_img_name(req.getParameter("activ_main_img_name"));
-		activitiesVO.setActiv_thumbnail_img_name(req.getParameter("activ_thumbnail_img_name"));
+		activitiesVO.setActivManagerEmail(req.getParameter("activManagerEmail"));
+		activitiesVO.setActivManagerName(req.getParameter("activManagerName"));
+		activitiesVO.setActivManagerPhonenum(req.getParameter("activManagerPhonenum"));
+		activitiesVO.setActivManagerDept(req.getParameter("activManagerDept"));
+		activitiesVO.setActivTitle(req.getParameter("activTitle"));
+		activitiesVO.setActivUrl(req.getParameter("activUrl"));
+		activitiesVO.setActivArea(req.getParameter("activArea"));
+		activitiesVO.setActivDept(req.getParameter("activDept"));
+		activitiesVO.setActivStartDate(req.getParameter("activStartDate"));
+		activitiesVO.setActivEndDate(req.getParameter("activEndDate"));
+		activitiesVO.setActivActivingDate(req.getParameter("activActivingDate"));
+		try {
+			activitiesVO.setActivPeople(Integer.valueOf(req.getParameter("activPeople")));
+		} catch (NumberFormatException e) {
+			System.out.println("들어옴");
+			e.printStackTrace();
+		}
+		activitiesVO.setActivField(req.getParameter("activField"));
+		activitiesVO.setActivContents(req.getParameter("activContents"));
+		activitiesVO.setActivMainImgName(req.getParameter("activMainImgName"));
+		activitiesVO.setActivThumbnailImgName(req.getParameter("activThumbnailImgName"));
 		
 		
-		//파라미터 값으로 받아온 memberVO를 join 쿼리문에 삽입 => 테이블에 넣는다.
+				//파라미터 값으로 받아온 activitiesVO를 activ 쿼리문에 삽입 => 테이블에 넣는다.
 				activitiesDAO.insert(activitiesVO);
 				
 				//결과값을 초기화 시켜준다
-				result.setRedirect(true);
+//				result.setRedirect(true);
 				
-				//회원가입 완료후에 로그인 페이지로 이동
-				result.setPath(req.getContextPath() + "/activities/list.ac");
+				result.setPath(req.getContextPath() + "/list.ac");
 				
 				return result;
 	}

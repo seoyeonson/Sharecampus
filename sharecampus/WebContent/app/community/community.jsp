@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>커뮤니티</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/community/community.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/modal.css">
+<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/modal.css"> --%>
 </head>
 <body>
 	<jsp:include
@@ -41,7 +41,7 @@
                             <div class="left">
                                 <a href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
                                     <div class="profileThumb">
-                                        <img loading="lazy" src="profile1.jpg" alt="라이언">
+                                        <img loading="lazy" src="/assets/images/community/profile1.jpg" alt="라이언">
                                     </div>
                                 </a>
                             </div>
@@ -106,7 +106,7 @@ http://talkdrive.co.kr
                                     <div class="replyTab">
                                         <div class="tabTop">
                                             <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
-                                                <img src="let.png" alt="" class="tabImg0">
+                                                <img src="/assets/images/community/let.png" alt="" class="tabImg0">
                                             </a></div>
                                             <div class="tabRight">
                                                 <div class="tabProfile">

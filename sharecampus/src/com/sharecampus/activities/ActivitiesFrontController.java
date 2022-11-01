@@ -23,8 +23,11 @@ public class ActivitiesFrontController extends HttpServlet{
 		Result result = null;
 		
 		
-		if(target.equals("/activities/list.ac")) {
+		if(target.equals("/list.ac")) {
 //		대외활동 목록들을 DB에서 가져오는 것
+			result = new Result();
+			result.setPath("/app/activity/activity.jsp");
+			
 			
 		}else if(target.equals("/activities/listDs.ac")) {
 //		대외활동 상세글을 DB에서 조회
@@ -34,7 +37,8 @@ public class ActivitiesFrontController extends HttpServlet{
 			result = new ActivitiesInsertController().execute(req, resp);
 			
 		}else if(target.equals("/activities/listDd.ac")) {
-//		대외활동 상세글을 DB에서 삭제
+//		대외활동 상세글을 DB에서 삭제 -> 관리자페이지에서 삭제해야할 기능.
+			// 모든 유저들이 보는 게시판을 개인이 삭제할 수가 없음
 			
 		}else if(target.equals("/activities/listDu.ac")) {
 //		대외활동 상세글을 DB에서 수정
