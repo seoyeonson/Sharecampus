@@ -34,6 +34,7 @@
                     </div>
                 </div>
                 <!-- 피드 시작 -->
+                <form method="get">
                 <div class="communityFeedSection">
                     <div class="communityFeedWrap">
                      <div class="communityFeedContentWrap">
@@ -139,6 +140,7 @@ http://talkdrive.co.kr
                      </div>
                      </div>
                 </div>
+                </form>
                 <!-- 피드 시작2 -->
                 <div class="communityFeedSection">
                     <div class="communityFeedWrap">

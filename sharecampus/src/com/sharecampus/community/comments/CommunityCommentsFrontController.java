@@ -1,4 +1,4 @@
-package com.sharecampus.community;
+package com.sharecampus.community.comments;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.Result;
 
-public class CommunityFrontController extends HttpServlet{
+public class CommunityCommentsFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	super.doGet(req, resp);
@@ -22,15 +22,14 @@ public class CommunityFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/community/listDs.co")) {
-			result = new CommunitySelectController().execute(req, resp);
-//		커뮤니티 상세글을 DB에서 조회
-		}else if(target.equals("/community/listDi.co")) {
-//		커뮤니티 상세글을 DB에 추가
-		}else if(target.equals("/community/listDd.co")) {
-//		커뮤니티 상세글을 DB에서 삭제
-		}else if(target.equals("/community/listDu.co")) {
-//		커뮤니티 상세글을 DB에서 수정
+		if(target.equals("/community/rlistDs.cco")) {
+//		커뮤니티 댓글을 DB에서 조회
+		}else if(target.equals("/community/rlistDi.cco")) {
+//		커뮤니티 댓글을 DB에서 추가
+		}else if(target.equals("/community/rlistDd.cco")) {
+//		커뮤니티 댓글을 DB에서 삭제
+		}else if(target.equals("/community/rlistDu.cco")) {
+//		커뮤니티 댓글을 DB에서 수정
 		}
 		
 		if(result != null) {

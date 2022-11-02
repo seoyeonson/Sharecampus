@@ -1,4 +1,4 @@
-package com.sharecampus.community;
+package com.sharecampus.community.comments;
 
 public class CommunityCommentsUpdateController {
 
