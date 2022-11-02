@@ -2,8 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
 
+<select id="checkId" parameterType="memberVO" resultType="_int">
+	select count(member_num) from tbl_member
+	where member_id = #{memberId} and member_type = #{memberType}
+</select>
 
+<insert id="join" parameterType="memberVO">
+	insert into tbl_member (member_id, member_pw, member_name, member_nickname, member_phone_number, member_img_name, member_auth_img_name, member_auth, member_signup_date, member_type)
+	values(#{memberId}, #{memberPw}, #{memberName}, #{memberNickname}, #{memberPhoneNumber}, #{memberImgName}, #{memberAuthImgName}, #{memberAuth}, #{memberSignupDate}, #{memberType})
+</insert>
 
+<select id="selectMemberNum" parameterType="String" resultType="_int">
+	select member_num from tbl_member where member_id = #{memberId}
+</select>
 
 
 

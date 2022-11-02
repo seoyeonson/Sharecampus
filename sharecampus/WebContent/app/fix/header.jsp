@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="${pageContext.request.contextPath}/assets/css/main/main.css" rel="stylesheet">
 <header class="Header">
     <nav>
@@ -18,8 +19,16 @@
                 </a>
             </div>
             <div class="joinAndLoginWrap">
-                <a class="joinAndLogin join">가입</a>
-                <a class="joinAndLogin login">로그인</a>
+                <c:choose>
+					<c:when test="${empty sessionScope.memberNum}">
+		                <a class="joinAndLogin join">가입</a>
+		                <a class="joinAndLogin login">로그인</a>
+					</c:when>
+					<c:otherwise>
+						<a href="/member/logout.me" class="logOutAndMypage" >로그아웃</a>
+						<a href="/app/member/mypage_main.jsp" class="logOutAndMypage" >마이페이지</a>
+					</c:otherwise>
+			</c:choose>
             </div>
         </div>
     </nav>

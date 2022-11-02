@@ -9,6 +9,7 @@
    
    <typeAliases>
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>
+        <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
     </typeAliases>
 
    <environments default="mysql">
@@ -16,7 +17,7 @@
          <transactionManager type="JDBC"/>
          <dataSource type="POOLED">
             <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/Sharecampus"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/sharecampus"/>
             <property name="username" value="root"/>
             <property name="password" value="1234"/>
          </dataSource>
