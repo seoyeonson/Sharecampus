@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ page import="java.util.*"%>
-<%@ page import="curriculum.VO.*"%>
+<%@ page import="com.sharecampus.curriculum.vo.*"%>
 
 <%
 List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
@@ -93,7 +93,7 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 
 							<%
 							if (list != null) {
-								for (CurriculumVO dto : list) {
+								for (CurriculumVO cvo : list) {
 							%>
 							<li>
 								<div class="curriculum-list_box">
@@ -102,19 +102,18 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 										<img
 											src="https://d1qzykz9iz00c7.cloudfront.net/static/logo/logo_c290.jpg"
 											class="university-logo ls-is-cached lazyloaded"> <span
-											class="recommend-label recommend"><%=dto.getCurri_field()%></span>
-											
+											class="recommend-label recommend"><%=cvo.getCurri_field()%></span>
+
 
 										<span class="bookmark"><i class="fa-solid fa-heart"></i></span>
 										<a href="curriculum_detail.jsp" style="padding-bottom: 6px">
 											<div class="info-category">
-												<p class="univer_name td-text-style"><%=dto.getCurri_university()%></p>
-												<p class="user_name td-text-style"><%=dto.getMember_num()%></p>
+												<p class="univer_name td-text-style"><%=cvo.getCurri_uni_dert()%></p>
+												<p class="user_name td-text-style"><%=cvo.getMember_num()%></p>
 											</div>
 											<div class="curriculum-segment">
 												<p class="curriculum-name">
-													<span class="curriculum-brief-info">교양/3학점/1학년</span><br>컴퓨터의
-													개념 및 실습
+													<span class="curriculum-brief-info"><%=cvo.getCurri_division()%>/<%=cvo.getCurri_credits()%>학점/<%=cvo.getCurri_grade()%></span><br><%=cvo.getCurri_title()%>
 												</p>
 												<div class="curriculum-rank">
 													<span class="rank-mark checked"></span> <span
@@ -144,7 +143,7 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 											class="far fa-heart"></i><span>0</span></span> <span><i
 											class="far fa-comment-dots"></i><span>0</span></span>
 									</div> -->
-									<div></div> 
+									<div></div>
 								</div>
 							</li>
 							<%

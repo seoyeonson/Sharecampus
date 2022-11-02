@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\admin\Desktop\wanted\sharecampus\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3743656111.index
+1763122280.index
+1425716597.index
+2155133277.index
+4028517842.index
+504376574.index
