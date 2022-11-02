@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community">
+	<select id="selectAll" resultType="communityDTO">
+		select community_num, community_regist_date, community_contents, member_id, m.member_num
+		from tbl_member m join tbl_community b
+		on m.meber_number = b.member_number
+	</select>
+
+
+
+</mapper>
