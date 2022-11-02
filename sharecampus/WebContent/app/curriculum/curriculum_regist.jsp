@@ -1,22 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커리큘럼 등록</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>커리큘럼 등록</title>
 </head>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<link rel="stylesheet" href="../main/main.css">
-<link rel="stylesheet" href="curriculum_regist.css">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/curriculum/curriculum_regist.css">
+<script
+	src="${pageContext.request.contextPath}/assets/js/curriculum/curriculum_regist.js"></script>
 <body>
-    <main>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<main>
 		<form class="container" action="writeOk.do" method="post">
 			<div class="section">
 				<h1>커리큘럼 등록</h1>
@@ -186,16 +197,21 @@
 			</div>
 		</form>
 	</main>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
+<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
 <script>
-$(document).ready(function() {
-        $('#summernote').summernote({
-            height: 300,                 // 에디터 높이
-            placeholder :  '여기에 글을 작성하세요',
-	        lang: "ko-KR",
-            maxWidth: 1200,
-            disableResizeEditor: true
-        });
-});
+	$(document).ready(function() {
+		$('#summernote').summernote({
+			height : 300, // 에디터 높이
+			placeholder : '여기에 작성',
+			lang : "ko-KR",
+			maxWidth : 1200,
+			disableResizeEditor : true
+		});
+	});
 </script>
 </html>
