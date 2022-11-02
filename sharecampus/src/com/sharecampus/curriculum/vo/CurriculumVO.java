@@ -3,7 +3,7 @@ package com.sharecampus.curriculum.vo;
 import java.util.Date;
 
 public class CurriculumVO {
-
+	
 	private int 		curri_num;
 	private int 		member_num;
 	private String 		curri_title;
@@ -14,15 +14,18 @@ public class CurriculumVO {
 	private int 		curri_credits;
 	private String 		curri_grade;
 	private String 		curri_professor;
-	private String 		curr_contents;
+	private String 		curri_contents;
 	private int 		curri_satisfaction_rating;
 	private int 		curri_exam_rating;
+	private int         curri_professor_rating;
+	private int         curri_assignment_rating;
 	private Date		curri_regist_date;
 
 	public CurriculumVO(
+								 
 			int 		curri_num                    ,
 			int 		member_num                   ,
-			String 		curri_title                   ,
+			String 		curri_title                  ,
 			String 		curri_university 			 ,
 			String   	curri_uni_dert               ,
 			String   	curri_field                  ,
@@ -30,10 +33,13 @@ public class CurriculumVO {
 			int 		curri_credits                ,
 			String 		curri_grade                  ,
 			String 		curri_professor              ,
-			String 		curr_contents                ,
+			String 		curri_contents                ,
 			int 		curri_satisfaction_rating    ,
 			int 		curri_exam_rating            ,
+			int			curri_professor_rating		 ,
+			int			curri_assignment_rating		 ,
 			Date 		curri_regist_date            )   {   
+	
 	this.curri_num                 =	curri_num;                 
 	this.member_num                =	member_num;                
 	this.curri_title                =	curri_title;                
@@ -41,12 +47,15 @@ public class CurriculumVO {
 	this.curri_credits             =	curri_credits;             
 	this.curri_grade               =	curri_grade;               
 	this.curri_professor           =	curri_professor;           
-	this.curr_contents             =	curr_contents;             
+	this.curri_contents             =	curri_contents;             
 	this.curri_satisfaction_rating =	curri_satisfaction_rating; 
-	this.curri_exam_rating         =	curri_exam_rating;         
+	this.curri_exam_rating         =	curri_exam_rating; 
+	this.curri_professor_rating    =	curri_professor_rating; 
+	this.curri_assignment_rating   =	curri_assignment_rating;
 	this.curri_regist_date         =	curri_regist_date;         
 }    
 	public CurriculumVO() {;}
+	
 	public int getCurri_num() {
 		return curri_num;
 	}
@@ -108,11 +117,11 @@ public class CurriculumVO {
 	public void setCurri_professor(String curri_professor) {
 		this.curri_professor = curri_professor;
 	}
-	public String getCurr_contents() {
-		return curr_contents;
+	public String getCurri_contents() {
+		return curri_contents;
 	}
-	public void setCurr_contents(String curr_contents) {
-		this.curr_contents = curr_contents;
+	public void setCurri_contents(String curr_contents) {
+		this.curri_contents = curr_contents;
 	}
 	public int getCurri_satisfaction_rating() {
 		return curri_satisfaction_rating;
@@ -126,6 +135,18 @@ public class CurriculumVO {
 	public void setCurri_exam_rating(int curri_exam_rating) {
 		this.curri_exam_rating = curri_exam_rating;
 	}
+	public int getCurri_professor_rating() {
+		return curri_professor_rating;
+	}
+	public void setCurri_professor_rating(int curri_professor_rating) {
+		this.curri_professor_rating = curri_professor_rating;
+	}
+	public int getCurri_assignment_rating() {
+		return curri_assignment_rating;
+	}
+	public void setCurri_assignment_rating(int curri_assignment_rating) {
+		this.curri_assignment_rating = curri_assignment_rating;
+	}
 	public Date getCurri_regist_date() {
 		return curri_regist_date;
 	}
@@ -134,13 +155,16 @@ public class CurriculumVO {
 	}
 	@Override
 	public String toString() {
-		return "CurriculumVO [curri_num=" + curri_num + ", MEMBER_num=" + member_num + ", curr_title=" + curri_title
+		return "CurriculumVO [curri_num=" + curri_num + ", member_num=" + member_num + ", curri_title=" + curri_title
 				+ ", curri_university=" + curri_university + ", curri_uni_dert=" + curri_uni_dert + ", curri_field="
 				+ curri_field + ", curri_division=" + curri_division + ", curri_credits=" + curri_credits
-				+ ", curri_grade=" + curri_grade + ", curri_professor=" + curri_professor + ", curr_contents="
-				+ curr_contents + ", curri_satisfaction_rating=" + curri_satisfaction_rating + ", curri_exam_rating="
-				+ curri_exam_rating + ", curri_regist_date=" + curri_regist_date + "]";
+				+ ", curri_grade=" + curri_grade + ", curri_professor=" + curri_professor + ", curri_contents="
+				+ curri_contents + ", curri_satisfaction_rating=" + curri_satisfaction_rating + ", curri_exam_rating="
+				+ curri_exam_rating + ", curri_professor_rating=" + curri_professor_rating
+				+ ", curri_assignment_rating=" + curri_assignment_rating + ", curri_regist_date=" + curri_regist_date
+				+ "]";
 	}
+	
 	
 	
 }                             

@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+/*$(document).ready(function () {
 
     $('.img_heart').on({
         'click': function () {
@@ -9,4 +9,4 @@ $(document).ready(function () {
             $(this).attr('src', src);
         }
     });
-});
+});*/
