@@ -13,7 +13,13 @@ public class ActivitiesDAO {
 	}
 	public void insert(ActivitiesVO activitiesVO) {
 		sqlSession.insert("activ.insert", activitiesVO);
+//		sqlSession.insert("activTitle", activitiesVO.getActivTitle()); DB에 리턴값만 넣고 다시 가져오지를 못했다. return 값이 없다.
+//		sqlSession.insert("해시태그", activitiesVO.getActivTitle()); DB에 리턴값만 넣고 다시 가져오지를 못했다. return 값이 없다.
+//		sqlSession.insert("기간", activitiesVO.getActivTitle()); DB에 리턴값만 넣고 다시 가져오지를 못했다. return 값이 없다.
+		
 	}
+	
+	
 	
 	
 	

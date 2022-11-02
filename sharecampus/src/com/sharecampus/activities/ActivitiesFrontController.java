@@ -12,19 +12,22 @@ import com.sharecampus.Result;
 public class ActivitiesFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	super.doGet(req, resp);
+	doProcess(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		doProcess(req, resp);
 	}
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
 		
-		if(target.equals("/activities/list.ac")) {
+		if(target.equals("/list.ac")) {
 //		대외활동 목록들을 DB에서 가져오는 것
+			result = new Result();
+			result.setPath("/app/activity/activity.jsp");
+			
 			
 		}else if(target.equals("/activities/listDs.ac")) {
 //		대외활동 상세글을 DB에서 조회
@@ -34,7 +37,8 @@ public class ActivitiesFrontController extends HttpServlet{
 			result = new ActivitiesInsertController().execute(req, resp);
 			
 		}else if(target.equals("/activities/listDd.ac")) {
-//		대외활동 상세글을 DB에서 삭제
+//		대외활동 상세글을 DB에서 삭제 -> 관리자페이지에서 삭제해야할 기능.
+			// 모든 유저들이 보는 게시판을 개인이 삭제할 수가 없음
 			
 		}else if(target.equals("/activities/listDu.ac")) {
 //		대외활동 상세글을 DB에서 수정
