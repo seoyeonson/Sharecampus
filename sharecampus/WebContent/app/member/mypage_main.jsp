@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <title>마이페이지</title>
 </head>
-<jsp:include
+<jsp:include	
 		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
-<section class="curriculumSection">
-    <!-- 위 태그 -->
+		<section class="curriculumSection">
+<div>
     <body>
         <div class="curriculum_header">
             <h1>
@@ -23,22 +23,17 @@
                 <span class="bgTxt">마이페이지</span>
             </h1>
         </div>
-         <!-- 위 태그 -->
-    <!-- 배너 관리 시작 -->
-    <section>
     <div id="container">
-        <!-- 왼쪽 배너 시작 -->
         <div id="asideWrap" class="active">
             <div class="sideNav -first">
-                <!-- 왼쪽 첫번째 배너 시작-->
                 <ul>
                     <li class="first_Nav" style="background-color: #3393f4;">
-                        <a href="mypage_main.html">
+                         <a href="${pageContext.request.contextPath}/app/mypage/mypage_main.jsp">
                         <span style="color: #fff;">내 정보</span>
                         </a>
                     </li> 
                     <li>
-                        <a href="mypage_main.html">
+                        <a href="${pageContext.request.contextPath}/app/member/mypage_main.jsp">
                         <span>회원 정보 변경</span>
                         </a>
                     </li>
@@ -49,30 +44,28 @@
                     <!-- 왼쪽 두번째 배너 시작-->
                 <ul>
                     <li class="first_Nav" style="background-color: #3393f4;">
-                        <a href="mypage_writing.html">
+                         <a href="${pageContext.request.contextPath}/app/member/mypage_writing.jsp">
                         <span style="color: #fff;">나의 활동</span>
                         </a>
                     </li> 
                     <li>
-                        <a href="mypage_writing.html">
+                         <a href="${pageContext.request.contextPath}/app/member/mypage_writing.jsp">
                         <span>내가 쓴 글 모아보기</span>
                         </a>
                     </li> 
                     <li>
-                        <a href="mypage_comment.html">
+                         <a href="${pageContext.request.contextPath}/app/member/mypage_comment.jsp">
                         <span>내가 쓴 댓글 모아보기</span>
                         </a>
                     </li>
                     <li>
-                        <a href="mypage_bookmark.html">
-                        <span>내가 모은 책갈피 모아보기</span>
+                          <a href="${pageContext.request.contextPath}/app/member/mypage_bookmark.jsp">
+                         <span>내가 모은 북마크 모아보기</span>
                         </a>
                     </li>
                 </ul>
-                 <!-- 왼쪽 두번째 배너 끝-->
             </div>
         </div>
-        <!-- 오른쪽 배너 시작 -->
         <main id = "content" role="main" class="more" style="border:none">
             <section class="sMypage">
                 <!-- 오른쪽 배너 타이틀 -->
@@ -147,7 +140,7 @@
                             <div class="sMypageAccountItem _emailActionPanel">
                                 <label class="label" for="pass_word630">비밀번호</label>
                                 <div class="content" style="display: flex;">
-                                    <div id="password" class="uInput -simpleLine" style=" display: flex; width: 390px;">
+                                    <div id="password" class="uInput -simpleLine" style=" display: flex; width: 390px; paddig-left:0px">
                                         <!-- 비밀번호 입력 -->
                                         <input type="password" class="password" id="password1" placeholder="비밀번호 입력">
                                         <input type="password" class="password" id="password2" placeholder="비밀번호 재입력">
