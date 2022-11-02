@@ -172,7 +172,7 @@
     </main>
 </body>
 <script>
-$(document).ready(function() {
+/* $(document).ready(function() {
         $('#summernote').summernote({
             height: 300,                 // 에디터 높이
             placeholder :  '안녕',
@@ -180,6 +180,6 @@ $(document).ready(function() {
             maxWidth: 1200,
             disableResizeEditor: true
         });
-});
+}); */
 </script>
 </html>

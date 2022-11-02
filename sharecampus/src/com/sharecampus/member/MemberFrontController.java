@@ -22,37 +22,51 @@ public class MemberFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/member/join.me")) {
-//			회원가입 페이지로 이동
+		if(target.equals("/member/auth/kakao/callback.me")) {
+//			카카오 로그인 토큰
+			result = new KakaoLoginController().execute(req, resp);
+			
+		} else if(target.equals("/member/auth/kakaoLoginMember.me")){
+//			카카오 회원 정보
+			result = new KakaoLoginMemberController().execute(req, resp);
+			
+		} else if(target.equals("/member/checkId.me")) {
+//			아이디 체크
+			result = new CheckIdController().execute(req, resp);
+			
+		} else if(target.equals("/member/loginOk.me")) {
+//			로그인 성공
+			result = new LoginOkController().execute(req, resp);
+			
+			
+		} else if(target.equals("/member/join.me")){
+//			회원가입 확인
 			result = new Result();
 			result.setPath("/app/member/join.jsp");
 			
-		}else if(target.equals("/member/joinOk.me")) {
-//			회원가입 페이지에서 회원 가입 DB로 이동
-		}else if(target.equals("/member/checkId.me")) {
-//			아이디가 있는지 없는지 확인하는 것		
-		}else if(target.equals("/member/login.me")) {
-//			로그인 페이지로 이동
-		}else if(target.equals("/member/loginOk.me")) {
-//			로그인 성공 회원의 DB를 갖고오는 것
-		}else if(target.equals("/member/logout.me")) {
+		} else if (target.equals("/member/joinOk.me")){
+			result = new JoinOkController().execute(req, resp);
+			
+		} else if(target.equals("/member/logout.me")) {
 //			로그아웃 페이지로 이동
+			result = new LogOutController().execute(req, resp);
 //			===============================================
-		}else if(target.equals("/member/imagechange.me")) {
+		} else if(target.equals("/member/imagechange.me")) {
 //			프로필 이미지 변경
-		}else if(target.equals("/member/passwordchange.me")) {
+		} else if(target.equals("/member/passwordchange.me")) {
 //			비밀번호 변경
-		}else if(target.equals("/member/emailAdd.me")) {
+		} else if(target.equals("/member/emailAdd.me")) {
 //			이메일 주소 변경
-		}else if(target.equals("/member/connectproof.me")) {
+		} else if(target.equals("/member/connectproof.me")) {
 //			인증서 연결
-		}else if(target.equals("/member/movelist.me")) {
+		} else if(target.equals("/member/movelist.me")) {
 //			내가 쓴 글 보기로 이동
-		}else if(target.equals("/member/movecomments.me")) {
+		} else if(target.equals("/member/movecomments.me")) {
 //			내가 쓴 댓글 보기로 이동
-		}else if(target.equals("/member/movebookmarks.me")) {
+		} else if(target.equals("/member/movebookmarks.me")) {
 //			내가 모은 책갈피로 이동
 		}
+		
 		if(result != null) {
 			if(result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
