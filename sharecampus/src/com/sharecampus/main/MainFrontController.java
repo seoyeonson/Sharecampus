@@ -22,8 +22,6 @@ public class MainFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		System.out.println("들어옴");
-		
 		if(target.equals("/main/main.mn")) {
 			result = new Result();
 			result.setPath("/app/main/main.jsp");

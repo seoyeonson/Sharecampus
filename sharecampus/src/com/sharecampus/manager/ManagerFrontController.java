@@ -22,11 +22,7 @@ public class ManagerFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/manager/listin.ma")) {
-//		문의글 DB가져오기
-		}else if(target.equals("/manager/listDu.ma")) {
-//		문의글 삭제하기
-		}else if(target.equals("/manager/ActivitiesManager.ma")) {
+		if(target.equals("/manager/ActivitiesManager.ma")) {
 //		대외활동 공고글 승인하기
 		}else if(target.equals("/manager/ActivitiesJoin.ma")) {
 //		대외활동 공고글 삭제하기

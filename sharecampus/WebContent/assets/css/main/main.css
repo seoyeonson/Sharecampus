@@ -191,6 +191,22 @@ a.joinAndLogin:hover{
     font-weight: bold;
 }
 
+.loginWrap a.logOutAndMypage:first-child:after{
+    content: "/";
+    margin: 0 10px;
+    cursor: default;
+}
+
+.loginWrap a.logOutAndMypage {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.55;
+    cursor: pointer;
+}
+
+a.logOutAndMypage:hover{
+    font-weight: bold;
+}
 
 /* footer */
 .Footer .footerContent, .Footer .footerContent .top {
