@@ -139,6 +139,7 @@ body, h1, h2, h3, h4, h5, h6 {
 #content.more2{
     margin: 0 0 20px;
     width: 0px;
+    height: 500px;
     background-color: #fff;
     box-shadow: 0.2px 0.2px grey;
     border: gray solid 0.05px;
@@ -264,8 +265,8 @@ label[for='input_image'] div {
     height: 120px;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url("${pageContext.request.contextPath}/assets/images/mypage/no_image.jpg");
-    border-image: url("${pageContext.request.contextPath}/assets/images/mypage/no_image.jpg");
+    background-image: url("img/no_image.jpg");
+    border-image: url("img/no_image.jpg");
     cursor: pointer;
     border: 0.5px solid #ccc;
     border-radius: 50%;
@@ -393,14 +394,14 @@ li.sMypageInfoItem .content{
     display: inline-block;
     background-repeat: no-repeat;
     content: '';
-    background-image: url("${pageContext.request.contextPath}/assets/images/mypage/spr_icons_2x.png");
+    background-image: url(/Project/mypage/img/spr_icons_2x.png);
     background-position: -563px -737px;
 }
 .uSelect:before {
     width: 12px;
     height: 8px;
     background-size: 735px auto;
-    background-image: url("${pageContext.request.contextPath}/assets/images/mypage/spr_icons_2x.png");
+    background-image: url(img/spr_icons_2x.png);
     background-position: -140px -85px;
     object-fit: cover;
 }
@@ -462,6 +463,17 @@ li.sMypageInfoItem .content{
     background: 0 0;
     font-size: 13px;
     border-bottom: 1px solid #ebebeb;
+}
+.uInput h3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+    background: 0 0;
+    font-size: 13px;
+    border-bottom: 1px solid #ebebeb;
+    line-height: 36px;
 }
 
 input, textarea{
@@ -564,7 +576,7 @@ button img{
 }
 
 #_btnPhoneHelpGuide{
-    background-image:  url(${pageContext.request.contextPath}/assets/images/mypage/search.png);
+    background-image: url(icon/search.png);
 }
 
 .infoIcon.-error{
@@ -574,7 +586,7 @@ button img{
     display: inline-block;
     background-repeat: no-repeat;
     text-indent: -999px;
-    background-image:  url(${pageContext.request.contextPath}/assets/images/mypage/engine-warning.png);
+    background-image: url(icon/engine-warning.png);
 }
 
 .sMypageInnerTitle h2{
@@ -722,10 +734,6 @@ input::file-selector-button {
     
 }
 
-input:focus{
-	outline: none;
-}
-
 .Chan_Bitrh{
     border: none;
     height: 30px;
@@ -735,7 +743,7 @@ input:focus{
     text-align: center; 
     border: none ;
     padding: 2px;
-    padding-left: 0px;
+    padding-left: 20px;
 }
 .sMypageAccountItem.password fieldset{
     border: none; 
