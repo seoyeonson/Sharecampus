@@ -56,6 +56,13 @@ public class CurriculumVO {
 }    
 	public CurriculumVO() {;}
 	
+	public CurriculumVO(int curri_num, int member_num, String curri_title, String curri_university,String curri_uni_dert,
+			String curri_field, String curri_division, int curri_credits, String curri_grade,
+			String curri_professor, int curri_satisfaction_rating, int curri_exam_rating,
+			int curri_professor_rating, int curri_assignment_rating, String curri_contents,
+			java.sql.Date curri_regist_date) {
+		// TODO Auto-generated constructor stub
+	}
 	public int getCurri_num() {
 		return curri_num;
 	}
@@ -65,8 +72,8 @@ public class CurriculumVO {
 	public int getMember_num() {
 		return member_num;
 	}
-	public void setMember_num(int mEMBER_num) {
-		member_num = mEMBER_num;
+	public void setMember_num(int member_num) {
+		this.member_num = member_num;
 	}
 	public String getCurri_title() {
 		return curri_title;
