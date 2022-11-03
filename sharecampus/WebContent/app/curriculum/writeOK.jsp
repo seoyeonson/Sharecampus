@@ -15,8 +15,8 @@
 <% } else { %>
 	<script>
 		alert("등록 성공");
-		<%-- location.href = "/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>"; --%>
-		location.href = "/app/curriculum/curriculum.do";
+		location.href = "/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>";
+		/* location.href = "/app/curriculum/curriculum.do"; */
 
 	</script>
 <% } %>

@@ -6,7 +6,7 @@ public class MemberVO {
 	private String memberPw;
 	private String memberName;
 	private String memberNickname;
-	private String memberPhone_number;
+	private String memberPhoneNumber;
 	private String memberImgName;
 	private String memberAuthImgName;
 	private int memberAuth;
@@ -47,10 +47,10 @@ public class MemberVO {
 		this.memberNickname = memberNickname;
 	}
 	public String getMemberPhone_number() {
-		return memberPhone_number;
+		return memberPhoneNumber;
 	}
-	public void setMemberPhone_number(String memberPhone_number) {
-		this.memberPhone_number = memberPhone_number;
+	public void setMemberPhone_number(String memberPhoneNumber) {
+		this.memberPhoneNumber = memberPhoneNumber;
 	}
 	public String getMemberImgName() {
 		return memberImgName;
@@ -86,8 +86,8 @@ public class MemberVO {
 	@Override
 	public String toString() {
 		return "MemberVO [memberNum=" + memberNum + ", memberId=" + memberId + ", memberPw=" + memberPw
-				+ ", memberName=" + memberName + ", memberNickname=" + memberNickname + ", memberPhone_number="
-				+ memberPhone_number + ", memberImgName=" + memberImgName + ", memberAuthImgName=" + memberAuthImgName
+				+ ", memberName=" + memberName + ", memberNickname=" + memberNickname + ", memberPhoneNumber="
+				+ memberPhoneNumber + ", memberImgName=" + memberImgName + ", memberAuthImgName=" + memberAuthImgName
 				+ ", memberAuth=" + memberAuth + ", memberSignupDate=" + memberSignupDate + ", memberType=" + memberType
 				+ "]";
 	}

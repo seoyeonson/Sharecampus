@@ -44,7 +44,9 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 							총 <span id="curriculum_count" class="filter-search-result">1000+</span>건의대학
 							리뷰
 						</h3>
-						<a class="curriculum-regist" href="curriculum_regist.jsp"> <span>커리큘럼
+						<!-- <a class="curriculum-regist" href="curriculum_regist.jsp"> <span>커리큘럼
+								작성</span> -->
+						<a class="curriculum-regist" href="/app/curriculum/curriculum_regist.do"> <span>커리큘럼
 								작성</span>
 						</a>
 					</div>
@@ -84,7 +86,7 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 
 
 										<span class="bookmark"><i class="fa-solid fa-heart"></i></span>
-										<a href="curriculum_detail.jsp" style="padding-bottom: 6px">
+										<a href="/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>" style="padding-bottom: 6px">
 											<div class="info-category">
 												<p class="univer_name td-text-style"><%=cvo.getCurri_university()%></p>
 												<p class="user_name td-text-style"><%=cvo.getMember_num()%></p>

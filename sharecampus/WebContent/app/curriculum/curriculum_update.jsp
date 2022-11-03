@@ -1,4 +1,4 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="com.sharecampus.curriculum.vo.*"%>
 <%@ page import="java.util.*"%>
@@ -88,4 +88,4 @@ String contents = cvo.getCurri_contents();
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
-</html> --%>
+</html>

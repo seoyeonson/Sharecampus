@@ -9,6 +9,12 @@
    
    <typeAliases>
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>
+        <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
+        <typeAlias type="com.sharecampus.banner.vo.BannerVO" alias="bannerVO"/>
+        <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
+        <typeAlias type="com.sharecampus.curriculum.vo.CurriculumVO" alias="curriculumVO"/>
+        <typeAlias type="com.sharecampus.curriculum.comments.vo.CurriculumCommentsVO" alias="curriculumcommentsVO"/>
+        <typeAlias type="com.sharecampus.study.vo.StudyVO" alias="studyVO"/>
     </typeAliases>
 
    <environments default="mysql">
@@ -16,7 +22,7 @@
          <transactionManager type="JDBC"/>
          <dataSource type="POOLED">
             <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="url" value="jdbc:mysql://localhost:3306/Sharecampus"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/sharecampus"/>
             <property name="username" value="root"/>
             <property name="password" value="1234"/>
          </dataSource>
@@ -24,8 +30,13 @@
    </environments>
    
    <mappers>
-      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
       <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
-      
+      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/BannerMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/CurriculumMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/CurriculumCommentsMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/MainMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/StudyMapper.xml"/>
    </mappers>
 </configuration>

@@ -262,7 +262,9 @@
         <div style="display: block; width: 210px;"></div>
         <div class="sideRight" style="display: none;"></div>
     </div>
-    <footer>
-    </footer>
+    <jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </div></section>
 </html>

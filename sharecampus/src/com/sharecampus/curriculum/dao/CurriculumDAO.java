@@ -14,7 +14,7 @@ public class CurriculumDAO {
 	ResultSet rs;
 	String driver = "com.mysql.cj.jdbc.Driver";
 
-	String url = "jdbc:mysql://localhost:3306/curriculum";
+	String url = "jdbc:mysql://localhost:3306/sharecampus";
 	String user = "root";
 	String pw = "1234";
 
@@ -44,30 +44,34 @@ public class CurriculumDAO {
 		if (conn != null)
 			conn.close();
 	}
-	
+
 	private List<CurriculumVO> buildList(ResultSet rs) throws SQLException {
 		List<CurriculumVO> list = new ArrayList<>();
 
 		while (rs.next()) {
-			int curri_num 					= rs.getInt("curri_num");
-			int member_num					= rs.getInt("member_num");
-			String curri_title 				= rs.getString("curri_title");
-			String curri_uni_dert 			= rs.getString("curri_uni_dert");
-			String curri_field 				= rs.getString("curri_field");
-			String curri_division			= rs.getString("curri_division");
-			int curri_credits 				= rs.getInt("curri_credits");
-			String curri_grade 				= rs.getString("curri_grade");
-			String curri_professor 			= rs.getString("curri_professor");
-			int curri_satisfaction_rating 	= rs.getInt("curri_satisfaction_rating");
-			int curri_exam_rating 			= rs.getInt("curri_exam_rating");
-			int curri_assignment_rating 	= rs.getInt("curri_assignment_rating");
-			int curri_professor_rating 		= rs.getInt("curri_professor_rating");
-			String curri_contents 			= rs.getString("curri_contents");
-			
+			int curri_num = rs.getInt("curri_num");
+			int member_num = rs.getInt("member_num");
+			String curri_title = rs.getString("curri_title");
+			String curri_university = rs.getString("curri_university");
+			String curri_uni_dert = rs.getString("curri_uni_dert");
+			String curri_field = rs.getString("curri_field");
+			String curri_division = rs.getString("curri_division");
+			int curri_credits = rs.getInt("curri_credits");
+			String curri_grade = rs.getString("curri_grade");
+			String curri_professor = rs.getString("curri_professor");
+			int curri_satisfaction_rating = rs.getInt("curri_satisfaction_rating");
+			int curri_exam_rating = rs.getInt("curri_exam_rating");
+			int curri_professor_rating = rs.getInt("curri_professor_rating");
+			int curri_assignment_rating = rs.getInt("curri_assignment_rating");
+			String curri_contents = rs.getString("curri_contents");
+			Date curri_regist_date = rs.getDate("curri_regist_date");
+
 			if (curri_contents == null)
 				curri_contents = "";
 
-			CurriculumVO cvo = new CurriculumVO();
+			CurriculumVO cvo = new CurriculumVO(curri_num, member_num, curri_title, curri_university ,curri_uni_dert, curri_field, curri_division, curri_credits,
+					curri_grade, curri_professor, curri_satisfaction_rating, curri_exam_rating, curri_professor_rating, curri_assignment_rating, 
+					curri_contents, curri_regist_date);
 			list.add(cvo);
 		}
 		return list;
@@ -154,13 +158,15 @@ public class CurriculumDAO {
 
 		return cnt;
 	}
+
 	public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException {
+
 		List<CurriculumVO> list = null;
-		
+
 		try {
 			conn.setAutoCommit(false);
 			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
-			pstmt.setInt(1, 10);
+			pstmt.setInt(1, curri_num);
 			rs = pstmt.executeQuery();
 			list = buildList(rs);
 			
@@ -170,10 +176,22 @@ public class CurriculumDAO {
 			throw e;
 		} finally {
 			close();
-		}	
-	    
+		}
+
 		return list;
+
 	}
-	
+
+	/*
+	 * public List<CurriculumVO> selectByCurri_num(int cnum) throws SQLException {
+	 * List<CurriculumVO> list = null;
+	 * 
+	 * try { pstmt = conn
+	 * .prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.
+	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, cnum); rs =
+	 * pstmt.executeQuery(); list = buildList(rs); } finally { close(); }
+	 * 
+	 * return list; }
+	 */
 
 }

@@ -12,9 +12,9 @@ import com.sharecampus.curriculum.vo.CurriculumVO;
 public class ViewCommand implements Command {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		List<CurriculumVO> list = null;
+	public void execute(HttpServletRequest request, HttpServletResponse response){
 
+		List<CurriculumVO> list = null;
 		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
 
 		try {
@@ -23,5 +23,7 @@ public class ViewCommand implements Command {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }
