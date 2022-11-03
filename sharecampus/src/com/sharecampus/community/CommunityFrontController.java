@@ -22,11 +22,17 @@ public class CommunityFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/community/listDs.co")) {
+		if(target.equals("/community/list.co")) {
+			result = new Result();
+			result.setPath("/app/community/community.jsp");
+		}else if(target.equals("/community/listDs.co")) {
 			result = new CommunitySelectController().execute(req, resp);
 		}else if(target.equals("/community/listDi.co")) {
+			result = new CommunityInsertController().execute(req, resp);
 		}else if(target.equals("/community/listDd.co")) {
+			result = new CommunityDeleteController().execute(req, resp);
 		}else if(target.equals("/community/listDu.co")) {
+			result = new CommunityUpdateController().execute(req, resp);
 		}
 		
 		if(result != null) {
