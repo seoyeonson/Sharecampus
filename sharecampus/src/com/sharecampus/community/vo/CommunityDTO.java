@@ -6,6 +6,7 @@ public class CommunityDTO {
 	private String communityRegistDate;
 	private String communityContents;
 	private int memberId;
+	private String memberImgName;
 	
 	public CommunityDTO() {;}
 
@@ -49,11 +50,22 @@ public class CommunityDTO {
 		this.communityContents = communityContents;
 	}
 
+	public String getMemberImgName() {
+		return memberImgName;
+	}
+
+	public void setMemberImgName(String memberImgName) {
+		this.memberImgName = memberImgName;
+	}
+
 	@Override
 	public String toString() {
-		return "CommunityDTO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", memberId=" + memberId
-				+ ", communityRegistDate=" + communityRegistDate + ", communityContents=" + communityContents + "]";
+		return "CommunityDTO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", communityRegistDate="
+				+ communityRegistDate + ", communityContents=" + communityContents + ", memberId=" + memberId
+				+ ", memberImgName=" + memberImgName + "]";
 	}
+
+	
 
 
 	

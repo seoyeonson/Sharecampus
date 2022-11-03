@@ -14,7 +14,7 @@ public class CommunityDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<CommunityDTO> selectAll() {
-		return sqlSession.selectList("community.selectAll");
+	public CommunityDAO select(int boardNumber) {
+		return sqlSession.selectOne("community.select", boardNumber);
 	}
 }

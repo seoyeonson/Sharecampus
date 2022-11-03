@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/community/community.css">
-<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/modal.css"> --%>
 </head>
 <body>
 	<jsp:include
@@ -20,8 +21,9 @@
         </div>
         <div class="community">
             <div class="communityWrap">
+            <!-- 글쓰기 창 시작 -->
                 <div class="communityInputSection">
-                    <div class="communityInputWrap">
+                    	<div class="communityInputWrap">
                         <textarea placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2" maxlength="1000" id="textarea" style="border: none" ></textarea>
                         <div class="btnWrap" id="btnWrap">
                             <p class="count" id="count_cnt" >
@@ -33,6 +35,7 @@
                         </div>
                     </div>
                 </div>
+                   <!-- 글쓰기 창 종료 -->
                 <!-- 피드 시작 -->
                 <form method="get">
                 <div class="communityFeedSection">
@@ -245,114 +248,17 @@ http://talkdrive.co.kr
                      </div>
                      </div>
                 </div>
-                
-<!-- 카카오톡 채널 톡 api -->
-                <div
-  id="kakao-talk-channel-chat-button"
-  data-channel-public-id="_ZeUTxl"
-  data-title="question"
-  data-size="large"
-  data-color="yellow"
-  data-shape="pc"
-  data-support-multiple-densities="true"
-  style="display: scroll; position: fixed; bottom: 30px; right: 35px;"
-></div>
-<!-- -->
                         </div>
                      </div>
                      </div>
                 </div>
             </div>
         </div>
-        
+         <jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
     </section>
-    <footer class="Footer">
-        <div class="footerContent">
-            <div class="top">
-                <div class="left">
-                    <div class="logoWrap">
-                        <a>로고</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <span>1:1 문의</span>
-                            <a href="" target="_blank">운영자 1:1 카카오챗</a>
-                        </li>
-                        <li>
-                            <span>오픈 챗</span>
-                            <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
-                        </li>
-                        <li>
-                            <span>제휴문의</span>
-                            <a href="" target="_blank">help@letspl.me</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li class="tit">바로가기</li>
-                        <li><a href="">렛플인</a></li>
-                        <li><a href="">프로젝트</a></li>
-                        <li><a href="">스토리</a></li>
-                        <li><a href="">라운지</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">이용안내</li>
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="../qna/qna.html">Q&A</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">관련사이트</li>
-                        <li><a href="">네이버 블로그</a></li>
-                        <li><a href="">티스토리 블로그</a></li>
-                        <li><a href="">인스타그램</a></li>
-                        <li><a href="">Velog</a></li>
-                        <li><a href="">Medium</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">서비스약관</li>
-                        <li><a href="">서비스 이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">전자금융거래약관</a></li>
-                        <li><a href="">결제/환불약관</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footerContentBottom">
-            <div class="wrap">
-                <div class="left">
-                    <ul>
-                        <li>어썸크루</li>
-                        <li>사업등록번호 : 619-39-00615</li>
-                        <li>대표 : 이승준</li>
-                        <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
-                        <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
-                        <li>TEL : 070.8064.3497</li>
-                        <li>개인정보담당자 : 이승준 help@letspl.me</li>
-                    </ul>
-                    <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
-                </div>
-                <div class="right">
-                    <div class="appLinkWrap">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
@@ -393,17 +299,12 @@ $("#replyFold").click(function(){
 
 });
 
-
-
-  
-
-   
-
-  window.kakaoAsyncInit = function() {
+<!-- window.kakaoAsyncInit = function() {
     Kakao.Channel.createChatButton({
       container: '#kakao-talk-channel-chat-button',
     });
   };
+  -->
 
   
 
@@ -430,18 +331,6 @@ $(".edit").click(function(event) {
     }
 });
 
-
-
-
-    //key up 으로 해보자
-    //     let text = $('#textarea').val();
-    // if (text.length==0) {
-    //     $('#btnWrap').css("display", "none");
-    
-    // }else {
-    //     $('#btnWrap').css("display", "block");
-    // };
-       
 </script>
 <script src="../main/modal.js"></script>
 </html>
