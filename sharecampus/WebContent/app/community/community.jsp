@@ -36,17 +36,15 @@
                     </div>
                 </form>
                 <!-- 피드 시작 -->
-                <form method="post" action="#" class="combined" name="communityDetailForm">
+                <form method="post" action="#" class="combined" name="communityDetailForm"> 
                 <div class="communityFeedSection">
                     <div class="communityFeedWrap">
                      <div class="communityFeedContentWrap">
                         <div class="top2">
                             <div class="left">
-                                <a href="https://letspl.me/people/%EB%82%98%EC%A0%95%ED%98%B8?tab=info">
                                     <div class="profileThumb">
                                         <img loading="lazy" src="profile1.jpg" alt="라이언">
                                     </div>
-                                </a>
                             </div>
                             <div class="right5">
                                 <h2 class="profileName"><c:out value ="${board.getMemberNickname()}"/>
@@ -61,10 +59,7 @@
                             <div class="feedContents">
                                 <h3>
                                     <textarea style="font-size: 0.875rem;  height: auto;"disabled rows="21" maxlength="1000" class="text">
-
-"차로에서 취향을 이야기하다"
-
-나와 결이 같은 사람과 취향을 공유하고 이야기 나눈다면 그 일상은 분명 특별해질 거예요.
+										<c:out value ="${board.getCommunityContents()}"/>
                                     </textarea>
                                 </h3>
                                 <div class="bottom2">
@@ -88,6 +83,7 @@
                                 </form>
                                 <!-- 숨겨진 댓글 창 -->
                                 <div class="communityReplyTab" id="communityReplyTab">
+                                <form>
                                     <div class="replyTab">
                                         <div class="tabTop">
                                             <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
@@ -100,14 +96,17 @@
                                                 </div>
                                                 <div class="tabTxt">
                                                     <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
-서비스 출시하시면 웹이나 앱 형태로 나올까요?
-지금은 오픈채팅방으로 가기밖에는 안보여서요
-출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
-제대로 등록한게 맞는지 궁금합니다.</textarea>
+																서비스 출시하시면 웹이나 앱 형태로 나올까요?
+																지금은 오픈채팅방으로 가기밖에는 안보여서요
+																출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
+																제대로 등록한게 맞는지 궁금합니다.
+													</textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    </form>
+                                    <form>
                                     <div class="replyInput">
                                         <div class="replyProfileThumb">
                                             <img loading="lazy "src="https://letspl.me/assets/images/prof-no-img.png" alt="" class="tabImg">
@@ -117,8 +116,9 @@
                                             <button class="blackBtn" disabled>등록</button>
                                         </div>
                                     </div>
+                                    </form>
                                 </div>
-                                
+                              
                             </div>
 
                         </div>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="community">
-	<!-- 멤버 너 -->
-	<select id="selectAll">select community_num, community_regist_date, community_contents, m.member_num,member_img_name ,member_nickname
+	<!-- 멤버 전체 정보 가져오기ㅣ -->
+	<select id="selectAll" resultType="communityDTO">
+			select community_num, community_regist_date, community_contents, m.member_num, member_img_name , member_nickname
 			from tbl_member m join tbl_community
 			on m.member_num = b.member_num
-		</select>
+			order by board_number desc
+	</select>
 	
 	<!-- 전체 숫자 세기 -->
 	<select id="getTotal" resultType="_int">
 			select count(community_num) from tbl_community
-		</select>
+	</select>
 	
 	<!--  시퀀스 번호 받아오기 -->
 	<select id="getSequence" resultType="_int">
