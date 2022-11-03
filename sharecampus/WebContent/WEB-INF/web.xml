@@ -9,18 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
+ <!-- 메인 -->	  
 <servlet>
 	<servlet-name>Main</servlet-name>
   	<servlet-class>com.sharecampus.main.MainFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>Main</servlet-name>
   	<url-pattern>*.mn</url-pattern>
 </servlet-mapping>
-  		
-
+ <!-- 커뮤니티 -->	
 <servlet>
   	<servlet-name>Community</servlet-name>
   	<servlet-class>com.sharecampus.community.CommunityFrontController</servlet-class>
@@ -29,7 +27,7 @@
   	<servlet-name>Community</servlet-name>
   	<url-pattern>*.co</url-pattern>
 </servlet-mapping>
-
+ <!-- 커리큘럼 -->	
 <servlet>	
 	<servlet-name>Curriculum</servlet-name>
   	<servlet-class>com.sharecampus.curriculum.CurriculumFrontController</servlet-class>
@@ -38,7 +36,7 @@
   	<servlet-name>Curriculum</servlet-name>
   	<url-pattern>*.cu</url-pattern>
 </servlet-mapping>
-
+ <!-- 커리큘럼코멘트 -->	
 <servlet>	
 	<servlet-name>CurriculumComments</servlet-name>
   	<servlet-class>com.sharecampus.curriculum.comments.CurriculumCommentsFrontController</servlet-class>
@@ -47,63 +45,56 @@
   	<servlet-name>CurriculumComments</servlet-name>
   	<url-pattern>*.ccu</url-pattern>
 </servlet-mapping>
-  	
+ <!-- 관리자 -->	  	
 <servlet>
 	<servlet-name>Manager</servlet-name>
   	<servlet-class>com.sharecampus.manager.ManagerFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
   	<servlet-name>Manager</servlet-name>
   	<url-pattern>*.ma</url-pattern>
 </servlet-mapping>
-  	
+ <!-- 멤버관리 -->		
 <servlet>
 	<servlet-name>Member</servlet-name>
   	<servlet-class>com.sharecampus.member.MemberFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
   	<servlet-name>Member</servlet-name>
   	<url-pattern>*.me</url-pattern>
 </servlet-mapping>
-
+ <!-- QNA -->	
 <servlet>
 	<servlet-name>Qna</servlet-name>
   	<servlet-class>com.sharecampus.qna.QnAFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
   	<servlet-name>Qna</servlet-name>
   	<url-pattern>*.qa</url-pattern>
 </servlet-mapping>
-
-  	
+ <!-- 스터디 -->	  	
 <servlet>
 	<servlet-name>Study</servlet-name>
   	<servlet-class>com.sharecampus.study.StudyFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
   	<servlet-name>Study</servlet-name>
   	<url-pattern>*.su</url-pattern>
 </servlet-mapping>
-  
+  <!-- 대외활동 -->	 
 <servlet>
 	<servlet-name>Activities</servlet-name>
   	<servlet-class>com.sharecampus.activities.ActivitiesFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>Activities</servlet-name>
   	<url-pattern>*.ac</url-pattern>
 </servlet-mapping>
-  		
+ <!-- 커뮤니티코멘트 -->	
 <servlet>
 	<servlet-name>CommunityComments</servlet-name>
   	<servlet-class>com.sharecampus.community.comments.CommunityCommentsFrontController</servlet-class>
 </servlet>
-
 <servlet-mapping>
 	<servlet-name>CommunityComments</servlet-name>
   	<url-pattern>*.cco</url-pattern>

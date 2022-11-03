@@ -5,7 +5,7 @@ public class CommunityDTO {
 	private int memberNum;
 	private String communityRegistDate;
 	private String communityContents;
-	private int memberId;
+	private int memberNickname;
 	private String memberImgName;
 	
 	public CommunityDTO() {;}
@@ -26,12 +26,14 @@ public class CommunityDTO {
 		this.memberNum = memberNum;
 	}
 
-	public int getMemberId() {
-		return memberId;
+	
+
+	public int getMemberNickname() {
+		return memberNickname;
 	}
 
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
+	public void setMemberNickname(int memberNickname) {
+		this.memberNickname = memberNickname;
 	}
 
 	public String getCommunityRegistDate() {
@@ -61,9 +63,11 @@ public class CommunityDTO {
 	@Override
 	public String toString() {
 		return "CommunityDTO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", communityRegistDate="
-				+ communityRegistDate + ", communityContents=" + communityContents + ", memberId=" + memberId
-				+ ", memberImgName=" + memberImgName + "]";
+				+ communityRegistDate + ", communityContents=" + communityContents + ", memberNickname="
+				+ memberNickname + ", memberImgName=" + memberImgName + "]";
 	}
+
+	
 
 	
 
