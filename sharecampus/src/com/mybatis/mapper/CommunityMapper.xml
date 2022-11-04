@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="community">
-<<<<<<< HEAD
-=======
 	<!-- 멤버 전체 정보 가져오기ㅣ -->
 	<select id="selectAll" resultType="communityDTO">
 			select community_num, community_regist_date, community_contents, m.member_num, member_img_name , member_nickname
@@ -34,7 +32,6 @@
 			where member_number = #{memberNumber}
 		</delete>
 		
->>>>>>> f5b07ffd8274fe42bef0d8277544943bc242b7c8
 	<!-- 해당 테이블 추가 -->
 		<insert id="insert" parameterType="communityVO">
 			insert into tbl_community (member_num, community_contents)
@@ -51,12 +48,4 @@
 		on m.member_number = b.member_number
 		order by board_number desc
 	</select>
-	
-	create table tbl_community_comment(
-comm_comment_num int not null auto_increment primary key,
-member_num int unsigned,
-community_num int not null,
-comm_comment_contents varchar(500) not null,
-comm_comment_date datetime default now(),
-	
 </mapper>
