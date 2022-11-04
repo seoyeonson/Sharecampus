@@ -1,4 +1,4 @@
-function cl() {
+/*function cl() {
     let commit = confirm("댓글을 저장하시겠습니까?");
     if ($("#cwrite").val() == "") {
         alert("댓글을 입력해주세요.");
@@ -10,4 +10,4 @@ function cl() {
  
         }
     }
-}
+}*/

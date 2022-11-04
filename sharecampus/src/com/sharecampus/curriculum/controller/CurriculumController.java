@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.curriculum.command.Command;
+import com.sharecampus.curriculum.command.ListCommand;
+import com.sharecampus.curriculum.command.SelectCommand;
+import com.sharecampus.curriculum.command.ViewCommand;
+import com.sharecampus.curriculum.command.WriteCommand;
 
 /**
  * Servlet implementation class GetList
@@ -43,28 +47,35 @@ public class CurriculumController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String com = uri.substring(conPath.length());
-		System.out.println(com);
+		/* System.out.println(com); */
 		switch(com) {
-		case "/curriculum/curriculum.do":
+		case "/app/curriculum/curriculum.do":
 			command = new ListCommand();
 			command.execute(request, response);
 			viewPage = "curriculum.jsp";
 			break;
-		case "/curriculum/view.do":
-			// TODO
+		case "/app/curriculum/curriculum_detail.do":
+			command = new ViewCommand();
+			command.execute(request, response);
+			viewPage = "curriculum_detail.jsp";
 			break;
-		case "/curriculum/write.do":
+		case "/app/curriculum/curriculum_regist.do":
 			viewPage = "curriculum_regist.jsp";
 			break;
-		case "/curriculum/writeOk.do":
-//			command = new WriteCommand();
+		case "/app/curriculum/writeOk.do":
+			command = new WriteCommand();
 			command.execute(request, response);
+			viewPage = "writeOK.jsp";
 			break;
-		case "/curriculum/update.do":
-			// TODO
+		case "/app/curriculum/curriculum_update.do":
+			command = new SelectCommand();
+			command.execute(request, response);
+			viewPage = "update.jsp";
 			break;
-		case "/curriculum/updateOk.do":
-			// TODO
+		case "/app/curriculum/updateOk.do":
+			/* command = new UpdateCommand(); */
+			command.execute(request, response);
+			viewPage = "updateOk.jsp";
 			break;
 		case "/curriculum/deleteOk.do":
 			// TODO
@@ -74,7 +85,7 @@ public class CurriculumController extends HttpServlet {
 		// view page로 forward
 		if (viewPage != null) {
 			RequestDispatcher dispatcher = 
-					request.getRequestDispatcher("/curriculum/" + viewPage);
+					request.getRequestDispatcher("/app/curriculum/" + viewPage);
 			dispatcher.forward(request, response);
 		}
 	}

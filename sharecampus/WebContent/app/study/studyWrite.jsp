@@ -1,113 +1,145 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스터디 모집 글쓰기</title>
-    <!-- 인원수 모집란에 증감 화살표 삭제 -->
-    <style>
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<title>스터디 모집 글쓰기</title>
+<!-- 인원수 모집란에 증감 화살표 삭제 -->
+<style>
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-    </style>
-    <!-- 에러 무시 문제 없음 -->
+input[type=number] {
+	-moz-appearance: textfield;
+}
+</style>
+<!-- 에러 무시 문제 없음 -->
 </head>
-<link rel="stylesheet" href="../main/main.css">
-<link rel="stylesheet" href="studyWrite.css">
-<script type="text/javascript" src="studyWrite.js"></script>
-
+<%-- <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/study/studyMain.css"> --%>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/assets/css/study/studyWrite.css">
 <body>
-
-    <!-- header start -->
-    <header class="Header">
-        <nav>
-            <div class="logo"><a href="../main/index.html">로고</a></div>
-            <ul class="Navbar">
-                <li><a href="#">커리큘럼</a></li>
-                <li><a href="../Study/studyMain.html">스터디</a></li>
-                <li><a href="../activity/activity.html">대외활동</a></li>
-                <li><a href="../community/community.html">커뮤니티</a></li>
-            </ul>
-            <div class="loginWrap">
-                <div class="searchWrap">
-                    <a class="searchIc" href="../search/search.html">
-                        <span>검색</span>
-                        <img src="https://letspl.me/assets/images/ic-search-white.png">
-                    </a>
-                </div>
-                <div class="joinAndLoginWrap">
-                    <a class="joinAndLogin join">가입</a>
-                    <a class="joinAndLogin login">로그인</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- header end -->
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<div id="maindiv">
 
 
-    <form id="container">
-        <div class="section">
-            <h2>스터디 모집 개요</h2>
-            <p class="caution">* 별표 표시는 필수 항목입니다.</p>
-            <p class="input"><input type="text" name="title" placeholder="제목 *" maxlength="40" autocomplete="off">
-            <h3>분야 *</h3>
-            <div class="group category">
-                <label class="checkbox"><input type="radio" name="category" value="01">여행/호텔/관광</label>
-                <label class="checkbox"><input type="radio" name="category" value="02">언론/미디어</label>
-                <label class="checkbox"><input type="radio" name="category" value="03">문화/역사</label>
-                <label class="checkbox"><input type="radio" name="category" value="04">행사/페스티벌</label>
-                <label class="checkbox"><input type="radio" name="category" value="05">교육</label>
-                <label class="checkbox"><input type="radio" name="category" value="06">디자인/사진/예술</label>
-                <label class="checkbox"><input type="radio" name="category" value="07">경제/금융</label>
-                <label class="checkbox"><input type="radio" name="category" value="08">경영/컨설팅/마케팅</label>
-                <label class="checkbox"><input type="radio" name="category" value="09">정치/사회/법률</label>
-                <label class="checkbox"><input type="radio" name="category" value="10">체육/헬스</label>
-                <label class="checkbox"><input type="radio" name="category" value="11">의료/보건</label>
-                <label class="checkbox"><input type="radio" name="category" value="12">뷰티/미용/화장품</label>
-                <label class="checkbox"><input type="radio" name="category" value="13">과학/공학/기술/IT</label>
-                <label class="checkbox"><input type="radio" name="category" value="14">요리/식품</label>
-                <label class="checkbox"><input type="radio" name="category" value="15">창업/자기계발</label>
-                <label class="checkbox"><input type="radio" name="category" value="16">환경/에너지</label>
-                <label class="checkbox"><input type="radio" name="category" value="17">콘텐츠</label>
-                <label class="checkbox"><input type="radio" name="category" value="18">사회공헌/교류</label>
-                <label class="checkbox"><input type="radio" name="category" value="19">유통/물류</label>
-                <label class="checkbox"><input type="radio" name="category" value="20">기타</label>
-            </div>
-            <h3>접수 기간 *</h3>
-            <p class="input small"><input type="date" name="start_date" autocomplete="off" class="date"><span>부터</span>
-            </p>
-            <p class="input small"><input type="date" name="end_date" autocomplete="off" class="date"><span>까지</span>
-            </p>
-            <h3>활동기간 *</h3>
-            <div class="group">
-                <label class="checkbox"><input type="radio" name="period" value="0001">3개월 이하</label>
-                <label class="checkbox"><input type="radio" name="period" value="0002">3개월~6개월</label>
-                <label class="checkbox"><input type="radio" name="period" value="0003">6개월~1년</label>
-                <label class="checkbox"><input type="radio" name="period" value="0004">1년 이상</label>
-            </div>
-            <h3>모집인원</h3>
-            <p class="input medium"><input type="number" min="0" name="num_people" placeholder="인원수" maxlength="40"
-                    autocomplete="off"></p>
-        </div>
-        <div class="section">
-            <h2>상세 내용</h2>
-            <p class="input"><textarea name="description"
-                    placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
-            </p>
-        </div>
 
+		<form id="container">
+			<div class="section">
+				<h1>스터디 모집</h1>
+				<!-- <p class="description">
+					 <strong>무료로 진행</strong>되며,<br>담당자의 검토 및 승인 절차를 걸쳐
+					48시간 이내 게시됩니다.
+				</p> -->
+				<!-- 원래 아무것도 안적혀있는데 허전하다고 느끼시면 상의해서 문구를 넣어봐요. -->
+			</div>
+			<div class="section">
+				<h2>글쓴이 정보</h2>
+				<div class="manager" data-managerfor="first">
+					<p class="input medium">
+						<input type="email" name="" placeholder="이메일" 
+						
+							maxlength="100" autocomplete="off">
+					</p>
+					<p class="input medium">
+						<input type="text" name="" placeholder="이름" 
+							maxlength="10" autocomplete="off">
+					</p>
+					<p class="input medium">
+						<input type="text" name=""
+							placeholder="연락처 (- 없이 숫자만)" autocomplete="off">
+					</p>
+					<p class="agreement">게시물 관리, 게시 처리 안내, 유료 광고 게재 안내 등을 위해 글쓴이
+						이메일, 이름, 연락처, 소속을 수집합니다. 수집한 개인정보는 2년 이후 즉시 파기됩니다. (게시 요청 또는 게시물
+						관리 계정 접속 기준)</p>
+					<label class="agreement"><input type="checkbox"
+						name="agree">위 내용에 동의합니다.</label>
+				</div>
+			</div>
+			<div class="section">
+				<h2>활동 개요</h2>
+				<p class="caution">* 별표 표시는 필수 항목입니다.</p>
+				<p class="input">
+					<input type="text" name="title" placeholder="제목 *" maxlength="40"
+						autocomplete="off"
+						>
+				</p>
+				
+				<h3>분야 *</h3>
+				<div class="group category">
+					<label class="checkbox"><input type="radio" name="category"
+						value="01">여행/호텔/관광</label> <label class="checkbox"><input
+						type="radio" name="category" value="02">언론/미디어</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="03">문화/역사</label> <label class="checkbox"><input
+						type="radio" name="category" value="04">행사/페스티벌</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="05">교육</label> <label class="checkbox"><input
+						type="radio" name="category" value="06">디자인/사진/예술</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="07">경제/금융</label> <label class="checkbox"><input
+						type="radio" name="category" value="08">경영/컨설팅/마케팅</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="09">정치/사회/법률</label> <label class="checkbox"><input
+						type="radio" name="category" value="10">체육/헬스</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="11">의료/보건</label> <label class="checkbox"><input
+						type="radio" name="category" value="12">뷰티/미용/화장품</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="13">과학/공학/기술/IT</label> <label class="checkbox"><input
+						type="radio" name="category" value="14">요리/식품</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="15">창업/자기계발</label> <label class="checkbox"><input
+						type="radio" name="category" value="16">환경/에너지</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="17">콘텐츠</label> <label class="checkbox"><input
+						type="radio" name="category" value="18">사회공헌/교류</label> <label
+						class="checkbox"><input type="radio" name="category"
+						value="19">유통/물류</label> <label class="checkbox"><input
+						type="radio" name="category" value="20">기타</label>
+				</div>
+				<h3>접수 기간 *</h3>
+				<p class="input small">
+					<input type="date" name="start_date" autocomplete="off"
+						class="date" id="datepicker1"><span>부터</span>
+				</p>
+				<p class="input small">
+					<input type="date" name="end_date" autocomplete="off" class="date"
+						id="datepicker2"><span>까지</span>
+				</p>
+				<h3>활동기간 *</h3>
+				<div class="group">
+					<label class="checkbox">
+					<input type="radio" name="period"
+						value="0001">3개월 이하</label> 
+						<label class="checkbox">
+						<input type="radio" name="period" 
+						value="0002">3개월~6개월</label> 
+						<label class="checkbox">
+						<input type="radio" name="period"
+						value="0003">6개월~1년</label> 
+						<label class="checkbox">
+						<input type="radio" name="period" value="0004">1년 이상</label>
+				</div>
+				<h3>모집인원</h3>
+				<p class="input medium">
+				<input type="number" min="0" name="num_people" placeholder="인원수" maxlength="40" autocomplete="off"></p>
+			</div>
+			<div class="section">
+				<h2>상세 내용</h2>
+				<p class="input">
+					<textarea name="description"
+						placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
+				</p>
+			</div>
 
-        <div class="section">
+			 <div class="section">
             <h2>유의사항</h2>
             <ul class="description">
                 <li>스터디 모집 정보만 게시할 수 있습니다. 동아리, 대외활동, 구인 등의 정보는 다른 커뮤니티를 이용해주세요.</li>
@@ -134,101 +166,16 @@
                 </ul>
             </ul>
         </div>
-        <div class="submit"><input type="submit" value="글쓰기"></div>
-    </form>
-
-
-    <!-- footer start -->
-    <footer class="Footer">
-        <div class="footerContent">
-            <div class="top">
-                <div class="left">
-                    <div class="logoWrap">
-                        <a>로고</a>
-                    </div>
-                    <ul>
-                        <li>
-                            <span>1:1 문의</span>
-                            <a href="" target="_blank">운영자 1:1 카카오챗</a>
-                        </li>
-                        <li>
-                            <span>오픈 챗</span>
-                            <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
-                        </li>
-                        <li>
-                            <span>제휴문의</span>
-                            <a href="" target="_blank">help@letspl.me</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li class="tit">바로가기</li>
-                        <li><a href="">렛플인</a></li>
-                        <li><a href="">프로젝트</a></li>
-                        <li><a href="">스토리</a></li>
-                        <li><a href="">라운지</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">이용안내</li>
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="../qna/qna.html">Q&A</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">관련사이트</li>
-                        <li><a href="">네이버 블로그</a></li>
-                        <li><a href="">티스토리 블로그</a></li>
-                        <li><a href="">인스타그램</a></li>
-                        <li><a href="">Velog</a></li>
-                        <li><a href="">Medium</a></li>
-                    </ul>
-                    <ul>
-                        <li class="tit">서비스약관</li>
-                        <li><a href="">서비스 이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">전자금융거래약관</a></li>
-                        <li><a href="">결제/환불약관</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footerContentBottom">
-            <div class="wrap">
-                <div class="left">
-                    <ul>
-                        <li>어썸크루</li>
-                        <li>사업등록번호 : 619-39-00615</li>
-                        <li>대표 : 이승준</li>
-                        <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
-                        <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
-                        <li>TEL : 070.8064.3497</li>
-                        <li>개인정보담당자 : 이승준 help@letspl.me</li>
-                    </ul>
-                    <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
-                </div>
-                <div class="right">
-                    <div class="appLinkWrap">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg"
-                                        alt="렛플 안드로이드앱 다운로드">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
-                                    <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg"
-                                        alt="렛플 아이폰앱 다운로드">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
-
+			<div class="submit">
+				<input type="submit" value="게시 요청하기" >
+			</div>
+		</form>
+	</div>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
 </html>

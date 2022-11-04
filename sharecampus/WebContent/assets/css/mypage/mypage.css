@@ -725,6 +725,9 @@ a:hover, a:active { text-decoration: none; }
 
 .btn .document_file{
     width: 220px;
+    line-height: 46px;
+    text-align: center; 
+    
 }
 input::file-selector-button {
     color: #222;
@@ -743,8 +746,8 @@ input::file-selector-button {
     text-align: center; 
     border: none ;
     padding: 2px;
-    padding-left: 20px;
 }
+
 .sMypageAccountItem.password fieldset{
     border: none; 
     padding-right: 70px;

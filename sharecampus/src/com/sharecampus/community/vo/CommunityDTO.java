@@ -1,12 +1,14 @@
 package com.sharecampus.community.vo;
 
-public class CommunityVO {
+public class CommunityDTO {
 	private int communityNum;
 	private int memberNum;
 	private String communityRegistDate;
 	private String communityContents;
+	private int memberNickname;
+	private String memberImgName;
 	
-	public CommunityVO() {;}
+	public CommunityDTO() {;}
 
 	public int getCommunityNum() {
 		return communityNum;
@@ -22,6 +24,16 @@ public class CommunityVO {
 
 	public void setMemberNum(int memberNum) {
 		this.memberNum = memberNum;
+	}
+
+	
+
+	public int getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(int memberNickname) {
+		this.memberNickname = memberNickname;
 	}
 
 	public String getCommunityRegistDate() {
@@ -40,11 +52,25 @@ public class CommunityVO {
 		this.communityContents = communityContents;
 	}
 
+	public String getMemberImgName() {
+		return memberImgName;
+	}
+
+	public void setMemberImgName(String memberImgName) {
+		this.memberImgName = memberImgName;
+	}
+
 	@Override
 	public String toString() {
-		return "CommunityVO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", communityRegistDate="
-				+ communityRegistDate + ", communityContents=" + communityContents + "]";
+		return "CommunityDTO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", communityRegistDate="
+				+ communityRegistDate + ", communityContents=" + communityContents + ", memberNickname="
+				+ memberNickname + ", memberImgName=" + memberImgName + "]";
 	}
+
+	
+
+	
+
 
 	
 }
