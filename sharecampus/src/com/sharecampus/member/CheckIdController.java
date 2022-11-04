@@ -16,6 +16,7 @@ public class CheckIdController implements Execute{
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		System.out.println("CheckIdController 들어옴");
 		Result result = new Result();
 		HttpSession session = req.getSession();
 		
@@ -33,8 +34,8 @@ public class CheckIdController implements Execute{
 		
 		// 만약 로그인 정보가 없을 경우
 		if(memberDAO.checkId(memberVO)) {
-			// 회원가입	
-			result.setPath("/member/join.me");
+			// 바로 회원가입할지 체크
+			result.setPath("/app/member/join.jsp");
 		} else {
 			// 로그인 완료
 			result.setPath("/member/loginOk.me");

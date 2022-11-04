@@ -16,39 +16,31 @@ public class JoinOkController implements Execute{
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
-		
+		req.setCharacterEncoding("UTF-8");
 		Result result = new Result();	
 		HttpSession session = req.getSession();
 		
-		System.out.println("joinOk 들어옴 " + (boolean)req.getAttribute("choice"));
+		System.out.println("멤버 데이터 저장");
 		
-		if((boolean)req.getAttribute("choice")) {
-			
-			MemberVO memberVO = new MemberVO();
-			MemberDAO memberDAO = new MemberDAO();
-			
-			String member_id = String.valueOf(session.getAttribute("member_id"));
-			String member_nickname = String.valueOf(session.getAttribute("member_nickname"));
-			int member_type = (Integer)session.getAttribute("member_type");
-			
-			memberVO.setMemberId(member_id);
-			memberVO.setMemberNickname(member_nickname);
-			memberVO.setMemberType(member_type);
-			
-			memberDAO.join(memberVO);
-			
-			result.setRedirect(true);
-			result.setPath(req.getContextPath() + "/member/loginOk.me");
-		} else {
-			result.setRedirect(true);
-			result.setPath(req.getContextPath() + "/");
-		}
+		MemberVO memberVO = new MemberVO();
+		MemberDAO memberDAO = new MemberDAO();
+		
+		String member_id = String.valueOf(session.getAttribute("member_id"));
+		String member_nickname = String.valueOf(req.getParameter("memberNickname"));
+		int member_type = (Integer)session.getAttribute("member_type");
+		
+		memberVO.setMemberId(member_id);
+		memberVO.setMemberNickname(member_nickname);
+		memberVO.setMemberType(member_type);
+		
+		memberDAO.join(memberVO);
 		
 		session.removeAttribute("member_nickname");
 		session.removeAttribute("member_type");
-			
-//		
-		return null;
+		
+		result.setPath("/member/loginOk.me");
+					
+		return result;
 	}
 
 }

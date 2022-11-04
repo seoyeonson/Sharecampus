@@ -24,4 +24,18 @@ public class MemberDAO {
 		return (Integer)sqlSession.selectOne("member.selectMemberNum", memberId);
 		
 	}
+	
+	public boolean checkNickname(String memberNickname) {
+		return (Integer)sqlSession.selectOne("member.checkNickname", memberNickname) == 0;
+		
+	}
+	
+	public MemberVO memberInfo(int memberNum) {
+		return sqlSession.selectOne("member.memberInfo", memberNum);
+		
+	}
+	
+	public void updateNickname(MemberVO memberVO) {
+		sqlSession.update("member.updateNickname", memberVO);
+	}
 }

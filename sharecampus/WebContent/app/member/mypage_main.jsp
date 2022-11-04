@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +34,7 @@
                         </a>
                     </li> 
                     <li>
-                        <a href="${pageContext.request.contextPath}/app/member/mypage_main.jsp">
+                        <a href="javascript:void(0);">
                         <span>회원 정보 변경</span>
                         </a>
                     </li>
@@ -99,7 +100,7 @@
                                 <div class="content">
                                     <div class="uInput -simpleLine" style="width: 390px; padding-left: 20px; border-bottom: #ebebeb;">
                                         <!-- 닉네임 주소 -->
-                                        <h3 id="now_nickname">집에 가고싶고 졸립고 배고픈 무지</h3>
+                                        <h3 id="now_nickname"><c:out value="${memberInfo.getMemberNickname()}"/></h3>
                                         <!-- 닉네임 주소 -->
                                     </div>
                                 </div>
@@ -109,7 +110,7 @@
                                 <div class="content">
                                     <div class="uInput -simpleLine" style="width: 390px; padding-left: 20px; border-bottom: #ebebeb;">
                                         <!-- 이메일 주소 -->
-                                        <h3 id="now_email">iolpji@Naver.com</h3>
+                                        <h3 id="now_email"><c:out value="${memberInfo.getMemberId()}"/></h3>
                                         <!-- 이메일 주소 -->
                                     </div>
                                 </div>
@@ -126,36 +127,16 @@
                                 <div class="content">
                                     <div class="uInput -simpleLine" style="width: 390px; border-bottom: #ebebeb;">
                                         <!-- 닉네임 주소 입력 -->
-                                        <input type="text" id="nickname_view630" placeholder="변경하고싶은 닉네임을 입력해주세요" value="" class="_inputEmail">
+                                        <form action="${getContext.request.contextPath}/member/updateNickname.me" name="updateNicknameForm" method="POST">
+	                                        <input type="text" id="memberNickname" name="memberNickname" placeholder="변경하고싶은 닉네임을 입력해주세요" value="" class="_inputEmail">
+                                        </form>
                                         <!--  닉네임 주소 입력 -->
                                     </div>
                                 </div>
-                                <!-- 입력한 이메일 값을 DB로 전송-->
                                 <div class="btn">
-                                    <button type="submit" class="uButton -sizeS -confirm" id="_btnUpdateEmail">확인</button>
+                                    <button type="button" class="uButton -sizeS -confirm" id="btnUpdateNickname">확인</button>
                                 </div>
-                                <!-- 입력한 이메일 값을 DB로 전송-->
                             </div>
-                            <!-- 비밀번호 변경 창 -->
-                            <div class="sMypageAccountItem _emailActionPanel">
-                                <label class="label" for="pass_word630">비밀번호</label>
-                                <div class="content" style="display: flex;">
-                                    <div id="password" class="uInput -simpleLine" style=" display: flex; width: 390px; paddig-left:0px">
-                                        <!-- 비밀번호 입력 -->
-                                        <input type="password" class="password" id="password1" placeholder="비밀번호 입력">
-                                        <input type="password" class="password" id="password2" placeholder="비밀번호 재입력">
-                                        <!-- 비밀번호 입력 -->
-                                    </div>
-                                    <div class="password_check" style="padding-top: 20px; font-size: 8px;"></div>
-                                    </span>
-                                </div>
-                                <!-- 입력한 비밀번호 값을 DB로 전송-->
-                                <div class="btn">
-                                    <input type="button" style="border: 0;" onclick="test()" class="uButton -sizeS -confirm" id="_btnUpdatePassword" value="확인">
-                                </div>
-                                <!-- 입력한 비밀번호 값을 DB로 전송-->
-                            </div>
-
                         </div>
                     </div>
                     </div>
@@ -170,7 +151,7 @@
                                     <span class="gSrOnly">첫번째 연동</span>
                                 </span>
                             </div>
-                            <img class="id_icon" src="/Project/mypage/icon/engine-warning.png">
+                            <img class="id_icon" src="${pageContext.request.contextPath}/assets/images/mypage/engine-warning.png">
                             <div class="content off">증명서류를 제출할 수 있습니다.</div>
                         </div>
                            <div class="btn" style="display: flex; justify-content: flex-end;">
@@ -196,61 +177,54 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-//미리보기 이미지 
 
+// 닉네임 업데이트
+$("#btnUpdateNickname").on("click", function(){
+	let memberNickname = $("#memberNickname").val();
+	
+	$.ajax({
+		url: "${getContext/request/contextPath}/member/checkNickname.me",
+		data: {memberNickname: memberNickname},
+		success: function(result){
+			if(result == "false"){
+				color = "red";
+				msg = "중복된 닉네임입니다.";
+			} else {
+				msg = "닉네임을 바꾸시겠습니까?";
+			}
+			
+			$("#result").css("color", color);
+			$("#result").test("msg", msg);
+		}
+	});
+	
+	if(check){
+		if($("#memberNickname").val() != ""){
+			updateNicknameForm.submit();	
+		} else {
+			$("#memberNickname").focus();
+		}		
+	}
+});
+
+//미리보기 이미지 
 const file = document.querySelector("input[type='file']");
     
-    file.addEventListener("change", function(e){
-        var reader = new FileReader();
-        reader.readAsDataURL
-        
-        (e.target.files[0]);
-        reader.onload = function(e){
-            let url = e.target.result;
+file.addEventListener("change", function(e){
+    var reader = new FileReader();
+    reader.readAsDataURL
+    
+    (e.target.files[0]);
+    reader.onload = function(e){
+        let url = e.target.result;
 
-            if(url.includes("image")){
-                document.querySelector("label div").style.backgroundImage = "url(" + url +")";
-            }else{
-                document.querySelector("label div").style.backgroundImage = "url(img/no_image.jpg)";
-            }
+        if(url.includes("image")){
+            document.querySelector("label div").style.backgroundImage = "url(" + url +")";
+        }else{
+            document.querySelector("label div").style.backgroundImage = "url(img/no_image.jpg)";
         }
-    });
-  
-// 비밀번호 일치 
-var $passwords = $("password");
-var $password1 = $("#password1");
-var $password2 = $("#password2");
-var $password_check = $(".password_check");
-
-$password1.on("click", function(){
-  if($password2.val() == ""){
-    $password2.css({
-      "border-bottom-color":"#ebebeb"
-    });
-    $password1.css({
-      "border-bottom-color":"#ebebeb"
-    });
-    $password_check.html("");
-  };
-
-  $password2.on("blur", function(){
-    // password2를 벗어났을때 해당 함수 실행
-    if($password2.val() == ""){
-      $password2.css({
-        "border-bottom-color":"#ebebeb"
-      });
-      $password_check.html("");
-    }else if( $password1.val() != $password2.val() ) {
-        $password_check.html("비밀번호 불일치");
-        $password1.css({
-          "border-bottom-color":"#ff5a5a"
-        })
-        $password2.css({
-          "border-bottom-color":"#ff5a5a"
-        });}
-        else if($password1.val() == $password2.val()){
-        $password_check.html("비밀번호 일치");
     }
-  });
-});</script>
+});
+  
+</script>
 </html>

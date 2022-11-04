@@ -23,7 +23,7 @@ public class MemberFrontController extends HttpServlet {
 		Result result = null;
 		
 		if(target.equals("/member/auth/kakao/callback.me")) {
-//			카카오 로그인 토큰
+//			카카오 로그인
 			result = new KakaoLoginController().execute(req, resp);
 			
 		} else if(target.equals("/member/auth/kakaoLoginMember.me")){
@@ -34,29 +34,40 @@ public class MemberFrontController extends HttpServlet {
 //			아이디 체크
 			result = new CheckIdController().execute(req, resp);
 			
+		} else if (target.equals("/member/joinCheck.me")){
+//			회원가입 체크 여부에 따라 알맞은 경로로 이동
+			result = new JoinCheckController().execute(req, resp);
+			
+		} else if (target.equals("/member/joinCheckOk.me")){
+//			회원가입 체크 여부에 따라 알맞은 경로로 이동
+			result = new Result();
+			result.setPath("/app/member/memberNickName.jsp");
+			
+		} else if (target.equals("/member/checkNickname.me")){
+//			중복 닉네임 검사
+			result = new CheckNicknameController().execute(req, resp);
+			
+		} else if(target.equals("/member/joinOk.me")) {
+			result = new JoinOkController().execute(req, resp);
+			
 		} else if(target.equals("/member/loginOk.me")) {
 //			로그인 성공
 			result = new LoginOkController().execute(req, resp);
 			
 			
-		} else if(target.equals("/member/join.me")){
-//			회원가입 확인
-			result = new Result();
-			result.setPath("/app/member/join.jsp");
-			
-		} else if (target.equals("/member/joinOk.me")){
-			result = new JoinOkController().execute(req, resp);
-			
-		} else if(target.equals("/member/logout.me")) {
+		} else if(target.equals("/member/logoutOk.me")) {
 //			로그아웃 페이지로 이동
-			result = new LogOutController().execute(req, resp);
-//			===============================================
+			result = new LogOutOkController().execute(req, resp);
+			
+		} else if(target.equals("/member/mypageOk.me")){
+//			마이페이지 이동
+			result = new MyPageController().execute(req, resp);
+			
+		} else if(target.equals("/member/updateNickname.me")) {
+			result = new updateNicknameController().execute(req, resp);
+			
 		} else if(target.equals("/member/imagechange.me")) {
 //			프로필 이미지 변경
-		} else if(target.equals("/member/passwordchange.me")) {
-//			비밀번호 변경
-		} else if(target.equals("/member/emailAdd.me")) {
-//			이메일 주소 변경
 		} else if(target.equals("/member/connectproof.me")) {
 //			인증서 연결
 		} else if(target.equals("/member/movelist.me")) {
