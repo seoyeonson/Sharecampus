@@ -19,6 +19,7 @@ public class KakaoLoginController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		System.out.println("KakaoLOginController 들어옴");
 		
 		Result result = new Result(); 
 		HttpSession session = req.getSession();
@@ -38,6 +39,8 @@ public class KakaoLoginController implements Execute {
 	    
 	    // 로그인 과정중 얻은 authorization code 값
 	    String code = req.getParameter("code");
+	    
+	    String access_token = "";
 
 	    // access_token을 URL에 요청하기 위한 객체
 	    HttpsURLConnection conn = null;
@@ -81,12 +84,8 @@ public class KakaoLoginController implements Execute {
 	    	System.out.println(data);
 	      
 	    	// 응답에서 필요한 정보를 잘라내어 사용
-	    	String access_token = data.substring(data.indexOf("access_token") + 15, data.indexOf("token_type") - 3);
+	    	access_token = data.substring(data.indexOf("access_token") + 15, data.indexOf("token_type") - 3);
 	    	System.out.println(access_token);
-	      
-	    	session.setAttribute("access_token", access_token);	
-	      
-	    	result.setPath("/member/auth/kakaoLoginMember.me");
 	     
 	    } catch (IOException e) {
 	      e.printStackTrace();
@@ -111,6 +110,8 @@ public class KakaoLoginController implements Execute {
 	            }
 	         }
 	    }	
+	    session.setAttribute("access_token", access_token);	
+    	result.setPath("/member/auth/kakaoLoginMember.me");
 	    return result;
 	}
 

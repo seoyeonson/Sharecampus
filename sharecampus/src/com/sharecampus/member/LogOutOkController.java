@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import com.sharecampus.Execute;
 import com.sharecampus.Result;
 
-public class LogOutController implements Execute {
+public class LogOutOkController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
@@ -23,7 +23,7 @@ public class LogOutController implements Execute {
 		Result result = new Result();
 		
 	    // 카카오 계정 로그아웃 URL
-	    String logoutUrl = "https://kapi.kakao.com/v1/user/logout ";
+	    String unconnKakaoUrl = "https://kapi.kakao.com/v1/user/unlink";
 	    
 	    // 이전 URL에서 가져온 access_token 값
 	    String access_token = String.valueOf(session.getAttribute("access_token"));
@@ -34,11 +34,9 @@ public class LogOutController implements Execute {
 	    BufferedReader reader = null;
 	    InputStreamReader isr= null;
 	    
-	    System.out.println(access_token);
-	    
 		 // 카카오 계정 연결 해제	    	    
 	    try {
-	    	final URL url = new URL(logoutUrl);
+	    	final URL url = new URL(unconnKakaoUrl);
 	    	
 	    	conn = (HttpsURLConnection) url.openConnection();
 	    	// 요청 프로퍼티 설정
@@ -53,7 +51,7 @@ public class LogOutController implements Execute {
 	    	writer.flush();
 	    	
 	    	final int responseCode = conn.getResponseCode();
-	    	System.out.println("\nSending 'POST' request to URL : " + logoutUrl);
+	    	System.out.println("\nSending 'POST' request to URL : " + unconnKakaoUrl);
 	    	System.out.println("Response Code : " + responseCode);
 	    	
 	    	isr = new InputStreamReader(conn.getInputStream());
@@ -64,8 +62,8 @@ public class LogOutController implements Execute {
 	    		buffer.append(line);
 	    	}
 	    	
-//	    	String data = buffer.toString();
-//	    	System.out.println(data);
+	    	String data = buffer.toString();
+	    	System.out.println(data);
 	    	
 	    } catch (IOException e) {
 	    	e.printStackTrace();
@@ -90,7 +88,9 @@ public class LogOutController implements Execute {
 	    		}
 	    	}
 	    }
-	    result.setPath("/member/logoutOk.me");
+	    
+	    session.invalidate();
+    	result.setPath("/");
 		return result;
 	}
 

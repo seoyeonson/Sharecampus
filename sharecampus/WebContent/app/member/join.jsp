@@ -6,7 +6,7 @@
 <script>
 	$(document).ready(function(){
 		var choice = confirm("회원정보가 없습니다. 바로 회원가입 하시겠습니까?");
-		var url = '${pageContext.request.contextPath}/member/joinOk.me?choice=' + choice;
+		var url = '${pageContext.request.contextPath}/member/joinCheck.me?choice=' + choice;
 		console.log(url);
 		location.href= url;
 	})
