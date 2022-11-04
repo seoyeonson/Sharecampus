@@ -24,7 +24,6 @@ public class CommunityFrontController extends HttpServlet{
 		
 		if(target.equals("/community/list.co")) {
 			result = new Result();
-			result.setPath("/app/community/community.jsp");
 		}else if(target.equals("/community/listDs.co")) {
 			result = new CommunitySelectController().execute(req, resp);
 		}else if(target.equals("/community/listDi.co")) {

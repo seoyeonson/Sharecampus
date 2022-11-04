@@ -18,11 +18,21 @@ public class CommunitySelectController extends HttpServlet implements Execute {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		Result result = new Result();
+		
 		CommunityDAO communityDAO = new CommunityDAO();
-		req.setAttribute("communitys", communityDAO.selectAll());
+		CommunityDTO communityDTO = new CommunityDTO();
+		
+		String temp = req.getParameter("page");
+		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
+		
+		int total = communityDAO.getTotal();
+		
+		req.setAttribute("communitys", communityDTO);
 		
 		result.setPath("/app/community/community.jsp");
+		
 		return result;
+		
 	}
 
 }

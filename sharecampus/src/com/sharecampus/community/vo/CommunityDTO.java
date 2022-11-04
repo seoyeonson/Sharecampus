@@ -25,7 +25,6 @@ public class CommunityDTO {
 	public void setMemberNum(int memberNum) {
 		this.memberNum = memberNum;
 	}
-
 	
 
 	public int getMemberNickname() {

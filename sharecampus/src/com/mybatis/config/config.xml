@@ -8,10 +8,11 @@
    </settings>
    
    <typeAliases>
+        <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
+        <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityDTO"/>
+        <!--
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>
         <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
-        <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
-        <!--
         <typeAlias type="com.sharecampus.banner.vo.BannerVO" alias="bannerVO"/>
         <typeAlias type="com.sharecampus.curriculum.vo.CurriculumVO" alias="curriculumVO"/>
         <typeAlias type="com.sharecampus.curriculum.comments.vo.CurriculumCommentsVO" alias="curriculumcommentsVO"/>
@@ -33,10 +34,10 @@
    </environments>
    
    <mappers>
-      <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
-      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
       <!--
+      <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
       <mapper resource="com/mybatis/mapper/BannerMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CurriculumMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CurriculumCommentsMapper.xml"/>
