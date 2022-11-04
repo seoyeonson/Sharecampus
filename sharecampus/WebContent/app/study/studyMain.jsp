@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스터디</title>
 </head>
-<link rel="stylesheet" href="studyMain.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/study/studyMain.css">
 <link rel="stylesheet" href="../main/main.css">
 
 <body>

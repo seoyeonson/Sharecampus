@@ -18,6 +18,9 @@ public class ActivitiesDAO {
 //		sqlSession.insert("기간", activitiesVO.getActivTitle()); DB에 리턴값만 넣고 다시 가져오지를 못했다. return 값이 없다.
 		
 	}
+	public void select(ActivitiesVO activitiesVO) {
+		sqlSession.selectList("activ.select", activitiesVO); //selectOne 인지 List 인지 잘모르겠음
+	}
 	
 	
 	

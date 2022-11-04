@@ -23,8 +23,7 @@ input[type=number] {
 	href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/activity/activity_new.css">
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/assets/js/activity/activity_new.js"></script>
+
 <body>
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
@@ -32,7 +31,7 @@ input[type=number] {
 
 
 
-		<form id="container" action ="/activities/listDi.ac">
+		<form id="container" action ="/activities/listDi.ac" name = "writeForm" method = "post" enctype= "multipart/form-data">
 			<div class="section">
 				<h1>대외활동 게시 요청</h1>
 				<p class="description">
@@ -192,7 +191,7 @@ input[type=number] {
 						placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
 				</p>
 			</div>
-
+			 <%-- <form action = "${pageContext.request.contextPath}/activities/listDiOk.ac" name="writeForm" method="post" enctype = "multipart/form-data"> --%>
 			<div class="section">
 				<h2>이미지</h2>
 				<ul class="description">
@@ -200,25 +199,17 @@ input[type=number] {
 					<li>썸네일 : 목록에 노출 / 480x684px 권장 / 없을 시 '본문' 이미지로 대체</li>
 				</ul>
 				<p class="input medium">
-					<input type="text" name="activThumbnailImgName" placeholder="본문 *"
-						class="attachtext" readonly> <input type="file"
-						id="my-input" name="attach" class="attachfile"
-						accept="image/jpeg, image/png, image" onchange="fileUpload()">
-					<input type="button" name="attach_button" value="파일 선택"
-						class="attachbutton" onclick="onClickUpload();"
-						onchange="fileUpload()">
+					<input type="text" name="attach1" placeholder="본문 *" class="attachtext" readonly> 
+					<input type="file" id="my-input1" name="activMainImgName" class="attachfile" accept="image/jpeg, image/png, image">
+					<input type="button" name="attach_button1" value="파일 선택" id ="uploadBtn" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
 				</p>
-				<p class="input medium thumbnail">
-					<input type="text" name="activMainImgName" placeholder="썸네일"
-						class="attachtext" readonly> <input type="file"
-						id="my-input" name="attach" class="attachfile"
-						accept="image/jpeg, image/png, image" onchange="fileUpload()">
-					<input type="button" name="attach_button" value="파일 선택"
-						class="attachbutton" onclick="onClickUpload();"
-						onchange="fileUpload()">
-				</p>
+				<!-- <p class="input medium thumbnail">
+					<input type="text" name="attach2" placeholder="썸네일" class="attachtext" readonly> 
+					<input type="file" id="my-input" name="activThumbnailImgName" class="attachfile" accept="image/jpeg, image/png, image" onchange="fileUpload()">
+					<input type="button" name="attach_button2" value="파일 선택" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
+				</p> -->
 			</div>
-
+			<!-- </form> --> 
 			<div class="section">
 				<h2>유의사항</h2>
 				<ul class="description">
@@ -252,7 +243,7 @@ input[type=number] {
 				</ul>
 			</div>
 			<div class="submit">
-				<input type="submit" value="게시 요청하기" >
+				<input type="submit" value="게시 요청하기" onclick="checkform()" >
 			</div>
 		</form>
 	</div>
@@ -262,5 +253,73 @@ input[type=number] {
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/assets/js/activity/activity_new.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script>
+/* function send(){
+    if(!#container.activManagerEmail){
+       alert("이메일을 작성해주세요.");
+       return;
+    }
+    
+    
+    if(!#container.activManagerPhonenum){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activManagerName){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activManagerDept){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activTitle){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activUrl){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activStartDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activEndDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activActivingDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activPeople){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activField){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activContents){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    
+    #container.submit();
+ } */
+
+
+
+
+
+
+
+
+
+
+</script>
 </html>

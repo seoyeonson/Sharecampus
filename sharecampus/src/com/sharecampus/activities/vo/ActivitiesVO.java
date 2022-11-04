@@ -29,6 +29,31 @@ public class ActivitiesVO {
 	private String activThumbnailImgName;
 	private String activMainImgName;
 	
+//	파일
+	private String fileSystemName;
+	private String fileOriginalName;
+	private int boardNumber;
+	
+	public String getFileSystemName() {
+		return fileSystemName;
+	}
+	public void setFileSystemName(String fileSystemName) {
+		this.fileSystemName = fileSystemName;
+	}
+	public String getFileOriginalName() {
+		return fileOriginalName;
+	}
+	public void setFileOriginalName(String fileOriginalName) {
+		this.fileOriginalName = fileOriginalName;
+	}
+	public int getBoardNumber() {
+		return boardNumber;
+	}
+	public void setBoardNumber(int boardNumber) {
+		this.boardNumber = boardNumber;
+	}
+	//파일끝
+	
 	
 	public ActivitiesVO() {;}
 	
@@ -42,6 +67,7 @@ public class ActivitiesVO {
 	}
 
 
+	
 	@Override
 	public String toString() {
 		return "ActivitiesVO [activNum=" + activNum + ", activManagerName=" + activManagerName + ", activManagerEmail="
@@ -50,7 +76,8 @@ public class ActivitiesVO {
 				+ ", activActivingDate=" + activActivingDate + ", activPeople=" + activPeople + ", activField="
 				+ activField + ", activArea=" + activArea + ", activDept=" + activDept + ", activTitle=" + activTitle
 				+ ", activContents=" + activContents + ", activUrl=" + activUrl + ", activThumbnailImgName="
-				+ activThumbnailImgName + ", activMainImgName=" + activMainImgName + "]";
+				+ activThumbnailImgName + ", activMainImgName=" + activMainImgName + ", fileSystemName="
+				+ fileSystemName + ", fileOriginalName=" + fileOriginalName + ", boardNumber=" + boardNumber + "]";
 	}
 	public void setActivManagerName(String activManagerName) {
 		this.activManagerName = activManagerName;

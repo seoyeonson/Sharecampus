@@ -8,9 +8,10 @@
 	</insert>
 
 	<select id="select" parameterType = "activitiesVO" resultType ="activitiesVO">
-		select * from tbl_activity
+		select activ_title, activ_dept, activ_content, activ_thumnail_image_name from tbl_activity
 		where activ_num = #{activNum}
 	</select>
+
 
 
 
