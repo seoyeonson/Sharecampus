@@ -19,6 +19,7 @@ public class KakaoLoginMemberController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		System.out.println("KakaoLOginMemberController 들어옴");
 		Result result = new Result(); 
 		HttpSession session = req.getSession();
 		
@@ -80,19 +81,8 @@ public class KakaoLoginMemberController implements Execute {
 	      
 	      
 	      // member_nickname
-//	      프로필 이미지 안받아오는 경우
-	      member_nickname = data.substring(data.indexOf("properties") + 25, data.indexOf("kakao_account") - 4);
-//	      System.out.println("member_nickname : " + member_nickname);
-	      
-//	      프로필 이미지 받아오는 경우
-//	      String nickname = data.substring(data.indexOf("properties")+25, data.indexOf("profile_image") - 3);
-	      
-	      session.setAttribute("member_id", member_id);
-	      session.setAttribute("member_nickname", member_nickname);
-	      session.setAttribute("member_type", 1);
-	      
-	      result.setPath("/member/checkId.me");
-	      
+    	  member_nickname = data.substring(data.indexOf("properties") + 25, data.indexOf("kakao_account") - 4);	    	  
+
 	    } catch (IOException e) {
 	      e.printStackTrace();
 	    } finally {
@@ -116,6 +106,12 @@ public class KakaoLoginMemberController implements Execute {
 	            }
 	         }
 	    }	
+	    
+	    session.setAttribute("member_id", member_id);
+	    session.setAttribute("member_nickname", member_nickname);
+	    session.setAttribute("member_type", 1);
+	      
+	    result.setPath("/member/checkId.me");
 		return result;
 	}
 

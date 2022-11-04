@@ -6,8 +6,7 @@
         <p class="modalTit">회원 가입하기</p>
         <button class="closeBtn"><img src="https://letspl.me/assets/icon/ic-close.svg" alt=""></button>
         <button class="loginBtn naver">네이버 아이디로 <span class="changeTxt">가입</span></button>
-        <button class="loginBtn kakao" onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5448023a0fad890ae4a80526f46aa8c9&redirect_uri=http://localhost:8085/member/auth/kakao/callback.me&response_type=code'">카카오 계정으로 <span class="changeTxt">가입</span></button>
-        <button class="loginBtn facebook">페이스북 계정으로 <span class="changeTxt">가입</span></button>
+        <button class="loginBtn kakao" onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=5448023a0fad890ae4a80526f46aa8c9&redirect_uri=http://localhost:8085/member/auth/kakao/callback.me&response_type=code&prompt=login'">카카오 계정으로 <span class="changeTxt">가입</span></button>
         <button class="loginBtn google">구글 계정으로 <span class="changeTxt">가입</span></button>
         <p class="loginNoticeTxt">
             소셜 로그인으로 가입 시

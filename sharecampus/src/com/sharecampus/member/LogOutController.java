@@ -22,15 +22,11 @@ public class LogOutController implements Execute {
 		HttpSession session = req.getSession();
 		Result result = new Result();
 		
-		// 로그인 된 사용자의 정보를 요청할 URL
-	    String getMemberInfoUrl = "https://kapi.kakao.com/v1/user/logout ";
-//	    String token_type = "token_type";
+	    // 카카오 계정 로그아웃 URL
+	    String logoutUrl = "https://kapi.kakao.com/v1/user/logout ";
 	    
-	    String access_token = String.valueOf(session.getAttribute("access_token"));
 	    // 이전 URL에서 가져온 access_token 값
-	    
-//	    access_token check test Code
-//	    System.out.println(access_token);
+	    String access_token = String.valueOf(session.getAttribute("access_token"));
 	    
 	    // 요청하기 위해 필요한 객체
 	    HttpsURLConnection conn = null;
@@ -38,67 +34,63 @@ public class LogOutController implements Execute {
 	    BufferedReader reader = null;
 	    InputStreamReader isr= null;
 	    
-	    // member 정보를 세션에 저장하기 위한 객체
-	    String member_id = "";
-	    String member_nickname = "";
-
+	    System.out.println(access_token);
+	    
+		 // 카카오 계정 연결 해제	    	    
 	    try {
-	      final URL url = new URL(getMemberInfoUrl);
-	      
-	      conn = (HttpsURLConnection) url.openConnection();
-	      // 요청 프로퍼티 설정
-	      conn.setRequestProperty("Authorization", "Bearer " + access_token);
-	      conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-	      conn.setRequestProperty("charset", "utf-8");
-	      
-	      // POST 방식으로 요청
-	      conn.setRequestMethod("POST");
-	      conn.setDoOutput(true);
-
-	      writer = new OutputStreamWriter(conn.getOutputStream());
-	      writer.flush();
-	   
-	      final int responseCode = conn.getResponseCode();
-	      System.out.println("\nSending 'POST' request to URL : " + getMemberInfoUrl);
-	      System.out.println("Response Code : " + responseCode);
-
-	      isr = new InputStreamReader(conn.getInputStream());
-	      reader = new BufferedReader(isr);
-	      final StringBuffer buffer = new StringBuffer();
-	      String line;
-	      while ((line = reader.readLine()) != null) {
-	        buffer.append(line);
-	      }
-	     
-	      String data = buffer.toString();
-	      System.out.println(data);
-	      
-	      session.invalidate();
-	      result.setPath("/");
-	      
+	    	final URL url = new URL(logoutUrl);
+	    	
+	    	conn = (HttpsURLConnection) url.openConnection();
+	    	// 요청 프로퍼티 설정
+	    	conn.setRequestProperty("Authorization", "Bearer " + access_token);
+	    	conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+	    	
+	    	// POST 방식으로 요청
+	    	conn.setRequestMethod("POST");
+	    	conn.setDoOutput(true);
+	    	
+	    	writer = new OutputStreamWriter(conn.getOutputStream());
+	    	writer.flush();
+	    	
+	    	final int responseCode = conn.getResponseCode();
+	    	System.out.println("\nSending 'POST' request to URL : " + logoutUrl);
+	    	System.out.println("Response Code : " + responseCode);
+	    	
+	    	isr = new InputStreamReader(conn.getInputStream());
+	    	reader = new BufferedReader(isr);
+	    	final StringBuffer buffer = new StringBuffer();
+	    	String line;
+	    	while ((line = reader.readLine()) != null) {
+	    		buffer.append(line);
+	    	}
+	    	
+//	    	String data = buffer.toString();
+//	    	System.out.println(data);
+	    	
 	    } catch (IOException e) {
-	      e.printStackTrace();
+	    	e.printStackTrace();
 	    } finally {
-	        // clear resources
-	        if (writer != null) {
-	          try {
-	              writer.close();
-	           } catch(Exception ignore) {
-	           }
-	        }
-	        if (reader != null) {
-	          try {
-	              reader.close();
-	          } catch(Exception ignore) {
-	          }
-	        }
-	        if (isr != null) {
-	            try {
-	                isr.close();
-	            } catch(Exception ignore) {
-	            }
-	         }
+	    	// clear resources
+	    	if (writer != null) {
+	    		try {
+	    			writer.close();
+	    		} catch(Exception ignore) {
+	    		}
+	    	}
+	    	if (reader != null) {
+	    		try {
+	    			reader.close();
+	    		} catch(Exception ignore) {
+	    		}
+	    	}
+	    	if (isr != null) {
+	    		try {
+	    			isr.close();
+	    		} catch(Exception ignore) {
+	    		}
+	    	}
 	    }
+	    result.setPath("/member/logoutOk.me");
 		return result;
 	}
 
