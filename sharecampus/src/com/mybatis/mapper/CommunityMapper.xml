@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="community">
-	<!-- 해당 테이블 추가 -->
+	<!-- 해당 멤버 번호와 글을 줄테니 입력하라는 쿼리이다 -->
+	
 		<insert id="insert" parameterType="communityVO">
 			insert into tbl_community (member_num, community_contents)
 			values(#{memberNum}, #{communityContents})
 		</insert>
+		
+		<select id="getTotal" resultType="_int">
+			select count(community_num) from tbl_community
+		</select>
+		
+	<!-- 번호를 줄테니 전체정보를 가져와라라는 쿼리이다 -->
+		<select id="selectAll" parameterType="map" resultType="CommunityDTO">
+			select community_num, community_regist_date, community_contents, m.member_num, member_nickname, member_img_name
+			from tbl_member m join tbl_community c 
+			on m.member_num = c.member_num 
+			order by community_num desc
+		</select>
 		
 </mapper>

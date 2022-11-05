@@ -9,7 +9,7 @@
    
    <typeAliases>
         <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
-        <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityDTO"/>
+        <typeAlias type="com.sharecampus.community.vo.CommunityDTO" alias="communityDTO"/>
         <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
         <!--
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>

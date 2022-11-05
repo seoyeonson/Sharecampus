@@ -2,7 +2,7 @@ package com.sharecampus.community.vo;
 
 public class CommunityDTO {
 	int communityNum; 
-	String communityRegist_date; 
+	String communityRegistDate; 
 	String communityContents; 
 	int memberNum;
 	String memberNickname; 
@@ -18,12 +18,12 @@ public class CommunityDTO {
 		this.communityNum = communityNum;
 	}
 
-	public String getCommunityRegist_date() {
-		return communityRegist_date;
+	public String getCommunityRegistDate() {
+		return communityRegistDate;
 	}
 
-	public void setCommunityRegist_date(String communityRegist_date) {
-		this.communityRegist_date = communityRegist_date;
+	public void setCommunityRegistDate(String communityRegistDate) {
+		this.communityRegistDate = communityRegistDate;
 	}
 
 	public String getCommunityContents() {
@@ -60,11 +60,13 @@ public class CommunityDTO {
 
 	@Override
 	public String toString() {
-		return "CommunityDTO [communityNum=" + communityNum + ", communityRegist_date=" + communityRegist_date
+		return "CommunityDTO [communityNum=" + communityNum + ", communityRegistDate=" + communityRegistDate
 				+ ", communityContents=" + communityContents + ", memberNum=" + memberNum + ", memberNickname="
 				+ memberNickname + ", memberImgName=" + memberImgName + "]";
 	}
-	
+
+
+
 	
 	
 }

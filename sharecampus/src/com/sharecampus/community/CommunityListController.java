@@ -18,16 +18,11 @@ public class CommunityListController extends HttpServlet implements Execute {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		CommunityDAO communityDAO = new CommunityDAO();
-		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
 		Result result = new Result();
-		
+		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
 		req.setAttribute("communitys", communityDAO.selectAll(pageMap));
-		
 		result.setPath("/app/community/community.jsp");
 		return result;
-		
-		
-
 	}
 
 }

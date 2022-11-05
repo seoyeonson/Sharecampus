@@ -22,15 +22,15 @@ public class CommunityAddController extends HttpServlet implements Execute {
 		
 		Result result = new Result();
 		CommunityDAO communityDAO = new CommunityDAO();
-//		HttpSession session = req.getSession();
+		HttpSession session = req.getSession();
 		
 		String communityContents = req.getParameter("community_content");
-//		int memberNumber =  (Integer)session.getAttribute("memberNum");
+		int memberNumber =  (Integer)session.getAttribute("memberNum");
 		
 
 		CommunityVO communityVO = new CommunityVO();
 		communityVO.setCommunityContents(communityContents);
-		communityVO.setMemberNum(1);
+		communityVO.setMemberNum(memberNumber);
 		communityDAO.insert(communityVO);
 		
 		result.setPath("/community/listDs.co");
