@@ -16,18 +16,17 @@ public class CommunityDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<CommunityDAO> selectAll(HashMap<String, Integer> pageMap) {
-		return sqlSession.selectList("community.selectAll", pageMap);
+	public List<CommunityDTO> selectAll(HashMap<String, Integer> pageMap) {
+		return sqlSession.selectList("community.selectAll",pageMap);
 	}
 	
 	public void insert(CommunityVO communityVO) {
 		sqlSession.insert("community.insert", communityVO);
 	}
 
-	public int getTotal() {
-		return sqlSession.selectOne("community.getTotal");
+	public CommunityDTO select(int communityNum) {
+		return sqlSession.selectOne("community.select", communityNum);
 	}
-	
 	
 	
 	

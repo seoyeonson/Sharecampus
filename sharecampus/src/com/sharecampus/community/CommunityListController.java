@@ -13,36 +13,21 @@ import com.sharecampus.Result;
 import com.sharecampus.community.dao.CommunityDAO;
 import com.sharecampus.community.vo.CommunityDTO;
 
-public class CommunitySelectController extends HttpServlet implements Execute {
-
+public class CommunityListController extends HttpServlet implements Execute {
+// 전체 글목록을 호출할때 사용
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
-<<<<<<< HEAD
-		Result result = new Result();
-		
 		CommunityDAO communityDAO = new CommunityDAO();
-		CommunityDTO communityDTO = new CommunityDTO();
-		
-		String temp = req.getParameter("page");
 		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
-		
-		int total = communityDAO.getTotal();
-		
-		req.setAttribute("communitys", communityDTO);
-=======
-		CommunityDAO communityDAO = new CommunityDAO();
 		Result result = new Result();
-		String temp = req.getParameter("page");
 		
-		int page = temp == null ? 1 : Integer.parseInt(temp);
-		
-		req.setAttribute("communitys", communityDAO.selectAll());
->>>>>>> f5b07ffd8274fe42bef0d8277544943bc242b7c8
+		req.setAttribute("communitys", communityDAO.selectAll(pageMap));
 		
 		result.setPath("/app/community/community.jsp");
-		
 		return result;
 		
+		
+
 	}
 
 }

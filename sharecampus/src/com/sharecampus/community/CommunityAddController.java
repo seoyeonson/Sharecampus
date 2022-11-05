@@ -14,8 +14,8 @@ import com.sharecampus.Result;
 import com.sharecampus.community.dao.CommunityDAO;
 import com.sharecampus.community.vo.CommunityVO;
 
-public class CommunityInsertController extends HttpServlet implements Execute {
-
+public class CommunityAddController extends HttpServlet implements Execute {
+// 글 쓰기를 할 때 호출
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		req.setCharacterEncoding("UTF-8");

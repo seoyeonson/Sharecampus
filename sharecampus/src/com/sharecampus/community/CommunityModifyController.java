@@ -13,8 +13,8 @@ import com.sharecampus.Result;
 import com.sharecampus.community.dao.CommunityDAO;
 import com.sharecampus.community.vo.CommunityDTO;
 
-public class CommunityUpdateController extends HttpServlet implements Execute {
-
+public class CommunityModifyController extends HttpServlet implements Execute {
+// 수정화면을 보여줄때 호출
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		Result result = new Result();
