@@ -22,9 +22,7 @@ public class CommunityFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 		
-		if(target.equals("/community/list.co")) {
-			result = new Result();
-		}else if(target.equals("/community/listDs.co")) {
+		if(target.equals("/community/listDs.co")) {
 			result = new CommunityListController().execute(req, resp);
 		}else if(target.equals("/community/listDi.co")) {
 			result = new CommunityAddController().execute(req, resp);

@@ -34,7 +34,6 @@
 	                        </div>
 	                    </div>
 	                </form>
-	                <!-- 피드 시작 -->
 	                <c:choose>
 	                <c:when test ="${not empty communitys and fn:length(communitys) > 0}">
 	                	<c:forEach var="community" items ="${communitys}">
@@ -79,9 +78,7 @@
 							                    </div>
 											</div>
 										</div>
-			                                <!-- 숨겨진 댓글 창 -->
-			                                <!-- 
-			                             <div class="communityReplyTab" id="communityReplyTab">
+			                            <div class="communityReplyTab" id="communityReplyTab">
 			                                 <div class="replyTab">
 			                                     <div class="tabTop">
 			                                         <div class="tabLeft">
@@ -92,7 +89,7 @@
 													<div class="tabRight">
 			                                             <div class="tabProfile">
 			                                                 <p class="tabProfileName">렛플운영자</p>
-			                                                 <span class="tabDate">22.10.18 21:53</span>
+			                                                 <span class="tabDate"><c:out value="${board.getCommCommentDate()}"/></span>
 			                                             </div>
 			                                             <div class="tabTxt">
 			                                                 <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
@@ -112,8 +109,6 @@
 			                                     </div>
 			                                 </div>
 			                             </div>
-			                             -->
-			                             <!-- 숨겨진 댓글창 종료 -->
 									</div>
 			                   </div>
 			               </div>

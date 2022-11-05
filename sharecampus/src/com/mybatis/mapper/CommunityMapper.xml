@@ -6,21 +6,5 @@
 			insert into tbl_community (member_num, community_contents)
 			values(#{memberNum}, #{communityContents})
 		</insert>
-	<!-- 테이블의 개수만큼 문서 출력 -->
-		<select id="selectAll" parameterType="map" resultType="communityDTO">
-			select community_num, community_regist_date, community_contents, m.member_num, member_nickname, member_img_name
-			from tbl_member m join tbl_community c
-			on m.member_num = c.member_num
-			order by tbl_community desc
-		</select>
 		
-		<select id = "getSequence" resultType="__int">
-			select LAST_INSERT_ID()
-		</select>
-		
-		<select id = "select" parameterType="_int" resultType="communityDTO">
-			select  community_num, community_regist_date, community_contents, m.member_num, member_nickname, member_img_name
-			from tbl_member m join tbl_community c on member_num = #{memberNum} and m.member_num = c.member_num
-		</select>
-	
 </mapper>
