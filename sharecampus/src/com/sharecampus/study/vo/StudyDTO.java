@@ -1,6 +1,6 @@
 package com.sharecampus.study.vo;
 
-public class StudyVO {
+public class StudyDTO {
 	private int studyNum;
 	private int memberNum;
 	private String studyTitle;
@@ -11,8 +11,10 @@ public class StudyVO {
 	private boolean studyIng;
 	private String studyDepart;
 	private String studyContact;
+	private String nickName;
+//	private String authImgName;
 
-	public StudyVO() {;}
+	public StudyDTO() {;}
 
 	public int getStudyNum() {
 		return studyNum;
@@ -94,12 +96,21 @@ public class StudyVO {
 		this.studyContact = studyContact;
 	}
 
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
 	@Override
 	public String toString() {
-		return "StudyVO [studyNum=" + studyNum + ", memberNum=" + memberNum + ", studyTitle=" + studyTitle
+		return "StudyDTO [studyNum=" + studyNum + ", memberNum=" + memberNum + ", studyTitle=" + studyTitle
 				+ ", studyIntro=" + studyIntro + ", studyArea=" + studyArea + ", studyPeople=" + studyPeople
 				+ ", studyRegistDate=" + studyRegistDate + ", studyIng=" + studyIng + ", studyDepart=" + studyDepart
-				+ ", studyContact=" + studyContact + "]";
+				+ ", studyContact=" + studyContact + ", nickName=" + nickName + "]";
 	}
+	
 	
 }
