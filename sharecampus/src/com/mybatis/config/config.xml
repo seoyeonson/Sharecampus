@@ -8,17 +8,13 @@
    </settings>
    
    <typeAliases>
-<<<<<<< HEAD
         <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
         <typeAlias type="com.sharecampus.community.vo.CommunityDTO" alias="communityDTO"/>
         <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
-=======
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>
         <!-- <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
         <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
-        <typeAlias type="com.sharecampus.community.vo.CommunityDTO" alias="communityDTO"/> -->
->>>>>>> a495f1f72cf864a39541f64cc1afd8eee342235b
-        <!--
+        <typeAlias type="com.sharecampus.community.vo.CommunityDTO" alias="communityDTO"/>
         <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/>
         <typeAlias type="com.sharecampus.community.vo.CommunityVO" alias="communityVO"/>
         <typeAlias type="com.sharecampus.community.vo.CommunityDTO" alias="communityDTO"/>
@@ -43,15 +39,11 @@
    </environments>
    
    <mappers>
-<<<<<<< HEAD
       <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
       <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
-=======
       <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
       <!-- <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
-      <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/> -->
->>>>>>> a495f1f72cf864a39541f64cc1afd8eee342235b
-      <!--
+      <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
       <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
       <mapper resource="com/mybatis/mapper/BannerMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CurriculumMapper.xml"/>

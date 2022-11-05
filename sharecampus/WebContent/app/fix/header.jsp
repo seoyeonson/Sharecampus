@@ -9,7 +9,7 @@
             <li><a href="${pageContext.request.contextPath}/app/curriculum/curriculum.jsp">커리큘럼</a></li>
             <li><a href="${pageContext.request.contextPath}/app/study/study_main.jsp">스터디</a></li>
             <li><a href="${pageContext.request.contextPath}/list.ac">대외활동</a></li>
-            <li><a href="${pageContext.request.contextPath}/app/community/community.jsp">커뮤니티</a></li>
+            <li><a href="${pageContext.request.contextPath}/listDs.co">커뮤니티</a></li>
         </ul>
         <div class="loginWrap">
             <div class="searchWrap">
