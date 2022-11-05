@@ -110,7 +110,7 @@ String curri_contents = cvo.getCurri_contents();
 				</div>
 				<!-- <hr> -->
 				<div>
-					<div class="curri_main_contents"></div>
+					<div class="curri_main_contents"><%=curri_contents%></div>
 				</div>
 				<!-- <div class="crri_info">
                     <img src="https://d1qzykz9iz00c7.cloudfront.net/static/logo/logo_c290.jpg" class="university-logo ls-is-cached lazyloaded">
