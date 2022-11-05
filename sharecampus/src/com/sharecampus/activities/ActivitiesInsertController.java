@@ -24,46 +24,51 @@ public class ActivitiesInsertController implements Execute{
 		
 //		파일 업로드 컨트롤러
 		
-		String uploadPath = req.getSession().getServletContext().getRealPath("/")+"upload";
+//		String uploadPath = req.getSession().getServletContext().getRealPath("/")+"upload/";
+		String uploadPath = "C:\\Users\\comed\\Desktop\\웹개발\\web_1900_hjs\\git\\Wanted\\wanted\\wanted\\sharecampus\\WebContent\\upload\\";
 		int fileSize = 1024 * 1024 * 5; // 5M
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
 		
 		Enumeration<String> fileNames = multipartRequest.getFileNames();
+		int a = 0;
 		
+		activitiesVO.setActivManagerEmail(multipartRequest.getParameter("activManagerEmail"));
+		activitiesVO.setActivManagerName(multipartRequest.getParameter("activManagerName"));
+		activitiesVO.setActivManagerPhonenum(multipartRequest.getParameter("activManagerPhonenum"));
+		activitiesVO.setActivManagerDept(multipartRequest.getParameter("activManagerDept"));
+		activitiesVO.setActivTitle(multipartRequest.getParameter("activTitle"));
+		activitiesVO.setActivUrl(multipartRequest.getParameter("activUrl"));
+		activitiesVO.setActivArea(multipartRequest.getParameter("activArea"));
+		activitiesVO.setActivDept(multipartRequest.getParameter("activDept"));
+		activitiesVO.setActivStartDate(multipartRequest.getParameter("activStartDate"));
+		activitiesVO.setActivEndDate(multipartRequest.getParameter("activEndDate"));
+		activitiesVO.setActivActivingDate(multipartRequest.getParameter("activActivingDate"));
+		try {
+			activitiesVO.setActivPeople(Integer.valueOf(multipartRequest.getParameter("activPeople")));
+		} catch (NumberFormatException e) {
+			System.out.println("들어옴");
+			e.printStackTrace();
+		}
 		
+		activitiesVO.setActivField(multipartRequest.getParameter("activField"));
+		activitiesVO.setActivContents(multipartRequest.getParameter("activContents"));
 		while(fileNames.hasMoreElements()) {
+			
 			String fileName = fileNames.nextElement();
 			String fileOriginalName = multipartRequest.getOriginalFileName(fileName);
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
-			
-			if(fileOriginalName == null) {continue;}
-			
-			activitiesVO.setActivManagerEmail(multipartRequest.getParameter("activManagerEmail"));
-			activitiesVO.setActivManagerName(multipartRequest.getParameter("activManagerName"));
-			activitiesVO.setActivManagerPhonenum(multipartRequest.getParameter("activManagerPhonenum"));
-			activitiesVO.setActivManagerDept(multipartRequest.getParameter("activManagerDept"));
-			activitiesVO.setActivTitle(multipartRequest.getParameter("activTitle"));
-			activitiesVO.setActivUrl(multipartRequest.getParameter("activUrl"));
-			activitiesVO.setActivArea(multipartRequest.getParameter("activArea"));
-			activitiesVO.setActivDept(multipartRequest.getParameter("activDept"));
-			activitiesVO.setActivStartDate(multipartRequest.getParameter("activStartDate"));
-			activitiesVO.setActivEndDate(multipartRequest.getParameter("activEndDate"));
-			activitiesVO.setActivActivingDate(multipartRequest.getParameter("activActivingDate"));
-			try {
-				activitiesVO.setActivPeople(Integer.valueOf(multipartRequest.getParameter("activPeople")));
-			} catch (NumberFormatException e) {
-				System.out.println("들어옴");
-				e.printStackTrace();
-			}
-			activitiesVO.setActivField(multipartRequest.getParameter("activField"));
-			activitiesVO.setActivContents(multipartRequest.getParameter("activContents"));
-			System.out.println(multipartRequest.getParameter("activMainImgName"));
+
+			if(fileOriginalName == null) {				continue;}
+			if(a == 0) {
+
 			activitiesVO.setActivMainImgName(fileSystemName);
-			activitiesVO.setActivThumbnailImgName(multipartRequest.getParameter("activThumbnailImgName"));
-			
-			activitiesDAO.insert(activitiesVO);
+			}else {
+			activitiesVO.setActivThumbnailImgName(fileSystemName);
+			}
+			a+=1;
 		}
+		activitiesDAO.insert(activitiesVO);
 
 				//결과값을 초기화 시켜준다
 //				result.setRedirect(true);

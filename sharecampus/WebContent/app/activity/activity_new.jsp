@@ -203,11 +203,11 @@ input[type=number] {
 					<input type="file" id="my-input1" name="activMainImgName" class="attachfile" accept="image/jpeg, image/png, image">
 					<input type="button" name="attach_button1" value="파일 선택" id ="uploadBtn" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
 				</p>
-				<!-- <p class="input medium thumbnail">
-					<input type="text" name="attach2" placeholder="썸네일" class="attachtext" readonly> 
+				 <p class="input medium thumbnail">
+					<input type="text" name="attach2" placeholder="썸네일" class="attachtext2" readonly> 
 					<input type="file" id="my-input" name="activThumbnailImgName" class="attachfile" accept="image/jpeg, image/png, image" onchange="fileUpload()">
-					<input type="button" name="attach_button2" value="파일 선택" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
-				</p> -->
+					<input type="button" name="attach_button2" value="파일 선택" class="attachbutton" onclick="onClickUpload1();" onchange="fileUpload()">
+				</p> 
 			</div>
 			<!-- </form> --> 
 			<div class="section">

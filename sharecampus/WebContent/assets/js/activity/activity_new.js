@@ -6,12 +6,26 @@ $("#my-input1").on('change',function(e){
     $(".attachtext").val(fileName);
   });
 
+$("#my-input").on('change',function(e){
+	console.log(e.target.value.split("\\"));
+	var fileValue = e.target.value.split("\\")
+	var fileName = fileValue[fileValue.length-1]; // 파일명
+	console.log(fileName);
+    $(".attachtext2").val(fileName);
+  });
+
 
 
 function onClickUpload() {
     let myInput1 = document.getElementById("my-input1");
     myInput1.click();
+	
 }
+function onClickUpload1() {
+    let myInput = document.getElementById("my-input");
+	myInput.click();
+}
+
 
 function checkform() {
  if(document.container.activManagerName.value == "" ){

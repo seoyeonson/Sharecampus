@@ -28,8 +28,17 @@ public class ActivitiesVO {
 	private String activUrl;
 	private String activThumbnailImgName;
 	private String activMainImgName;
+	private int activPermission;
 	
-//	파일
+public int getActivPermission() {
+		return activPermission;
+	}
+	public void setActivPermission(int activPermission) {
+		this.activPermission = activPermission;
+	}
+
+
+	//	파일
 	private String fileSystemName;
 	private String fileOriginalName;
 	private int boardNumber;
@@ -68,6 +77,7 @@ public class ActivitiesVO {
 
 
 	
+	
 	@Override
 	public String toString() {
 		return "ActivitiesVO [activNum=" + activNum + ", activManagerName=" + activManagerName + ", activManagerEmail="
@@ -76,8 +86,9 @@ public class ActivitiesVO {
 				+ ", activActivingDate=" + activActivingDate + ", activPeople=" + activPeople + ", activField="
 				+ activField + ", activArea=" + activArea + ", activDept=" + activDept + ", activTitle=" + activTitle
 				+ ", activContents=" + activContents + ", activUrl=" + activUrl + ", activThumbnailImgName="
-				+ activThumbnailImgName + ", activMainImgName=" + activMainImgName + ", fileSystemName="
-				+ fileSystemName + ", fileOriginalName=" + fileOriginalName + ", boardNumber=" + boardNumber + "]";
+				+ activThumbnailImgName + ", activMainImgName=" + activMainImgName + ", activPermission="
+				+ activPermission + ", fileSystemName=" + fileSystemName + ", fileOriginalName=" + fileOriginalName
+				+ ", boardNumber=" + boardNumber + "]";
 	}
 	public void setActivManagerName(String activManagerName) {
 		this.activManagerName = activManagerName;
