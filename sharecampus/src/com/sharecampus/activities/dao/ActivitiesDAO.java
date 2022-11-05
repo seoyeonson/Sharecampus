@@ -1,5 +1,8 @@
 package com.sharecampus.activities.dao;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
@@ -18,8 +21,17 @@ public class ActivitiesDAO {
 //		sqlSession.insert("기간", activitiesVO.getActivTitle()); DB에 리턴값만 넣고 다시 가져오지를 못했다. return 값이 없다.
 		
 	}
-	public void select(ActivitiesVO activitiesVO) {
-		sqlSession.selectList("activ.select", activitiesVO); //selectOne 인지 List 인지 잘모르겠음
+	public List<ActivitiesVO> selectAll(HashMap<String, Integer> pageMap ) {
+		return sqlSession.selectList("activ.selectAll", pageMap); //selectOne 인지 List 인지 잘모르겠음
+	}
+	
+	public int getTotal() {
+		return sqlSession.selectOne("activ.getTotal");
+	}
+	
+	public ActivitiesVO bring(int activNum) {
+		return sqlSession.selectOne("activ.bring",activNum);
+		
 	}
 	
 	

@@ -7,11 +7,22 @@
 		values(#{activManagerEmail}, #{activManagerName}, #{activManagerPhonenum}, #{activManagerDept}, #{activTitle}, #{activUrl}, #{activArea}, #{activDept}, #{activStartDate},#{activEndDate},#{activActivingDate},#{activPeople},#{activField},#{activContents},#{activMainImgName},#{activThumbnailImgName})
 	</insert>
 
-	<select id="select"  resultType ="activitiesVO">
-		select activ_title, activ_dept, activ_content, activ_thumnail_image_name from tbl_activity
+	<select id="selectAll" parameterType = "map" resultType ="activitiesVO">
+		select activ_num, activ_title, activ_dept, activ_contents, activ_thumbnail_img_name from tbl_activity
 		where activ_permission = 1
+		order by activ_num desc
+		limit #{startRow}, #{rowCount}
 	</select>
 
+	 <select id="getTotal" resultType="_int">
+		select count(activ_num) from tbl_activity
+	</select> 
+	
+	<select id ="bring" parameterType="_int" resultType="activitiesVO">
+		select activ_manager_email, activ_manager_name, activ_manager_phonenum, activ_manager_dept, activ_title, activ_url, activ_area, activ_dept, activ_start_date,activ_end_date,activ_activing_date,activ_people,activ_field,activ_contents,activ_main_img_name,activ_thumbnail_img_name
+		from tbl_activity
+		where activ_num = #{activNum}
+	</select>
 
 
 
