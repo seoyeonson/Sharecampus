@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+								
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +26,7 @@
 			<h1>전체 대외활동</h1>
 			<div class="searchOption">
 				<select class="smSelect">
-				
+
 					<option value="KR00">지역 미지정</option>
 					<option value="KR01">서울특별시</option>
 					<option value="KR02">경기도</option>
@@ -67,494 +69,94 @@
 					<option value="20">기타</option>
 				</select>
 				<div class="ActivityNew">
-					<button class="btn123" onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_new.jsp';">공고
+					<button class="btn123"
+						onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_new.jsp';">공고
 						등록</button>
 				</div>
 			</div>
-			<div class="projectGridView">
-				<div class="projectGridWrap" onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_info.jsp';"">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
+			<!-- </div> -->
+			
+						<div class="projectGridView">
+			<c:choose>
+				<c:when
+					test="${not empty activityAll and fn:length(activityAll) > 0 }">
+					<c:forEach var="activity" items="${activityAll}">
+							<a class="projectGridWrap"
+								href='${pageContext.request.contextPath}/activities/listDs.ac?activNum=${activity.getActivNum()}'>
+								<div class="projectTopInfo">
+									<div class="top">
+										<div class="badgeWrap">
+											<div class="topBadge purpleLight">
+												<img loading="lazy"
+													src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
+													alt="업데이트있는 프로젝트" />
+											</div>
+											<div class="badge blue">
+												<h2 class="dept"> <c:out value="${activity.getActivDept()}"/></h2>
+											</div>
+										</div>
+										<div class="favorite"></div>
+									</div>
 								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
+								<div class="projectBottomInfo">
+									<div class="txtWrap studyTxtWrap">
+										<h3 class="category"><c:out value= "${activity.getActivArea()}"/></h3>
+										<h2 class="tit"><c:out value="${activity.getActivTitle()}"/></h2>
+										<p class="studyCategory">(간략 설명)</p>
+										<div class="iconWrap">
+											<!-- <span style="margin-right: 4px; font-size: 14px">#hashtag</span>
+											<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span> -->
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit" value='<c:out value= "${activTitle}"/>'>(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
+								<div class="projectInfo2">
+									<div class="middleWrap">
+										<div class="left">
+											<div class="heartCount">
+												<!-- <img loading="lazy"
                                             src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
                                             alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
+												<span>(좋아요 수)</span>
+											</div>
+										</div>
+									</div>
 								</div>
+							</a>
+					</c:forEach>
+				</c:when>
+				<c:otherwise>
+					 <tr>
+						<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
+					</tr> 
+				</c:otherwise>
+			</c:choose>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap"
-					onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_info.jsp';">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectGridWrap">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-                                            alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge black">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동 제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="projectView projectNewsWrap"></div>
-				<div class="projectBlueBg"></div>
+			 <table style="font-size:0.99rem;margin: auto;margin-top: 40px;">
+										<tr align="center" valign="middle">
+											<td class="web-view">
+												<c:if test="${prev}">
+													<a href="${pageContext.request.contextPath}/list.ac?page=${startPage - 1}">&lt;</a>
+												</c:if>
+												<c:forEach var="i" begin="${startPage}" end="${endPage}">
+													<c:choose>
+														<c:when test="${not (i eq page)}">
+															<a href="${pageContext.request.contextPath}/list.ac?page=${i}">
+																<c:out value="${i}"/>&nbsp;&nbsp;
+															</a>
+														</c:when>
+														<c:otherwise>
+																<c:out value="${i}"/>&nbsp;&nbsp;
+														</c:otherwise>
+													</c:choose>
+												</c:forEach>
+												<c:if test="${next}">
+													<a href="${pageContext.request.contextPath}/list.ac?page=${endPage + 1}">&gt;</a>
+												</c:if>
+											</td>
+										</tr>
+									</table>
+			<div class="projectView projectNewsWrap"></div>
+			<div class="projectBlueBg"></div>
 	</section>
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
@@ -564,3 +166,4 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
 </html>
+							

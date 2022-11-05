@@ -8,8 +8,8 @@
 </select>
 
 <insert id="join" parameterType="memberVO">
-	insert into tbl_member (member_id, member_nickname, member_img_name, member_auth_img_name, member_auth, member_type)
-	values(#{memberId}, #{memberNickname}, #{memberImgName}, #{memberAuthImgName}, #{memberAuth}, #{memberType})
+	insert into tbl_member (member_id, member_nickname, member_type)
+	values(#{memberId}, #{memberNickname}, #{memberType})
 </insert>
 
 <select id="selectMemberNum" parameterType="String" resultType="_int">
@@ -21,7 +21,9 @@
 </select>
 
 <select id="memberInfo" parameterType="_int" resultType="memberVO">
-	select * from tbl_member where member_num = #{memberNum}
+	select member_id, member_nickname, member_img_name, member_auth_img_name , member_auth
+	from tbl_member 
+	where member_num = #{memberNum}
 </select>
 
 <update id="updateNickname" parameterType="memberVO">
@@ -30,7 +32,17 @@
 	where member_num = #{memberNum}
 </update>
 
+<update id="updateImgName" parameterType="memberVO">
+	update tbl_member
+	set member_img_name = #{memberImgName}
+	where member_num = #{memberNum}
+</update>
 
+<update id="updateAuthImgName" parameterType="memberVO">
+	update tbl_member
+	set member_auth_img_name = #{memberAuthImgName}, member_auth = #{memberAuth}
+	where member_num = #{memberNum}
+</update>
 
 </mapper>
 

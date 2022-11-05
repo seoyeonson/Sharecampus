@@ -64,12 +64,16 @@ public class MemberFrontController extends HttpServlet {
 			result = new MyPageController().execute(req, resp);
 			
 		} else if(target.equals("/member/updateNickname.me")) {
-			result = new updateNicknameController().execute(req, resp);
+			result = new UpdateNicknameController().execute(req, resp);
 			
 		} else if(target.equals("/member/imagechange.me")) {
 //			프로필 이미지 변경
+			result = new ImageChangeController().execute(req, resp);
+			
 		} else if(target.equals("/member/connectproof.me")) {
 //			인증서 연결
+			result = new ConnectproofController().execute(req, resp);
+			
 		} else if(target.equals("/member/movelist.me")) {
 //			내가 쓴 글 보기로 이동
 		} else if(target.equals("/member/movecomments.me")) {

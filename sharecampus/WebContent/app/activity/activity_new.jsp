@@ -23,8 +23,7 @@ input[type=number] {
 	href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/activity/activity_new.css">
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/assets/js/activity/activity_new.js"></script>
+
 <body>
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
@@ -32,7 +31,7 @@ input[type=number] {
 
 
 
-		<form id="container" action ="/activities/listDi.ac">
+		<form id="container" action ="/activities/listDi.ac" name = "writeForm" method = "post" enctype= "multipart/form-data">
 			<div class="section">
 				<h1>대외활동 게시 요청</h1>
 				<p class="description">
@@ -96,65 +95,65 @@ input[type=number] {
 				<h3>지역 *</h3>
 				<div class="group area">
 					<label class="checkbox"><input type="radio" name="activArea"
-						value="KR01">서울특별시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR02">경기도</label> <label
+						value="서울특별시">서울특별시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="경기도">경기도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR03">부산광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR04">인천광역시</label> <label
+						value="부산광역시">부산광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="인천광역시">인천광역시</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR05">대구광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR06">경상남도</label> <label
+						value="대구광역시">대구광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="경상남도">경상남도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR07">경상북도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR08">대전광역시</label> <label
+						value="경상북도">경상북도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="대전광역시">대전광역시</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR09">충청남도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR10">충청북도</label> <label
+						value="충청남도">충청남도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="충청북도">충청북도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR11">전라남도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR12">전라북도</label> <label
+						value="전라남도">전라남도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="전라북도">전라북도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR13">광주광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR14">강원도</label> <label
+						value="광주광역시">광주광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="강원도">강원도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR15">울산광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR16">제주특별자치도</label> <label
+						value="울산광역시">울산광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="제주특별자치도">제주특별자치도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR17">세종특별자치시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR00">기타</label>
+						value="세종특별자치시">세종특별자치시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="기타">기타</label>
 				</div>
 				<h3>분야 *</h3>
 				<div class="group category">
 					<label class="checkbox"><input type="radio" name="activDept"
-						value="01">여행/호텔/관광</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="02">언론/미디어</label> <label
+						value="여행/호텔/관광">여행/호텔/관광</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="언론/미디어">언론/미디어</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="03">문화/역사</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="04">행사/페스티벌</label> <label
+						value="문화/역사">문화/역사</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="행사/페스티벌">행사/페스티벌</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="05">교육</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="06">디자인/사진/예술</label> <label
+						value="교육">교육</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="디자인/사진/예술">디자인/사진/예술</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="07">경제/금융</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="08">경영/컨설팅/마케팅</label> <label
+						value="경제/금융">경제/금융</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="경영/컨설팅/마케팅">경영/컨설팅/마케팅</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="09">정치/사회/법률</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="10">체육/헬스</label> <label
+						value="정치/사회/법률">정치/사회/법률</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="체육/헬스">체육/헬스</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="11">의료/보건</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="12">뷰티/미용/화장품</label> <label
+						value="의료/보건">의료/보건</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="뷰티/미용/화장품">뷰티/미용/화장품</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="13">과학/공학/기술/IT</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="14">요리/식품</label> <label
+						value="과학/공학/기술/IT">과학/공학/기술/IT</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="요리/식품">요리/식품</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="15">창업/자기계발</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="16">환경/에너지</label> <label
+						value="창업/자기계발">창업/자기계발</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="환경/에너지">환경/에너지</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="17">콘텐츠</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="18">사회공헌/교류</label> <label
+						value="콘텐츠">콘텐츠</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="사회공헌/교류">사회공헌/교류</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="19">유통/물류</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="20">기타</label>
+						value="유통/물류">유통/물류</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="기타">기타</label>
 				</div>
 				<h3>접수 기간 *</h3>
 				<p class="input small">
@@ -192,7 +191,7 @@ input[type=number] {
 						placeholder="※ 개요, 주제, 일정, 참가자격, 시상내역 및 혜택, 활동내용, 유의사항, 접수방법, 문의처 등 상세 내용을 자유롭게 적어주세요."></textarea>
 				</p>
 			</div>
-
+			 <%-- <form action = "${pageContext.request.contextPath}/activities/listDiOk.ac" name="writeForm" method="post" enctype = "multipart/form-data"> --%>
 			<div class="section">
 				<h2>이미지</h2>
 				<ul class="description">
@@ -200,25 +199,17 @@ input[type=number] {
 					<li>썸네일 : 목록에 노출 / 480x684px 권장 / 없을 시 '본문' 이미지로 대체</li>
 				</ul>
 				<p class="input medium">
-					<input type="text" name="activThumbnailImgName" placeholder="본문 *"
-						class="attachtext" readonly> <input type="file"
-						id="my-input" name="attach" class="attachfile"
-						accept="image/jpeg, image/png, image" onchange="fileUpload()">
-					<input type="button" name="attach_button" value="파일 선택"
-						class="attachbutton" onclick="onClickUpload();"
-						onchange="fileUpload()">
+					<input type="text" name="attach1" placeholder="본문 *" class="attachtext" readonly> 
+					<input type="file" id="my-input1" name="activMainImgName" class="attachfile" accept="image/jpeg, image/png, image">
+					<input type="button" name="attach_button1" value="파일 선택" id ="uploadBtn" class="attachbutton" onclick="onClickUpload();" onchange="fileUpload()">
 				</p>
-				<p class="input medium thumbnail">
-					<input type="text" name="activMainImgName" placeholder="썸네일"
-						class="attachtext" readonly> <input type="file"
-						id="my-input" name="attach" class="attachfile"
-						accept="image/jpeg, image/png, image" onchange="fileUpload()">
-					<input type="button" name="attach_button" value="파일 선택"
-						class="attachbutton" onclick="onClickUpload();"
-						onchange="fileUpload()">
-				</p>
+				 <p class="input medium thumbnail">
+					<input type="text" name="attach2" placeholder="썸네일" class="attachtext2" readonly> 
+					<input type="file" id="my-input" name="activThumbnailImgName" class="attachfile" accept="image/jpeg, image/png, image" onchange="fileUpload()">
+					<input type="button" name="attach_button2" value="파일 선택" class="attachbutton" onclick="onClickUpload1();" onchange="fileUpload()">
+				</p> 
 			</div>
-
+			<!-- </form> --> 
 			<div class="section">
 				<h2>유의사항</h2>
 				<ul class="description">
@@ -252,7 +243,7 @@ input[type=number] {
 				</ul>
 			</div>
 			<div class="submit">
-				<input type="submit" value="게시 요청하기" >
+				<input type="submit" value="게시 요청하기" onclick="checkform()" >
 			</div>
 		</form>
 	</div>
@@ -262,5 +253,73 @@ input[type=number] {
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/assets/js/activity/activity_new.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script>
+/* function send(){
+    if(!#container.activManagerEmail){
+       alert("이메일을 작성해주세요.");
+       return;
+    }
+    
+    
+    if(!#container.activManagerPhonenum){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activManagerName){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activManagerDept){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activTitle){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activUrl){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activStartDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activEndDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activActivingDate){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activPeople){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activField){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    if(!#container.activContents){
+       alert("내용을 작성해주세요.");
+       return;
+    }
+    
+    #container.submit();
+ } */
+
+
+
+
+
+
+
+
+
+
+</script>
 </html>

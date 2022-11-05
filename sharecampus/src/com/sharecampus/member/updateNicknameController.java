@@ -12,7 +12,7 @@ import com.sharecampus.Result;
 import com.sharecampus.member.dao.MemberDAO;
 import com.sharecampus.member.vo.MemberVO;
 
-public class updateNicknameController implements Execute {
+public class UpdateNicknameController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {

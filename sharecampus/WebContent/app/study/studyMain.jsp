@@ -12,8 +12,7 @@
 <script
 	src="${pageContext.request.contextPath}/assets/js/study/studyMain.js"></script>
 <body>
-	<jsp:include
-		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
+	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp"/>
 	<section>
 		<div class="commonContentViewHeader">
 			<h1 class="projectView">
@@ -120,10 +119,8 @@
 				<div class="projectBlueBg"></div>
 			</div>
 	</section>
-	<jsp:include
-		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
-	<jsp:include
-		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
+	<jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>

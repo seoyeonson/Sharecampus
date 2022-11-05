@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>커리큘럼 등록</title>
 </head>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
 <link
 	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -183,13 +184,19 @@
 							<input type="radio" name="professorStar" value="1"
 								id="professorrate5"><label for="professorrate5">★</label>
 						</fieldset>
+					
 					</div>
 				</div>
 			</div>
 			<!-- <form action=""> -->
 			<div class="section">
 				<h2>상세 내용</h2>
-				<div id="summernote" name="editordata"></div>
+						<div>
+						
+				<!-- <div id="summernote" name="curri_contents" class="content"></div> -->
+				 <textarea cols="77%" rows="25%" placeholder="여기에 글을 작성하세요"
+                            style="font-weight: bold; font-size: 15px; resize: none;" name="editordata"></textarea>
+				</div>	
 			</div>
 			<!--  </form> -->
 			<div class="submit_btn">
@@ -203,7 +210,7 @@
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
-<script>
+<!-- <script>
 	$(document).ready(function() {
 		$('#summernote').summernote({
 			height : 300, // 에디터 높이
@@ -213,5 +220,6 @@
 			disableResizeEditor : true
 		});
 	});
-</script>
+	
+</script> -->
 </html>
