@@ -30,7 +30,7 @@ input[type=number] {
 
 
 
-		<form id="container">
+		<form id="container" action="${pageContext.request.contextPath}/study/listDi.su" method="post" name="studyWriteForm">
 			<div class="section">
 				<h1>스터디 모집</h1>
 				<!-- <p class="description">
@@ -167,7 +167,7 @@ input[type=number] {
             </ul>
         </div>
 			<div class="submit">
-				<input type="submit" value="게시 요청하기" >
+				<input type="button" value="게시 요청하기" onclick="send()">
 			</div>
 		</form>
 	</div>
@@ -178,4 +178,10 @@ input[type=number] {
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script>
+function send(){
+	console.log('들어옴');
+	studyWriteForm.submit();
+}
+</script>
 </html>
