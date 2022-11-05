@@ -53,6 +53,7 @@ public class ActivitiesInsertController implements Execute{
 		
 		activitiesVO.setActivField(multipartRequest.getParameter("activField"));
 		activitiesVO.setActivContents(multipartRequest.getParameter("activContents"));
+		
 		while(fileNames.hasMoreElements()) {
 			
 			String fileName = fileNames.nextElement();
@@ -60,6 +61,7 @@ public class ActivitiesInsertController implements Execute{
 			String fileSystemName = multipartRequest.getFilesystemName(fileName);
 
 			if(fileOriginalName == null) {				continue;}
+			
 			if(a == 0) {
 
 			activitiesVO.setActivMainImgName(fileSystemName);
@@ -68,10 +70,11 @@ public class ActivitiesInsertController implements Execute{
 			}
 			a+=1;
 		}
+		
 		activitiesDAO.insert(activitiesVO);
 
 				//결과값을 초기화 시켜준다
-//				result.setRedirect(true);
+				result.setRedirect(true);
 				
 				result.setPath("/list.ac");
 				

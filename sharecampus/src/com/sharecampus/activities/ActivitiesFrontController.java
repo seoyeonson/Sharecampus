@@ -26,19 +26,23 @@ public class ActivitiesFrontController extends HttpServlet {
 		Result result = null;
 
 		if (target.equals("/list.ac")) {
-//		대외활동 목록들을 DB에서 가져오는 것
-			result = new Result();
-			result.setPath("/app/activity/activity.jsp");
+//		대외활동 목록들을 DB에서 가져오는 것 
+//		DB에서 목록 보여주는 대외활동 메인페이지
+			result = new ActivitiesSelectController().execute(req, resp);
 
 		} else if (target.equals("/activities/listDs.ac")) {
 //		대외활동 상세글을 DB에서 조회
-			result = new Result();
-			result.setPath("/app/activity/activity.jsp");
+//			result = new Result();
+//			result.setPath("/app/activity/activity.jsp");
+			result = new ActivitiesBringController().execute(req, resp);
+			
+			
 			
 		} else if (target.equals("/activities/listDi.ac")) {
 //		대외활동 상세글을 DB에 추가
+//		DB에다가 공고등록에서 작성한 폼을 삽입 시킨다.
 			result = new ActivitiesInsertController().execute(req, resp);
-		
+
 		} else if (target.equals("/activities/listDiOk.ac")) {
 			result = new ActivitiesInsertOkController().execute(req, resp);
 
