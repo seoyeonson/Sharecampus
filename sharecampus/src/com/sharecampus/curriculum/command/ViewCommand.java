@@ -11,19 +11,37 @@ import com.sharecampus.curriculum.vo.CurriculumVO;
 
 public class ViewCommand implements Command {
 
-	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response){
+	/*
+	 * @Override public void execute(HttpServletRequest request, HttpServletResponse
+	 * response) { List<CurriculumVO> list = null;
+	 * 
+	 * try { list = new CurriculumDAO().select1(2); } catch (SQLException e) {
+	 * e.printStackTrace(); }
+	 * 
+	 * request.setAttribute("list", list); }
+	 */
 
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		List<CurriculumVO> list = null;
+
 		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
 
 		try {
-			list = new CurriculumDAO().readByCurri_num(curri_num);
+			list = new CurriculumDAO().select1(curri_num);
 			request.setAttribute("list", list);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
+	/*
+	 * @Override public void execute(HttpServletRequest request, HttpServletResponse
+	 * response) { List<CurriculumVO> list = null;
+	 * 
+	 * int curri_num = Integer.parseInt(request.getParameter("curri_num"));
+	 * 
+	 * try { list = new CurriculumDAO().readByCurri_num(curri_num);
+	 * request.setAttribute("list", list); } catch (SQLException e) {
+	 * e.printStackTrace(); } }
+	 */
 }

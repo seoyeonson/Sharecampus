@@ -69,9 +69,10 @@ public class CurriculumDAO {
 			if (curri_contents == null)
 				curri_contents = "";
 
-			CurriculumVO cvo = new CurriculumVO(curri_num, member_num, curri_title, curri_university ,curri_uni_dert, curri_field, curri_division, curri_credits,
-					curri_grade, curri_professor, curri_satisfaction_rating, curri_exam_rating, curri_professor_rating, curri_assignment_rating, 
-					curri_contents, curri_regist_date);
+			CurriculumVO cvo = new CurriculumVO(curri_num, member_num, curri_title, curri_university, curri_uni_dert,
+					curri_field, curri_division, curri_credits, curri_grade, curri_professor, curri_satisfaction_rating,
+					curri_exam_rating, curri_professor_rating, curri_assignment_rating, curri_contents,
+					curri_regist_date);
 			list.add(cvo);
 		}
 		return list;
@@ -158,8 +159,40 @@ public class CurriculumDAO {
 
 		return cnt;
 	}
+	public List<CurriculumVO> select1(int curri_num) throws SQLException {
+		List<CurriculumVO> list = new ArrayList<CurriculumVO>();
 
-	public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException {
+		try {
+			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
+			pstmt.setInt(1, curri_num);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				CurriculumVO cvo = new CurriculumVO();
+				cvo.setCurri_num(rs.getInt("curri_num"));
+				cvo.setMember_num(rs.getInt("member_num"));
+				cvo.setCurri_title(rs.getString("curri_title"));
+				cvo.setCurri_university(rs.getString("curri_university"));
+				cvo.setCurri_uni_dert(rs.getString("curri_uni_dert"));
+				cvo.setCurri_field(rs.getString("curri_field"));
+				cvo.setCurri_division(rs.getString("curri_division"));
+				cvo.setCurri_credits(rs.getInt("curri_credits"));
+				cvo.setCurri_grade(rs.getString("curri_grade"));
+				cvo.setCurri_professor(rs.getString("curri_professor"));
+				cvo.setCurri_contents(rs.getString("curri_contents"));
+				cvo.setCurri_satisfaction_rating(rs.getInt("curri_satisfaction_rating"));
+				cvo.setCurri_exam_rating(rs.getInt("curri_exam_rating"));
+				cvo.setCurri_assignment_rating(rs.getInt("curri_assignment_rating"));
+				cvo.setCurri_exam_rating(rs.getInt("curri_professor_rating"));
+				cvo.setCurri_regist_date(rs.getDate("curri_regist_date"));
+				list.add(cvo);
+			}
+		} finally {
+			close();
+		}
+		return list;
+	}
+
+	/*public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException {
 
 		List<CurriculumVO> list = null;
 
@@ -169,7 +202,7 @@ public class CurriculumDAO {
 			pstmt.setInt(1, curri_num);
 			rs = pstmt.executeQuery();
 			list = buildList(rs);
-			
+
 			conn.commit();
 		} catch (SQLException e) {
 			conn.rollback();
@@ -180,7 +213,7 @@ public class CurriculumDAO {
 
 		return list;
 
-	}
+	}*/
 
 	/*
 	 * public List<CurriculumVO> selectByCurri_num(int cnum) throws SQLException {
