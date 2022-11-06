@@ -38,4 +38,13 @@ public class MemberDAO {
 	public void updateNickname(MemberVO memberVO) {
 		sqlSession.update("member.updateNickname", memberVO);
 	}
+	
+	public void updateImgName(MemberVO memberVO) {
+		sqlSession.update("member.updateImgName", memberVO);
+	}
+	
+	public void updateAuthImgName(MemberVO memberVO) {
+		System.out.println("인증 이미지 dao 실행");
+		sqlSession.update("member.updateAuthImgName", memberVO);
+	}
 }

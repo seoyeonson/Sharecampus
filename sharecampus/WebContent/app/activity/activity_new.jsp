@@ -95,65 +95,65 @@ input[type=number] {
 				<h3>지역 *</h3>
 				<div class="group area">
 					<label class="checkbox"><input type="radio" name="activArea"
-						value="KR01">서울특별시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR02">경기도</label> <label
+						value="서울특별시">서울특별시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="경기도">경기도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR03">부산광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR04">인천광역시</label> <label
+						value="부산광역시">부산광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="인천광역시">인천광역시</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR05">대구광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR06">경상남도</label> <label
+						value="대구광역시">대구광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="경상남도">경상남도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR07">경상북도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR08">대전광역시</label> <label
+						value="경상북도">경상북도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="대전광역시">대전광역시</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR09">충청남도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR10">충청북도</label> <label
+						value="충청남도">충청남도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="충청북도">충청북도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR11">전라남도</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR12">전라북도</label> <label
+						value="전라남도">전라남도</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="전라북도">전라북도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR13">광주광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR14">강원도</label> <label
+						value="광주광역시">광주광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="강원도">강원도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR15">울산광역시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR16">제주특별자치도</label> <label
+						value="울산광역시">울산광역시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="제주특별자치도">제주특별자치도</label> <label
 						class="checkbox"><input type="radio" name="activArea"
-						value="KR17">세종특별자치시</label> <label class="checkbox"><input
-						type="radio" name="activArea" value="KR00">기타</label>
+						value="세종특별자치시">세종특별자치시</label> <label class="checkbox"><input
+						type="radio" name="activArea" value="기타">기타</label>
 				</div>
 				<h3>분야 *</h3>
 				<div class="group category">
 					<label class="checkbox"><input type="radio" name="activDept"
-						value="01">여행/호텔/관광</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="02">언론/미디어</label> <label
+						value="여행/호텔/관광">여행/호텔/관광</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="언론/미디어">언론/미디어</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="03">문화/역사</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="04">행사/페스티벌</label> <label
+						value="문화/역사">문화/역사</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="행사/페스티벌">행사/페스티벌</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="05">교육</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="06">디자인/사진/예술</label> <label
+						value="교육">교육</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="디자인/사진/예술">디자인/사진/예술</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="07">경제/금융</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="08">경영/컨설팅/마케팅</label> <label
+						value="경제/금융">경제/금융</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="경영/컨설팅/마케팅">경영/컨설팅/마케팅</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="09">정치/사회/법률</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="10">체육/헬스</label> <label
+						value="정치/사회/법률">정치/사회/법률</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="체육/헬스">체육/헬스</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="11">의료/보건</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="12">뷰티/미용/화장품</label> <label
+						value="의료/보건">의료/보건</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="뷰티/미용/화장품">뷰티/미용/화장품</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="13">과학/공학/기술/IT</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="14">요리/식품</label> <label
+						value="과학/공학/기술/IT">과학/공학/기술/IT</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="요리/식품">요리/식품</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="15">창업/자기계발</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="16">환경/에너지</label> <label
+						value="창업/자기계발">창업/자기계발</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="환경/에너지">환경/에너지</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="17">콘텐츠</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="18">사회공헌/교류</label> <label
+						value="콘텐츠">콘텐츠</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="사회공헌/교류">사회공헌/교류</label> <label
 						class="checkbox"><input type="radio" name="activDept"
-						value="19">유통/물류</label> <label class="checkbox"><input
-						type="radio" name="activDept" value="20">기타</label>
+						value="유통/물류">유통/물류</label> <label class="checkbox"><input
+						type="radio" name="activDept" value="기타">기타</label>
 				</div>
 				<h3>접수 기간 *</h3>
 				<p class="input small">

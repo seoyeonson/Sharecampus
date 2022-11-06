@@ -14,7 +14,7 @@ import com.sharecampus.community.dao.CommunityDAO;
 import com.sharecampus.community.vo.CommunityDTO;
 
 public class CommunityDeleteController extends HttpServlet implements Execute {
-
+// 글 삭제할 때 호출
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		Result result = new Result();

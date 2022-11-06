@@ -1,48 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="community">
-	<!-- 멤버 전체 정보 가져오기ㅣ -->
-	<select id="selectAll" resultType="communityDTO">
-			select community_num, community_regist_date, community_contents, m.member_num, member_img_name , member_nickname
-			from tbl_member m join tbl_community
-			on m.member_num = b.member_num
-			order by board_number desc
-	</select>
+	<!-- 해당 멤버 번호와 글을 줄테니 입력하라는 쿼리이다 -->
 	
-	<!-- 전체 숫자 세기 -->
-	<select id="getTotal" resultType="_int">
-			select count(community_num) from tbl_community
-	</select>
-	
-	<!--  시퀀스 번호 받아오기 -->
-	<select id="getSequence" resultType="_int">
-		  	select LAST_INSERT_ID()
-	</select>
-	
-	<!-- 해당 멤버 넘버로 커뮤니티 정보조회 -->
-		<select id="select" parameterType="_int" resultType="communityDTO">
-			select community_num, community_regist_date, community_contents, member_nickname, m.member_num
-			from tbl_member m join tbl_community b
-			on m.member_number = b.member_number = #{boardNumber} and m.member_num = b.member_num
-		</select>
-		
-	<!-- 해당 테이블 삭제  -->
-		<delete id="delete" parameterType="_int">
-			delete from tbl_community 
-			where member_number = #{memberNumber}
-		</delete>
-		
-	<!-- 해당 테이블 추가 -->
 		<insert id="insert" parameterType="communityVO">
-			insert into tbl_community (member_number, community_contents)
-			values(#{memberNumber}, #{communityContents})
+			insert into tbl_community (member_num, community_contents)
+			values(#{memberNum}, #{communityContents})
 		</insert>
 		
-	<!--  해당 테이블 업데이트 -->
-		<update id="update" parameterType="communityVO">
-			update tbl_community
-			set community_contents = #{communityContents}
-			where member_number = #{memberNumber}
-		</update>
-
+		<select id="getTotal" resultType="_int">
+			select count(community_num) from tbl_community
+		</select>
+		
+	<!-- 번호를 줄테니 전체정보를 가져와라라는 쿼리이다 -->
+		<select id="selectAll" parameterType="map" resultType="CommunityDTO">
+			select community_num, community_regist_date, community_contents, m.member_num, member_nickname, member_img_name
+			from tbl_member m join tbl_community c 
+			on m.member_num = c.member_num 
+			order by community_num desc
+		</select>
+		
 </mapper>

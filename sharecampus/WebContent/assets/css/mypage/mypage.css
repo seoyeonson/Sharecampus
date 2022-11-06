@@ -94,7 +94,7 @@ display: block;
         min-height: 49px;
         border-bottom: 1px solid rgba(0,0,0,.04);
         background-color: #fff;
-        box-shadow: 0.2px  grey;
+        /* box-shadow: 0.2px  grey; */
 }
 
 .sideNav .first_Nav a span{
@@ -132,16 +132,16 @@ body, h1, h2, h3, h4, h5, h6 {
     margin: 0 0 20px;
     width: 810px;
     background-color: #fff;
-    box-shadow: 0.2px 0.2px grey;
+    /* box-shadow: 0.2px 0.2px grey; */
     border: gray solid 0.05px;
 }
 
 #content.more2{
     margin: 0 0 20px;
     width: 0px;
-    height: 500px;
+    /* height: 500px; */
     background-color: #fff;
-    box-shadow: 0.2px 0.2px grey;
+    /* box-shadow: 0.2px 0.2px grey; */
     border: gray solid 0.05px;
 }
 

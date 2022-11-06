@@ -1,12 +1,12 @@
 package com.sharecampus.community.vo;
 
 public class CommunityDTO {
-	private int communityNum;
-	private int memberNum;
-	private String communityRegistDate;
-	private String communityContents;
-	private int memberNickname;
-	private String memberImgName;
+	int communityNum; 
+	String communityRegistDate; 
+	String communityContents; 
+	int memberNum;
+	String memberNickname; 
+	String memberImgName;
 	
 	public CommunityDTO() {;}
 
@@ -16,24 +16,6 @@ public class CommunityDTO {
 
 	public void setCommunityNum(int communityNum) {
 		this.communityNum = communityNum;
-	}
-
-	public int getMemberNum() {
-		return memberNum;
-	}
-
-	public void setMemberNum(int memberNum) {
-		this.memberNum = memberNum;
-	}
-
-	
-
-	public int getMemberNickname() {
-		return memberNickname;
-	}
-
-	public void setMemberNickname(int memberNickname) {
-		this.memberNickname = memberNickname;
 	}
 
 	public String getCommunityRegistDate() {
@@ -52,6 +34,22 @@ public class CommunityDTO {
 		this.communityContents = communityContents;
 	}
 
+	public int getMemberNum() {
+		return memberNum;
+	}
+
+	public void setMemberNum(int memberNum) {
+		this.memberNum = memberNum;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+
 	public String getMemberImgName() {
 		return memberImgName;
 	}
@@ -62,15 +60,13 @@ public class CommunityDTO {
 
 	@Override
 	public String toString() {
-		return "CommunityDTO [communityNum=" + communityNum + ", memberNum=" + memberNum + ", communityRegistDate="
-				+ communityRegistDate + ", communityContents=" + communityContents + ", memberNickname="
+		return "CommunityDTO [communityNum=" + communityNum + ", communityRegistDate=" + communityRegistDate
+				+ ", communityContents=" + communityContents + ", memberNum=" + memberNum + ", memberNickname="
 				+ memberNickname + ", memberImgName=" + memberImgName + "]";
 	}
 
+
+
 	
-
-	
-
-
 	
 }
