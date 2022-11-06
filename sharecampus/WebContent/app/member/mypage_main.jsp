@@ -48,7 +48,7 @@
 												<div style="background-image: url('${getContext.request.contextPath}/upload/${memberInfo.getMemberImgName()}')"></div>
 											</c:when>										
 											<c:otherwise>
-												<div></div>
+												<div style="background-image: url(${pagePath.request.contextPath}/assets/images/mypage/no_image.jpg)"></div>
 											</c:otherwise>										
 										</c:choose>
 										</label> 
@@ -214,7 +214,7 @@ file.addEventListener("change", function(e){
         if(url.includes("image")){
             document.querySelector("label div").style.backgroundImage = "url(" + url +")";
         }else{
-            document.querySelector("label div").style.backgroundImage = "url(img/no_image.jpg)";
+            document.querySelector("label div").style.backgroundImage = "url(${pagePath.request.contextPath}/assets/images/mypage/no_image.jpg)";
         }
     }
 });
