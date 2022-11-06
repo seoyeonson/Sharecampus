@@ -30,7 +30,7 @@
             <!-- new study section start -->
             <section>
                 <div class="hotProjectWrap wrap mainWrap">
-                    <h1><span class="bigTxt">새로운 프로젝트/스터디</span></h1>
+                    <h1><span class="bigTxt">새로운 커리큘럼</span></h1>
                     <div class="hotProjectContentWrap">
                         <!-- study content start -->
                         <div class="projectGridWrap" style="margin-right:10px">
@@ -267,7 +267,7 @@
             <!-- hot story start -->
             <section>
                 <div class="wrap hotProjectWrap mainWrap">
-                    <h1><span class="bigTxt">핫한 스토리</span></h1>
+                    <h1><span class="bigTxt">모집중인 스터디</span></h1>
                     <div class="hotStoryContentWrap">
                         <!-- hot story content start -->
                         <a class="hotStoryContent">
@@ -329,9 +329,9 @@
             <section class="bannerSection">
                 <div class="carousel-root">
                     <div class="bannerWrap">
-                        <p class="lgTxt">렛플- 오픈챗</p>
-                        <p class="smTxt">당신의 아이디어 대해 의견을 나누어 보세요</p>
-                        <a>오픈챗 입장하기</a>
+                        <p class="lgTxt">쉐어캠퍼스 스터디</p>
+                        <p class="smTxt">새로운 스터디에 참여해보세요!</p>
+                        <a>스터디 만들기</a>
                     </div>
                 </div>
             </section>
@@ -339,7 +339,7 @@
             <!-- studying start -->
             <section>
                 <div class="hotProjectWrap wrap mainWrap">
-                    <h1><span class="bigTxt">모집중인 프로젝트/스터디</span></h1>
+                    <h1><span class="bigTxt">모집중인 모집중인 대외 활동</span></h1>
                     <div class="hotProjectContentWrap">
                         <!-- study content start -->
                         <div class="projectGridWrap" style="margin-right:10px">

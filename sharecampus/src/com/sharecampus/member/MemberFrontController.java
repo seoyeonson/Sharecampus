@@ -32,8 +32,15 @@ public class MemberFrontController extends HttpServlet {
 			
 		} else if(target.equals("/member/google/login.me")){
 //			구글 로그인
-			new GoogleLoginMemberController().execute(req, resp);
+			result = new GoogleLoginMemberController().execute(req, resp);	
 			
+		} else if(target.equals("/member/naver/login.me")){
+//			네이버 로그인
+			result = new NaverLoginController().execute(req, resp);	
+			
+		} else if(target.equals("/member/naver/naverLoginMember.me")){
+//			네이버 회원 정보
+			result = new NaverLoginMemberController().execute(req, resp);
 			
 		} else if(target.equals("/member/checkId.me")) {
 //			아이디 체크
