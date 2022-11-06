@@ -15,6 +15,8 @@ public class StudyVO {
 	public StudyVO() {;}
 
 	public int getStudyNum() {
+		System.out.println("getStudyNum 들어옴");
+		System.out.println(studyNum);
 		return studyNum;
 	}
 

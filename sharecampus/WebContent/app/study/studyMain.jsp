@@ -7,12 +7,11 @@
 <meta charset="UTF-8">
 <title>스터디</title>
 </head>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/study/studyMain.css">
-<script
-	src="${pageContext.request.contextPath}/assets/js/study/studyMain.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/study/studyMain.css">
+<script src="${pageContext.request.contextPath}/assets/js/study/studyMain.js"></script>
 <body>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp"/>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<section>
 		<div class="commonContentViewHeader">
 			<h1 class="projectView">
@@ -67,61 +66,75 @@
 				</select>
 				<div class="StudyNew">
 					<button class="btn123"
-						onclick="location.href='${pageContext.request.contextPath}/app/study/studyWrite.jsp';">글쓰기</button>
+						onclick="location.href='${pageContext.request.contextPath}/study/write.su';">글쓰기</button>
 				</div>
 			</div>
-		
-			<div class="projectGridView">	<!-- 전체 글상자 -->
-					<!-- 단일 글 상자 시작 -->
-				<div class="projectGridWrap" 
-					onclick="location.href='${pageContext.request.contextPath}/app/study/studyBoard.jsp';"">
-					<div class="projectTopInfo">
-						<div class="top">
-							<div class="badgeWrap">
-								<div class="topBadge purpleLight">
+
+			<div class="projectGridView">
+				<!-- 전체 글상자 -->
+				<!-- 단일 글 상자 시작 -->
+			 	<c:forEach var="study" items="${studies}"> 
+					<div class="projectGridWrap" onclick="location.href='${pageContext.request.contextPath}/study/listDs.su?studyNum=${study.getStudyNum()}'">
+						<div class="projectTopInfo">
+							<div class="top">
+								<div class="badgeWrap">
+									<div class="topBadge purpleLight">
 									<!-- <img loading="lazy"
                                             src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
                                             alt="업데이트있는 프로젝트" /> -->
-								</div>
-								<div class="badge blue">
-									<h2>(분야)</h2>
-								</div>
-							</div>
-							<div class="favorite"></div>
-						</div>
-					</div>
-					<div class="projectBottomInfo">
-						<div class="txtWrap studyTxtWrap">
-							<h3 class="category">(지역)</h3>
-							<h2 class="tit">(대외활동
-								제목)</h2>
-							<p class="studyCategory">(간략 설명)</p>
-							<div class="iconWrap">
-								<span style="margin-right: 4px; font-size: 14px">#hashtag</span>
-								<span style="margin-right: 4px; font-size: 14px">#해쉬태그</span>
-							</div>
-						</div>
-					</div>
-					<div class="projectInfo2">
-						<div class="middleWrap">
-							<div class="left">
-								<div class="heartCount">
-									<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-									<span>(좋아요 수)</span>
+									</div>
+									<div class="badge blue">
+										<h2><c:out value="${study.getStudyArea()}" /></h2>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+						<div class="projectBottomInfo">
+							<div class="txtWrap studyTxtWrap">
+								<h3 class="category"><c:out value="${study.getStudyDepart()}" /></h3>
+								<h2 class="tit"><c:out value="${study.getStudyTitle()}" /></h2>
+							</div> 
+						</div>
+					<div class="projectView projectNewsWrap"></div>
+					<div class="projectBlueBg"></div>
 				</div>
-				<div class="projectView projectNewsWrap"></div>
-				<div class="projectBlueBg"></div>
+				 </c:forEach>
 			</div>
+			<!-- 페이징 처리 -->
+			<table style="font-size:1.3rem; margin: auto;">
+			<tr align="center" valign="middle">
+				<td class="web-view">
+					<c:if test="${prev}">
+						<a href="${pageContext.request.contextPath}/study/list.su?page=${startPage - 1}">&lt;</a>
+					</c:if>
+					<c:forEach var="i" begin="${startPage}" end="${endPage}">
+						<c:choose>
+							<c:when test="${not (i eq page)}">
+								<a href="${pageContext.request.contextPath}/study/list.su?page=${i}">
+									<c:out value="${i}"/>&nbsp;&nbsp;
+								</a>
+							</c:when>
+							<c:otherwise>
+									<c:out value="${i}"/>&nbsp;&nbsp;
+							</c:otherwise>
+						</c:choose>
+					</c:forEach>
+					<c:if test="${next}">
+						<a href="${pageContext.request.contextPath}/study/list.su?page=${endPage + 1}">&gt;</a>
+					</c:if>
+				</td>
+			</tr>
+		</table>			
 	</section>
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
-	<jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
+	
+	
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+
+
 </html>

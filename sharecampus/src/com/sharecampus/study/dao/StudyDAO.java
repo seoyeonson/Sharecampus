@@ -1,8 +1,11 @@
 package com.sharecampus.study.dao;
 
+import java.util.HashMap;
+import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sharecampus.study.vo.StudyDTO;
 import com.sharecampus.study.vo.StudyVO;
 
 public class StudyDAO {
@@ -20,12 +23,15 @@ public class StudyDAO {
 		return sqlSession.selectOne("study.getSequence");
 	}
 	
-	public void select() {
-		
+	public List<StudyDTO> selectAll(HashMap<String, Integer> pageMap) {
+		return sqlSession.selectList("study.selectAll", pageMap);
+	}
+
+	public int getTotal() {
+		return sqlSession.selectOne("study.getTotal");
 	}
 	
-	public void selectAll() {
-		
+	public StudyDTO select(int studyNum) {
+		return sqlSession.selectOne("study.select", studyNum);
 	}
-	
 }
