@@ -7,6 +7,7 @@
 <title>쉐어캠퍼스</title>
 </head>
 <body>
+	<jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp"/>
 	<jsp:include page="${pageContext.request.contextPath}/app/fix/header.jsp"/>
     <div>
         <!-- main start -->
@@ -662,7 +663,6 @@
         </main>
         <!-- main end -->
     </div>
-    <jsp:include page="${pageContext.request.contextPath}/app/fix/modal.jsp"/>
     <jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

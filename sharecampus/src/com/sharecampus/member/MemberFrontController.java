@@ -30,6 +30,11 @@ public class MemberFrontController extends HttpServlet {
 //			카카오 회원 정보
 			result = new KakaoLoginMemberController().execute(req, resp);
 			
+		} else if(target.equals("/member/google/login.me")){
+//			구글 로그인
+			new GoogleLoginMemberController().execute(req, resp);
+			
+			
 		} else if(target.equals("/member/checkId.me")) {
 //			아이디 체크
 			result = new CheckIdController().execute(req, resp);

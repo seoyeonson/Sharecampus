@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import com.sharecampus.Execute;
 import com.sharecampus.Result;
 import com.sharecampus.member.dao.MemberDAO;
+import com.sharecampus.member.vo.MemberVO;
 
 public class LoginOkController implements Execute {
 
@@ -20,10 +21,12 @@ public class LoginOkController implements Execute {
 		HttpSession session = req.getSession();
 		
 		MemberDAO memberDAO = new MemberDAO();
+		MemberVO memberVO = new MemberVO();
+		memberVO = memberDAO.selectMemberNum(String.valueOf(session.getAttribute("member_id")));
 		
-		int memberNum = 0;
-		memberNum = memberDAO.selectMemberNum(String.valueOf(session.getAttribute("member_id")));
-		session.setAttribute("memberNum", memberNum);
+		System.out.println("MemberNum: " + memberVO.getMemberNum() + "MemberType: " + memberVO.getMemberType());
+		session.setAttribute("memberNum", memberVO.getMemberNum());
+		session.setAttribute("memberType", memberVO.getMemberType());
 		
 		result.setPath("/");
 		return result;
