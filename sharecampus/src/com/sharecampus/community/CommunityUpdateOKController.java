@@ -12,16 +12,31 @@ import com.sharecampus.Execute;
 import com.sharecampus.Result;
 import com.sharecampus.community.dao.CommunityDAO;
 import com.sharecampus.community.vo.CommunityDTO;
+import com.sharecampus.community.vo.CommunityVO;
 
-public class CommunityDeleteController extends HttpServlet implements Execute {
-// 글 삭제할 때 호출
+public class CommunityUpdateOKController extends HttpServlet implements Execute {
+// 수정화면을 보여줄때 호출
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		req.setCharacterEncoding("UTF-8");
 		Result result = new Result();
-		int communityNum = Integer.valueOf(req.getParameter("communityNum"));
+		CommunityVO communityVO = new CommunityVO();
 		CommunityDAO communityDAO = new CommunityDAO();
+		int communityNum = Integer.valueOf(req.getParameter("communityNum"));
+		int memberNum = (Integer)req.getSession().getAttribute("mamberNum");
+		String communityContent = req.getParameter("communitContent");
+		
+		communityVO.setCommunityNum(communityNum);
+		communityVO.setCommunityContents(communityContent);
+		communityVO.setMemberNum(memberNum);
+		
+		communityDAO.update(communityVO);
+		
 		communityDAO.delete(communityNum);
-		result.setRedirect(true);
+		
+		communityDAO.insert(communityVO);
+		
+		
 		result.setPath("/community/listDs.co");
 		return result;
 	}

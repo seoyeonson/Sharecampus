@@ -20,4 +20,22 @@
 			order by community_num desc
 		</select>
 		
+		<delete id="delete" parameterType = "_int">
+			delete from tbl_community where community_num = #{communityNum}
+		</delete>
+		
+		<select id="select" parameterType="_int" resultType="communityVO">
+			select community_contents from tbl_community
+			where community_num = #{community_num}
+		</select>
+		
+		<update id="update" parameterType="communityVO">
+			update tbl_community
+			set community_contents = #{communityContents}
+			where community_num = #{community_num}
+		</update>
+		
+		<select id="getSequence" resultType="_int">
+			select LAST_INSERT_ID()
+		</select>
 </mapper>

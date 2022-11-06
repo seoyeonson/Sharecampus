@@ -26,7 +26,7 @@
                         </div> 
                     </div>
                      <div class="register-btn">
-                        <button type="button" tabindex="0" style="background-color: rgb(216, 216, 216);" onclick="send()">가입하기</button>
+                        <button type="button" id="joinOkBtn" tabindex="0" style="background-color: rgb(216, 216, 216);" onclick="send()">가입하기</button>
                      </div>
                 </form>
             </div>
@@ -48,6 +48,7 @@ $($memberNickname).on("blur", function(e){
 	if(e.target.value == ""){
 		$("#result").css("color", "red");
 		$("#result").text("닉네임을 입력해주세요.");	
+		$("#joinOkBtn").css("background-color", "rgb(216, 216, 216)");
 		$("#result").focus();
 		check = false;
 	} else {
@@ -65,19 +66,22 @@ function checkNickname(memberNickname){
 		data: { memberNickname : memberNickname },
 		success: function(result){
 			console.log(result);
-			let msg, color;
+			let msg, color, back;
 			
 			if(result == "true"){
 				msg = "사용 가능한 닉네임입니다.";
 				color = "blue";
 				check = true;
+				back = "#3393f4";
 			}else{
 				msg = "중복된 닉네임입니다.";
 				color = "red";
+				back = "rgb(216, 216, 216)";
 			}
 			
 			$("#result").css("color", color);
-			$("#result").text(msg);			
+			$("#result").text(msg);		
+			$("#joinOkBtn").css("background-color", back);
 		},
 		error: function(a, b, c){
 			console.log(a, b, c);

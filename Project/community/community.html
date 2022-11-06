@@ -9,8 +9,92 @@
     <link rel="stylesheet" href="../main/main.css">
     <link href="modal.css" rel="stylesheet">
 </head>
+<style>
+    .delete{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+        display: none;
+    }
+
+    .deleteModal{
+        max-width: 384px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 46px 30px 74px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .delete .deleteModal p.deleteTit{
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .delete .deleteModal p{
+        color: #ea6560;
+        margin-bottom: 64px;
+    }
+
+    .delete .deleteModal .closeDelete{
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    }
+
+    .delete .deleteModal .seleteDelete{
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: .75rem;
+    padding: 13.5px 0;
+    margin-bottom: 6px;
+    background-color: #3393f4;
+    }
+
+</style>
 <body>
     <!-- header start -->
+    <header class="Header">
+        <nav>
+            <div class="logo"><a href="../main/index.html">로고</a></div>
+            <ul class="Navbar">
+                <li><a href="#">커리큘럼</a></li>
+                <li><a href="../Study/studyMain.html">스터디</a></li>
+                <li><a href="../activity/activity.html">대외활동</a></li>
+                <li><a href="../community/community.html">커뮤니티</a></li>
+            </ul>
+            <div class="loginWrap">
+                <div class="searchWrap">
+                    <a class="searchIc" href="../search/search.html">
+                        <span>검색</span>
+                        <img src="https://letspl.me/assets/images/ic-search-white.png">
+                    </a>
+                </div>
+                <div class="joinAndLoginWrap">
+                    <a class="joinAndLogin join">가입</a>
+                    <a class="joinAndLogin login">로그인</a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- header end -->
     <section class="communitySection">
         <div class="community_header">
@@ -21,22 +105,20 @@
         </div>
         <div class="community">
             <div class="communityWrap">
-                <form method="post" action="#" class="combined" name="communityWritingForm">
-                    <div class="communityInputSection">
-                        <div class="communityInputWrap">
-                            <textarea placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2" maxlength="1000" id="textarea" style="border: none" ></textarea>
-                            <div class="btnWrap" id="btnWrap">
-                                <p class="count" id="count_cnt" >
-                                    <span>(0/1000)</span>
-                                </p>
-                                <!-- <button disabled="disabled"></button> -->
-                                <button class="grayBtn" >등록</button>
-                            </div>
+                <div class="communityInputSection">
+                    <div class="communityInputWrap">
+                        <textarea placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2" maxlength="1000" id="textarea" style="border: none" ></textarea>
+                        <div class="btnWrap" id="btnWrap">
+                            <p class="count" id="count_cnt" >
+                                <span>(0/1000)</span>
+                                
+                            </p>
+                            <!-- <button disabled="disabled"></button> -->
+                            <button class="grayBtn" >등록</button>
                         </div>
                     </div>
-                </form>
+                </div>
                 <!-- 피드 시작 -->
-                <form method="post" action="#" class="combined" name="communityDetailForm">
                 <div class="communityFeedSection">
                     <div class="communityFeedWrap">
                      <div class="communityFeedContentWrap">
@@ -52,7 +134,10 @@
                                 <h2 class="profileName">나정호
                                     <div class="hoverView"></div>
                                 </h2>
+                                
                                 <span>
+                                    
+                                    
                                     <span>22.10.18 10:15</span>
                                 </span>
                             </div>
@@ -89,17 +174,20 @@ http://talkdrive.co.kr
                                         <button class="edit" style="color : #c9c9d9" >수정</button>&nbsp;
                                     ㅣ&nbsp;
                                     <button class="remove_popupBtn" style="color : #c9c9d9">삭제</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <!-- 
                                     <div class="remove_popup">
                                         <div class="remove_text"><h2>정말삭제하시겠어요?</h2><br>
-                                        <p>삭제한 글은 다시 불러올 수 없습니다.</p></div>
-                                        <button class="remove_close" id>
+                                        <p>삭제한 글은 다시 불러올 수 없습니다.</p>
+                                        <button class="remove_close">
                                             <img src="https://letspl.me/assets/icon/ic-close.svg" alt="">
                                         </button>
                                         <button class="reRemove">
                                             삭제
                                         </button>
+                                        </div>
                                     </div>
-                                    </div>
+                                 -->
+                                </div>
                                 </div>
                                 <!-- 숨겨진 댓글 창 -->
                                 <div class="communityReplyTab" id="communityReplyTab">
@@ -139,28 +227,127 @@ http://talkdrive.co.kr
                      </div>
                      </div>
                 </div>
+                
                         </div>
                      </div>
                      </div>
                 </div>
             </div>
         </div>
+        
     </section>
-    <!-- footer start -->
+    <footer class="Footer">
+        <div class="footerContent">
+            <div class="top">
+                <div class="left">
+                    <div class="logoWrap">
+                        <a>로고</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>1:1 문의</span>
+                            <a href="" target="_blank">운영자 1:1 카카오챗</a>
+                        </li>
+                        <li>
+                            <span>오픈 챗</span>
+                            <a href="" target="_blank">&nbsp;&nbsp;코드 2580</a>
+                        </li>
+                        <li>
+                            <span>제휴문의</span>
+                            <a href="" target="_blank">help@letspl.me</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li class="tit">바로가기</li>
+                        <li><a href="">렛플인</a></li>
+                        <li><a href="">프로젝트</a></li>
+                        <li><a href="">스토리</a></li>
+                        <li><a href="">라운지</a></li>
+                    </ul>
+                    <ul>
+                        <li class="tit">이용안내</li>
+                        <li><a href="">공지사항</a></li>
+                        <li><a href="../qna/qna.html">Q&A</a></li>
+                    </ul>
+                    <ul>
+                        <li class="tit">관련사이트</li>
+                        <li><a href="">네이버 블로그</a></li>
+                        <li><a href="">티스토리 블로그</a></li>
+                        <li><a href="">인스타그램</a></li>
+                        <li><a href="">Velog</a></li>
+                        <li><a href="">Medium</a></li>
+                    </ul>
+                    <ul>
+                        <li class="tit">서비스약관</li>
+                        <li><a href="">서비스 이용약관</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                        <li><a href="">전자금융거래약관</a></li>
+                        <li><a href="">결제/환불약관</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerContentBottom">
+            <div class="wrap">
+                <div class="left">
+                    <ul>
+                        <li>어썸크루</li>
+                        <li>사업등록번호 : 619-39-00615</li>
+                        <li>대표 : 이승준</li>
+                        <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
+                        <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
+                        <li>TEL : 070.8064.3497</li>
+                        <li>개인정보담당자 : 이승준 help@letspl.me</li>
+                    </ul>
+                    <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
+                </div>
+                <div class="right">
+                    <div class="appLinkWrap">
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
+                                    <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- footer end -->
+
+    <div class="delete" style="display: none;">
+        <div class="deleteModal">
+            <p class="deleteTit">정말 삭제하시겠습니까?</p>
+            <p>삭제한 글은 다시 불러올 수 없습니다.</p>
+            <button class="closeDelete">
+                <img src="https://letspl.me/assets/icon/ic-close.svg" alt="">
+            </button>
+            <button type="button" class="seleteDelete" value="삭제" onclick="">
+                <span style="color: white;">삭제</span>
+            </button>
+        </div>
+    </div>
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
 
-//  let page = 1;
-//    $(window).scroll(function(){
-//       if($(window).scrollTop() + 2 >= $(document).height() - $(window).height()){
-//          let text = "";
-//          text += `<h1>` + (++page) + `</h1>`;
-//          $(document.body).append(text);
-//       }
-//    });
-
+$(".closeDelete").click("on", function(i, v){
+    $(".delete").css("display", "none");
+})
+$(".remove_popupBtn").click("on", function(e){
+    $(".delete").css("display", "block");
+});
 
 
     $('#textarea').keydown(function() {
@@ -178,6 +365,17 @@ http://talkdrive.co.kr
     });
 });
     
+//     $("#replyFold").click(function(){
+//         // console.log($(".replyFold")[0].innerHTML)
+//   $("#communityReplyTab").toggle(function() {});
+//   if ($(".replyFold")[0].innerHTML == "댓글 열기") {
+//     $(".replyFold")[0].innerHTML = "댓글 닫기"
+// } else {
+//     $(".replyFold")[0].innerHTML = "댓글 열기";
+// }
+
+// });
+
 $("#replyFold").click(function(){
         // console.log($(".replyFold")[0].innerHTML)
   $("#communityReplyTab").toggle(function() {});
@@ -189,6 +387,43 @@ $("#replyFold").click(function(){
 
 });
 
+$(document).ready(function(){
+
+$("#popOpenBtn").click(function(event){  //팝업 Open 버튼 클릭 시 
+
+     $("#popupDiv").css({
+        "top": (($(window).height()-$("#popupDiv").outerHeight())/2+$(window).scrollTop())+"px",
+        "left": (($(window).width()-$("#popupDiv").outerWidth())/2+$(window).scrollLeft())+"px"
+        //팝업창을 가운데로 띄우기 위해 현재 화면의 가운데 값과 스크롤 값을 계산하여 팝업창 CSS 설정
+
+     }); 
+
+    $("#popup_mask").css("display","block"); //팝업 뒷배경 display block
+    $("#popupDiv").css("display","block"); //팝업창 display block
+
+    $("body").css("overflow","hidden");//body 스크롤바 없애기
+});
+
+$("#popCloseBtn").click(function(event){
+    $("#popup_mask").css("display","none"); //팝업창 뒷배경 display none
+    $("#popupDiv").css("display","none"); //팝업창 display none
+    $("body").css("overflow","auto");//body 스크롤바 생성
+});
+
+
+});
+
+
+   
+
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
+
+  
+
     $(".remove_popupBtn").click("on", function(e) {
     $(".remove_popup").css("display", "block")
     });
@@ -197,5 +432,33 @@ $("#replyFold").click(function(){
                                             $(".remove_popup").css("display", "none");
                                         })
 
+/
+$(".text").attr("disabled", true);
+
+$(".edit").click(function(event) {
+	$(".text").attr("disabled", false);
+    $(".text").css("border" , "1px solid black")
+    $(".edit").text("작성");
+    $(".edit").css("color", "#3393f4");
+    $(".remove_popupBtn").text("취소");
+    $(".remove_popupBtn").css("color", "#ea6560");
+    if ($(".remove_popupBtn").click) {
+        $(".text").attr("disabled", true);
+    }
+});
+
+
+
+
+    //key up 으로 해보자
+    //     let text = $('#textarea').val();
+    // if (text.length==0) {
+    //     $('#btnWrap').css("display", "none");
+    
+    // }else {
+    //     $('#btnWrap').css("display", "block");
+    // };
+       
 </script>
+<script src="../main/modal.js"></script>
 </html>

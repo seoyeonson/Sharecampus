@@ -25,7 +25,7 @@ public class WriteCommand implements Command {
 		int curri_exam_rating 						= Integer.parseInt(request.getParameter("examStar"));
 		int curri_assignment_rating 				= Integer.parseInt(request.getParameter("workStar"));
 		int curri_professor_rating 					= Integer.parseInt(request.getParameter("professorStar"));
-		String curr_contents 						= request.getParameter("editordata");
+		String curri_contents 						= request.getParameter("editordata");
 		
 		CurriculumVO cvo = new CurriculumVO();
 		cvo.setCurri_title(curri_title);
@@ -39,7 +39,7 @@ public class WriteCommand implements Command {
 		cvo.setCurri_exam_rating(curri_exam_rating);
 		cvo.setCurri_assignment_rating(curri_assignment_rating);
 		cvo.setCurri_professor_rating(curri_professor_rating);
-		cvo.setCurri_contents(curr_contents);
+		cvo.setCurri_contents(curri_contents);
 		
 		if (curri_title != null && curri_title.trim().length() > 0) {
 			try {

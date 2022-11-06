@@ -12,8 +12,8 @@
 	values(#{memberId}, #{memberNickname}, #{memberType})
 </insert>
 
-<select id="selectMemberNum" parameterType="String" resultType="_int">
-	select member_num from tbl_member where member_id = #{memberId}
+<select id="selectMember" parameterType="String" resultType="memberVO">
+	select member_num, member_type from tbl_member where member_id = #{memberId}
 </select>
 
 <select id="checkNickname" parameterType="String" resultType="_int">

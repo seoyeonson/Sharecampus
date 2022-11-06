@@ -25,4 +25,19 @@ public class CommunityDAO {
 	public int getTotal() {
 		return sqlSession.selectOne("community.getTotal");
 	}
+	
+	public void delete(int communityNum) {
+		sqlSession.delete("community.delete", communityNum); 
+	}
+	public CommunityDAO select(int communityNum) {
+		return sqlSession.selectOne("community.select", communityNum);
+	}
+	
+	public int getSequence() {
+		return sqlSession.selectOne("community.getSequence");
+	}
+	
+	public void update(CommunityVO communityVO) {
+		sqlSession.update("community.update",communityVO);
+	}
 }

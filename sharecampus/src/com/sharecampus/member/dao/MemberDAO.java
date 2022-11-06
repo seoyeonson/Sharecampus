@@ -20,8 +20,8 @@ public class MemberDAO {
 		sqlSession.insert("member.join", memberVO);
 	}
 	
-	public int selectMemberNum(String memberId) {
-		return (Integer)sqlSession.selectOne("member.selectMemberNum", memberId);
+	public MemberVO selectMemberNum(String memberId) {
+		return sqlSession.selectOne("member.selectMember", memberId);
 		
 	}
 	

@@ -28,7 +28,7 @@ public class ViewCommand implements Command {
 		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
 
 		try {
-			list = new CurriculumDAO().select1(curri_num);
+			list = new CurriculumDAO().read(curri_num);
 			request.setAttribute("list", list);
 		} catch (SQLException e) {
 			e.printStackTrace();
