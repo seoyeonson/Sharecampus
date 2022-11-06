@@ -11,8 +11,7 @@ public class StudyDTO {
 	private boolean studyIng;
 	private String studyDepart;
 	private String studyContact;
-	private String nickName;
-//	private String authImgName;
+	private String memberNickName;
 
 	public StudyDTO() {;}
 
@@ -96,12 +95,12 @@ public class StudyDTO {
 		this.studyContact = studyContact;
 	}
 
-	public String getNickName() {
-		return nickName;
+	public String getMemberNickName() {
+		return memberNickName;
 	}
 
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
+	public void setMemberNickName(String memberNickName) {
+		this.memberNickName = memberNickName;
 	}
 
 	@Override
@@ -109,8 +108,9 @@ public class StudyDTO {
 		return "StudyDTO [studyNum=" + studyNum + ", memberNum=" + memberNum + ", studyTitle=" + studyTitle
 				+ ", studyIntro=" + studyIntro + ", studyArea=" + studyArea + ", studyPeople=" + studyPeople
 				+ ", studyRegistDate=" + studyRegistDate + ", studyIng=" + studyIng + ", studyDepart=" + studyDepart
-				+ ", studyContact=" + studyContact + ", nickName=" + nickName + "]";
+				+ ", studyContact=" + studyContact + ", memberNickName=" + memberNickName + "]";
 	}
+
 	
 	
 }

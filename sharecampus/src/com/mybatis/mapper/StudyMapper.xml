@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="study">
+
+	<select id="selectAll" parameterType="map" resultType="studyDTO">
+		select study_num, m.member_num, study_title, study_intro, study_area, study_people, study_regist_date, study_ing, study_depart, study_contact
+		from tbl_member m join tbl_study s 
+		on m.member_num = s.member_num
+		order by study_num desc
+		limit #{startRow}, #{rowCount}
+	</select>	
+
+
+	<insert id="insert" parameterType="studyVO">
+		insert into tbl_study(study_num, member_num, study_title, study_intro, study_area, study_people, study_ing, study_depart, study_contact)
+		values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, #{studyPeople}, #{studyIng}, #{studyDepart}, #{studyContact})
+		<!-- insert into tbl_study(study_num, member_num, study_title, study_intro, 
+			study_area, study_people, study_regist_date, study_ing, study_depart, study_contact) 
+			values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, 
+			#{studyPeople}, #{studyRegistDate}, #{studyIng}, #{studyDepart}, #{studyContact}) -->
+	</insert>
+
+	<select id="select" parameterType="_int" resultType="studyDTO">
+		select study_num, study_title, study_intro, study_area, study_people, study_depart, study_regist_date, member_nickname, study_contact, m.member_num, member_nickname
+		from tbl_member m join tbl_study s on study_num = #{studyNum} and m.member_num = s.member_num
+	</select>
+	
+	<select id="getDate" resultType="string"> 
+		select study_regist_date from tbl_study 
+		order by study_regist_date desc 
+	</select>
+	
+	<update id="update" parameterType="studyVO"> 
+		update tbl_study 
+		set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea},  
+		where study_numb = #{studyNum} 
+	</update>
+	
+	<select id="getSequence" resultType="_int"> 
+		select LAST_INSERT_ID()
+	</select>
+	
+	<select id="getTotal" resultType="_int"> 
+		select count(study_num) from tbl_study 
+	</select>
+	
+</mapper>
