@@ -23,12 +23,10 @@ public class CommunityUpdateOKController extends HttpServlet implements Execute 
 		CommunityVO communityVO = new CommunityVO();
 		CommunityDAO communityDAO = new CommunityDAO();
 		int communityNum = Integer.valueOf(req.getParameter("communityNum"));
-		int memberNum = (Integer)req.getSession().getAttribute("mamberNum");
-		String communityContent = req.getParameter("communitContent");
+		String communityContent = (String)req.getAttribute("communityContent");
 		
 		communityVO.setCommunityNum(communityNum);
 		communityVO.setCommunityContents(communityContent);
-		communityVO.setMemberNum(memberNum);
 		
 		communityDAO.update(communityVO);
 		
