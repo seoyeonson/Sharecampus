@@ -65,19 +65,58 @@
 		                                    			</pre>
 		                                			</h3>
 		                                			<div class="bottom2">
+                                				   <!-- <div href="div.communityReplyTab" class="replyFold" id="replyFold">댓글 열기</div>-->
 		                                    			<div class="replyFoldRight">
 		                                    			 	<c:if test="${sessionScope.memberNum == community.getMemberNum()}">
-		                                        				<button class="edit" style="color : #c9c9d9">수정</button>&nbsp;ㅣ&nbsp;
-		                                    					<button class="remove_popupBtn" style="color : #c9c9d9">삭제</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		                                        				<button class="edit" onclick="location.href='/community/listDu.co?communityContents=${community.getCommunityContents()}&&communityNum=${community.getCommunityNum()}'">수정</button>&nbsp;ㅣ&nbsp;
+		                                    					<button class="remove_popupBtn" onclick="location.href='/community/listDd.co?communityNum=${community.getCommunityNum()}'">삭제</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		                                    				</c:if>
-		                                    				<div class="remove_popup">
-						                                        <div class="remove_text"><h2>정말삭제하시겠어요?</h2><br>
-						                                        <p>삭제한 글은 다시 불러올 수 없습니다.</p></div>
-						                                        <button class="remove_close" id=""><img src="https://letspl.me/assets/icon/ic-close.svg" alt=""></button>
-						                                        <button class="reRemove">삭제</button>
-		                                    				</div>
-		                                  				</div>
+		                                  				</div>	
 		                                			</div>
+		                                			<!--
+					                                <div class="communityReplyTab" id="communityReplyTab">
+					                                	<c:choose>
+														<c:when test="${not empty communitys and fn:length(communitys) > 0}">
+															<c:forEach var="community" items="${communitys}">
+							                                    <div class="replyTab">
+							                                        <div class="tabTop">
+							                                            <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
+							                                                <img src="https://letspl.me/assets/images/prof-no-img.png" class="tabImg0">
+							                                            </a></div>
+							                                            <div class="tabRight">
+							                                                <div class="tabProfile">
+							                                                    <p class="tabProfileName">렛플운영자</p>
+							                                                    <span class="tabDate">22.10.18 21:53</span>
+							                                                </div>
+							                                                <div class="tabTxt">
+							                                                    <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
+서비스 출시하시면 웹이나 앱 형태로 나올까요?
+지금은 오픈채팅방으로 가기밖에는 안보여서요
+출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
+제대로 등록한게 맞는지 궁금합니다.</textarea>
+							                                                </div>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+					                                   	 	</c:forEach>
+														</c:when>
+															<c:otherwise>
+																<tr>
+																	<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
+																</tr>
+															</c:otherwise>
+														</c:choose>
+					                                    <div class="replyInput">
+					                                        <div class="replyProfileThumb">
+					                                            <img loading="lazy "src="https://letspl.me/assets/images/prof-no-img.png" alt="" class="tabImg">
+					                                        </div>
+					                                        <div class="txtInput">
+					                                            <textarea rows="4" maxlength="500" placeholder="로그인 후 댓글작성이 가능합니다" ></textarea>
+					                                            <button class="blackBtn" disabled>등록</button>
+					                                        </div>
+					                                    </div>
+					                                </div>
+		                                			 -->		                		
 		                            			</div>
 		                        			</div>
 		                     			</div>
@@ -98,6 +137,20 @@
 				</div>
 			</div>
    	 	</section>
+   	 	<!--
+   	<div class="delete" style="display: none;">
+        <div class="deleteModal">
+            <p class="deleteTit">정말 삭제하시겠습니까?</p>
+            <p>삭제한 글은 다시 불러올 수 없습니다.</p>
+            <button class="closeDelete">
+                <img src="https://letspl.me/assets/icon/ic-close.svg" alt="">
+            </button>
+            <button type="button" class="seleteDelete" value="삭제" onclick="location.href='/community/listDd.co?communityNum=${community.getCommunityNum()}'">
+                <span style="color: white;">삭제</span>
+            </button>
+        </div>
+    </div>
+    --> 	
     <jsp:include
 		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
 	<jsp:include
@@ -105,6 +158,16 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
+$(".closeDelete").click("on", function(i, v){
+    $(".delete").css("display", "none");
+})
+$(".remove_popupBtn").click("on", function(e){
+    $(".delete").css("display", "block");
+});
+
+
+
+
 $('#textarea').keydown(function() {
     $('#btnWrap').css("display", "flex");
 });

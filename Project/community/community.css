@@ -44,19 +44,18 @@ div.remove_text p {
 
 button.remove_close {
     position: absolute;
-    left: 890px;
-    top: 285px;
+    right: 20px;
+    top: 20px;
                       
 }
 button.reRemove {
     background-color: #3393f4;
     color: #fff;
     position: absolute;
-    left: 597px;
-    top: 405px;
     width: 328.5px;
     height: 35px;
     border-radius: 4px;
+    bottom: 25px;
 }
 
 
