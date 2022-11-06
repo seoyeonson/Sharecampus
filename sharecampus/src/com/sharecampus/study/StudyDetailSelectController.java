@@ -16,7 +16,6 @@ public class StudyDetailSelectController implements Execute {
 		
 		
 		int	studyNum = Integer.valueOf(req.getParameter("studyNum"));
-		System.out.println("컨트롤러" + studyNum);
 	
 		StudyDAO studyDAO = new StudyDAO();
 		StudyDTO studyDTO = studyDAO.select(studyNum);

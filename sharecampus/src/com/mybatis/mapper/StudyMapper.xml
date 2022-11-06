@@ -32,8 +32,8 @@
 	
 	<update id="update" parameterType="studyVO"> 
 		update tbl_study 
-		set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea},  
-		where study_numb = #{studyNum} 
+		set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea}, study_depart = #{studyDepart}, study_people = #{studyPeople}, study_contact = #{studyContact}
+		where study_num = #{studyNum} 
 	</update>
 	
 	<select id="getSequence" resultType="_int"> 
@@ -43,5 +43,9 @@
 	<select id="getTotal" resultType="_int"> 
 		select count(study_num) from tbl_study 
 	</select>
+	
+	<delete id="delete" parameterType="_int">
+		delete from tbl_study where study_num = #{studyNum}
+	</delete>
 	
 </mapper>

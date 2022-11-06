@@ -41,6 +41,8 @@ public class StudyFrontController extends HttpServlet{
 		}else if(target.equals("/study/listDd.su")) {
 //		스터디 상세글을 DB에서 삭제
 			result = new StudyDetailDeleteController().execute(req, resp);
+		}else if(target.equals("/study/listDuOk.su")) {
+				result = new StudyDetailUpdateOkController().execute(req, resp);
 		}else if(target.equals("/study/listDu.su")) {
 //		스터디 상세글을 DB에서 수정
 			result = new StudyDetailUpdateController().execute(req, resp);
