@@ -58,12 +58,7 @@ String curri_contents = cvo.getCurri_contents();
 		<jsp:include
 			page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 		<!-- main start -->
-		<main>
-			<%-- <button type="button" onclick="chkDelete(<%=curri_num%>)">삭제하기</button>
-	<button type="button" onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button>
-	<button type="button" onclick="location.href='/app/curriculum/curriculum_update.do?curri_num=<%=curri_num%>'">수정하기</button>
-	<button type="button" onclick="location.href='/app/curriculum/curriculum_regist.do'">신규등록</button> --%>
-			
+		<main>	
 			<section class="curriculumDetailSection">
 				<div class="curriculum_top">
 					<div>
@@ -106,6 +101,12 @@ String curri_contents = cvo.getCurri_contents();
 								</li>
 							</ul>
 						</div>
+						<div class="btns">
+	<button type="button" onclick="chkDelete(<%=curri_num%>)">삭제하기</button> |
+	<button type="button" onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button> |
+	<button type="button" onclick="location.href='/app/curriculum/curriculum_update.do?curri_num=<%=curri_num%>'">수정하기</button> |
+	<button type="button" onclick="location.href='/app/curriculum/curriculum_regist.do'">신규등록</button>
+		</div>
 					</div>
 				</div>
 				<!-- <hr> -->
@@ -145,35 +146,8 @@ String curri_contents = cvo.getCurri_contents();
 	function chkDelete(curri_num) {
 		let r = confirm("삭제하시겠습니까?");
 		if (r) {
-			location.href = "deleteOk.do?curri_num=" + curri_num;
+			location.href = "/app/curriculum/deleteOk.do?curri_num=" + curri_num;
 		}
 	}
 </script>
 </html>
-<!-- <p>교수님이 정말 친절하시고 학생들 편으도 많이 봐주십니다.</p>
-						<p>일찍 끝내주시고 목소리가 나긋나긋하셔서 살짝 졸리지만 설명도 잘 해주십니다.</p>
-						<p>비대면일때는 온라인 강의 올려주시고 줌 수업도 하시는데 줌 수업은 출결 반영 안하니까</p>
-						<p>들어오기 슾은 사람만 들어오라고 하십니다.</p>
-						<p>근데 전 한번도 안빠지고 들어갔어요. 줌 수업에서 중요한 포인트 같은거 알려주시기 때문에</p>
-						<p>학점 잘 받고싶으면 듣는게 좋을거에요!</p>
-						<p>제가 물리는 처음이라 중간고사 50점, 기말고사는 한문제밖에 못풀었는데도 B+ 받았습니다.</p>
-						<p>과제는 전혀 없으세용 개인적으로 만족하면서 수업들었습니다!</p>
-						<br>
-						<p>교수님이 정말 친절하시고 학생들 편으도 많이 봐주십니다.</p>
-						<p>일찍 끝내주시고 목소리가 나긋나긋하셔서 살짝 졸리지만 설명도 잘 해주십니다.</p>
-						<p>비대면일때는 온라인 강의 올려주시고 줌 수업도 하시는데 줌 수업은 출결 반영 안하니까</p>
-						<p>들어오기 슾은 사람만 들어오라고 하십니다.</p>
-						<p>근데 전 한번도 안빠지고 들어갔어요. 줌 수업에서 중요한 포인트 같은거 알려주시기 때문에</p>
-						<p>학점 잘 받고싶으면 듣는게 좋을거에요!</p>
-						<p>제가 물리는 처음이라 중간고사 50점, 기말고사는 한문제밖에 못풀었는데도 B+ 받았습니다.</p>
-						<p>과제는 전혀 없으세용 개인적으로 만족하면서 수업들었습니다!</p>
-						<br> <img
-							src="https://yslib.sen.go.kr/data/flexer//board/997/976101//201804271550_DUcHyLd.pdf.files//00001.png">
-						<p>교수님이 정말 친절하시고 학생들 편으도 많이 봐주십니다.</p>
-						<p>일찍 끝내주시고 목소리가 나긋나긋하셔서 살짝 졸리지만 설명도 잘 해주십니다.</p>
-						<p>비대면일때는 온라인 강의 올려주시고 줌 수업도 하시는데 줌 수업은 출결 반영 안하니까</p>
-						<p>들어오기 슾은 사람만 들어오라고 하십니다.</p>
-						<p>근데 전 한번도 안빠지고 들어갔어요. 줌 수업에서 중요한 포인트 같은거 알려주시기 때문에</p>
-						<p>학점 잘 받고싶으면 듣는게 좋을거에요!</p>
-						<p>제가 물리는 처음이라 중간고사 50점, 기말고사는 한문제밖에 못풀었는데도 B+ 받았습니다.</p>
-						<p>과제는 전혀 없으세용 개인적으로 만족하면서 수업들었습니다!</p> -->

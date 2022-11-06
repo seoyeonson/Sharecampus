@@ -159,11 +159,13 @@ public class CurriculumDAO {
 
 		return cnt;
 	}
-	public List<CurriculumVO> select1(int curri_num) throws SQLException {
+
+	public List<CurriculumVO> read(int curri_num) throws SQLException {
 		List<CurriculumVO> list = new ArrayList<CurriculumVO>();
 
 		try {
-			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
+			pstmt = conn
+					.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
 			pstmt.setInt(1, curri_num);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -192,39 +194,112 @@ public class CurriculumDAO {
 		return list;
 	}
 
-	/*public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException {
-
-		List<CurriculumVO> list = null;
-
-		try {
-			conn.setAutoCommit(false);
-			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
-			pstmt.setInt(1, curri_num);
-			rs = pstmt.executeQuery();
-			list = buildList(rs);
-
-			conn.commit();
-		} catch (SQLException e) {
-			conn.rollback();
-			throw e;
-		} finally {
-			close();
-		}
-
-		return list;
-
-	}*/
+	/*
+	 * public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException
+	 * {
+	 * 
+	 * List<CurriculumVO> list = null;
+	 * 
+	 * try { conn.setAutoCommit(false); pstmt =
+	 * conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.
+	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, curri_num); rs =
+	 * pstmt.executeQuery(); list = buildList(rs);
+	 * 
+	 * conn.commit(); } catch (SQLException e) { conn.rollback(); throw e; } finally
+	 * { close(); }
+	 * 
+	 * return list;
+	 * 
+	 * }
+	 */
 
 	/*
-	 * public List<CurriculumVO> selectByCurri_num(int cnum) throws SQLException {
-	 * List<CurriculumVO> list = null;
+	 * public List<CurriculumVO> selectByCurri_num(int curri_num) throws
+	 * SQLException { List<CurriculumVO> list = null;
 	 * 
 	 * try { pstmt = conn
 	 * .prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.
-	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, cnum); rs =
+	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, curri_num); rs =
 	 * pstmt.executeQuery(); list = buildList(rs); } finally { close(); }
 	 * 
 	 * return list; }
 	 */
+	public List<CurriculumVO> selectByCurri_num(int curri_num) throws SQLException {
+		List<CurriculumVO> list = new ArrayList<CurriculumVO>();
+
+		try {
+			pstmt = conn
+					.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_SELECT_BY_CURRI_NUM);
+			pstmt.setInt(1, curri_num);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				CurriculumVO cvo = new CurriculumVO();
+				cvo.setCurri_num(rs.getInt("curri_num"));
+				cvo.setMember_num(rs.getInt("member_num"));
+				cvo.setCurri_title(rs.getString("curri_title"));
+				cvo.setCurri_university(rs.getString("curri_university"));
+				cvo.setCurri_uni_dert(rs.getString("curri_uni_dert"));
+				cvo.setCurri_field(rs.getString("curri_field"));
+				cvo.setCurri_division(rs.getString("curri_division"));
+				cvo.setCurri_credits(rs.getInt("curri_credits"));
+				cvo.setCurri_grade(rs.getString("curri_grade"));
+				cvo.setCurri_professor(rs.getString("curri_professor"));
+				cvo.setCurri_contents(rs.getString("curri_contents"));
+				cvo.setCurri_satisfaction_rating(rs.getInt("curri_satisfaction_rating"));
+				cvo.setCurri_exam_rating(rs.getInt("curri_exam_rating"));
+				cvo.setCurri_assignment_rating(rs.getInt("curri_assignment_rating"));
+				cvo.setCurri_exam_rating(rs.getInt("curri_professor_rating"));
+				cvo.setCurri_regist_date(rs.getDate("curri_regist_date"));
+				list.add(cvo);
+			}
+		} finally {
+			close();
+		}
+		return list;
+	}
+
+	public int update(int curri_num, String curri_title, String curri_uni_dert, String curri_field,
+			String curri_division, int curri_credits, String curri_grade, String curri_professor,
+			int curri_satisfaction_rating, int curri_exam_rating, int curri_assignment_rating,
+			int curri_professor_rating, String curri_contents) throws SQLException {
+		int cnt = 0;
+
+		try {
+			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_UPDATE);
+			pstmt.setInt(1, curri_num);
+			pstmt.setString(2, curri_title);
+			pstmt.setString(3, curri_uni_dert);
+			pstmt.setString(4, curri_field);
+			pstmt.setString(5, curri_division);
+			pstmt.setInt(6, curri_credits);
+			pstmt.setString(7, curri_grade);
+			pstmt.setString(8, curri_professor);
+			pstmt.setInt(9, curri_satisfaction_rating);
+			pstmt.setInt(10, curri_exam_rating);
+			pstmt.setInt(11, curri_assignment_rating);
+			pstmt.setInt(12, curri_professor_rating);
+			pstmt.setString(13, curri_contents);
+
+			cnt = pstmt.executeUpdate();
+		} finally {
+			close();
+		}
+
+		return cnt;
+	}
+	
+	public int delete(int curri_num) throws SQLException {
+		int cnt = 0;
+			
+		try {
+			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_DELETE);
+			pstmt.setInt(1, curri_num);
+			cnt = pstmt.executeUpdate();
+		} finally {
+			close();
+		}
+		
+		return cnt;
+	}
 
 }
