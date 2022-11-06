@@ -113,7 +113,8 @@ public class CurriculumDAO {
 
 	public int insert(CurriculumVO cvo) throws SQLException {
 		int cnt = 0;
-
+		
+		String curri_university = cvo.getCurri_university();
 		String curri_title = cvo.getCurri_title();
 		String curri_uni_dert = cvo.getCurri_uni_dert();
 		String curri_field = cvo.getCurri_field();
@@ -132,18 +133,20 @@ public class CurriculumDAO {
 		try {
 			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_INSERT,
 					generatedCols);
-			pstmt.setString(1, curri_title);
-			pstmt.setString(2, curri_uni_dert);
-			pstmt.setString(3, curri_field);
-			pstmt.setString(4, curri_division);
-			pstmt.setInt(5, curri_credits);
-			pstmt.setString(6, curri_grade);
-			pstmt.setString(7, curri_professor);
-			pstmt.setInt(8, curri_satisfaction_rating);
-			pstmt.setInt(9, curri_exam_rating);
-			pstmt.setInt(10, curri_assignment_rating);
-			pstmt.setInt(11, curri_professor_rating);
-			pstmt.setString(12, curri_contents);
+			
+			pstmt.setString(1, curri_university);
+			pstmt.setString(2, curri_title);
+			pstmt.setString(3, curri_uni_dert);
+			pstmt.setString(4, curri_field);
+			pstmt.setString(5, curri_division);
+			pstmt.setInt(6, curri_credits);
+			pstmt.setString(7, curri_grade);
+			pstmt.setString(8, curri_professor);
+			pstmt.setInt(9, curri_satisfaction_rating);
+			pstmt.setInt(10, curri_exam_rating);
+			pstmt.setInt(11, curri_assignment_rating);
+			pstmt.setInt(12, curri_professor_rating);
+			pstmt.setString(13, curri_contents);
 			cnt = pstmt.executeUpdate();
 
 			if (cnt > 0) {
@@ -184,7 +187,7 @@ public class CurriculumDAO {
 				cvo.setCurri_satisfaction_rating(rs.getInt("curri_satisfaction_rating"));
 				cvo.setCurri_exam_rating(rs.getInt("curri_exam_rating"));
 				cvo.setCurri_assignment_rating(rs.getInt("curri_assignment_rating"));
-				cvo.setCurri_exam_rating(rs.getInt("curri_professor_rating"));
+				cvo.setCurri_professor_rating(rs.getInt("curri_professor_rating"));
 				cvo.setCurri_regist_date(rs.getDate("curri_regist_date"));
 				list.add(cvo);
 			}
