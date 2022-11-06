@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.curriculum.command.Command;
+import com.sharecampus.curriculum.command.DeleteCommand;
 import com.sharecampus.curriculum.command.ListCommand;
 import com.sharecampus.curriculum.command.SelectCommand;
+import com.sharecampus.curriculum.command.UpdateCommand;
 import com.sharecampus.curriculum.command.ViewCommand;
 import com.sharecampus.curriculum.command.WriteCommand;
 
@@ -29,26 +31,27 @@ public class CurriculumController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		actionDo(request, response);
-		
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		actionDo(request, response); 
+		actionDo(request, response);
 	}
-	
-	protected void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void actionDo(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
-		Command command = null;	// 어떠한 로직을 수행할지
-		String viewPage = null;	// 어떠한 페이지를 보여줄지
-		
+
+		Command command = null; // 어떠한 로직을 수행할지
+		String viewPage = null; // 어떠한 페이지를 보여줄지
+
 		// URL로부터 command 분리
 		String uri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String com = uri.substring(conPath.length());
 		/* System.out.println(com); */
-		switch(com) {
+		switch (com) {
 		case "/app/curriculum/curriculum.do":
 			command = new ListCommand();
 			command.execute(request, response);
@@ -70,22 +73,23 @@ public class CurriculumController extends HttpServlet {
 		case "/app/curriculum/curriculum_update.do":
 			command = new SelectCommand();
 			command.execute(request, response);
-			viewPage = "update.jsp";
+			viewPage = "curriculum_update.jsp";
 			break;
 		case "/app/curriculum/updateOk.do":
-			/* command = new UpdateCommand(); */
+			command = new UpdateCommand();
 			command.execute(request, response);
-			viewPage = "updateOk.jsp";
+			viewPage = "curriculum_updateOk.jsp";
 			break;
-		case "/curriculum/deleteOk.do":
-			// TODO
+		case "/app/curriculum/deleteOk.do":
+			command = new DeleteCommand();
+			command.execute(request, response);
+			viewPage = "curriculum_deleteOk.jsp";
 			break;
 		}
-		
+
 		// view page로 forward
 		if (viewPage != null) {
-			RequestDispatcher dispatcher = 
-					request.getRequestDispatcher("/app/curriculum/" + viewPage);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/app/curriculum/" + viewPage);
 			dispatcher.forward(request, response);
 		}
 	}
