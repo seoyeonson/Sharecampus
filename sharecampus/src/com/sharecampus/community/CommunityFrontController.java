@@ -29,7 +29,9 @@ public class CommunityFrontController extends HttpServlet{
 		}else if(target.equals("/community/listDd.co")) {
 			result = new CommunityDeleteController().execute(req, resp);
 		}else if(target.equals("/community/listDu.co")) {
-			result = new CommunityModifyController().execute(req, resp);
+			result = new CommunityUpdateController().execute(req, resp);
+		}else if(target.equals("/community/listDuOK.co")) {
+		result = new CommunityUpdateOKController().execute(req, resp);
 		}
 		
 		if(result != null) {
