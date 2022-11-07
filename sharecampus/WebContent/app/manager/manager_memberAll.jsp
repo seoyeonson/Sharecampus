@@ -88,20 +88,20 @@
 			<thead>
 				<tr>
 					<th>회원번호</th>
-					<th>회원명</th>
+					<th>닉네임</th>
 					<th>가입 일자</th>
-					<th>방문 횟수</th>
+					<th>인증 상태</th>
 					<th>회원 삭제</th>
 				</tr>
 			</thead>
 			<tbody id="memberTableBody">
 				<c:choose>
-					<c:when test="${not empty members and fn:length(members) > 0}">
-						<c:forEach var="member" items="${members}">
+					<c:when test="${not empty memberAll and fn:length(memberAll) > 0}">
+						<c:forEach var="member" items="${memberAll}">
 							<tr>
 								<td><c:out value="${member.getMemberNum()}" /></td>
-								<td><c:out value="${member.getMemberName()}" /></td>
-								<td><c:out value="${member.getSignupDate()}" /></td>
+								<td><c:out value="${member.getMemberNickname()}" /></td>
+								<td><c:out value="${member.getMemberSignupDate()}" /></td>
 								<td><c:out value="${member.getMemberType()}" /></td>
 								<td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
 							</tr>

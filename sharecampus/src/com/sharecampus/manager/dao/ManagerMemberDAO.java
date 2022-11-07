@@ -16,14 +16,18 @@ public class ManagerMemberDAO {
 	}
 
 	public List<MemberVO> selectAll(HashMap<String, Integer> pageMap) {
-		return sqlSession.selectList("member.selectAll", pageMap);
+		return sqlSession.selectList("managermember.selectAll", pageMap);
 	}
 
 	public void delete(int memberNum) {
-		sqlSession.delete("member.delete", memberNum);
+		sqlSession.delete("managermember.delete", memberNum);
 	}
 
 	public void update(MemberVO memberVO) {
-		sqlSession.update("member.update", memberVO);
+		sqlSession.update("managermember.update", memberVO);
+	}
+
+	public int getTotal() {
+		return sqlSession.selectOne("managermember.getTotal");
 	}
 }
