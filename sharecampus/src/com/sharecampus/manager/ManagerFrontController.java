@@ -9,50 +9,79 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sharecampus.Result;
 
-public class ManagerFrontController extends HttpServlet{
+public class ManagerFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	super.doGet(req, resp);
+		doProcess(req, resp);
 	}
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		doProcess(req, resp);
 	}
+
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
-		
-		if(target.equals("/manager/ActivitiesManager.ma")) {
+
+		if (target.equals("/manager/memberAll.ma")) {
+//		회원 목록 관리 페이지
+			result = new Result();
+			result.setPath("/app/manager/manager_memberAll.jsp");
+		} else if (target.equals("/manager/memberConfirm.ma")) {
+//		회원 인증 관리 페이지
+			result = new Result();
+			result.setPath("/app/manager/manager_memberConfirm.jsp");
+		} else if (target.equals("/manager/activityPost.ma")) {
+//		대외활동 관리 페이지
+			result = new Result();
+			result.setPath("/app/manager/manager_activityPost.jsp");
+		} else if (target.equals("/manager/settingBanner.ma")) {
+//		베너 관리 페이지
+			result = new Result();
+			result.setPath("/app/manager/manager_settingBanner.jsp");
+		} else if (target.equals("/manager/memberList.ma")) {
+//		회원 목록 가져오기
+			result = new MemberListController().execute(req, resp);
+		} else if (target.equals("/manager/memberDelete.ma")) {
+//		회원 삭제
+			result = new MemberDeleteController().execute(req, resp);
+		} else if (target.equals("/manager/memberAuthList.ma")) {
+//		회원 인증 가져오기
+			result = new MemberAuthListController().execute(req, resp);
+		} else if (target.equals("/manager/memberAuthConfirm.ma")) {
+//		회원 인증 승인
+			result = new MemberAuthConfirmController().execute(req, resp);
+		} else if (target.equals("/manager/memberAuthDeny.ma")) {
+//		회원 인증 거절
+			result = new MemberListController().execute(req, resp);
+		} else if (target.equals("/manager/activitiesList.ma")) {
+//		대외활동 공고글 가져오기 
+			result = new ActivitiesListController().execute(req, resp);
+		} else if (target.equals("/manager/activitiesConfirm.ma")) {
 //		대외활동 공고글 승인하기
-		}else if(target.equals("/manager/ActivitiesJoin.ma")) {
-//		대외활동 공고글 삭제하기
-		}else if(target.equals("/manager/ActivitiesJoin.ma")) {
-//		대외활동 공고글 가져오기 DB
-		}else if(target.equals("/manager/ReportManager.ma")) {
-//		회원 인증 승인 DB
-		}else if(target.equals("/manager/ReportManager.ma")) {
-//		회원 인증 삭제 DB
-		}else if(target.equals("/manager/MemberlistJoin.ma")) {
-//		회원 인증 가져오기 DB
-		}else if(target.equals("/manager/MemberlistManager.ma")) {
-//		회원 목록 추방 DB
-		}else if(target.equals("/manager/MemberlistJoin.ma")) {
-//		회원 목록 가져오기 DB
-		}else if(target.equals("/manager/ChanBanner.ma")) {
-//		배너수정 가져오기 DB		
-		}else if(target.equals("/manager/ChanBanner.ma")) {
-//		배너수정 추가하기 DB		
-		}else if(target.equals("/manager/ChanBanner.ma")) {
-//		배너수정 삭제하기 DB		
+			result = new ActivitiesConfirmController().execute(req, resp);
+		} else if (target.equals("/manager/activitiesDeny.ma")) {
+//		대외활동 공고글 거절하기
+			result = new ActivitiesDenyController().execute(req, resp);
+		} else if (target.equals("/manager/bannerList.ma")) {
+//		배너 가져오기	
+			result = new BannerListController().execute(req, resp);
+		} else if (target.equals("/manager/bannerAdd.ma")) {
+//		배너 추가하기		
+			result = new BannerAddController().execute(req, resp);
+		} else if (target.equals("/manager/bannerDelete.ma")) {
+//		배너 삭제하기	
+			result = new BannerDeleteController().execute(req, resp);
 		}
-			if(result != null) {
-			if(result.isRedirect()) {
+		if (result != null) {
+			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
-				
-			}else {
+
+			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
-			
-		
 
-			}}}
+		}
+	}
+}

@@ -33,9 +33,7 @@ public class MainFrontController extends HttpServlet {
 				
 			}else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
-			}
-			
+			}	
 		}
-		
 	}
 }
