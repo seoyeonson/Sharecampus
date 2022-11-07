@@ -10,7 +10,7 @@
                 <ul>
                     <li>
                         <span>1:1 문의</span>
-                        <a href="" target="_blank">운영자 1:1 카카오챗</a>
+                        <a href="javascript:void(0)" target="_blank">운영자 1:1 문의</a>
                     </li>
                     <li>
                         <span>오픈 챗</span>
@@ -25,10 +25,10 @@
             <div class="right">
                 <ul>
                     <li class="tit">바로가기</li>
-                    <li><a href="">렛플인</a></li>
-                    <li><a href="">프로젝트</a></li>
-                    <li><a href="">스토리</a></li>
-                    <li><a href="">라운지</a></li>
+                    <li><a href="">커리큘럼</a></li>
+                    <li><a href="">스터디</a></li>
+                    <li><a href="">대외활동</a></li>
+                    <li><a href="">커뮤니티</a></li>
                 </ul>
                 <ul>
                     <li class="tit">이용안내</li>
@@ -57,31 +57,13 @@
         <div class="wrap">
             <div class="left">
                 <ul>
-                    <li>어썸크루</li>
-                    <li>사업등록번호 : 619-39-00615</li>
-                    <li>대표 : 이승준</li>
-                    <li>통신판매신고번호 : 제 2020-서울마포-1796호</li>
-                    <li>주소 : 서울특별시 마포구 신수동 22-35 하나테크노빌 1002호</li>
-                    <li>TEL : 070.8064.3497</li>
-                    <li>개인정보담당자 : 이승준 help@letspl.me</li>
+                    <li>Wanted</li>
+                    <li>팀장 : 이지형</li>
+                    <li>팀원 : 강희수, 손서연, 임소영, 홍정수, 황재승</li>
+                    <!-- <li>TEL : 070.8064.3497</li> -->
+                    <!-- <li>개인정보담당자 : 이승준 help@letspl.me</li> -->
                 </ul>
-                <p>Copyright ⓒ 2022 LETSPL. All rights reserved.</p>
-            </div>
-            <div class="right">
-                <div class="appLinkWrap">
-                    <ul>
-                        <li>
-                            <a href="" target="_blank">
-                                <img loading="lazy" src="https://letspl.me/assets/images/googlePlayBadge.svg" alt="렛플 안드로이드앱 다운로드">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://apps.apple.com/kr/app/id1595017110" target="_blank">
-                                <img loading="lazy" src="https://letspl.me/assets/images/applestorBadge.svg" alt="렛플 아이폰앱 다운로드">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <p>Copyright ⓒ 2022 Sharecampus. All rights reserved.</p>
             </div>
         </div>
     </div>
