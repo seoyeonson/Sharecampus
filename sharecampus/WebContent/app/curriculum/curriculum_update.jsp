@@ -51,7 +51,7 @@ String curri_contents = cvo.getCurri_contents();
 		<div class="section">
 				<h1>커리큘럼 수정</h1> 
 				<p class="description">
-					<button onclick="histroy.back()">뒤로가기</button>
+					<button onclick="histroy.back()">뒤로가기</button> |
 	<button onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button>
 					<input type="hidden" name="curri_num" value="<%=curri_num%>"/>
 				</p>

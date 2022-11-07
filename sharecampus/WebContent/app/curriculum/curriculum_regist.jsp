@@ -40,6 +40,12 @@
 				<h2>교과목 정보</h2>
 				<p class="caution">* 별표 표시는 필수 항목입니다.</p>
 				<div class="input_text_area">
+					<h3>학교명 *</h3>
+					<!-- 학교 -->
+					<input type="text" name="university" placeholder="학교 이름" maxlength="100"
+						autocomplete="off">
+				</div>
+				<div class="input_text_area">
 					<h3>커리큘럼명 *</h3>
 					<!-- 제목 -->
 					<input type="text" name="title" placeholder="커리큘럼명" maxlength="100"
@@ -143,14 +149,16 @@
 					<h3>시험난이도</h3>
 					<div class="exam_rank_group rank_group">
 						<fieldset>
-							<input type="radio" name="examStar" value="5" id="examrate1"><label
-								for="examrate1">★</label> <input type="radio" name="examStar"
-								value="4" id="examrate2"><label for="examrate2">★</label>
-							<input type="radio" name="examStar" value="3" id="examrate3"><label
-								for="examrate3">★</label> <input type="radio" name="examStar"
-								value="2" id="examrate4"><label for="examrate4">★</label>
-							<input type="radio" name="examStar" value="1" id="examrate5"><label
-								for="examrate5">★</label>
+							<input type="radio" name="examStar" value="5" id="examrate1">
+							<label for="examrate1">★</label> 
+							<input type="radio" name="examStar" value="4" id="examrate2">
+							<label for="examrate2">★</label>
+							<input type="radio" name="examStar" value="3" id="examrate3">
+							<label for="examrate3">★</label> 
+							<input type="radio" name="examStar" value="2" id="examrate4">
+							<label for="examrate4">★</label>
+							<input type="radio" name="examStar" value="1" id="examrate5">
+							<label for="examrate5">★</label>
 						</fieldset>
 					</div>
 				</div>
@@ -194,8 +202,9 @@
 						<div>
 						
 				<!-- <div id="summernote" name="curri_contents" class="content"></div> -->
-				 <textarea cols="77%" rows="25%" placeholder="여기에 글을 작성하세요"
-                            style="font-weight: bold; font-size: 15px; resize: none;" name="editordata"></textarea>
+				 <textarea cols="77%" rows="25%" placeholder="  여기에 글을 작성하세요"
+                            style="font-weight: bold; font-size: 15px; resize: none; border-color: #fff; 
+                             " name="editordata"></textarea>
 				</div>	
 			</div>
 			<!--  </form> -->

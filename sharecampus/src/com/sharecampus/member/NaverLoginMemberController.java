@@ -15,16 +15,18 @@ import javax.servlet.http.HttpSession;
 import com.sharecampus.Execute;
 import com.sharecampus.Result;
 
-public class KakaoLoginMemberController implements Execute {
+public class NaverLoginMemberController implements Execute {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
-		System.out.println("KakaoLOginMemberController 들어옴");
+		req.setCharacterEncoding("UTF-8");
+		
+		System.out.println("NaverLoginMemberController 들어옴");
 		Result result = new Result(); 
 		HttpSession session = req.getSession();
 		
 		// 로그인 된 사용자의 정보를 요청할 URL
-	    String getMemberInfoUrl = "https://kapi.kakao.com/v2/user/me";
+	    String getMemberInfoUrl = "https://openapi.naver.com/v1/nid/me";
 //	    String token_type = "token_type";
 	    
 	    // 이전 URL에서 가져온 access_token 값
@@ -49,8 +51,8 @@ public class KakaoLoginMemberController implements Execute {
 	      conn = (HttpsURLConnection) url.openConnection();
 	      // 요청 프로퍼티 설정
 	      conn.setRequestProperty("Authorization", "Bearer " + access_token);
-//	      conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-	      conn.setRequestProperty("charset", "utf-8");
+	      conn.setRequestProperty("Content-Type", "application/json; utf-8");
+//	      conn.setRequestProperty("charset", "utf-8");
 	      
 	      // POST 방식으로 요청
 	      conn.setRequestMethod("POST");
@@ -76,12 +78,13 @@ public class KakaoLoginMemberController implements Execute {
 	      
 	      // 응답에서 필요한 정보를 잘라내어 사용
 	      // member_id
-	      member_id = data.substring(data.indexOf("\"email\"") + 9, data.length() - 3);
-//	      System.out.println("member_id : " + member_id);
+	      member_id = data.substring(data.indexOf("email") + 8, data.length() - 3);
+	      System.out.println("member_id : " + member_id);
 	      
 	      
 	      // member_nickname
-    	  member_nickname = data.substring(data.indexOf("properties") + 25, data.indexOf("kakao_account") - 4);	    	  
+    	  member_nickname = data.substring(data.indexOf("nickname") + 11, data.indexOf("email") - 3);	    	  
+    	  System.out.println("member_nickname : " + member_nickname);
 
 	    } catch (IOException e) {
 	      e.printStackTrace();
@@ -109,7 +112,7 @@ public class KakaoLoginMemberController implements Execute {
 	    
 	    session.setAttribute("member_id", member_id);
 	    session.setAttribute("member_nickname", member_nickname);
-	    session.setAttribute("member_type", 1);
+	    session.setAttribute("member_type", 3);
 	      
 	    result.setPath("/member/checkId.me");
 		return result;

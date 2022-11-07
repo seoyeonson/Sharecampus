@@ -19,6 +19,8 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 	crossorigin="anonymous">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/curriculum/curriculum.css">
+<link rel="stylesheet"	
+	href="${pageContext.request.contextPath}/assets/css/main/modal.css">
 <script
 	src="${pageContext.request.contextPath}/assets/js/curriculum/curriculum.js"></script>
 </head>
@@ -52,18 +54,24 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 					</div>
 					<!-- 과 카테고리 선택 -->
 					<div class="departments">
-						<a href="" class="department checked">경영·경제</a> <a href=""
-							class="department">컴퓨터·전기·전자</a> <a href="" class="department">기계</a>
-						<a href="" class="department">건축·토목</a> <a href=""
-							class="department">재료·산업·안전</a> <a href="" class="department">농림·수산·축산</a>
-						<a href="" class="department">사회과학</a> <a href=""
-							class="department">간호</a> <a href="" class="department">화공·에너지</a>
-						<a href="" class="department">화학·생명·환경</a> <a href=""
-							class="department">수학·물리·천문</a> <a href="" class="department">교육</a>
-						<a href="" class="department">언어·문학</a> <a href=""
-							class="department">인문학</a> <a href="" class="department">미술·응용예술</a>
-						<a href="" class="department">생활과학</a> <a href=""
-							class="department">음악·연극·영화</a> <a href="" class="department">체육·무용</a>
+						<a href="" class="department checked">경영·경제</a> 
+						<a href="" class="department">컴퓨터·전기·전자</a> 
+						<a href="" class="department">기계</a>
+						<a href="" class="department">건축·토목</a>
+						<a href="" class="department">재료·산업·안전</a> 
+						<a href="" class="department">농림·수산·축산</a>
+						<a href="" class="department">사회과학</a> 
+						<a href="" class="department">간호</a> 
+						<a href="" class="department">화공·에너지</a>
+						<a href="" class="department">화학·생명·환경</a> 
+						<a href="" class="department">수학·물리·천문</a> 
+						<a href="" class="department">교육</a>
+						<a href="" class="department">언어·문학</a> 
+						<a href="" class="department">인문학</a> 
+						<a href="" class="department">미술·응용예술</a>
+						<a href="" class="department">생활과학</a> 
+						<a href="" class="department">음악·연극·영화</a> 
+						<a href="" class="department">체육·무용</a>
 					</div>
 					<!-- 커리큘럼 목록 -->
 					<div class="result-view">
@@ -79,51 +87,36 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 								<div class="curriculum-list_box">
 									<div class="curri_img"></div>
 									<div class="top-curriculum-info">
-										<img
+										<!-- <img
 											src="https://d1qzykz9iz00c7.cloudfront.net/static/logo/logo_c290.jpg"
-											class="university-logo ls-is-cached lazyloaded"> <span
-											class="recommend-label recommend"><%=cvo.getCurri_uni_dert()%></span>
+											class="university-logo ls-is-cached lazyloaded"> --> 
+											<img src="/assets/images/curriculum/certi.png" class="university-logo ls-is-cached lazyloaded">
+											<span class="recommend-label recommend"><%=cvo.getCurri_uni_dert()%></span>
 
 
 										<span class="bookmark"><i class="fa-solid fa-heart"></i></span>
 										<a href="/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>" style="padding-bottom: 6px">
 											<div class="info-category">
-												<p class="univer_name td-text-style"><%=cvo.getCurri_university()%></p>
-												<p class="user_name td-text-style"><%=cvo.getMember_num()%></p>
+												<p class="univer_name td-text-style"><strong><%=cvo.getCurri_university()%></strong></p>
+												<%-- <p class="user_name td-text-style"><%=cvo.getMember_num()%></p> --%>
 											</div>
 											<div class="curriculum-segment">
 												<p class="curriculum-name">
 													<span class="curriculum-brief-info"><%=cvo.getCurri_division()%>/<%=cvo.getCurri_credits()%>학점/<%=cvo.getCurri_grade()%>학년</span><br><%=cvo.getCurri_title()%>
 												</p>
 												<div class="curriculum-rank">
-													<span class="rank-mark checked"></span> <span
+													<!-- <span class="rank-mark checked"></span> <span
 														class="rank-mark checked"></span> <span
 														class="rank-mark checked"></span> <span
 														class="rank-mark checked"></span> <span class="rank-mark"></span>
-													<span class="rank-mark-number recommend-rank-mark-number">4.0</span>
+													<span class="rank-mark-number recommend-rank-mark-number">4.0</span> -->
+													<strong style="color: orange;">종합 만족도 : <%=(cvo.getCurri_satisfaction_rating()+cvo.getCurri_exam_rating()+
+															cvo.getCurri_assignment_rating()+cvo.getCurri_professor_rating())/4.0%>점</strong>
 												</div>
 											</div>
 										</a>
 									</div>
-									<!-- <div class="area-line"></div>
-									<div class="uni-info_text_wrap">
-										<div class="curriculum-review">
-											<h4 class="good">장점</h4>
-											<p class="td-text-style">의료기사 중에서 유일하게 창업이 가능한 점이 좋음 실력을
-												쌓아서 자기가 기공소를 차려도 되고 해외취업이나 치과로 취업해도되고 학력을 더 쌓...</p>
-										</div>
-										<div class="curriculum-review">
-											<h4 class="bad">단점</h4>
-											<p class="td-text-style">너무 계단이 에바임 여름에 쪄죽음. 등록금이 비쌈.
-												사람들이 우리과에 대해 좋게 생각하는 사람들이 드뭄</p>
-										</div>
-									</div>
-									<div class="sub-info td-text-style">
-										<span><i class="far fa-eye"></i><span>46</span></span> <span><i
-						
-											class="far fa-heart"></i><span>0</span></span> <span><i
-											class="far fa-comment-dots"></i><span>0</span></span>
-									</div> -->
+									
 									<div></div>
 								</div>
 							</li>
