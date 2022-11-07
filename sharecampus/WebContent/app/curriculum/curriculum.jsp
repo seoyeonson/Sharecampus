@@ -83,11 +83,12 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 							if (list != null) {
 								for (CurriculumVO cvo : list) {
 							%>
+							<!-- crud -->
 							<li>
 								<div class="curriculum-list_box">
 									<div class="curri_img"></div>
 									<div class="top-curriculum-info">
-										<!-- <img
+										<!-- <img 
 											src="https://d1qzykz9iz00c7.cloudfront.net/static/logo/logo_c290.jpg"
 											class="university-logo ls-is-cached lazyloaded"> --> 
 											<img src="/assets/images/curriculum/certi.png" class="university-logo ls-is-cached lazyloaded">
