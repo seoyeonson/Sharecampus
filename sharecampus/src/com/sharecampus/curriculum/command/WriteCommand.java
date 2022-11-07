@@ -13,7 +13,7 @@ public class WriteCommand implements Command {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		int cnt = 0;
-		
+		String curri_university						= request.getParameter("university");
 		String curri_title 							= request.getParameter("title");
 		String curri_uni_dert 						= request.getParameter("major");
 		String curri_field 							= request.getParameter("curri_field");
@@ -28,6 +28,8 @@ public class WriteCommand implements Command {
 		String curri_contents 						= request.getParameter("editordata");
 		
 		CurriculumVO cvo = new CurriculumVO();
+		
+		cvo.setCurri_university(curri_university);
 		cvo.setCurri_title(curri_title);
 		cvo.setCurri_uni_dert(curri_uni_dert);
 		cvo.setCurri_field(curri_field);

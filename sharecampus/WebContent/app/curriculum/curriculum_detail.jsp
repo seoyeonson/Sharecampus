@@ -32,7 +32,7 @@ String curri_professor = cvo.getCurri_professor();
 int curri_satisfaction_rating = cvo.getCurri_satisfaction_rating();
 int curri_exam_rating = cvo.getCurri_exam_rating();
 int curri_assignment_rating = cvo.getCurri_assignment_rating();
-int professorrating = cvo.getCurri_professor_rating();
+int curri_professor_rating = cvo.getCurri_professor_rating();
 Date curri_regist_date = cvo.getCurri_regist_date();
 String curri_contents = cvo.getCurri_contents();
 %>
@@ -68,40 +68,66 @@ String curri_contents = cvo.getCurri_contents();
 						<div>
 							<ul class="class_detail_top">
 								<li>교과목 구분 <span class="class_division"><%=curri_division%></span></li>
-								<li>이수학점<span class="class_credit"><%=curri_credits%></span></li>
-								<li>이수학년<span class="class_grade"><%=curri_grade%></span></li>
-								<li>교수명<span class="class_prof"><%=curri_professor%></span></li>
+								<li>이수학점<span class="class_credit"><%=curri_credits%>학점</span></li>
+								<li>이수학년<span class="class_grade"><%=curri_grade%>학년</span></li>
+								<li>교수명<span class="class_prof"><%=curri_professor%> 교수님</span></li>
 							</ul>
 						</div>
 						<div class="All_ratings">
 							<ul>
 								<li>
-									<h3>수업만족도</h3> <span class="rank-mark checked"></span> <span
-									class="rank-mark checked"></span> <span
-									class="rank-mark checked"></span> <span
-									class="rank-mark checked"></span> <span class="rank-mark"></span>
+									<h3>수업만족도</h3> 
+									<!-- <span class="rank-mark checked"></span> 
+									<span class="rank-mark checked"></span> 
+									<span class="rank-mark checked"></span> 
+									<span class="rank-mark checked"></span> 
+									<span class="rank-mark"></span> --> 
+									<strong style="color: orange;"><%=curri_satisfaction_rating%>점</strong>
 								</li>
 								<li>
 									<h3>시험난이도</h3> <span class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span class="rank-mark"></span>
+									<strong style="color: orange;"><%=curri_exam_rating%>점</strong>
 								</li>
 								<li>
 									<h3>과제난이도</h3> <span class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span class="rank-mark"></span>
+									<strong style="color: orange;"><%=curri_assignment_rating%>점</strong>
 								</li>
 								<li>
 									<h3>교수만족도</h3> <span class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span
 									class="rank-mark checked"></span> <span class="rank-mark"></span>
+									<strong style="color: orange;"><%=curri_professor_rating%>점</strong>
 								</li>
 							</ul>
 						</div>
 						<div class="btns">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<button type="button" onclick="chkDelete(<%=curri_num%>)">삭제하기</button> |
 	<button type="button" onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button> |
 	<button type="button" onclick="location.href='/app/curriculum/curriculum_update.do?curri_num=<%=curri_num%>'">수정하기</button> |
@@ -150,4 +176,5 @@ String curri_contents = cvo.getCurri_contents();
 		}
 	}
 </script>
+ 
 </html>

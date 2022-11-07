@@ -24,18 +24,15 @@
 			delete from tbl_community where community_num = #{communityNum}
 		</delete>
 		
-		<select id="select" parameterType="_int" resultType="communityVO">
-			select community_contents from tbl_community
-			where community_num = #{community_num}
+		<select id="select" parameterType="_int" resultType="communityDTO">
+			select community_num, community_regist_date, community_contents, m.member_num, member_nickname, member_img_name
+			from tbl_member m join tbl_community c on community_num = #{communityNum} and m.member_num = c.member_num 
 		</select>
 		
 		<update id="update" parameterType="communityVO">
 			update tbl_community
 			set community_contents = #{communityContents}
-			where community_num = #{community_num}
+			where community_num = #{communityNum}
 		</update>
 		
-		<select id="getSequence" resultType="_int">
-			select LAST_INSERT_ID()
-		</select>
 </mapper>

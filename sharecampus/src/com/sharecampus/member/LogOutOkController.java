@@ -94,6 +94,79 @@ public class LogOutOkController implements Execute {
 				}
 			}
 			
+		} else if((Integer)session.getAttribute("memberType") == 3) {
+			System.out.println("들어옴");
+
+			// 카카오 계정 로그아웃 URL
+			String unconnKakaoUrl = "https://nid.naver.com/oauth2.0/token";
+			// 이전 URL에서 가져온 access_token 값
+			String access_token = String.valueOf(session.getAttribute("access_token"));
+			String CLIENT_ID = "1SE3yDHsMXrLybnglp1f"; 
+		    String CLIENT_SECRET = "vBb06MeqCL";
+			
+			// 요청하기 위해 필요한 객체
+			HttpsURLConnection conn = null;
+			OutputStreamWriter writer = null;
+			BufferedReader reader = null;
+			InputStreamReader isr= null;
+			
+			// 카카오 계정 연결 해제	    	    
+			try {
+				final String params = String.format("grant_type=delete&client_id=%s&client_secret=%s&access_token=%s&service_provider=NAVER",
+                        CLIENT_ID, CLIENT_SECRET, access_token);
+				final URL url = new URL(unconnKakaoUrl);
+				
+				conn = (HttpsURLConnection) url.openConnection();
+				// 요청 프로퍼티 설정
+				conn.setRequestProperty("Authorization", "Bearer " + access_token);
+				conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+				
+				// POST 방식으로 요청
+				conn.setRequestMethod("POST");
+				conn.setDoOutput(true);
+				
+				writer = new OutputStreamWriter(conn.getOutputStream());
+				writer.write(params);
+				writer.flush();
+				
+				final int responseCode = conn.getResponseCode();
+				System.out.println("\nSending 'POST' request to URL : " + unconnKakaoUrl);
+				System.out.println("Response Code : " + responseCode);
+				
+				isr = new InputStreamReader(conn.getInputStream());
+				reader = new BufferedReader(isr);
+				final StringBuffer buffer = new StringBuffer();
+				String line;
+				while ((line = reader.readLine()) != null) {
+					buffer.append(line);
+				}
+				
+				String data = buffer.toString();
+				System.out.println(data);
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				// clear resources
+				if (writer != null) {
+					try {
+						writer.close();
+					} catch(Exception ignore) {
+					}
+				}
+				if (reader != null) {
+					try {
+						reader.close();
+					} catch(Exception ignore) {
+					}
+				}
+				if (isr != null) {
+					try {
+						isr.close();
+					} catch(Exception ignore) {
+					}
+				}
+			}
 		}
 	    
 	    session.invalidate();

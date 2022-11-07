@@ -14,10 +14,6 @@
 	<insert id="insert" parameterType="studyVO">
 		insert into tbl_study(study_num, member_num, study_title, study_intro, study_area, study_people, study_ing, study_depart, study_contact)
 		values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, #{studyPeople}, #{studyIng}, #{studyDepart}, #{studyContact})
-		<!-- insert into tbl_study(study_num, member_num, study_title, study_intro, 
-			study_area, study_people, study_regist_date, study_ing, study_depart, study_contact) 
-			values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, 
-			#{studyPeople}, #{studyRegistDate}, #{studyIng}, #{studyDepart}, #{studyContact}) -->
 	</insert>
 
 	<select id="select" parameterType="_int" resultType="studyDTO">
@@ -32,8 +28,8 @@
 	
 	<update id="update" parameterType="studyVO"> 
 		update tbl_study 
-		set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea},  
-		where study_numb = #{studyNum} 
+		set study_title = #{studyTitle}, study_intro = #{studyIntro}, study_area = #{studyArea}, study_depart = #{studyDepart}, study_people = #{studyPeople}, study_contact = #{studyContact}
+		where study_num = #{studyNum} 
 	</update>
 	
 	<select id="getSequence" resultType="_int"> 
@@ -43,5 +39,9 @@
 	<select id="getTotal" resultType="_int"> 
 		select count(study_num) from tbl_study 
 	</select>
+	
+	<delete id="delete" parameterType="_int">
+		delete from tbl_study where study_num = #{studyNum}
+	</delete>
 	
 </mapper>
