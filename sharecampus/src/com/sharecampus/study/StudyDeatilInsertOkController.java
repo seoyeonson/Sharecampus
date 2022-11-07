@@ -51,7 +51,6 @@ public class StudyDeatilInsertOkController implements Execute {
 		studyDAO.insert(studyVO);
 		
 		studyNum = studyDAO.getSequence();
-		System.out.println(studyNum);
 //		Enumeration<String> fileNames = multipartRequest.getFileNames();
 
 //		while(fileNames.hasMoreElements()) {

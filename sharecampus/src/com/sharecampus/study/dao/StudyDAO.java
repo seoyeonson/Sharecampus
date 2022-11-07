@@ -34,4 +34,13 @@ public class StudyDAO {
 	public StudyDTO select(int studyNum) {
 		return sqlSession.selectOne("study.select", studyNum);
 	}
+	
+	public void delete(int studyNum) {
+		sqlSession.delete("study.delete", studyNum);
+	}
+	
+	public void update(StudyVO studyVO) {
+		sqlSession.update("study.update", studyVO);
+	}
+	
 }
