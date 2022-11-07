@@ -17,8 +17,6 @@ if (list == null || list.size() == 0) {
 %>
 <%
 CurriculumVO cvo = list.get(0);
-int curri_num = cvo.getCurri_num();
-int member_num = cvo.getMember_num();
 String curri_title = cvo.getCurri_title();
 String curri_university = cvo.getCurri_university();
 String curri_uni_dert = cvo.getCurri_uni_dert();
@@ -31,8 +29,8 @@ int curri_satisfaction_rating = cvo.getCurri_satisfaction_rating();
 int curri_exam_rating = cvo.getCurri_exam_rating();
 int curri_assignment_rating = cvo.getCurri_assignment_rating();
 int professorrating = cvo.getCurri_professor_rating();
-Date curri_regist_date = cvo.getCurri_regist_date();
 String curri_contents = cvo.getCurri_contents();
+int curri_num = cvo.getCurri_num();
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -46,20 +44,25 @@ String curri_contents = cvo.getCurri_contents();
 <jsp:include
 		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 	<main>
-		<form class="container">
-	<form name="frm" action="/app/curriculum/updateOk.do" method="post" onsubmit="return chkSubmit()">
+		<form class="container" name="frm" action="/app/curriculum/curriculum_updateOk.do" method="post">
 		<div class="section">
 				<h1>커리큘럼 수정</h1> 
 				<p class="description">
-					<button onclick="histroy.back()">뒤로가기</button> |
-	<button onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button>
-					<input type="hidden" name="curri_num" value="<%=curri_num%>"/>
+	<button  type="button" onclick="history.back()">뒤로가기</button> |
+	<button type="button" onclick="location.href='/app/curriculum/curriculum.do'">목록으로</button>
+	<input type="hidden" name="curri_num" value="<%=curri_num%>"/>
 				</p>
 			</div>
 			<div class="section">
 				<h2>교과목 정보</h2>
 				<p class="caution">* 별표 표시는 필수 항목입니다.</p>
 				<div class="input_text_area">
+				<div class="input_text_area">
+					<h3>학교명 *</h3>
+					<!-- 학교 -->
+					<input type="text" name="university" placeholder="학교 이름" maxlength="100"
+						autocomplete="off" value="<%=curri_university%>">
+				</div>
 					<h3>커리큘럼명 *</h3>
 					<!-- 제목 -->
 					<input type="text" name="title" placeholder="커리큘럼명" maxlength="100"
@@ -263,28 +266,7 @@ String curri_contents = cvo.getCurri_contents();
 				<button type="submit">커리큘럼 수정완료</button>
 			</div>
 	</form>
-	</form>
 	</main>
-
-	
-	<script>
-	function chkSubmit() {
-		frm = document.forms['frm'];
-
-		let title = frm['title'].value.trim();
-		let major = frm['major'].value.trim();
-		let subject = frm['subject'].value.trim();
-		let professorName = frm['professorName'].value.trim();
-
-		if (title == '') {
-			alert("제목은 반드시 입력해야 합니다");
-			frm['title'].focus();
-			return false;
-		}
-
-		return true;
-	}
-	</script>
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/modal.jsp" />
 	<jsp:include
