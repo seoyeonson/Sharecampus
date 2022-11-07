@@ -14,10 +14,6 @@
 	<insert id="insert" parameterType="studyVO">
 		insert into tbl_study(study_num, member_num, study_title, study_intro, study_area, study_people, study_ing, study_depart, study_contact)
 		values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, #{studyPeople}, #{studyIng}, #{studyDepart}, #{studyContact})
-		<!-- insert into tbl_study(study_num, member_num, study_title, study_intro, 
-			study_area, study_people, study_regist_date, study_ing, study_depart, study_contact) 
-			values(#{studyNum}, #{memberNum}, #{studyTitle}, #{studyIntro}, #{studyArea}, 
-			#{studyPeople}, #{studyRegistDate}, #{studyIng}, #{studyDepart}, #{studyContact}) -->
 	</insert>
 
 	<select id="select" parameterType="_int" resultType="studyDTO">
