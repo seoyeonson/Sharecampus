@@ -20,16 +20,20 @@
         	</div>
 	        <div class="community">
 	            <div class="communityWrap">
-	                <form action="${pageContext.request.contextPath}/community/listDuOK.co" name="updateForm" method="post">
+	                <form action="${pageContext.request.contextPath}/community/listDuOK.co" name="updateForm" method="post" enctype="multipart/form-data">
 	                    <div class="communityInputSection">
 	                        <div class="communityInputWrap">
-	                            <textarea name ="community_content" placeholder="커뮤니티에서 가볍게 이야기를 시작해보세요" rows="2" maxlength="1000" id="textarea" style="border: none" >
-<c:out value="${board.getBoardContent()}"/></textarea>
+	                        <input type="hidden" name="communityNum" value="${community.getCommunityNum()}">
+	                            <textarea name ="communityContents" placeholder="수정할 이야기를 적어주세요" rows="2" maxlength="1000" id="textarea" style="border: none" >
+<c:out value="${community.getCommunityContents()}"/></textarea>
 	                            <div class="btnWrap" id="btnWrap">
 	                                <p class="count" id="count_cnt" >
 	                                    <span>(0/1000)</span>
 	                                </p>
+	                                <div class="BtnSet">
 	                                <button class="grayBtn" value="글쓰기" onclick="send()" >수정</button>
+	                                <button class="grayBtn" value="돌아가기" href="${pageContext.request.contextPath}/community/listDs.co" >취소</button>
+	                            	</div>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -45,9 +49,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
 
-$('#textarea').keydown(function() {
     $('#btnWrap').css("display", "flex");
-});
 
 $(document).ready(function() {
 $('#textarea').on('keyup', function() {
@@ -63,8 +65,8 @@ $('#textarea').on('keyup', function() {
 
 function send(){
 	let form = document.updateForm;
-	if(!form.boardContent.value){
-		form.boardTitle.focus();
+	if(!form.communityContents.value){
+		form.communityContents.focus();
 		return;
 	}
 	
