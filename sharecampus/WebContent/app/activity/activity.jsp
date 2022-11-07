@@ -9,10 +9,15 @@
 <meta charset="UTF-8">
 <title>대외활동</title>
 </head>
-<link rel="stylesheet"
+ <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/activity/activity.css">
 <script
 	src="${pageContext.request.contextPath}/assets/js/activity/activity.js"></script>
+<style>
+h2.tit {
+font-size: 15px;
+}
+</style>
 <body>
 	<jsp:include
 		page="${pageContext.request.contextPath}/app/fix/header.jsp" />
@@ -70,8 +75,8 @@
 				</select>
 				<div class="ActivityNew">
 					<button class="btn123"
-						onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_new.jsp';">공고
-						등록</button>
+						onclick="location.href='${pageContext.request.contextPath}/app/activity/activity_new.jsp';"><p>공고
+						등록</p></button>
 				</div>
 			</div>
 			<!-- </div> -->
@@ -88,11 +93,13 @@
 										<div class="badgeWrap">
 											<div class="topBadge purpleLight">
 												<img loading="lazy"
-													src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-badge_project_update.png"
-													alt="업데이트있는 프로젝트" />
+													src="${pageContext.request.contextPath}/upload/${activity.getActivThumbnailImgName()}">
 											</div>
 											<div class="badge blue">
 												<h2 class="dept"> <c:out value="${activity.getActivDept()}"/></h2>
+											</div>
+											<div class="badge blue2">
+												<h2 class="dept" style = "color :#a06bff !important"> <c:out value="${activity.getActivArea()}"/></h2>
 											</div>
 										</div>
 										<div class="favorite"></div>
@@ -101,7 +108,7 @@
 								<div class="projectBottomInfo">
 									<div class="txtWrap studyTxtWrap">
 										<h3 class="category"><c:out value= "${activity.getActivArea()}"/></h3>
-										<h2 class="tit"><c:out value="${activity.getActivTitle()}"/></h2>
+										<%-- <h2 class="tit"><c:out value="${activity.getActivTitle()}"/></h2> --%>
 										<p class="studyCategory">(간략 설명)</p>
 										<div class="iconWrap">
 											<!-- <span style="margin-right: 4px; font-size: 14px">#hashtag</span>
@@ -111,12 +118,9 @@
 								</div>
 								<div class="projectInfo2">
 									<div class="middleWrap">
+									<h2 class="tit" style = "font-size:13px"><c:out value="${activity.getActivTitle()}"/></h2>
 										<div class="left">
 											<div class="heartCount">
-												<!-- <img loading="lazy"
-                                            src="./렛플 │ 사이드프로젝트_스터디 찾기_files/ic-favorite-empty-white.svg"
-                                            alt="프로젝트 구독자 수" /> -->
-												<span>(좋아요 수)</span>
 											</div>
 										</div>
 									</div>
@@ -134,6 +138,7 @@
 			 <table style="font-size:0.99rem;margin: auto;margin-top: 40px;">
 										<tr align="center" valign="middle">
 											<td class="web-view">
+												<!-- <button><img src="/assets/images/activity/back.png" class="back" style = "width:14px"></button> -->
 												<c:if test="${prev}">
 													<a href="${pageContext.request.contextPath}/list.ac?page=${startPage - 1}">&lt;</a>
 												</c:if>
@@ -152,6 +157,7 @@
 												<c:if test="${next}">
 													<a href="${pageContext.request.contextPath}/list.ac?page=${endPage + 1}">&gt;</a>
 												</c:if>
+												<!-- <button><img src="/assets/images/activity/next.png" style = "width:14px"></button> -->
 											</td>
 										</tr>
 									</table>
