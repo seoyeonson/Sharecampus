@@ -113,7 +113,7 @@ public class CurriculumDAO {
 
 	public int insert(CurriculumVO cvo) throws SQLException {
 		int cnt = 0;
-		
+
 		String curri_university = cvo.getCurri_university();
 		String curri_title = cvo.getCurri_title();
 		String curri_uni_dert = cvo.getCurri_uni_dert();
@@ -133,7 +133,7 @@ public class CurriculumDAO {
 		try {
 			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_INSERT,
 					generatedCols);
-			
+
 			pstmt.setString(1, curri_university);
 			pstmt.setString(2, curri_title);
 			pstmt.setString(3, curri_uni_dert);
@@ -197,36 +197,6 @@ public class CurriculumDAO {
 		return list;
 	}
 
-	/*
-	 * public List<CurriculumVO> readByCurri_num(int curri_num) throws SQLException
-	 * {
-	 * 
-	 * List<CurriculumVO> list = null;
-	 * 
-	 * try { conn.setAutoCommit(false); pstmt =
-	 * conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.
-	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, curri_num); rs =
-	 * pstmt.executeQuery(); list = buildList(rs);
-	 * 
-	 * conn.commit(); } catch (SQLException e) { conn.rollback(); throw e; } finally
-	 * { close(); }
-	 * 
-	 * return list;
-	 * 
-	 * }
-	 */
-
-	/*
-	 * public List<CurriculumVO> selectByCurri_num(int curri_num) throws
-	 * SQLException { List<CurriculumVO> list = null;
-	 * 
-	 * try { pstmt = conn
-	 * .prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.
-	 * SQL_CURRICULUM_SELECT_BY_CURRI_NUM); pstmt.setInt(1, curri_num); rs =
-	 * pstmt.executeQuery(); list = buildList(rs); } finally { close(); }
-	 * 
-	 * return list; }
-	 */
 	public List<CurriculumVO> selectByCurri_num(int curri_num) throws SQLException {
 		List<CurriculumVO> list = new ArrayList<CurriculumVO>();
 
@@ -238,7 +208,6 @@ public class CurriculumDAO {
 			while (rs.next()) {
 				CurriculumVO cvo = new CurriculumVO();
 				cvo.setCurri_num(rs.getInt("curri_num"));
-				cvo.setMember_num(rs.getInt("member_num"));
 				cvo.setCurri_title(rs.getString("curri_title"));
 				cvo.setCurri_university(rs.getString("curri_university"));
 				cvo.setCurri_uni_dert(rs.getString("curri_uni_dert"));
@@ -252,7 +221,6 @@ public class CurriculumDAO {
 				cvo.setCurri_exam_rating(rs.getInt("curri_exam_rating"));
 				cvo.setCurri_assignment_rating(rs.getInt("curri_assignment_rating"));
 				cvo.setCurri_exam_rating(rs.getInt("curri_professor_rating"));
-				cvo.setCurri_regist_date(rs.getDate("curri_regist_date"));
 				list.add(cvo);
 			}
 		} finally {
@@ -261,15 +229,15 @@ public class CurriculumDAO {
 		return list;
 	}
 
-	public int update(int curri_num, String curri_title, String curri_uni_dert, String curri_field,
-			String curri_division, int curri_credits, String curri_grade, String curri_professor,
+	public int update(int curri_num, String curri_university, String curri_title, String curri_uni_dert,
+			String curri_field, String curri_division, int curri_credits, String curri_grade, String curri_professor,
 			int curri_satisfaction_rating, int curri_exam_rating, int curri_assignment_rating,
 			int curri_professor_rating, String curri_contents) throws SQLException {
 		int cnt = 0;
 
 		try {
 			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_UPDATE);
-			pstmt.setInt(1, curri_num);
+			pstmt.setString(1, curri_university);
 			pstmt.setString(2, curri_title);
 			pstmt.setString(3, curri_uni_dert);
 			pstmt.setString(4, curri_field);
@@ -282,6 +250,7 @@ public class CurriculumDAO {
 			pstmt.setInt(11, curri_assignment_rating);
 			pstmt.setInt(12, curri_professor_rating);
 			pstmt.setString(13, curri_contents);
+			pstmt.setInt(14, curri_num);
 
 			cnt = pstmt.executeUpdate();
 		} finally {
@@ -290,10 +259,10 @@ public class CurriculumDAO {
 
 		return cnt;
 	}
-	
+
 	public int delete(int curri_num) throws SQLException {
 		int cnt = 0;
-			
+
 		try {
 			pstmt = conn.prepareStatement(com.sharecampus.curriculum.sql.CurriculumSQL.SQL_CURRICULUM_DELETE);
 			pstmt.setInt(1, curri_num);
@@ -301,7 +270,7 @@ public class CurriculumDAO {
 		} finally {
 			close();
 		}
-		
+
 		return cnt;
 	}
 

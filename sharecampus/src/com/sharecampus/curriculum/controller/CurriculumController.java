@@ -75,7 +75,7 @@ public class CurriculumController extends HttpServlet {
 			command.execute(request, response);
 			viewPage = "curriculum_update.jsp";
 			break;
-		case "/app/curriculum/updateOk.do":
+		case "/app/curriculum/curriculum_updateOk.do":
 			command = new UpdateCommand();
 			command.execute(request, response);
 			viewPage = "curriculum_updateOk.jsp";

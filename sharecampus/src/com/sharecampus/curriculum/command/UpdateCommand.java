@@ -16,6 +16,7 @@ public class UpdateCommand implements Command {
 		int cnt = 0;
 
 		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
+		String curri_university = request.getParameter("university");
 		String curri_title = request.getParameter("title");
 		String curri_uni_dert = request.getParameter("major");
 		String curri_field = request.getParameter("curri_field");
@@ -31,7 +32,7 @@ public class UpdateCommand implements Command {
 
 		if ((curri_title != null && curri_title.trim().length() > 0)) {
 			try {
-				cnt = new CurriculumDAO().update(curri_num, curri_title, curri_uni_dert, curri_field, curri_division,
+				cnt = new CurriculumDAO().update(curri_num, curri_university, curri_title, curri_uni_dert, curri_field, curri_division,
 						curri_credits, curri_grade, curri_professor, curri_satisfaction_rating, curri_exam_rating,
 						curri_assignment_rating, curri_professor_rating, curri_contents);
 			} catch (SQLException e) {
