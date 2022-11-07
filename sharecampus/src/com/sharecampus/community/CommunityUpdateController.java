@@ -20,9 +20,9 @@ public class CommunityUpdateController extends HttpServlet implements Execute {
 		Result result = new Result();
 		int communityNum = Integer.valueOf(req.getParameter("communityNum"));
 		CommunityDAO communityDAO = new CommunityDAO();
-		req.setAttribute("communityContent", communityDAO.select(communityNum));
-
-		result.setPath("/community/listDuOK.co");
+		req.setAttribute("community", communityDAO.select(communityNum));
+		
+		result.setPath("/app/community/communityupdate.jsp");
 		return result;
 	}
 

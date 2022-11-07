@@ -29,7 +29,7 @@ public class CommunityDAO {
 	public void delete(int communityNum) {
 		sqlSession.delete("community.delete", communityNum); 
 	}
-	public CommunityDAO select(int communityNum) {
+	public CommunityDTO select(int communityNum) {
 		return sqlSession.selectOne("community.select", communityNum);
 	}
 	
