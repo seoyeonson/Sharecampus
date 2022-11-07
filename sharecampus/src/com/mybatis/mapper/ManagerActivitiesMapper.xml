@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="activ">
+
+	<select id="selectAll" parameterType = "map" resultType ="activitiesVO">
+		select activ_num, activ_title, activ_dept, activ_contents, activ_thumbnail_img_name from tbl_activity
+		where activ_permission = 0
+		order by activ_num desc
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id ="bring" parameterType="_int" resultType="activitiesVO">
+		select activ_manager_email, activ_manager_name, activ_manager_phonenum, activ_manager_dept, activ_title, activ_url, activ_area, activ_dept, activ_start_date,activ_end_date,activ_activing_date,activ_people,activ_field,activ_contents,activ_main_img_name,activ_thumbnail_img_name
+		from tbl_activity
+		where activ_num = #{activNum}
+	</select>
+
+	<update id="update" parameterType="activitiesVO">
+		update tbl_activity
+		set activ_permission = #{activPermission}
+		where activ_num = #{activNum}
+	</update>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="banner">
+
+	<select id="selectAll" parameterType = "map" resultType ="bannerVO">
+		select banner_num, banner_img_name
+		where activ_permission = 0
+		order by activ_num desc
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id ="view" parameterType="_int" resultType="bannerVO">
+		select file_system_name, file_original_img
+		from tbl_bannerimg
+		where banner_num = #{bannerNum}
+	</select>
+
+	<update id="update" parameterType="bannerVO">
+		update tbl_banner
+		set banner_use = #{bannerUse}
+		where banner_num = #{bannerNum}
+	</update>
+
+</mapper>
