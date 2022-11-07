@@ -100,7 +100,7 @@
 										<span><img
 											src="${pageContext.request.contextPath}/upload/${activity.getActivMainImgName()}"></span>
 									</p>
-									<p class = "block">
+									<p class = "block" style="white-space:pre;">
 									<c:out value="${activity.getActivContents()}"/>
 									</p>
 								</div>
