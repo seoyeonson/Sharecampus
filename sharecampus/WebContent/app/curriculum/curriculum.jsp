@@ -94,8 +94,8 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 											<span class="recommend-label recommend"><%=cvo.getCurri_uni_dert()%></span>
 
 
-										<%-- <span class="bookmark"><i class="fa-solid fa-heart"></i></span>
-										<a href="/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>" style="padding-bottom: 6px"> --%>
+										<!-- <span class="bookmark"><i class="fa-solid fa-heart"></i></span> -->
+										<a href="/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>" style="padding-bottom: 6px">
 											<div class="info-category">
 												<p class="univer_name td-text-style"><strong><%=cvo.getCurri_university()%></strong></p>
 												<%-- <p class="user_name td-text-style"><%=cvo.getMember_num()%></p> --%>
