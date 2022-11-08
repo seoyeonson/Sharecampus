@@ -29,7 +29,7 @@
 	        <jsp:include page="${pageContext.request.contextPath}/app/member/mypage_menu.jsp" />
 	        <main id="content" role="main" class="more2" style="border: none;">
 	            <section class="sMypage">
-	                <h1 class="sMypageTitle" style="background-color: #3393f4; color: #fff;">나의 활동 - <span style="font-size: 12px">스터디 모아보기</span></h1>
+	                <h1 class="sMypageTitle" style="background-color: #3393f4; color: #fff;">나의 활동 - <span style="font-size: 12px">커뮤니티 모아보기</span></h1>
 	                <div>
 	                    <div class="board_list_wrap">
                             <div style="width:90%; margin: auto; padding-bottom: 10px;">
@@ -44,22 +44,22 @@
 	                            	</c:choose>
 	                            </h2>
                             </div>
-		                    <table class="board_list curriculum" style="width:90%; margin: 0 auto; margin-bottom: 20px" id="study_list">
+		                    <table class="board_list curriculum" style="width:90%; margin: 0 auto; margin-bottom: 20px; text-align: center;">
 		                        <thead>
 			                        <tr>
 			                            <th>번호</th>
-			                            <th>제목</th>
+			                            <th>내용</th>
 			                            <th>작성일</th>
 			                        </tr>
 		                        </thead>
 		                        <tbody>
 		                        	<c:choose>
-										<c:when test="${not empty studyAll and fn:length(studyAll) > 0}">
-											<c:forEach var="study" items="${studyAll}">
+										<c:when test="${not empty commAll and fn:length(commAll) > 0}">
+											<c:forEach var="comm" items="${commAll}">
 												<tr>
-													<td><c:out value="${study.getStudyNum()}"/></td>
-													<td><a href="${pageContext.request.contextPath}/study/listDs.su?studyNum=${study.getStudyNum()}"><c:out value="${study.getStudyTitle()}"/></a></td>
-													<td><c:out value="${study.getStudyRegistDate()}"/></td>
+													<td><c:out value="${comm.getCommunityNum()}"/></td>
+													<td><c:out value="${comm.getCommunityContents()}"/></td>
+													<td><c:out value="${comm.getCommunityRegistDate()}"/></td>
 												</tr>
 											</c:forEach>
 										</c:when>
@@ -76,12 +76,12 @@
 								<tr align="center" valign="middle">
 									<td class="web-view" style="border: none; font-size: 16px;">
 										<c:if test="${prev}">
-											<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${startPage - 1}">&lt;</a>
+											<a href="${pageContext.request.contextPath}/member/selectComm.me?page=${startPage - 1}">&lt;</a>
 										</c:if>
 										<c:forEach var="i" begin="${startPage}" end="${endPage}">
 											<c:choose>
 												<c:when test="${not (i eq page)}">
-													<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${i}">
+													<a href="${pageContext.request.contextPath}/member/selectComm.me?page=${i}">
 														<c:out value="${i}"/>&nbsp;&nbsp;
 													</a>
 												</c:when>
@@ -91,7 +91,7 @@
 											</c:choose>
 										</c:forEach>
 										<c:if test="${next}">
-											<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${endPage + 1}">&gt;</a>
+											<a href="${pageContext.request.contextPath}/member/selectComm.me?page=${endPage + 1}">&gt;</a>
 										</c:if>
 									</td>
 								</tr>

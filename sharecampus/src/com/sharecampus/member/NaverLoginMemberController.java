@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
+
 import com.sharecampus.Execute;
 import com.sharecampus.Result;
 
@@ -74,7 +76,20 @@ public class NaverLoginMemberController implements Execute {
 	      }
 	     
 	      String data = buffer.toString();
+	      StringBuffer decode_uni = new StringBuffer();
+	      
 	      System.out.println(data);
+	      
+	      for(int i=0; i<data.length(); i++){
+	          if(data.charAt(i) == '\\' &&  data.charAt(i+1) == 'u'){    
+	              Character c = (char)Integer.parseInt(data.substring(i+2, i+6), 16);
+	              decode_uni.append(c);
+	              i+=5;
+	          }else{
+	        	  decode_uni.append(data.charAt(i));
+	          }
+	      }
+	      data = decode_uni.toString();
 	      
 	      // 응답에서 필요한 정보를 잘라내어 사용
 	      // member_id
