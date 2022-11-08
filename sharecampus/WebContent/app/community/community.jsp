@@ -27,6 +27,7 @@ pre{
         	</div>
 	        <div class="community">
 	            <div class="communityWrap">
+	           	<c:if test="${sessionScope.memberNum != null}">
 	                <form action="${pageContext.request.contextPath}/community/listDi.co" name="writeForm" method="post">
 	                    <div class="communityInputSection">
 	                        <div class="communityInputWrap">
@@ -40,6 +41,7 @@ pre{
 	                        </div>
 	                    </div>
 	                </form>
+	                </c:if>
 	                 	<!-- 피드시작 -->
 					<table style="width: 980px; table-layout: fixed; overflow: hidden;">
 					<c:choose>
@@ -52,8 +54,14 @@ pre{
 		                     			<div class="communityFeedContentWrap">
 		                        			<div class="top2">
 		                            			<div class="left">
-			                                    	<div class="profileThumb" style="background-image: url('/upload/${community.getMemberImgName()}')">
-			                                    	</div>
+						                                <c:choose>
+														<c:when test="${memberInfo.getMemberImgName() != 'default'}">
+															<div class="profileThumb"></div>
+														</c:when>										
+														<c:otherwise> 
+															<div class="profileThumb" style="background-image: url(${pagePath.request.contextPath}/assets/images/mypage/no_image.jpg)"></div>
+														</c:otherwise>										
+													</c:choose>
 		                           				</div>
 		                            			<div class="right5">
 						                        	<h2 class="profileName"><c:out value="${community.getMemberNickname()}"/></h2>
@@ -70,7 +78,6 @@ pre{
 		                                    			</pre>
 		                                			</h3>
 		                                			<div class="bottom2">
-                                				   <!-- <div href="div.communityReplyTab" class="replyFold" id="replyFold">댓글 열기</div>-->
 		                                    			<div class="replyFoldRight">
 		                                    			 	<c:if test="${sessionScope.memberNum == community.getMemberNum()}">
 		                                        				<button class="edit" onclick="location.href='/community/listDu.co?communityNum=${community.getCommunityNum()}'">수정</button>&nbsp;ㅣ&nbsp;
@@ -78,50 +85,6 @@ pre{
 		                                    				</c:if>
 		                                  				</div>	
 		                                			</div>
-		                                			<!--
-					                                <div class="communityReplyTab" id="communityReplyTab">
-					                                	<c:choose>
-														<c:when test="${not empty communitys and fn:length(communitys) > 0}">
-															<c:forEach var="community" items="${communitys}">
-							                                    <div class="replyTab">
-							                                        <div class="tabTop">
-							                                            <div class="tabLeft"><a href="https://letspl.me/people/%EB%A0%9B%ED%94%8C%EC%9A%B4%EC%98%81%EC%9E%90?tab=info">
-							                                                <img src="https://letspl.me/assets/images/prof-no-img.png" class="tabImg0">
-							                                            </a></div>
-							                                            <div class="tabRight">
-							                                                <div class="tabProfile">
-							                                                    <p class="tabProfileName">렛플운영자</p>
-							                                                    <span class="tabDate">22.10.18 21:53</span>
-							                                                </div>
-							                                                <div class="tabTxt">
-							                                                    <textarea disabled maxlength="500" style="font-size : 0.875rem; height: 125px; " class="tabTextarea">
-서비스 출시하시면 웹이나 앱 형태로 나올까요?
-지금은 오픈채팅방으로 가기밖에는 안보여서요
-출시알림 받기 이런 기능(이메일 등록)이 있는 것 같은데 조금 문구가 헷갈리네요
-제대로 등록한게 맞는지 궁금합니다.</textarea>
-							                                                </div>
-							                                            </div>
-							                                        </div>
-							                                    </div>
-					                                   	 	</c:forEach>
-														</c:when>
-															<c:otherwise>
-																<tr>
-																	<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
-																</tr>
-															</c:otherwise>
-														</c:choose>
-					                                    <div class="replyInput">
-					                                        <div class="replyProfileThumb">
-					                                            <img loading="lazy "src="https://letspl.me/assets/images/prof-no-img.png" alt="" class="tabImg">
-					                                        </div>
-					                                        <div class="txtInput">
-					                                            <textarea rows="4" maxlength="500" placeholder="로그인 후 댓글작성이 가능합니다" ></textarea>
-					                                            <button class="blackBtn" disabled>등록</button>
-					                                        </div>
-					                                    </div>
-					                                </div>
-		                                			 -->		                		
 		                            			</div>
 		                        			</div>
 		                     			</div>
