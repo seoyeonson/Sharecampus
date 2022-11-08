@@ -19,6 +19,7 @@ public class CommunityDeleteController extends HttpServlet implements Execute {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
 		Result result = new Result();
 		int communityNum = Integer.valueOf(req.getParameter("communityNum"));
+		System.out.println("들어옴"+communityNum);
 		CommunityDAO communityDAO = new CommunityDAO();
 		communityDAO.delete(communityNum);
 		result.setRedirect(true);
