@@ -19,9 +19,14 @@ public class MyPageController implements Execute{
 		HttpSession session = req.getSession();
 		MemberDAO memberDAO = new MemberDAO();
 		
-		req.setAttribute("memberInfo", memberDAO.memberInfo((Integer)session.getAttribute("memberNum")));
+		try {
+			req.setAttribute("memberInfo", memberDAO.memberInfo((Integer)session.getAttribute("memberNum")));
+			result.setPath("/app/member/mypage_main.jsp");
+		} catch (Exception e){
+			req.setAttribute("loginOK", "false");
+			result.setPath("/");
+		}
 		
-		result.setPath("/app/member/mypage_main.jsp");
 		return result;
 	}
 

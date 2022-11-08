@@ -1,9 +1,15 @@
 package com.sharecampus.member.dao;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sharecampus.community.vo.CommunityVO;
+import com.sharecampus.curriculum.vo.CurriculumVO;
 import com.sharecampus.member.vo.MemberVO;
+import com.sharecampus.study.vo.StudyVO;
 
 public class MemberDAO {
 	public SqlSession sqlSession;
@@ -44,7 +50,31 @@ public class MemberDAO {
 	}
 	
 	public void updateAuthImgName(MemberVO memberVO) {
-		System.out.println("인증 이미지 dao 실행");
 		sqlSession.update("member.updateAuthImgName", memberVO);
 	}
+	
+	public int getCurriTotal(int memberNum) {
+		return sqlSession.selectOne("member.getCurriTotal", memberNum);
+	}
+	
+	public int getStudyTotal(int memberNum) {
+		return sqlSession.selectOne("member.getStudyTotal", memberNum);
+	}
+	
+	public int getCommTotal(int memberNum) {
+		return sqlSession.selectOne("member.getCommTotal", memberNum);
+	}
+	
+	public List<CurriculumVO> selectCurri(HashMap<String, Integer> pageMap) {
+		return sqlSession.selectList("member.selectCurri", pageMap);
+	}
+	
+	public List<StudyVO> selectStudy(HashMap<String, Integer> pageMap) {
+		return sqlSession.selectList("member.selectStudy", pageMap);
+	}
+	
+	public List<CommunityVO> selectComm(HashMap<String, Integer> pageMap) {
+		return sqlSession.selectList("member.selectComm", pageMap);
+	}
+	
 }
