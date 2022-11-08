@@ -8,7 +8,7 @@
 	</select>
 
 	<delete id="delete" parameterType="_int">
-		delete from tbl_member where member_number = #{memberNumber}
+		delete from tbl_member where member_num = #{memberNum}
 	</delete>
 
 	<select id="selectAuth" parameterType="map" resultType="memberVO">

@@ -59,7 +59,9 @@
 								<td><c:out value="${member.getMemberNickname()}" /></td>
 								<td><c:out value="${member.getMemberSignupDate()}" /></td>
 								<td><c:out value="${member.getMemberType()}" /></td>
-								<td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+								<c:if test="${sessionScope.memberNum == memeber.getMemberNum()}">
+								<td><button class="removeList" onclick="location.href='/manager/memberDelete.ma?memberNum=${member.getMemberNum()}'">회원 삭제</button></td>
+								</c:if>
 							</tr>
 						</c:forEach>
 					</c:when>
