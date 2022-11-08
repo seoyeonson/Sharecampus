@@ -54,8 +54,14 @@ pre{
 		                     			<div class="communityFeedContentWrap">
 		                        			<div class="top2">
 		                            			<div class="left">
-			                                    	<div class="profileThumb" style="background-image: url('/upload/${community.getMemberImgName()}')">
-			                                    	</div>
+						                                <c:choose>
+														<c:when test="${memberInfo.getMemberImgName() != 'default'}">
+															<div class="profileThumb"></div>
+														</c:when>										
+														<c:otherwise> 
+															<div class="profileThumb" style="background-image: url(${pagePath.request.contextPath}/assets/images/mypage/no_image.jpg)"></div>
+														</c:otherwise>										
+													</c:choose>
 		                           				</div>
 		                            			<div class="right5">
 						                        	<h2 class="profileName"><c:out value="${community.getMemberNickname()}"/></h2>

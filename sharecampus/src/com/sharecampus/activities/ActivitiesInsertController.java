@@ -24,8 +24,8 @@ public class ActivitiesInsertController implements Execute{
 		
 //		파일 업로드 컨트롤러
 		
-//		String uploadPath = req.getSession().getServletContext().getRealPath("/")+"upload/";
-		String uploadPath = "C:\\Users\\comed\\Desktop\\웹개발\\web_1900_hjs\\git\\Wanted\\wanted\\wanted\\sharecampus\\WebContent\\upload\\";
+		String uploadPath = req.getSession().getServletContext().getRealPath("/")+"upload/";
+//		String uploadPath = "C:\\Users\\comed\\Desktop\\웹개발\\web_1900_hjs\\git\\Wanted\\wanted\\wanted\\sharecampus\\WebContent\\upload\\";
 		int fileSize = 1024 * 1024 * 5; // 5M
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
