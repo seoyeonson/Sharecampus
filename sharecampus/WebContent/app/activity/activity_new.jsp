@@ -167,11 +167,11 @@ input[type=number] {
 				<h3>활동기간 *</h3>
 				<div class="group">
 					<label class="checkbox"><input type="radio" name="activActivingDate"
-						value="0001">3개월 이하</label> <label class="checkbox"><input
-						type="radio" name="activActivingDate" value="0002">3개월~6개월</label> <label
+						value="3개월 이하">3개월 이하</label> <label class="checkbox"><input
+						type="radio" name="activActivingDate" value="3개월~6개월">3개월~6개월</label> <label
 						class="checkbox"><input type="radio" name="activActivingDate"
-						value="0003">6개월~1년</label> <label class="checkbox"><input
-						type="radio" name="activActivingDate" value="0004">1년 이상</label>
+						value="6개월~1년">6개월~1년</label> <label class="checkbox"><input
+						type="radio" name="activActivingDate" value="1년이상">1년 이상</label>
 				</div>
 				<h3>모집인원</h3>
 				<p class="input medium">

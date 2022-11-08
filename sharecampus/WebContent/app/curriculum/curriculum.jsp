@@ -12,7 +12,7 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>커리큘럼</title>
+<title>커리큘럼 메인</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -83,18 +83,19 @@ List<CurriculumVO> list = (List<CurriculumVO>) request.getAttribute("list");
 							if (list != null) {
 								for (CurriculumVO cvo : list) {
 							%>
+							<!-- crud -->
 							<li>
 								<div class="curriculum-list_box">
 									<div class="curri_img"></div>
 									<div class="top-curriculum-info">
-										<!-- <img
+										<!-- <img 
 											src="https://d1qzykz9iz00c7.cloudfront.net/static/logo/logo_c290.jpg"
 											class="university-logo ls-is-cached lazyloaded"> --> 
 											<img src="/assets/images/curriculum/certi.png" class="university-logo ls-is-cached lazyloaded">
 											<span class="recommend-label recommend"><%=cvo.getCurri_uni_dert()%></span>
 
 
-										<span class="bookmark"><i class="fa-solid fa-heart"></i></span>
+										<!-- <span class="bookmark"><i class="fa-solid fa-heart"></i></span> -->
 										<a href="/app/curriculum/curriculum_detail.do?curri_num=<%=cvo.getCurri_num()%>" style="padding-bottom: 6px">
 											<div class="info-category">
 												<p class="univer_name td-text-style"><strong><%=cvo.getCurri_university()%></strong></p>

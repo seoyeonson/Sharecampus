@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link href="${pageContext.request.contextPath}/assets/css/search.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath}/assets/css/search/search.css" rel="stylesheet">
 </head>
 <body>
 	<div>
@@ -23,7 +23,7 @@
 					<div class="inputBtnWrap">
 						<button class="inputSearchBtn">
 							<img loading="lazy"
-								src="https://letspl.me/assets/images/ic-search.png" alt="검색">
+								src="https://letspl.me/assets/images/ic-search.png" alt="검색" onclick="alert('준비중입니다.')">
 						</button>
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 						<span style="font-size: 14px; margin-left: 10px">최근 검색어가
 							없습니다</span>
 					</div>
-					<div class="historyWrap">
+					<!-- <div class="historyWrap">
 						<p>인기 검색어</p>
 						<ul>
 							<li><a href="">IOS</a></li>
@@ -42,7 +42,7 @@
 							<li><a href="">FLUTTER</a></li>
 							<li><a href="">퍼블리셔</a></li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</section>
 		</main>
@@ -53,5 +53,5 @@
 			page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 	</div>
 </body>
-<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/main/modal.js"></script>
 </html>

@@ -25,29 +25,35 @@ public class ImageChangeController implements Execute {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		
+		try {
 //		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
-		String uploadPath = "/Users/son/Documents/wanted/sharecampus/WebContent/upload";
-		int fileSize = 1024 * 1024 * 5; // 5M
-		
-		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
-		
-		Enumeration<String> fileNames = multipartRequest.getFileNames();
-		
-		while(fileNames.hasMoreElements()) {
-			String fileName = fileNames.nextElement();
-			String memberImgName = multipartRequest.getFilesystemName(fileName);
+			String uploadPath = "/Users/son/Documents/wanted/sharecampus/WebContent/upload";
+			int fileSize = 1024 * 1024 * 5; // 5M
 			
-			if(memberImgName == null) {continue;}
-	
+			MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 			
-			int memberNum = (Integer)req.getSession().getAttribute("memberNum");
-			memberVO.setMemberNum(memberNum);
-			memberVO.setMemberImgName(memberImgName);
+			Enumeration<String> fileNames = multipartRequest.getFileNames();
 			
-			memberDAO.updateImgName(memberVO);
+			while(fileNames.hasMoreElements()) {
+				String fileName = fileNames.nextElement();
+				String memberImgName = multipartRequest.getFilesystemName(fileName);
+				
+				if(memberImgName == null) {continue;}
+				
+				
+				int memberNum = (Integer)req.getSession().getAttribute("memberNum");
+				memberVO.setMemberNum(memberNum);
+				memberVO.setMemberImgName(memberImgName);
+				
+				memberDAO.updateImgName(memberVO);
+			}
+			
+			result.setPath("/member/mypageOk.me");			
+		} catch (Exception e) {
+			req.setAttribute("loginOK", "false");
+			result.setPath("/");
 		}
 		
-		result.setPath("/member/mypageOk.me");
 		
 		return result;
 	}

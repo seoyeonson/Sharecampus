@@ -1,48 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-
-<select id="checkId" parameterType="memberVO" resultType="_int">
-	select count(member_num) from tbl_member
-	where member_id = #{memberId} and member_type = #{memberType}
-</select>
-
-<insert id="join" parameterType="memberVO">
-	insert into tbl_member (member_id, member_nickname, member_type)
-	values(#{memberId}, #{memberNickname}, #{memberType})
-</insert>
-
-<select id="selectMember" parameterType="String" resultType="memberVO">
-	select member_num, member_type from tbl_member where member_id = #{memberId}
-</select>
-
-<select id="checkNickname" parameterType="String" resultType="_int">
-	select count(member_nickname) from tbl_member where member_nickname = #{memberNickname}
-</select>
-
-<select id="memberInfo" parameterType="_int" resultType="memberVO">
-	select member_id, member_nickname, member_img_name, member_auth_img_name , member_auth
-	from tbl_member 
-	where member_num = #{memberNum}
-</select>
-
-<update id="updateNickname" parameterType="memberVO">
-	update tbl_member
-	set member_nickname = #{memberNickname}
-	where member_num = #{memberNum}
-</update>
-
-<update id="updateImgName" parameterType="memberVO">
-	update tbl_member
-	set member_img_name = #{memberImgName}
-	where member_num = #{memberNum}
-</update>
-
-<update id="updateAuthImgName" parameterType="memberVO">
-	update tbl_member
-	set member_auth_img_name = #{memberAuthImgName}, member_auth = #{memberAuth}
-	where member_num = #{memberNum}
-</update>
-
+	<select id="checkId" parameterType="memberVO" resultType="_int">
+		select count(member_num) from tbl_member
+		where member_id = #{memberId} and member_type = #{memberType}
+	</select>
+	
+	<insert id="join" parameterType="memberVO">
+		insert into tbl_member (member_id, member_nickname, member_type)
+		values(#{memberId}, #{memberNickname}, #{memberType})
+	</insert>
+	
+	<select id="selectMember" parameterType="String" resultType="memberVO">
+		select member_num, member_type from tbl_member where member_id = #{memberId}
+	</select>
+	
+	<select id="checkNickname" parameterType="String" resultType="_int">
+		select count(member_nickname) from tbl_member where member_nickname = #{memberNickname}
+	</select>
+	
+	<select id="memberInfo" parameterType="_int" resultType="memberVO">
+		select member_id, member_nickname, member_img_name, member_auth_img_name , member_auth
+		from tbl_member 
+		where member_num = #{memberNum}
+	</select>
+	
+	<update id="updateNickname" parameterType="memberVO">
+		update tbl_member
+		set member_nickname = #{memberNickname}
+		where member_num = #{memberNum}
+	</update>
+	
+	<update id="updateImgName" parameterType="memberVO">
+		update tbl_member
+		set member_img_name = #{memberImgName}
+		where member_num = #{memberNum}
+	</update>
+	
+	<update id="updateAuthImgName" parameterType="memberVO">
+		update tbl_member
+		set member_auth_img_name = #{memberAuthImgName}, member_auth = #{memberAuth}
+		where member_num = #{memberNum}
+	</update>
+	
+	<select id="getCurriTotal" parameterType="_int" resultType="_int">
+		select count(curri_num) from tbl_curriculum
+		where member_num = #{memberNum}
+	</select> 
+	
+	<select id="getStudyTotal" parameterType="_int" resultType="_int">
+		select count(study_num) from tbl_study
+		where member_num = #{memberNum}
+	</select> 
+	
+	<select id="getCommTotal" parameterType="_int" resultType="_int">
+		select count(community_num) from tbl_community
+		where member_num = #{memberNum}
+	</select> 
+	
+	<select id="selectCurri" parameterType="Map" resultType="curriculumVO">
+		select curri_num, curri_title, curri_regist_date from tbl_curriculum
+		where member_num = #{memberNum}
+		order by curri_num desc
+		limit #{startRow}, #{rowCount} 
+	</select>
+	
+	<select id="selectStudy" parameterType="Map" resultType="studyVO">
+		select study_num, study_title, study_regist_date, study_ing
+		from tbl_study
+		where member_num = #{memberNum}
+		order by study_num desc
+		limit #{startRow}, #{rowCount} 
+	</select>
+	
+	<select id="selectComm" parameterType="Map" resultType="communityVO">
+		select community_num, community_regist_date, community_contents
+		from tbl_community
+		where member_num = #{memberNum}
+		order by community_num desc
+		limit #{startRow}, #{rowCount} 
+	</select>
+	
 </mapper>
 

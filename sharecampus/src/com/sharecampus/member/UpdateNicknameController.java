@@ -20,22 +20,27 @@ public class UpdateNicknameController implements Execute {
 		
 		Result result = new Result();
 		HttpSession session = req.getSession();
-		
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		
-		String memberNickname = req.getParameter("memberNickname");
-		int memberNum = (Integer)session.getAttribute("memberNum");
-		
-		memberVO.setMemberNickname(memberNickname);
-		memberVO.setMemberNum(memberNum);;
-		
-		memberDAO.updateNickname(memberVO);
-		
-		session.setAttribute("memberNickname", memberNickname);
-		
-		result.setPath("/member/mypageOk.me");
-		
+		try {
+			String memberNickname = req.getParameter("memberNickname");
+			int memberNum = (Integer)session.getAttribute("memberNum");
+			
+			memberVO.setMemberNickname(memberNickname);
+			memberVO.setMemberNum(memberNum);;
+			
+			memberDAO.updateNickname(memberVO);
+			
+			session.setAttribute("memberNickname", memberNickname);
+			
+			result.setPath("/member/mypageOk.me");
+			
+		} catch(Exception e){
+			req.setAttribute("loginOK", "false");
+			result.setPath("/");
+		}
+
 		return result;
 	}
 

@@ -13,8 +13,8 @@ public class SelectCommand implements Command {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
 		List<CurriculumVO> list = null;
+		int curri_num = Integer.parseInt(request.getParameter("curri_num"));
 		
 
 		try {

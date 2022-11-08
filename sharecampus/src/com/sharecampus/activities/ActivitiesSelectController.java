@@ -20,11 +20,11 @@ public class ActivitiesSelectController implements Execute{
 		Result result = new Result();
 		String temp = req.getParameter("page");
 		
-		System.out.println(temp);
+		//System.out.println(temp);
 		HashMap<String, Integer> pageMap = new HashMap<String, Integer>();
 
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		System.out.println(page);
+		//System.out.println(page);
 		
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 12;
@@ -44,6 +44,8 @@ public class ActivitiesSelectController implements Execute{
 		
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
+//		페이지 끝
+		
 		
 		req.setAttribute("activityAll", activitiesDAO.selectAll(pageMap));
 		req.setAttribute("total", total);

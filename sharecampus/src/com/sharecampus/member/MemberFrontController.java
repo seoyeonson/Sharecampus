@@ -86,12 +86,14 @@ public class MemberFrontController extends HttpServlet {
 //			인증서 연결
 			result = new ConnectproofController().execute(req, resp);
 			
-		} else if(target.equals("/member/movelist.me")) {
-//			내가 쓴 글 보기로 이동
-		} else if(target.equals("/member/movecomments.me")) {
-//			내가 쓴 댓글 보기로 이동
-		} else if(target.equals("/member/movebookmarks.me")) {
-//			내가 모은 책갈피로 이동
+		} else if(target.equals("/member/selectStudy.me")) {
+//			내가 쓴 스터디 가져오기
+			result = new SelectStudyController().execute(req, resp);
+			
+		} else if(target.equals("/member/selectComm.me")) {
+//			내가 쓴 커뮤니티 가져오기
+			result = new SelectCommController().execute(req, resp);
+			
 		}
 		
 		if(result != null) {

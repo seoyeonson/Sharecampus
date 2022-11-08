@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,85 +29,73 @@
 	        <jsp:include page="${pageContext.request.contextPath}/app/member/mypage_menu.jsp" />
 	        <main id="content" role="main" class="more2" style="border: none;">
 	            <section class="sMypage">
-	                <h1 class="sMypageTitle" style="background-color: #3393f4; color: #fff;">나의 활동 - <span style="font-size: 12px">내가 쓴 댓글 모아보기</span></h1>
+	                <h1 class="sMypageTitle" style="background-color: #3393f4; color: #fff;">나의 활동 - <span style="font-size: 12px">스터디 모아보기</span></h1>
 	                <div>
 	                    <div class="board_list_wrap">
-		                    <table class="board_list curriculum">
-		                    <br>
+                            <div style="width:90%; margin: auto; padding-bottom: 10px;">
+	                            <h2 style="font-size: 18px; font-weight: bold;">전체 총
+	                            	<c:choose>
+	                            		<c:when test="${total > 0}">
+			                            	<span style="font-size: 15px; font-weight: normal;"><c:out value="${total}"/>건</span>
+	                            		</c:when>
+	                            		<c:otherwise>
+			                            	<span style="font-size: 15px; font-weight: normal;">0건</span>
+	                            		</c:otherwise>
+	                            	</c:choose>
+	                            </h2>
+                            </div>
+		                    <table class="board_list curriculum" style="width:90%; margin: 0 auto; margin-bottom: 20px" id="study_list">
 		                        <thead>
-		                            <th>번호</th>
-		                            <th>제목</th>
-		                            <th>글쓴이</th>
-		                            <th>작성일</th>
-		                            <th>조회</th>
+			                        <tr>
+			                            <th>번호</th>
+			                            <th>제목</th>
+			                            <th>작성일</th>
+			                        </tr>
 		                        </thead>
 		                        <tbody>
-		                        	<div style="width:90%; margin: auto;">
-		                            <hr>
-		                            <div ><span style="font-style: bold; font-size: 17px">커리큘럼</span><span>(1-5 / 31건)</span></div>
-		                            <br>
-		                            <br>
-		                        	</div>
-		                                <td>5</td>
-		                                <td class="tit">
-		                                    <a href="#">집에서 시간 때우는 방법</a>
-		                                </td>
-		                                <td>홍길동</td>
-		                                <td>2020-12-12</td>
-		                                <td>4213</td>
-		                            </tr>
+		                        	<c:choose>
+										<c:when test="${not empty studyAll and fn:length(studyAll) > 0}">
+											<c:forEach var="study" items="${studyAll}">
+												<tr>
+													<td><c:out value="${study.getStudyNum()}"/></td>
+													<td><a href="${pageContext.request.contextPath}/study/listDs.su?studyNum=${study.getStudyNum()}"><c:out value="${study.getStudyTitle()}"/></a></td>
+													<td><c:out value="${study.getStudyRegistDate()}"/></td>
+												</tr>
+											</c:forEach>
+										</c:when>
+										<c:otherwise>
+											<tr>
+												<td colspan="3" align="center">등록된 게시물이 없습니다.</td>
+											</tr>
+										</c:otherwise>
+									</c:choose>
 		                        </tbody>
 		                    </table>
-		                    <table class="board_list study">
-		                        <thead>
-		                            <th>번호</th>
-		                            <th>제목</th>
-		                            <th>글쓴이</th>
-		                            <th>작성일</th>
-		                            <th>조회</th>
-		                        </thead>
-		                        <tbody>
-		                        <div style="width:90%; margin: auto;">
-		                            <hr>
-		                            <div ><span style="font-style: bold; font-size: 17px">스터디</span><span>(1-5 / 31건)</span></div>
-		                            <br>
-		                            <br>
-		                            <tr>
-		                                <td>5</td>
-		                                <td class="tit">
-		                                    <a href="#">집에서 시간 때우는 방법</a>
-		                                </td>
-		                                <td>홍길동</td>
-		                                <td>2020-12-12</td>
-		                                <td>4213</td>
-		                            </tr>
-		                        </tbody>
-		                    </table>
-		                    <table class="board_list activity">
-		                        <thead>
-		                            <th>번호</th>
-		                            <th>제목</th>
-		                            <th>글쓴이</th>
-		                            <th>작성일</th>
-		                            <th>조회</th>
-		                        </thead>
-		                        <tbody>
-		                        <div style="width:90%; margin: auto;">
-		                            <hr>
-		                            <div ><span style="font-style: bold; font-size: 17px">대외활동</span><span>(1-5 / 31건)</span></div>
-		                            <br>
-		                            <br>
-		                            <tr>
-		                                <td>5</td>
-		                                <td class="tit">
-		                                    <a href="#">집에서 시간 때우는 방법</a>
-		                                </td>
-		                                <td>홍길동</td>
-		                                <td>2020-12-12</td>
-		                                <td>4213</td>
-		                            </tr>
-		                        </tbody>
-		                    </table>
+		                    <!-- 페이징 처리 -->
+							<table style="font-size:1.3rem; margin: 0 auto;">
+								<tr align="center" valign="middle">
+									<td class="web-view" style="border: none; font-size: 16px;">
+										<c:if test="${prev}">
+											<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${startPage - 1}">&lt;</a>
+										</c:if>
+										<c:forEach var="i" begin="${startPage}" end="${endPage}">
+											<c:choose>
+												<c:when test="${not (i eq page)}">
+													<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${i}">
+														<c:out value="${i}"/>&nbsp;&nbsp;
+													</a>
+												</c:when>
+												<c:otherwise>
+														<a style="color: var(--main); font-weight: bold;"><c:out value="${i}"/>&nbsp;&nbsp;</a>
+												</c:otherwise>
+											</c:choose>
+										</c:forEach>
+										<c:if test="${next}">
+											<a href="${pageContext.request.contextPath}/member/selectStudy.me?page=${endPage + 1}">&gt;</a>
+										</c:if>
+									</td>
+								</tr>
+							</table>
 	                	</div>
 	                </div>
 	            </section>

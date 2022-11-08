@@ -74,6 +74,7 @@ public class KakaoLoginMemberController implements Execute {
 	      String data = buffer.toString();
 	      System.out.println(data);
 	      
+	      
 	      // 응답에서 필요한 정보를 잘라내어 사용
 	      // member_id
 	      member_id = data.substring(data.indexOf("\"email\"") + 9, data.length() - 3);

@@ -698,6 +698,7 @@ a {
 .board_list tbody tr td:nth-child(2){
     text-align: left;
     text-overflow: clip;
+    width: 75%;
     border: "0";
 }
 a { text-decoration: none; color: black; }
