@@ -48,7 +48,7 @@ public class StudyFrontController extends HttpServlet{
 			result = new StudyDetailUpdateController().execute(req, resp);
 		}else if(target.equals("/study/find.su")) {
 			
-			new StudyFindController().execute(req, resp);
+//			new StudyFindController().execute(req, resp);
 		}
 		
 		if(result != null) {

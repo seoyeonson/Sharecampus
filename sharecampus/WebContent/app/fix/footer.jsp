@@ -5,7 +5,7 @@
         <div class="top">
             <div class="left">
                 <div class="logoWrap">
-                    <a>로고</a>
+                    <a>쉐어캠퍼스</a>
                 </div>
                 <ul>
                     <li>
