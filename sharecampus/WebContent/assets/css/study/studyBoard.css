@@ -153,21 +153,15 @@ input[type=button] {
 	background-color: #3393f4;
 	color: white;
 	height: 37px;
-	
+	margin-left: 5px;
+	top : 10px;
 }
 
-#updateBtn, #writeStudyBtn {
-	top: 10px;
-	left: 590px;
+#updateBtn, #deleteBtn, #studyListBtn{
 	border-radius: 3px;
-	float: left;
 }
-#deleteBtn, #studyListBtn {
-	top: 10px;
-	left: 600px;
-	border-radius: 3px;
-	float: left;
-}
+
+
 
 /* .comment {
     position: relative;

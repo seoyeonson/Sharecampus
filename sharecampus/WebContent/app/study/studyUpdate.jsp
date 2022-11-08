@@ -18,6 +18,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 input[type=number] {
 	-moz-appearance: textfield;
 }
+
+#updateOkBtn, #updateCancelBtn {
+	text-align : center;
+	padding-bottom : 4px;
+}
+
 </style>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/study/studyWrite.css">
 </head>
@@ -200,8 +206,8 @@ input[type=number] {
 				</ul>
 			</div>
 			<div class="submit">
-				<input type="button" value="수정 완료" onclick="sendForm()"/>
-				<input type="button" style="margin-top:5px;" value="수정 취소" onclick="location.href='${pageContext.request.contextPath}/study/list.su';">
+				<input type="button" value="수정 완료" id="updateOkBtn" onclick="sendForm()"/>
+				<input type="button" style="margin-top:5px;" id="updateCancelBtn" value="수정 취소" onclick="location.href='${pageContext.request.contextPath}/study/list.su';">
 			</div>
 		</form>
 	</div>
@@ -210,10 +216,14 @@ input[type=number] {
 <jsp:include page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/main/modal.js"></script>
 </body>
 
 <script>
+
+	$('input:radio[name="studyArea"]:input[value="${study.getStudyArea()}"]').prop("checked", true);
+	$('input:radio[name="studyDepart"]:input[value ="${study.getStudyDepart()}"]').prop("checked", true);
+	
 	function sendForm(){
 		let form = document.updateForm;
 		if(!form.studyTitle.value){
@@ -224,8 +234,6 @@ input[type=number] {
 		form.submit();
 	}
 	
-	/* $("input:radio[name="studyArea"]:input[value ="${study.getStudyArea()}"].prop("checked", true); */
-	/* $("input:radio[name="studyDepart"]:input[value ="${study.getStudyDepart()}"].prop("checked", true); */
 </script>
 
 </html>

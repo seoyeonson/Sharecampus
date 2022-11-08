@@ -11,7 +11,6 @@
 <title>스터디보드</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/study/studyBoard.css">
-<!-- <link rel="stylesheet" href="../main/main.css"> -->
 </head>
 
 <body>
@@ -20,14 +19,13 @@
 			page="${pageContext.request.contextPath}/app/fix/header.jsp" />
 		<div id="afthd">
 			<div id="box">
-			<!-- <ul class="actions"> -->
-			 	<!-- <li><input type="button" value="글쓰기" id="writeStudyBtn"class="primary" onclick=""/></li>
-                <li><input type="button" value="목록"  id="studyListBtn" class="primary" onclick=""/></li> -->
+			 <ul class="actions" style="display: flex; flex-direction: row-reverse; padding-right: 8px">    
+                <li><input type="button" value="목록"  id="studyListBtn" onclick="location.href='/study/list.su'"/></li>
 				<c:if test="${sessionScope.memberNum == study.getMemberNum()}">
                 <li><input type="button" id="updateBtn" value="수정" onclick="location.href='/study/listDu.su?studyNum=${study.getStudyNum()}'"/></li>
                 <li><input type="button" id="deleteBtn" value="삭제" onclick="location.href='/study/listDd.su?studyNum=${study.getStudyNum()}'"/></li>
                 </c:if>
-            </ul>				
+           </ul>				
             <div id="title"><c:out value="${study.getStudyTitle()}"/></div>
 				<div class="profile">
 					<div class="profPic">
@@ -58,7 +56,9 @@
 					<div class="contactMethod">연락 : <c:out value="${study.getStudyContact()}"/></div>
 					<span class="answerContact"><c:out value="${study.getStudyContact()}"/></span> --%>
 					<hr class="hr2">
-					<span class="about"><c:out value="${study.getStudyIntro()}"/></span>
+					<span class="about" style="white-space:pre-line;">
+						<c:out value="${study.getStudyIntro()}"/>
+					</span>
 				</form>		
 
 

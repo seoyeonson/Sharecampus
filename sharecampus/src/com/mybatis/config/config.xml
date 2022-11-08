@@ -17,8 +17,8 @@
         <typeAlias type="com.sharecampus.curriculum.comments.vo.CurriculumCommentsVO" alias="curriculumcommentsVO"/> -->
         <typeAlias type="com.sharecampus.study.vo.StudyVO" alias="studyVO"/>
         <typeAlias type="com.sharecampus.study.vo.StudyDTO" alias="studyDTO"/>
-    <!--     <typeAlias type="com.sharecampus.activities.vo.ActivitiesVO" alias="activitiesVO"/> -->
         <typeAlias type="com.sharecampus.member.vo.MemberVO" alias="memberVO"/>
+        <typeAlias type="com.sharecampus.study.vo.Criteria" alias="criteria"/>
         
     </typeAliases>
 
@@ -36,14 +36,13 @@
    
    <mappers>
       <!-- <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/>
-      <mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
+      <mapper resource="com/mybatis/mapper/MemberMapper.xml">
       <mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
       <mapper resource="com/mybatis/mapper/BannerMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CurriculumMapper.xml"/>
       <mapper resource="com/mybatis/mapper/CurriculumCommentsMapper.xml"/>
       <mapper resource="com/mybatis/mapper/MainMapper.xml"/> -->
       <mapper resource="com/mybatis/mapper/StudyMapper.xml"/>
-      <!-- <mapper resource="com/mybatis/mapper/ActivitiesMapper.xml"/> -->
      <!--  <mapper resource="com/mybatis/mapper/MainMapper.xml"/>-->
       <mapper resource="com/mybatis/mapper/MemberMapper.xml"/> 
       
