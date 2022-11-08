@@ -55,6 +55,10 @@ public class ActivitiesSelectController implements Execute{
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
 		
+		//ajax
+		req.getParameter("area");
+		req.getParameter("dept");
+		
 		result.setPath("/app/activity/activity.jsp");
 
 		return result;
