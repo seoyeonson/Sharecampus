@@ -44,4 +44,18 @@
 		delete from tbl_study where study_num = #{studyNum}
 	</delete>
 	
+	<select id="find" parameterType="criteria" resultType="studyVO">
+		select study_num, study_area, study_depart from tbl_study
+			<trim prefix="where" prefixOverrides="and">
+				<if test="areaSelect != 'none'.toString()">
+					study_area = #{areaSelect}
+				</if>
+				<if test="departSelect != 'none.toString()">
+					 and study_depart = #{departSelect}
+				</if>
+			</trim>
+		order by study_num desc
+		
+	</select>
+	
 </mapper>

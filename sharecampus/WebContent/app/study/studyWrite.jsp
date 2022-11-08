@@ -216,7 +216,7 @@ input[type=number] {
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/main/modal.js"></script>
 <script>
 	function send() {
 		studyWriteForm.submit();
