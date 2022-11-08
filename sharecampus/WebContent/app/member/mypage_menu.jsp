@@ -26,20 +26,20 @@
                 </a>
             </li> 
             <li>
-                 <a href="${pageContext.request.contextPath}/app/member/mypage_writing.jsp">
-                <span>내가 쓴 글 모아보기</span>
+                 <a href="${pageContext.request.contextPath}/member/selectStudy.me">
+                <span>스터디 모아보기</span>
                 </a>
             </li> 
             <li>
+                 <a href="${pageContext.request.contextPath}/member/selectComm.me">
+                 <span>커뮤니티 모아보기</span>
+                </a>
+            </li>
+            <%-- <li>
                  <a href="${pageContext.request.contextPath}/app/member/mypage_comment.jsp">
                 <span>내가 쓴 댓글 모아보기</span>
                 </a>
-            </li>
-            <li>
-                 <a href="${pageContext.request.contextPath}/app/member/mypage_bookmark.jsp">
-                 <span>내가 모은 북마크 모아보기</span>
-                </a>
-            </li>
+            </li> --%>
         </ul>
     </div>
 </div>
