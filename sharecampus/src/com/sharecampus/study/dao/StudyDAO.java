@@ -2,9 +2,11 @@ package com.sharecampus.study.dao;
 
 import java.util.HashMap;
 import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sharecampus.study.vo.Criteria;
 import com.sharecampus.study.vo.StudyDTO;
 import com.sharecampus.study.vo.StudyVO;
 
@@ -41,6 +43,10 @@ public class StudyDAO {
 	
 	public void update(StudyVO studyVO) {
 		sqlSession.update("study.update", studyVO);
+	}
+	
+	public List<StudyVO> find(Criteria criteria) {
+		return sqlSession.selectList("study.find", criteria);
 	}
 	
 }

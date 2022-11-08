@@ -12,6 +12,7 @@ import com.sharecampus.Result;
 public class ManagerFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("dd");
 		doProcess(req, resp);
 	}
 
@@ -21,6 +22,7 @@ public class ManagerFrontController extends HttpServlet {
 	}
 
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("dd");
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		Result result = null;
 

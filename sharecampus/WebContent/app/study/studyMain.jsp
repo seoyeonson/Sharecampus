@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>스터디</title>
+<style>
+	.backColor {
+		height: 230px;
+	} 
+</style>
 </head>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/study/studyMain.css">
 <script src="${pageContext.request.contextPath}/assets/js/study/studyMain.js"></script>
@@ -21,7 +26,7 @@
 		<div class="projectView projectAllGridView">
 			<h1>전체 스터디</h1>
 			<div class="searchOption">
-				<select class="smSelect">
+				<select class="smSelect" id="area-container" name="area">
 
 					<option value="KR00">지역 미지정</option>
 					<option value="KR01">서울특별시</option>
@@ -41,7 +46,8 @@
 					<option value="KR15">울산광역시</option>
 					<option value="KR16">제주특별자치도</option>
 					<option value="KR17">세종특별자치시</option>
-				</select> <select class="smSelect">
+				</select>
+				<select class="smSelect" id="depart-container" name="depart" >
 					<option value="00">관심분야</option>
 					<option value="01">여행/호텔/관광</option>
 					<option value="02">언론/미디어</option>
@@ -65,11 +71,9 @@
 					<option value="20">기타</option>
 				</select>
 				<div class="StudyNew">
-					<button class="btn123"
-						onclick="location.href='${pageContext.request.contextPath}/study/write.su';">글쓰기</button>
+					<button class="btn123" onclick="location.href='${pageContext.request.contextPath}/study/write.su';">글쓰기</button>
 				</div>
 			</div>
-
 			<div class="projectGridView">
 				<!-- 전체 글상자 -->
 				<!-- 단일 글 상자 시작 -->
@@ -89,7 +93,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="projectBottomInfo">
+						<div class="projectBottomInfo backColor">
 							<div class="txtWrap studyTxtWrap">
 								<h3 class="category"><c:out value="${study.getStudyDepart()}" /></h3>
 								<h2 class="tit"><c:out value="${study.getStudyTitle()}" /></h2>
@@ -100,6 +104,7 @@
 				</div>
 				 </c:forEach>
 			</div>
+		</div>
 			<!-- 페이징 처리 -->
 			<table style="font-size:1.3rem; margin: auto;">
 			<tr align="center" valign="middle">
@@ -126,6 +131,7 @@
 			</tr>
 		</table>			
 	</section>
+
 	
 	
 	<jsp:include
@@ -134,7 +140,21 @@
 		page="${pageContext.request.contextPath}/app/fix/footer.jsp" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/study/studyFind.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/main/modal.js"></script>
+<script>
+let backs = $(".backColor");
+let letters = ['d0e5ff', 'fff9c4', 'f5f9e7', 'FFF0F5','d7efd3','bedef9','f8ced7'];
+
+$.each(backs, function(e){
+	let color = '#';
+	// 원하는 색상을 'letters'에 지정한다. 변수는 맘대로 변경해도 무관하다.
+	color += letters[Math.floor(Math.random() * letters.length)]
+	$(this).css("background-color", color);
+});
 
 
+
+
+</script>
 </html>

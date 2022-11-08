@@ -28,52 +28,8 @@
 </head>
 <body>
 	<!-- <div class="wrapper"> -->
-	<div class="sidebar" id="menu">
-		<!-- 로고(image) -->
-		<div class="logo">
-			<img src="..">
-		</div>
-		<ul>
-			<li><a
-				href="${pageContext.request.contextPath}/app/main/main.jsp"
-				class="menu"><img
-					src="${pageContext.request.contextPath}/assets/images/manager/globe.png">사이트
-					바로가기</a></li>
-			<li><a><img
-					src="${pageContext.request.contextPath}/assets/images/manager/user.png">회원
-					관리<img
-					src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png"
-					style="float: right; height: 20px;"></a>
-				<ul>
-					<li><a
-						href="${pageContext.request.contextPath}/app/manager/manager_memberAll.jsp">회원
-							목록 관리</a></li>
-					<li><a
-						href="${pageContext.request.contextPath}/app/manager/manager_memberConfirm.jsp">회원
-							인증 관리</a></li>
-				</ul></li>
-			<li><a><img
-					src="${pageContext.request.contextPath}/assets/images/manager/apps.png">콘텐츠
-					관리<img
-					src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png"
-					style="float: right; height: 20px;"></a>
-				<ul>
-					<li><a
-						href="${pageContext.request.contextPath}/app/manager/manager_activityPost.jsp">대외활동
-							관리</a></li>
-				</ul></li>
-			<li><a><img
-					src="${pageContext.request.contextPath}/assets/images/manager/settings.png">환경
-					설정<img
-					src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png"
-					style="float: right; height: 20px;"></a>
-				<ul>
-					<li><a
-						href="${pageContext.request.contextPath}/app/manager/manager_settingBanner.jsp">배너
-							관리</a></li>
-				</ul></li>
-		</ul>
-	</div>
+	<jsp:include
+		page="${pageContext.request.contextPath}/app/manager/managerindex.jsp" />
 	<!-- </div> -->
 	<div class="contents">
 		<h3>회원 목록 관리</h3>
@@ -88,22 +44,24 @@
 			<thead>
 				<tr>
 					<th>회원번호</th>
-					<th>회원명</th>
+					<th>닉네임</th>
 					<th>가입 일자</th>
-					<th>방문 횟수</th>
+					<th>인증 상태</th>
 					<th>회원 삭제</th>
 				</tr>
 			</thead>
 			<tbody id="memberTableBody">
 				<c:choose>
-					<c:when test="${not empty members and fn:length(members) > 0}">
-						<c:forEach var="member" items="${members}">
+					<c:when test="${not empty memberAll and fn:length(memberAll) > 0}">
+						<c:forEach var="member" items="${memberAll}">
 							<tr>
 								<td><c:out value="${member.getMemberNum()}" /></td>
-								<td><c:out value="${member.getMemberName()}" /></td>
-								<td><c:out value="${member.getSignupDate()}" /></td>
+								<td><c:out value="${member.getMemberNickname()}" /></td>
+								<td><c:out value="${member.getMemberSignupDate()}" /></td>
 								<td><c:out value="${member.getMemberType()}" /></td>
-								<td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+								<c:if test="${sessionScope.memberNum == memeber.getMemberNum()}">
+								<td><button class="removeList" onclick="location.href='/manager/memberDelete.ma?memberNum=${member.getMemberNum()}'">회원 삭제</button></td>
+								</c:if>
 							</tr>
 						</c:forEach>
 					</c:when>
