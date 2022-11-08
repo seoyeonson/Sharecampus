@@ -2,9 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="${pageContext.request.contextPath}/assets/css/main/main.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d25c7e6490.js"
+	crossorigin="anonymous"></script>
 <header class="Header">
     <nav>
-        <div class="logo"><a href="${pageContext.request.contextPath}/index.jsp">로고</a></div>
+        <div class="logo"><a href="${pageContext.request.contextPath}/index.jsp">쉐어캠퍼스</a></div>
         <ul class="Navbar">
             <li><a href="${pageContext.request.contextPath}/app/curriculum/curriculum.do">커리큘럼</a></li>
             <li><a href="${pageContext.request.contextPath}/study/list.su">스터디</a></li>

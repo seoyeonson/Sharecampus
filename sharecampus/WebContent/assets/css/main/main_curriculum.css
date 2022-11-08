@@ -321,13 +321,6 @@ span.bgTxt {
     display: block;
 }
 
-.curri_img{
-    height: 150px;
-    background-image: url('https://t1.daumcdn.net/cfile/tistory/1819914850ADABCD0A');
-    background-size: 100%;
-    background-position: center;
-}
-
 .top-curriculum-info{
     padding: 18px;
     padding-top: 10px;

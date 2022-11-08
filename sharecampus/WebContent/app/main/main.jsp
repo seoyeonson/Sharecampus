@@ -17,6 +17,14 @@
 	href="${pageContext.request.contextPath}/assets/css/study/studyMain.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/main/main_study.css">
+<style>
+.curri_img{
+    height: 150px;
+    background-image: url('${pageContext.request.contextPath}/assets/images/curriculum/download.png');
+    background-size: 100%;
+    background-position: center;
+}
+</style>
 </head>
 <body>
 	<jsp:include
@@ -33,7 +41,7 @@
 						<div class="wrap">
 							<ul class="slider">
 								<li><img
-									src="https://letspl.me/assets/images/top-main-img-4.png" alt="">
+									src="${getPath.request.contextPath}/assets/images/main.png" alt="">
 								</li>
 							</ul>
 						</div>
