@@ -331,7 +331,7 @@
                     <div class="bannerWrap">
                         <p class="lgTxt">쉐어캠퍼스 스터디</p>
                         <p class="smTxt">새로운 스터디에 참여해보세요!</p>
-                        <a>스터디 만들기</a>
+                        <a href="/study/write.su">스터디 만들기</a>
                     </div>
                 </div>
             </section>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,36 +15,8 @@
 </head>
 <body>
 <!-- <div class="wrapper"> -->
-        <div class="sidebar" id="menu">
-            <!-- 로고(image) -->
-            <div class="logo">
-                <img src="..">
-            </div>
-            <ul>
-                <li>
-                    <a href="${pageContext.request.contextPath}/app/main/main.jsp" class="menu"><img src="${pageContext.request.contextPath}/assets/images/manager/globe.png">사이트 바로가기</a>
-                </li>
-                <li>
-                    <a><img src="${pageContext.request.contextPath}/assets/images/manager/user.png">회원 관리<img src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png" style="float: right; height:20px;"></a>
-                    <ul>
-                        <li><a href="${pageContext.request.contextPath}/app/manager/manager_memberAll.jsp">회원 목록 관리</a></li>
-                        <li><a href="${pageContext.request.contextPath}/app/manager/manager_memberConfirm.jsp">회원 인증 관리</a></li>
-                    </ul>
-                </li>
-                <li>
-                        <a><img src="${pageContext.request.contextPath}/assets/images/manager/apps.png">콘텐츠 관리<img src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png" style="float: right; height:20px;"></a>
-                            <ul>
-                                <li><a href="${pageContext.request.contextPath}/app/manager/manager_activityPost.jsp">대외활동 관리</a></li>
-                            </ul>
-                </li>
-                <li>
-                        <a><img src="${pageContext.request.contextPath}/assets/images/manager/settings.png">환경 설정<img src="${pageContext.request.contextPath}/assets/images/manager/menu-burger.png" style="float: right; height:20px;"></a>
-                    <ul>
-                        <li><a href="${pageContext.request.contextPath}/app/manager/manager_settingBanner.jsp">배너 관리</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <jsp:include
+		page="${pageContext.request.contextPath}/app/manager/managerindex.jsp" />
     <!-- </div> -->
 
     <div class="contents">
@@ -58,7 +32,25 @@
             </tr>
             </thead>
             <tbody>
-              <tr>
+            <c:choose>
+					<c:when test="${not empty memberAll and fn:length(memberAll) > 0}">
+						<c:forEach var="member" items="${memberAll}">
+							<tr>
+								<td><c:out value="${member.getMemberNum()}" /></td>
+								<td><c:out value="${member.getMemberNickname()}" /></td>
+								<td><c:out value="${member.getMemberSignupDate()}" /></td>
+								<td><c:out value="${member.getMemberType()}" /></td>
+								<td><button class="removeList" onclick="remove_tr(this)">회원 삭제</button></td>
+							</tr>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<tr>
+							<td colspan="5" align="center">준비중입니다.</td>
+						</tr>
+					</c:otherwise>
+				</c:choose>
+              <%-- <tr>
                 <td>
                     <input type="checkbox" name="activityPost_btn" id="activityPost_btn1" onclick='checkSelectAllActivity(this)'>
                 </td>
@@ -102,7 +94,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-              </tr>
+              </tr> --%>
             </tbody>
           </table>
     </div>
