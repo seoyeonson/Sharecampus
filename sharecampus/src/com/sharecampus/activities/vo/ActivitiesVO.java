@@ -174,7 +174,7 @@ public int getActivPermission() {
 		this.activField = activField;
 	}
 
-
+	//분류 ajax
 	public String getActivArea() {
 		return activArea;
 	}
@@ -193,8 +193,11 @@ public int getActivPermission() {
 	public void setActivDept(String activDept) {
 		this.activDept = activDept;
 	}
-
-
+	//분류 ajax 끝
+	
+	
+	
+	
 	public String getActivTitle() {
 		return activTitle;
 	}

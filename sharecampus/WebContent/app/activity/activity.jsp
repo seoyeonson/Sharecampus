@@ -30,7 +30,7 @@ font-size: 15px;
 		<div class="projectView projectAllGridView">
 			<h1>전체 대외활동</h1>
 			<div class="searchOption">
-				<select class="smSelect">
+				<select class="smSelect" name = "area" id = "a" onChange="show(this.id)">
 
 					<option value="KR00">지역 미지정</option>
 					<option value="KR01">서울특별시</option>
@@ -50,7 +50,7 @@ font-size: 15px;
 					<option value="KR15">울산광역시</option>
 					<option value="KR16">제주특별자치도</option>
 					<option value="KR17">세종특별자치시</option>
-				</select> <select class="smSelect">
+				</select> <select class="smSelect" name = "interest" id = "i" onChange="show(this.id)">
 					<option value="00">관심분야</option>
 					<option value="01">여행/호텔/관광</option>
 					<option value="02">언론/미디어</option>
@@ -107,7 +107,7 @@ font-size: 15px;
 								</div>
 								<div class="projectBottomInfo">
 									<div class="txtWrap studyTxtWrap">
-										<h3 class="category"><c:out value= "${activity.getActivArea()}"/></h3>
+										<%-- <h3 class="category"><c:out value= "${activity.getActivArea()}"/></h3> --%>
 										<%-- <h2 class="tit"><c:out value="${activity.getActivTitle()}"/></h2> --%>
 										<p class="studyCategory">(간략 설명)</p>
 										<div class="iconWrap">
@@ -171,5 +171,29 @@ font-size: 15px;
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/modal.js"></script>
+<script>
+	function show(){
+		let area = $("#a").val() || 'none';
+		let dept = $("#i").val() || 'none';
+		
+		$.ajax({
+			url : "${pageContext.request.contextPath}/list.ac",
+			type : "get",
+			data:{area: area, dept: dept},
+			dataType:"json",
+			success:function(results) {
+				console.log(result);
+			}
+			
+			
+			
+			
+			
+		});
+		
+		
+		
+	}
+</script>
 </html>
 							
