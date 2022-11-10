@@ -58,13 +58,6 @@
 		where member_num = #{memberNum}
 	</select> 
 	
-	<select id="selectCurri" parameterType="Map" resultType="curriculumVO">
-		select curri_num, curri_title, curri_regist_date from tbl_curriculum
-		where member_num = #{memberNum}
-		order by curri_num desc
-		limit #{startRow}, #{rowCount} 
-	</select>
-	
 	<select id="selectStudy" parameterType="Map" resultType="studyVO">
 		select study_num, study_title, study_regist_date, study_ing
 		from tbl_study
