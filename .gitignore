@@ -40,7 +40,7 @@ nb-configuration.xml
 .classpath
 .project
 .settings/
-config.xml
+
 
 # Intellij
 .idea/
