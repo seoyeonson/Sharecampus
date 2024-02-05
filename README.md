@@ -13,7 +13,7 @@
 |팀장|부팀장|팀원|팀원|팀원|팀원|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | <img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/395f3b48-a439-4ca4-b1da-be8b7129247b" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/2e2c4cbc-d9da-4dd3-8871-4730ce6ba18f" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/c2d661a2-f476-4d79-9534-55fde7153cbe" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/8c9a6067-1f0c-4f98-8041-1077670210ec" width="150">|<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/2af6ed36-0c86-4a61-a79c-accd74a758f6" width="150">|<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/7bc208cd-9252-4d75-9a8a-ffb8a9a51122" width="150">|
-| [이지형](https://github.com/Jihyeong00)|[손서연](https://github.com/seoyeonson)|[강희수]()|[임소영]()|[홍정수]()|[황재승]()|
+| [이지형](https://github.com/Jihyeong00)|[손서연](https://github.com/seoyeonson)|[강희수](https://github.com/devheesukang)|[임소영](https://github.com/SOYOUNGdev)|[홍정수](https://github.com/JS8800gt)|[황재승](https://github.com/devHwang1)|
 <br>
 
 ### 🚩 기획
