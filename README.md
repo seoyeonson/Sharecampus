@@ -3,16 +3,16 @@
 ‘쉐어캠퍼스’는 학과 및 학내 정보와 학생들 간의 교류 공간을 제공하여 적극적인 학내 활동에 도움을 주는 서비스입니다.</div>
 <br>
 <div align="center">
-<img src="" style="padding-right: 20px"/>
+<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/50dc8a4c-c214-4346-b1f0-739af343e114" style="padding-right: 20px"/>
 </div>
-
+<br>
 
 
 ### 📕 Member
 
 |팀장|부팀장|팀원|팀원|팀원|팀원|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| <img src="" width="150"> |<img src="" width="150"> |<img src="" width="150"> |<img src="" width="150">|<img src="h" width="150">|<img src="" width="150">|
+| <img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/395f3b48-a439-4ca4-b1da-be8b7129247b" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/2e2c4cbc-d9da-4dd3-8871-4730ce6ba18f" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/c2d661a2-f476-4d79-9534-55fde7153cbe" width="150"> |<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/8c9a6067-1f0c-4f98-8041-1077670210ec" width="150">|<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/2af6ed36-0c86-4a61-a79c-accd74a758f6" width="150">|<img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/7bc208cd-9252-4d75-9a8a-ffb8a9a51122" width="150">|
 | [이지형](https://github.com/Jihyeong00)|[손서연](https://github.com/seoyeonson)|[강희수]()|[임소영]()|[홍정수]()|[황재승]()|
 <br>
 
@@ -94,4 +94,5 @@
 <br>
 
 ### 이미지 출처
-<a href="https://kr.freepik.com/free-vector/japanese-teenager-students-wearing-uniform_9925843.htm#query=%ED%95%99%EC%83%9D&position=1&from_view=keyword&track=sph&uuid=5f320010-ba80-447e-9c92-86f70be7c884">작가 pikisuperstar</a> 출처 Freepik
+<a href="https://kr.freepik.com/free-vector/back-to-school-kids-students-with-backpacks-and-textbooks-stand-in-row-boy-and-girls-pupils-reading-books-education-learning-and-studying-concept-with-children-group-line-art-vector-illustration_24922281.htm#query=%ED%95%99%EC%83%9D%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=3&from_view=keyword&track=ais&uuid=6ba438d3-1883-4610-9220-85bfb88bbf54">작가 upklyak</a> 출처 Freepik
+
