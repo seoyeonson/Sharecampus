@@ -1,12 +1,12 @@
 # 🏫 쉐어캠퍼스
 <div style="font-weight: 600 font-size: 20px">
 ‘쉐어캠퍼스’는 학과 및 학내 정보와 학생들 간의 교류 공간을 제공하여 적극적인 학내 활동에 도움을 주는 서비스입니다.</div>
+
 <br>
 <div align="center">
 <img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/50dc8a4c-c214-4346-b1f0-739af343e114" style="padding-right: 20px"/>
 </div>
 <br>
-
 
 ### 📕 Member
 
@@ -59,40 +59,46 @@
 </table>
 <br>
               
-### 🛠️ Frontend Stack
-
-<div align="center">
-<img src="" style="width:50%;" />
-</div>
-
-### 🛠️ Backend Stack
-
-<div align="center">
-<img src="" style="width:50%;"/>
-</div>
+### 🛠️ 사용 기술 및 도구
+<br>
+<div align="center"><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/e183d193-5061-47a8-aac5-5d0245aa85e0" style="width:80%;"/></div>
 <br>
 
-#### 🖥️ 페이지 이미지 
+### 💽 DB 설계
+<div align="center"><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/ea8075c6-c2c8-4bd3-ad8d-4eb48a808476" style="width:50%;"/></div>
+<br>
+
+### 🖥️ 페이지 이미지 
 <table style="text-align: center">
   <tr>
-    <td>
-      <img src="" alt="메인 페이지" />
-    </td>
-    <td>
-      <img src="" alt="소셜 로그인 (네이버, 카카오)" />
-    </td>
+      <td><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/ee6e4c1b-8fb0-447d-b833-0fd625b6ac3f"/></td>
+      <td><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/4252cda0-41e7-4535-a488-d6a19c8097e4"/></td>
   </tr>
   <tr>
-    <th>렌딩 페이지</td>
-    <th>소셜 로그인(네이버, 카카오)</td>
+      <td><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/6772ac70-66f9-433f-b588-a51eadffaaef"/></td>
+      <td><img src="https://github.com/seoyeonson/seoyeonson/assets/93702730/7a8fe3e8-d1e3-44f8-91e3-ff0999703714"/></td>
   </tr>
 </table>
 <br>
 
-### 협업 문서
-📝 [기획 notion]()
+<table>
+    <tr></tr>
+    <tr>
+        <td style="padding:15px;">
+            <p></p>
+            <div><b>💡 인사이트</b></div>
+            <div style="width:100%; background-color:grey;">
+                    MVC Model2 방식으로 웹을 개발하면서 Web Service Architecture를 한번 더 이해할 수 있었고, 
+                    카카오, 네이버, 구글 3가지 OAuth를 분석하고 JavaScript와 REST API 방식으로 구현하는 경험을 가지면서 API에 대한 이해도도 높일 수 있는 시간이었습니다. 
+                    프로젝트의 요구사항을 분석하고 개체와 속성, 관계 등을 고려하여 ERD를 설계하는 경험을 할 수 있었습니다.
+                <p></p>
+            </div>
+        </td>
+    </tr>
+</table>
+<br>
 <br>
 
-### 이미지 출처
+[사용 이미지 출처]
 <a href="https://kr.freepik.com/free-vector/back-to-school-kids-students-with-backpacks-and-textbooks-stand-in-row-boy-and-girls-pupils-reading-books-education-learning-and-studying-concept-with-children-group-line-art-vector-illustration_24922281.htm#query=%ED%95%99%EC%83%9D%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=3&from_view=keyword&track=ais&uuid=6ba438d3-1883-4610-9220-85bfb88bbf54">작가 upklyak</a> 출처 Freepik
 
